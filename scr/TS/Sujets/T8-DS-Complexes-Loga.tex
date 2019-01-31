@@ -1,0 +1,55 @@
+\documentclass{cornouaille}
+\begin{document}
+\cornouaille{TS}{Devoir Surveillé}{Lundi 30 janvier 2019}
+
+\Bareme
+
+%D'après Pondichery mai 2018
+\begin{exercice}[Les complexes sont nos amis]
+Le plan est muni d'un repère orthonormé \Ouv.
+
+\smallskip
+
+Les points A, B et C ont pour affixes respectives $a = - 4,\: b = 2$ et $c = 4$.
+
+\medskip
+
+\begin{enumerate}
+\item On considère les trois points A$'$, B$'$ et C$'$ d'affixes respectives $a'= \text{j}a$, $b'= \text{j}b$ et $c'= \text{j}c$ où j est le nombre complexe $-\dfrac{1}{2} + \text{i}\dfrac{\sqrt{3}}{2}$.
+
+	\begin{enumerate}
+		\item Donner la forme trigonométrique et la forme exponentielle de j.
+		
+En déduire les formes algébriques et exponentielles de $a'$, $b'$ et $c'$.
+		\item Les points A, B et C ainsi que les cercles de centre O et de rayon 2, 3 et 4 sont
+représentés sur le graphique ci-dessous.
+		
+Placer les points A$'$, B$'$ et C$'$ sur ce graphique.
+	\end{enumerate}
+\item  Montrer que les points A$'$, B$'$ et C$'$ sont alignés.
+\item  On note M le milieu du segment [A$'$C], N le milieu du segment [C$'$C] et P le milieu du
+segment [C$'$A]. 
+	
+Démontrer que le triangle MNP est isocèle.
+\end{enumerate}
+
+\bigskip
+
+\begin{center}
+
+Graphique à compléter
+
+\psset{unit=1cm}
+\begin{pspicture}(-4,-4)(4,4)
+\psgrid[gridlabels=0pt,subgriddiv=1,gridwidth=0.1pt]
+\psaxes[linewidth=1pt,Dx=10,Dy=10](0,0)(-4,-4)(4,4)
+\psaxes[linewidth=1.5pt,Dx=10,Dy=10]{->}(0,0)(1,1)
+\uput[d](0.5,0){$\vect{u}$}\uput[l](0,0.5){$\vect{v}$}\uput[dl](0,0){O}
+\uput[dr](2,0){B} \uput[dr](4,0){C}\uput[dl](-4,0){A}
+\pscircle(0,0){2}\pscircle(0,0){3}\pscircle(0,0){4}
+\psdots(-4,0)(2,0)(4,0)
+\end{pspicture}
+\end{center}
+
+\end{exercice}
+\end{document}
