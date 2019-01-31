@@ -1,5 +1,4 @@
 \documentclass{cornouaille}
-\dscornouaille
 \begin{document}
 \cornouaille{TS}{Devoir Surveillé 5}{Lundi 30 janvier 2019}
 
@@ -86,9 +85,7 @@ $|c'|=4$ donc C$'$ est sur le cercle de centre O et de rayon 4 et on a $Re\left(
 
 $a'=-c'$ donc A$'$ et C$'$ sont symétriques par rapport à O alors O, A$'$ et C$'$ sont alignés
 
-$arg\left( b'\right) =arg\left( c'\right) =\dfrac{2\pi}{3} (2\pi)$
-
-donc $\vect{\text{OB}'}$ et $\vect{\text{OC}'}$ sont colinéaires d'où O, B$'$ et C$'$ sont alignés.
+$arg\left( b'\right) =arg\left( c'\right) =\dfrac{2\pi}{3} (2\pi)$ donc $\vect{\text{OB}'}$ et $\vect{\text{OC}'}$ sont colinéaires d'où O, B$'$ et C$'$ sont alignés.
 
 Finalement O, A$'$, B$'$ et C$'$ sont alignés.
 \end{solution}
@@ -216,11 +213,11 @@ pas $1,6$~mètre.
 
 Si on essaye de résoudre l'inéquation $b - 2 + 2 \ln\left(\dfrac{2}{b}\right) \leqslant 1,6$, on se retrouve devant une équation que l'on ne sait pas résoudre de façon exacte.
 
-Posons $m$ la fonction définie sur $[2~;~+\infty[$ par $m(b) = b - 2 + 2 \ln\left(\dfrac{2}{b}\right) = b - 2 + \ln(4) - 2\ln(b)$.
 \begin{enumerate}
+	\item Conjecturer à l'aide de la calculatrice une valeur possible pour $b$.
+	\item Posons $m$ la fonction définie sur $[2~;~+\infty[$ par $m(b) = b - 2 + 2 \ln\left(\dfrac{2}{b}\right) = b - 2 + \ln(4) - 2\ln(b)$.
 	
-	\item Etudier les variations de la fonction $m$ pour $b$ supérieur à 2.
-	
+	Etudier les variations de la fonction $m$ pour $b$ supérieur à 2.
 \begin{solution}
 La fonction $m$ est dérivable sur son ensemble de définition et on a pour tout $b$ supérieur à 2 :
 		
@@ -228,19 +225,17 @@ $m'(b) = 1 - \dfrac{2}{b}$.
 		
 Comme $b$ est supérieur à 2, on en déduit que $m'(b)$ est positif, et même strictement positif pour $b>2$, et donc que la fonction $m$ est strictement croissante sur $[2~;~+\infty[$.
 \end{solution}
-\item Déterminer: $\lim_{b \to +\infty} m(b)$
+\item Déterminer: $\lim{b \to +\infty} m(b)$
 	\item Dresser le tableau de variation de $m$ sur $[2;+\infty[$
 	
 
 	\item Démontrer que l'équation $m(b)=1,6$ admet une unique solution $b_0$ dans $[2;10]$. En donner un encadrement à $0,01$ près.
-	
 \begin{solution}
 La fonction $m$ étant continue (car dérivable) et strictement croissante sur l'intervalle $[2~;~10]$ et 1,6 étant une valeur intermédiaire entre $m(0) = 0$ et $m(10) \approx 4,8$, le corollaire au théorème des valeurs intermédiaires permet d'affirmer qu'il existe un unique nombre $b_0$ antécédent de 1,6 par $m$ sur $[2~;~10]$. Comme $m$ est strictement croissante sur $[2~;~+\infty[$, il n'y aura pas d'autre antécédent que celui là.
 
 Un balayage à la calculatrice donne $5,69 < b_0 < 5,70$.
 \end{solution}
 	\item Conclure.
-	
 \begin{solution}
 	
 Les valeurs du paramètre $b$ garantissant une hauteur maximale $m(b)$ ne dépassant pas 1,6 mètre sont donc les réels de l'intervalle $[2~;~b_0]$, soit, en donnant une valeur approchée (nécessairement par défaut, vu que $m$ est croissante) de l'intervalle $[2~;~5,69]$.
@@ -248,7 +243,14 @@ Les valeurs du paramètre $b$ garantissant une hauteur maximale $m(b)$ ne dépas
 \end{enumerate}
 
 
-\setcounter{enumii}{0}
+		
+		
+
+
+
+		
+
+
 \item  Dans cette question, on choisit $b = 5,69$.
 
 L'angle de tir $\theta$ correspond à l'angle entre l'axe des abscisses et la tangente à la courbe de la
