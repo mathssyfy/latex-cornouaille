@@ -1,0 +1,1079 @@
+%!TEX encoding = UTF-8 Unicode
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[scaled=0.875]{helvet}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{amsmath,amssymb}
+\usepackage{fancybox}
+\usepackage[normalem]{ulem}
+%\usepackage{pifont}
+\usepackage{lscape}
+%\usepackage{diagbox}
+%\usepackage{eucal}
+\usepackage{tabularx}
+\usepackage{multirow}
+%\usepackage{mathrsfs}
+%\usepackage{textcomp} 
+%\usepackage{enumerate}
+%\usepackage{enumitem} 
+\usepackage{colortbl} 
+\usepackage{variations}
+\newcommand{\euro}{\eurologo{}}
+% Tapuscrit : Denis Vergès
+% Corrigé : François Hache
+%\usepackage{pst-plot,pst-tree,pstricks,pst-node,pst-text}
+%\usepackage{pst-eucl}
+%\usepackage{pstricks-add}
+\usepackage{pst-all}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
+\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
+\newcommand{\barre}[1]{\overline{\,\mathstrut#1\,}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+%\renewcommand{\thesubsection}{Exercice \Roman{subsection}} 
+\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
+%\everymath{\displaystyle}
+\usepackage{fancyhdr}
+\usepackage[dvips]{hyperref}
+\hypersetup{%
+pdfauthor = {APMEP},
+pdfsubject = {Baccalauréat S},
+pdftitle = {Centres étrangers - 11 juin 2018},
+allbordercolors = white,
+pdfstartview=FitH} 
+\usepackage[frenchb]{babel}
+\DecimalMathComma
+\usepackage[np]{numprint}
+\renewcommand{\d}{\mathrm{\,d}}%     le d de différentiation
+\newcommand{\e}{\mathrm{\,e\,}}%       le e de l'exponentielle
+\renewcommand{\i}{\mathrm{\,i\,}}% le i des complexes
+\newcommand{\ds}{\displaystyle}
+\newcommand{\cg}{\texttt{]}}%    crochet gauche
+\newcommand{\cd}{\texttt{[}}%    crochet droit
+
+\begin{document}
+\setlength\parindent{0mm}
+\marginpar{\rotatebox{90}{\textbf{A. P{}. M. E. P{}.}}}
+\rhead{\textbf{A. P{}. M. E. P{}.}}
+\lhead{\small Corrigé - Baccalauréat S }
+\lfoot{\small{Centres étrangers}}
+\rfoot{\small{11 juin 2018}}
+\pagestyle{fancy}
+\thispagestyle{empty} 
+
+\begin{center} {\Large{\textbf{\decofourleft~Corrigé du baccalauréat S  Centres étrangers 11 juin 2018~\decofourright}}}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{\large{Exercice 1} \hfill 4 points}
+ 
+\textbf{Pour tous les candidats}
+
+\medskip
+
+Dans une usine, on se propose de tester un prototype de hotte aspirante pour un local industriel.
+
+Avant de lancer la fabrication en série, on réalise l'expérience suivante : dans un local clos équipé
+du prototype de hotte aspirante, on diffuse du dioxyde de carbone (CO$_2$) à débit constant.
+
+Dans ce qui suit, $t$ est le temps exprimé en minute.
+
+À l'instant $t = 0$, la hotte est mise en marche et on la laisse fonctionner pendant $20$ minutes. Les
+mesures réalisées permettent de modéliser le taux (en pourcentage) de CO$_2$ contenu dans le local au
+bout de $t$ minutes de fonctionnement de la hotte par l'expression $f(t)$, où $f$ est la fonction définie
+pour tout réel $t$ de l'intervalle [0~;~20] par :
+$f(t) = (0,8t + 0,2)\e^{-0,5t} + 0,03$.
+
+\medskip
+
+\parbox{0.57\linewidth}{On donne ci-contre le tableau des variations de la fonction $f$ sur l'intervalle [0~;~20].
+
+Ainsi, la valeur $f(0) = 0,23$ traduit le fait que le taux 
+de CO$_2$ à l'instant $0$ est égal à 23\,\%.}\hfill
+\parbox{0.41\linewidth}{
+\begin{flushright}
+{\renewcommand{\arraystretch}{1.3}
+\psset{nodesep=3pt,arrowsize=2pt 3}%  paramètres
+\def\esp{\hspace*{0.7cm}}% pour modifier la largeur du tableau
+\def\hauteur{10pt}% mettre au moins 20pt pour augmenter la hauteur
+$\begin{array}{|c|*5{c}|}
+\hline
+t & 0  & \esp & 1,75 & \esp & 20 \\ 
+\hline
+f'(t) &  &   \pmb{+} & \vline\hspace{-2.7pt}0 & \pmb{-} & \\ 
+\hline
+ & &  &   \Rnode{max}{}  &  &   \\  
+f & &     &  &  &  \rule{0pt}{\hauteur} \\ 
+ & \Rnode{min1}{0,23} &   &  &  &   \Rnode{min2}{} \rule{0pt}{\hauteur}    
+ \ncline{->}{min1}{max} 
+ \ncline{->}{max}{min2} 
+ \\ 
+\hline
+\end{array} $
+}
+\end{flushright}}
+
+\bigskip
+
+\begin{enumerate}
+\item %Dans cette question, on arrondira les deux résultats au millième.
+	\begin{enumerate}
+		\item On trouve à la calculatrice que $f (20)\approx 0,031$.
+		\item Le taux maximal de CO$_2$ présent dans le local pendant l'expérience est $f(1,75)\approx 0,697$ ce qui correspond à $69,7\,\%$.
+ 	\end{enumerate}
+\item  On souhaite que le taux de CO$_2$ dans le local retrouve une valeur $V$ inférieure ou égale à $3,5$\,\%, c'est-à-dire $0,035$.
+	\begin{enumerate}
+		\item% Justifier qu'il existe un unique instant $T$ satisfaisant cette condition.
+On complète le tableau des variations de $f$ en plaçant la valeur $0,035$:		
+\begin{center}
+{\renewcommand{\arraystretch}{1.2}
+\psset{nodesep=3pt,arrowsize=2pt 3}%  paramètres
+\def\esp{\hspace*{2.5cm}}% pour modifier la largeur du tableau
+\def\hauteur{20pt}% mettre au moins 20pt pour augmenter la hauteur
+$\begin{array}{|c|*5{c}|}
+\hline
+t & 0  & \esp & 1,75 & \esp & 20 \\ 
+%\hline
+%f'(x) &  &   \pmb{+} & \vline\hspace{-2.7pt}0 & \pmb{-} & \\ 
+\hline
+ & &  &   \Rnode{max}{\approx 0,687}  &  &   \\  
+f & &     &  &  &  \rule{0pt}{\hauteur} \\ 
+ & \Rnode{min1}{0,23} &   &  &  &   \Rnode{min2}{\approx 0,031} \rule{0pt}{\hauteur}    
+ \ncline{->}{min1}{max} 
+ \ncline{->}{max}{min2} 
+% \rput*(-6.1,0.65){\Rnode{zero}{\blue 0}}
+%\rput(-6.1,2.4){\Rnode{alpha}{\blue \alpha}}
+%\ncline[linestyle=dotted, linecolor=blue]{alpha}{zero}
+\rput*(-2,0.65){\Rnode{zero2}{\red 0,035}}
+\rput(-2,2.4){\Rnode{beta}{\red T}}
+\ncline[linestyle=dotted, linecolor=red]{beta}{zero2}
+ \\ 
+\hline
+\end{array} $
+}
+\end{center}			
+
+D'après ce tableau, il n'existe qu'un instant $T$ pour lequel $V = 0,035$. 
+
+De plus, $V\leqslant 0,035$ pour tout $t$ de l'intervalle $[T\,;\,20]$.
+		
+		\item  On considère l'algorithme suivant :
+		
+\begin{center}
+\begin{tabularx}{0.5\linewidth}{|X|}\hline
+$t \gets 1,75$\\
+$p \gets 0,1$\\
+$V \gets 0,7$\\
+Tant que $V > 0,035$\\
+\hspace{0.75cm}$t \gets t + p$\\
+\hspace{0.75cm}$V \gets (0,8t + 0,2)\text{e}^{-0,5t} + 0,03$\\
+Fin Tant que\\ \hline
+\end{tabularx}
+\end{center}		
+		
+%Quelle est la valeur de la variable $t$ à la fin de l'algorithme ?
+	
+Par approximations successives, on trouve $f(15,65) \approx \np{0,0351} > 0,035$ et $f(15,75) \approx \np{0,0349} < 0,035$; donc la valeur de $t$ en sortie d'algorithme est $15,75$.
+
+$15,75$ est une valeur approchée du temps exprimé en minutes à partir duquel le taux de CO$_2$ sera inférieur à $3,5\,\%$; ce temps est donc de 15 minutes et 45 secondes.
+		
+%Que représente cette valeur dans le contexte de l'exercice ?
+ 	\end{enumerate}
+\item  On désigne par $V_m$ le taux moyen (en pourcentage) de CO$_2$ présent dans le local pendant les $11$
+premières minutes de fonctionnement de la hotte aspirante.
+	\begin{enumerate}
+		\item Soit $F$ la fonction définie sur l'intervalle $[0~;~11]$ par : 
+$F(t) = (-1,6t -3,6)\e^{-0,5t} +0,03t$.
+		
+La foncttion $F$ est dérivable sur $\R$ donc sur $[0~;~11]$ et
+
+$F'(t)=(-1,6) \times \e^{-0,5t} + (-1,6t-3,6) \times (-0,5)\e^{-0,5t} + 0,03
+= (-1,6 +0,8t + 1,8)\e^{-0,5t} + 0,03\\
+\phantom{F'(t)}
+= (0,8t + 0,2) \e^{-0,5t} + 0,03 = f(t)$.
+
+Donc la fonction $F$ est une primitive de la fonction $f$ sur $[0~;~11]$.
+		
+%Montrer que la fonction $F$ est une primitive de la fonction $f$ sur l'intervalle [0~;~11].
+		\item La  valeur moyenne $V_m$ de la fonction $f$ sur l'intervalle [0~;~11] est
+		
+$\dfrac{1}{11-0} \ds\int_{0}^{11} f(t) \d t= \dfrac{1}{11} \left [ F(11)- F(0)\strut\right ]
+		= \dfrac{1}{11} \left [ \left ( (-17,6 - 3,6) \e^{-5,5} + 0,33\right ) -  (-3,6)  \right ]
+		\approx 0,349$.
+		
+Le taux moyen de CO$_2$ pendant les 11 premières minutes est d'environ $34,9$\,\%.
+
+%Arrondir le résultat au millième, soit à $0,1$\,\%.
+	\end{enumerate}
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\textbf{\large{Exercice 2} \hfill 4 points}
+ 
+\textbf{Pour tous les candidats}
+
+\medskip
+
+%Pour chacune des quatre affirmations suivantes, indiquer si elle est vraie ou fausse, en justifiant la
+%réponse. Il est attribué un point par réponse exacte correctement justifiée. Une réponse inexacte ou
+%non justifiée ne rapporte ni n'enlève aucun point.
+%
+%\bigskip
+
+\begin{enumerate}
+\item Un type d'oscilloscope a une durée de vie, exprimée en année, qui peut être modélisée par une variable aléatoire $D$ qui suit une loi exponentielle de paramètre $\lambda$.
+
+On sait que la durée de vie moyenne de ce type d'oscilloscope est de $8$ ans.
+
+\smallskip
+
+\textbf{Affirmation 1 :} pour un oscilloscope de ce type choisi au hasard et ayant déjà fonctionné $3$ ans, la probabilité que la durée de vie soit supérieure ou égale à $10$ ans, arrondie au centième, est égale à $0,42$.
+
+\begin{list}{\textbullet}{}
+\item On cherche $P_{(D\geqslant 3)} \left ( D\geqslant 10\right )$. Comme la loi exponentielle est une loi à durée de vie sans vieillissement, $P_{(D\geqslant 3)} \left ( D\geqslant 10\right ) = P\left (D\geqslant 10-3\right ) = P\left (D\geqslant 7\right )$.
+\item La durée de vie moyenne est de 8 ans, donc la variable aléatoire $D$ a pour espérance mathématique $E(D)=8$. D'après le cours, $E(D)=\dfrac{1}{\lambda}$ donc $8=\dfrac{1}{\lambda}$ et donc $\lambda = \dfrac{1}{8}$.
+\item D'après le cours, $P\left ( D\leqslant t\right ) = 1-\e^{-\lambda t}$; donc $P\left ( D\geqslant t\right ) = 1-P\left ( D\leqslant t\right )  = 1-\left ( 1-\e^{-\lambda t}\right ) = \e^{-\lambda t}$.
+\item On en déduit que $P\left (D\geqslant 7\right ) = \e^{-\frac{1}{8}\times 7} \approx 0,42$.
+\end{list}
+\textbf{L'affirmation 1 est vraie.}
+
+%\emph{On rappelle que si $X$ est une variable aléatoire qui suit une loi exponentielle de paramètre $\lambda$, on a pour tout réel $t$ positif :} $P(X \leqslant t) = 1 - \text{e}^{-\lambda t}.
+
+\medskip
+
+\item  En 2016, en France, les forces de l'ordre ont réalisé $9,8$ millions de dépistages d'alcoolémie auprès des automobilistes, et 3,1\,\% de ces dépistages étaient positifs.
+%
+%Source : \emph{OFDT (Observatoire Français des Drogues et des Toxicomanies)}
+
+Dans une région donnée, le 15 juin 2016, une brigade de gendarmerie a effectué un dépistage
+sur $200$ automobilistes.
+
+\smallskip
+
+\textbf{Affirmation 2 :} en arrondissant au centième, la probabilité que, sur les $200$ dépistages, il y ait eu strictement plus de $5$ dépistages positifs, est égale à $0,59$.
+
+\begin{list}{\textbullet}{}
+\item La proportion de dépistages positifs sur 9,8 millions de dépistages d'alcoolémie est de $3,1\,\%$ donc on peut considérer que la probabilité qu'un dépistage soit positif est égale à $p=0,031$.
+\item On réalise 200 dépistages dont les résultats sont indépendants les uns des autres; donc la variable aléatoire $X$ qui donne le nombre de dépistages positifs suit la loi binomiale de paramètres $n=200$ et $p=0,031$.
+\item On cherche donc $P\left ( X>5\right )$ c'est-à-dire $1-P\left (X\leqslant 5\right )$.
+\item À la calculatrice, on trouve $P\left (X\leqslant 5\right ) \approx 0,41$ donc $P\left ( X>5\right ) \approx 0,59$.
+\end{list}
+\textbf{L'affirmation 2 est vraie.}
+
+\medskip
+
+\item  On considère dans $\R$ l'équation :
+$\ln (6 x - 2) + \ln (2x - 1) = \ln (x).$
+
+\smallskip
+
+\textbf{Affirmation 3 :} l'équation admet deux solutions dans l'intervalle $\left]\frac{1}{2}~;~+ \infty\right[$.
+
+\begin{list}{\textbullet}{}
+\item Soit $I=\left]\frac{1}{2}~;~+ \infty\right[$. 
+\begin{list}{$\circ$}{}
+\item $\ln\left (6x-2\right )$ n'existe que si $6x-2>0$, c'est-à-dire $x>\dfrac{1}{3}$; donc $\ln\left (6x-2\right )$ existe si $x\in I$.
+\item $\ln\left (2x-1\right )$ n'existe que si $2x-1>0$, c'est-à-dire $x>\dfrac{1}{2}$; donc $\ln\left (2x-1\right )$ existe si $x\in I$.
+\item $\ln\left (x\right )$ n'existe que si $x>0$; donc $\ln\left (x\right )$ existe si $x\in I$.
+\end{list}
+\item Sur l'intervalle $I$:
+
+$\ln (6 x - 2) + \ln (2x - 1) = \ln (x) 
+\iff \ln \left ((6 x - 2)(2x - 1)\strut\right ) = \ln (x)
+\iff  (6 x - 2)(2x - 1) = x \newline
+\iff 12x^2 - 4x - 6x + 2 = x
+\iff 12x^2 -11x +2=0$
+\item On résout dans $I$ l'équation $12x^2 -11x +2=0$.
+
+$\Delta = 11^2 - 4\times 12\times 2 = 25 = 5^2$;
+$x'=\dfrac{11+5}{2\times 12} = \dfrac{16}{24}=\dfrac{2}{3}$ et
+$x''=\dfrac{11-5}{24}=\dfrac{6}{24}= \dfrac{1}{4}$
+
+$x'\in I$ et $x'' \not\in I$ donc l'équation du départ n'admet qu'une solution dans l'intervalle $I$.
+\end{list}
+\textbf{L'affirmation 3 est fausse.}
+
+\medskip
+
+\item  On considère dans $\C$ l'équation : 
+$\left(4z^2 - 20z + 37\right)(2z -7 + 2\i) = 0$.
+
+\smallskip
+
+\textbf{Affirmation 4 :} les solutions de l'équation sont les affixes de points appartenant à un même cercle de centre le point P d'affixe $2$.
+
+\begin{list}{\textbullet}{}
+\item Les solutions de l'équation $\left(4z^2 - 20z + 37\right)(2z -7 + 2\i) = 0$ sont les solutions des deux équations $4z^2 - 20z + 37 = 0$ et $2z -7 + 2\i = 0$.
+\item On résout dans $\C$ l'équation $4z^2 - 20z + 37 = 0$.
+
+$\Delta=20^2 - 4\times 4\times 37 = -192<0$; l'équation admet donc deux solutions complexes conjuguées:
+$z_1 = \dfrac{20 + \i \sqrt{192}}{2\times 4} = \dfrac{20 + 8\i \sqrt{3}}{8} = \dfrac{5}{2}+\i\sqrt{3}$ et $z_2 = \dfrac{5}{2} - \i\sqrt{3}$
+
+\item On résout dans $\C$ l'équation $2z-7+2\i=0$:
+$2z-7+2\i=0 \iff 2z=7-2\i \iff z = \dfrac{7}{2} - \i$
+
+Cette équation a pour solution le nombre complexe $z_3=\dfrac{7}{2}- \i$.
+
+\item On appelle  A, B et C les points d'affixes respectives $z_1$, $z_2$ et $z_3$.
+
+\begin{list}{$\circ$}{}
+\item $\mathrm{PA} = \left |  z_1 - z_{\mathrm{P}} \strut\right | = \left | \dfrac{5}{2} + \i\sqrt{3} -2 \right | = \left |  \dfrac{1}{2} +\i\sqrt{3} \right | = \ds\sqrt{\dfrac{1}{4} + 3} = \ds\sqrt{\dfrac{13}{4}}$
+\item $\mathrm{PB} = \left |z_2 - z_{\mathrm{P}} \strut\right | = \left |\dfrac{5}{2} - \i\sqrt{3}-2 \right | = \left |  \dfrac{1}{2} - \i\sqrt{3} \right | = \ds\sqrt{\dfrac{1}{4} + 3} = \ds\sqrt{\dfrac{13}{4}}$
+\item $\mathrm{PC} = \left | z_3 - z_{\mathrm{P}} \strut\right | = \left |\dfrac{7}{2} - \i -2 \right | = \left | \dfrac{3}{2} - \i \right | = \ds\sqrt{\dfrac{9}{4} + 1} = \ds\sqrt{\dfrac{13}{4}}$
+\end{list}
+
+\item $\mathrm{PA} = \mathrm{PB} = \mathrm{PC}$ donc les solutions de l'équation sont les affixes de trois points situés sur le cercle de centre P d'affixe 2 et de rayon $\dfrac{13}{4}$.
+
+\end{list}
+\textbf{L'affirmation 4 est vraie.}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\textbf{\large{Exercice 3} \hfill 7 points}
+ 
+\textbf{Pour tous les candidats}
+
+%\medskip
+%
+%\emph{Les parties \emph{A} et \emph{B} sont indépendantes}
+
+\medskip
+
+Un détaillant en fruits et légumes étudie l'évolution de ses ventes de melons afin de pouvoir
+anticiper ses commandes.
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+Le détaillant constate que ses melons se vendent bien lorsque leur masse est comprise entre $900$ g et \np{1200}~g. Dans la suite, de tels melons sont qualifiés \og conformes \fg.
+
+Le détaillant achète ses melons auprès de trois maraîchers, notés respectivement A, B et C.
+
+Pour les melons du maraîcher A, on modélise la masse en gramme par une variable aléatoire $M_{\text{A}}$ qui suit une loi uniforme sur l'intervalle $[850~;~x]$, où $x$ est un nombre réel supérieur à \np{1200}.
+
+La masse en gramme des melons du maraîcher B est modélisée par une variable aléatoire $M_{\text{B}}$ qui suit une loi normale de moyenne \np{1050} et d'écart-type inconnu $\sigma$.
+
+Le maraîcher C affirme, quant à lui, que 80\,\% des melons de sa production sont conformes.
+
+\medskip
+
+\begin{enumerate}
+\item Le détaillant constate que 75\,\% des melons du maraîcher A sont conformes. %Déterminer $x$.
+
+Autrement dit, la probabilité qu'un melon du maraîcher A soit conforme est $0,75$; on a donc $P\left ( M_{\mathrm{A}} \in \cd 900~,~\np{1200}\cg \right ) = 0,75$.
+
+Comme la variable aléatoire $M_{\mathrm{A}}$ suit une loi uniforme sur $\cd 850~,~x\cg$, on a\\
+$P\left ( M_{\mathrm{A}} \in \cd 900~,~\np{1200}\cg \strut \right ) = \dfrac{\np{1200}-900}{x-850}$.
+
+On en déduit que $\dfrac{\np{1200}-900}{x-850} = 0,75$ ce qui équivaut à
+$300 = 0,75x - 637,5$ ou à $937,5 = 0,75x$ c'est-à-dire $x=\np{1250}$.
+
+\item Le détaillant constate que 85\,\% des melons fournis par le maraîcher B sont conformes; autrement dit, $P\left (900 \leqslant M_{\mathrm{B}} \leqslant \np{1200} \right ) = 0,85$.
+
+D'après les propriétés de la loi normale, $P\left (M_{\mathrm{B}} \leqslant 900\right ) = P\left (M_{\mathrm{B}} \geqslant \np{1200}\right )= \dfrac{1-0,85}{2}=0,075$.
+
+\begin{center}
+\bigskip
+\psset{xunit=0.9cm, yunit=8cm, runit=1cm, arrowsize=3pt 3, algebraic=true}
+\def\xmin {-3}   \def\xmax {12}
+\def\ymin {-0.1} \def\ymax {0.31}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[subgriddiv=0, gridlabels=0, gridcolor=white, subgridcolor=gray](0,0)(\xmin,0)(\xmax,\ymax)
+%\psaxes[labelFontSize=\small, ticksize=-0pt 0pt, Dx=1, Dy=0.1, labels=none]{->}(0,0)(\xmin,-0.1)(\xmax,\ymax)
+\psline{->}(\xmin,0)(\xmax,0)
+\def\m{4}% moyenne 
+\def\s{2}% écart type
+\def\f{1/(\s*sqrt(2*PI))*EXP((-((x-\m)/\s)^2)/2)}
+\psplot[plotpoints=1000]{\xmin}{\xmax}{\f}
+\def\inf{2} \def\sup{6}
+\pscustom[fillstyle=hlines,linestyle=solid,linewidth=0.5pt, hatchcolor=red,hatchangle=-45]
+{
+\psplot{\inf}{\sup}{\f} % courbe de f sur [inf ; sup]
+\lineto(\sup,0)\lineto(\inf,0)
+\closepath % indispensable !
+}
+\uput[d](\m,0){$\np{1050}$} 
+\psline[linestyle=dashed, dash=1pt 1pt](\m,0)(\m,\ymax)
+\uput[d](\inf,0){$900$}
+\uput[d](\sup,0){$\np{1200}$}
+\psline[linestyle=dashed, dash=2pt 2pt,linecolor=red]{->}(6,0.25)(5,0.1)
+\uput[70](6,0.25){\red $85\,\%$}
+\psline[linestyle=dashed, dash=2pt 2pt]{->}(8,0.2)(6.5,0.03)
+\uput[ur](8,0.2){$7,5\,\%$}
+\psline[linestyle=dashed, dash=2pt 2pt]{->}(-1,0.2)(1.5,0.03)
+\uput[ul](-1,0.2){$7,5\,\%$}
+\end{pspicture*}
+\end{center}
+
+On en déduit que $P\left (M_{\mathrm{B}} \leqslant \np{1200}\right )=0,075+0,85=0,925$.
+
+\smallskip
+
+D'après le cours, on sait que si la variable aléatoire $X$ suit la loi normale de paramètres $\mu$ et $\sigma$, la variable aléatoire $Z=\dfrac{X-\mu}{\sigma}$ suit la loi normale centrée réduite.
+
+$M_{\mathrm{B}} \leqslant \np{1200} 
+\iff M_{\mathrm{B}} - \np{1050} \leqslant \np{150}
+\iff \dfrac{M_{\mathrm{B}} - \np{1050}}{\sigma} \leqslant \dfrac{150}{\sigma}
+\iff Z \leqslant \dfrac{150}{\sigma}$ où
+$Z=\dfrac{M_{\mathrm{B}}-\np{1050}}{\sigma}$.
+
+Donc  $P\left (M_{\mathrm{B}} \leqslant \np{1200}\right )=0,925$
+équivaut à $P\left (Z \leqslant \dfrac{150}{\sigma}\right )=0,925$.
+
+Pour $Z$ suivant la loi normale centré réduite, le nombre $\beta$ tel que $P(Z \leqslant \beta) = 0,925$ vaut environ $1,44$ (à la calculatrice).
+
+Donc $\dfrac{150}{\sigma} \approx 1,44$ donc $\sigma \approx 104$.
+
+La valeur arrondie à l'unité de l'écart-type $\sigma$ de la variable aléatoire $M_{\text{B}}$ est $104$.
+
+\item  Le détaillant doute de l'affirmation du maraîcher C. Il constate que sur $400$ melons livrés par ce maraîcher au cours d'une semaine, seulement $294$ sont conformes.
+
+La maraîcher C affirme que 80\,\% de ses melons sont conformes donc on prend $p=0,80$.
+
+On va tester cette hypothèse sur un échantillon de taille $n=400$.
+
+$n=400 \geqslant 30$, $np=320 \geqslant 5$ et $n(1-p) = 80 \geqslant 5$, donc les conditions sont remplies pour que l'on puisse établir un intervalle de fluctuation asymptotique au seuil de 95\,\% de la proportion de melons conformes dans des échantillons de taille 400:
+
+\medskip
+
+$I=\left[ p- 1,96 \dfrac{\ds \sqrt{p\left(1-p\right)}}{\ds \sqrt{n}}\:;\: p + 1,96\dfrac{\ds \sqrt{p\left(1-p\right)}}{\ds\sqrt{n}} \right]
+= \left[ 0,8- 1,96 \dfrac{\ds \sqrt{0,8\times 0,2}}{\ds \sqrt{400}}\:;\: 0,8 + 1,96\dfrac{\ds \sqrt{0,8\times 0,2}}{\ds\sqrt{400}} \right]\\[5pt]
+\phantom{I}
+= \cd \np{0,7608}\:;\:\np{0,8392}\cg$
+
+\smallskip
+
+Dans l'échantillon testé, il y a 294 melons conformes donc la fréquence des melons conformes dans cet échantillon est $f=\dfrac{294}{400}=0,735$.
+
+$f \not\in I$ donc le détaillant a raison de douter de l'affirmation du maraîcher C avec le risque de 5\,\% de se tromper.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+Le détaillant réalise une étude sur ses clients. Il constate que:
+
+\begin{itemize}
+\item parmi les clients qui achètent un melon une semaine donnée, 90\,\% d'entre eux achètent un
+melon la semaine suivante;
+\item parmi les clients qui n'achètent pas de melon une semaine donnée, 60\,\% d'entre eux n'achètent
+pas de melon la semaine suivante.
+\end{itemize}
+
+\smallskip
+
+On choisit au hasard un client ayant acheté un melon au cours de la semaine 1 et, pour $n \geqslant 1$, on
+note $A_n$ l'évènement : \og le client achète un melon au cours de la semaine $n$ \fg.
+
+On a ainsi $p\left(A_1\right) = 1$.
+
+\medskip
+
+\parbox{0.6\linewidth}{\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item On complète l'arbre de probabilités relatif aux trois premières semaines.
+		
+		\item% Démontrer que $p\left(A_3\right) = 0,85$.
+D'après la formule des probabilités totales:
+
+$P\left(A_3\right) = P\left ( A_2 \cap A_3\right ) + P\left ( \overline{A_2} \cap A_3\right )\\
+\phantom{P\left(A_3\right)}
+= P\left (A_2\right ) \times P_{A_2} \left ( A_3\right ) +  P\left (\overline{A_2}\right ) \times P_{\overline{A_2}} \left ( A_3\right ) \\
+\phantom{P\left(A_3\right)}
+= 0,9\times 0,9 + 0,1\times 0,4 = 0,81+0,04=0,85$
+		
+		\item Sachant que le client achète un melon au cours de la semaine 3, la probabilité qu'il en ait acheté un au cours de la semaine 2 est:
+		
+$P_{A_3}\left (A_2\right ) = \dfrac{P\left (A_2\cap A_3\right )}{P\left (A_3\right )}
+=\dfrac{0,9\times 0,9}{0,85} \approx 0,95$.
+		
+%Arrondir au centième.
+	\end{enumerate}
+\end{enumerate}
+}\hfill 
+\parbox{0.31\linewidth}{
+\pstree[treemode=R,nodesep=3pt,nrot=:U]
+{\TR{$A_1$}}
+{
+   \pstree{\TR{$A_2$}\naput{$0,9$}}
+      {
+       \TR{$A_3$}\naput{$0,9$}
+       \TR{$\overline{A_3}$}\nbput{\red \small $1-0,9=0,1$}
+      }
+   \pstree{\TR{$\overline{A_2}$} \nbput{\red \small $1-0,9=0,1$}}
+     {
+     \TR{$A_3$}\naput{\red\small $1-0,6=0,4$}
+     \TR{$\overline{A_3}$}\nbput{$0,6$}
+     }
+}
+}
+\medskip
+	
+Dans la suite, on pose pour tout entier $n \geqslant 1$ : \:$p_n = P\left(A_n\right)$. On a ainsi $p_1 = 1$.
+
+\medskip
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item %Démontrer que, pour tout entier $n \geqslant 1$ : $p_{n+1} = 0,5p_n + 0,4$.
+On représente un arbre pondéré correspondant aux semaines $n$ et $n+1$:
+
+\begin{center}
+\bigskip
+\pstree[treemode=R,nodesepA=0pt,nodesepB=3pt,treesep=1cm,levelsep=3cm,nrot=:U]
+{\TR{}}
+{
+   \pstree[nodesepA=3pt]{\TR{$A_{n}$}\naput{$p_{n}$}}
+      {
+       \TR{$A_{n+1}$}\naput{$0,9$}
+       \TR{$\overline{A_{n+1}}$}\nbput{$0,1$}
+      }
+   \pstree[nodesepA=3pt]{\TR{$\overline{A_{n}}$} \nbput{$1-p_{n}$}}
+     {
+     \TR{$A_{n+1}$}\naput{$0,4$}
+     \TR{$\overline{A_{n+1}}$}\nbput{$0,6$}
+     }
+}
+\bigskip
+\end{center}
+
+D'après la formule des probabilités totales:
+
+$p_{n+1}=P\left (A_{n+1}\right )=P\left (A_{n}\cap A_{n+1}\right ) + P\left ( \overline{A_{n}}\cap A_{n+1}\right ) = p_{n}\times 0,9 + \left (1-p_{n}\right ) \times 0,4
+= 0,5p_n+0,4$.
+
+\item 
+	\begin{enumerate}
+		\item Soit $\mathcal{P}_n$ la propriété: $p_n > 0,8$.
+\begin{list}{\textbullet}{}
+\item \textbf{Initialisation}
+
+On sait que $p_1=1$ donc $p_1>0,8$; la propriété est vraie au rang 1.
+
+\item \textbf{Hérédité}
+
+Soit un entier naturel $k\geqslant 1$ tel que la propriété soit vraie au rang $k$, c'est-à-dire $p_k>0,8$. C'est l'hypothèse de récurrence.
+
+On va démontrer que la propriété est vraie au rang $k+1$.
+
+D'après l'hypothèse de récurrence, $p_k>0,8$ donc $0,5p_k > 0,4$ et donc $0,5p_k + 0,4 >0,8$ qui signifie $p_{k+1}>0,8$. La propriété est donc vraie au rang $k+1$.
+
+\item \textbf{Conclusion}
+
+La propriété est vraie pour $n=1$ et elle est héréditaire pour tout $k\geqslant 1$; d'après le principe de récurrence, elle est vraie pour tout $n\geqslant 1$.
+\end{list}		
+
+On a donc démontré que, pour tout entier naturel non nul, $p_n >0,8$.
+		
+		\item %Démontrer que la suite $\left(p_n\right)$ est décroissante.
+Pour tout $n\geqslant 1$, $p_{n+1}-p_{n} = 0,5p_n+0,4-p_n = 0,4-0,5p_n$.
+
+Or $p_n>0,8$ donc $0,5p_n>0,4$ donc $-0,5p_n<-0,4$ et donc $0,4-0,5p_n<0$.
+
+On en déduit que, pour tout $n\geqslant 1$, $p_{n+1}-p_n<0$ et donc que la suite $(p_n)$ est strictement décroissante.		
+				
+		\item% La suite $\left(p_n\right)$ est-elle convergente ?
+Pour tout $n\geqslant 1$, $p_n>0,8$ donc la suite $(p_n)$ est minorée par $0,8$.
+
+On a vu aussi que la suite $(p_n)$ était décroissante.
+
+D'après le théorème de la convergence monotone, on peut déduire que la suite $(p_n)$ est convergente.		
+		
+		
+ 	\end{enumerate}
+\item On pose pour tout entier $n \geqslant 1$ : $v_n = p_n - 0,8$ donc $p_n=v_n+0,8$.
+	\begin{enumerate}
+		\item %Démontrer que $\left(v_n\right)$ est une suite géométrique dont on donnera le premier terme $v_1$ et la raison.
+\begin{list}{\textbullet}{}
+\item $v_{n+1} = p_{n+1}-0,8 = 0,5p_n+0,4-0,8 = 0,5\left ( v_n+0,8\right )-0,4 = 0,5v_n+0,4-0,4=0,5v_n$
+\item $v_1 = p_1-0,8 = 1-0,8 = 0,2$
+\end{list}		
+		
+Donc la suite $(v_n)$ est géométrique de raison $q=0,5$ et de premier terme $v_1=0,2$.		
+		
+		\item  On déduit de la question précédente que, pour tout $n\geqslant 1$,
+		$v_n=v_1\times q^{n-1} = 0,2 \times 0,5^{n-1}$.
+		
+%En déduire que, pour tout $n \geqslant 1$,\: $p_n = 0,8 + 0,2 \times  0,5^{n-1}$.
+Comme pour tout $n\geqslant 1$, $p_n=v_n+0,8$, on en déduit que $p_n=0,8+0,2\times 0,5^{n-1}$.
+
+		\item%  Déterminer la limite de la suite $\left(p_n\right)$.
+La suite $(v_n)$ est géométrique de raison $0,5$ et $-1<0,5<1$ donc la suite $(v_n)$ est convergente vers 0. Pour tout $n>0$, $p_n=v_n+0,8$ donc la suite $(p_n)$ est convergente et a pour limite $0,8$.		
+		
+		
+	\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\textbf{\large{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats n'ayant pas suivi la spécialité mathématique}
+
+\medskip
+
+\parbox{0.49\linewidth}{La figure ci-contre représente un cube ABCDEFGH.
+
+Les trois points I, J, K sont définis par les conditions
+suivantes :
+
+\begin{itemize}
+\item I est le milieu du segment [AD] ;
+\item J est tel que $\vect{\text{AJ}} = \dfrac{3}{4} \vect{\text{AE}}$ ;
+\item K est le milieu du segment [FG].
+\end{itemize}}
+\hfill
+\parbox{0.49\linewidth}{
+\begin{center}
+\psset{unit=0.9cm}
+\begin{pspicture}(-0.5,-0.5)(8,7.8)
+\psset{nodesep=0pt, radius=0pt}
+\Cnode*(0,0){A}           \uput[dl](A){A}
+\Cnode*(4.5,0){B}       \uput[dr](B){B}
+\Cnode*(4.5,4.5){F}    \uput[-10](F){F}
+\Cnode*(0,4.5){E}       \uput[ul](E){E}
+\Cnode*(6.7,6.8){G}   \uput[ur](G){G}
+\Cnode*(2.2,6.8){H}   \uput[ul](H){H}
+\Cnode*(6.7,2.3){C}   \uput[r](C){C}
+\Cnode*(2.2,2.3){D}   \uput[160](D){D}
+\pspolygon(A)(B)(F)(E)%ABFE
+\psline(E)(H)(G)(C)(B)
+\psline(F)(G)
+\psline[linestyle=dashed](A)(D)(H)
+\psline[linestyle=dashed](D)(C)
+\psset{radius=2pt}
+\Cnode*(1.1,1.15){I}     \uput[l](I){I}
+\Cnode*(0,3.375){J}     \uput[dl](J){J}
+\Cnode*(5.6,5.65){K}   \uput[u](K){K}
+\end{pspicture}
+\end{center}
+}
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+\begin{enumerate}
+\item %Sur la figure donnée en annexe, construire sans justifier le point d'intersection P du plan (IJK) et de la droite (EH). On laissera les traits de construction sur la figure.
+Construction du point P, intersection du plan (IJK) et de la droite (EH): voir figure.
+\item%  En déduire, en justifiant, l'intersection du plan (IJK) et du plan (EFG).
+\begin{list}{\textbullet}{}
+\item Le point P est le point d'intersection du plan (IJK) et de la droite (EH); le point H appartient au plan (EFG) donc la droite (EH) est contenue dans le plan (EFG). \\
+On en déduit que $\mathrm{P} \in (\mathrm{IJK}) \cap (\mathrm{EFG})$.
+\item Le point K appartient au plan (IJK) et à la droite (FG) qui est contenue dans le plan (EFG).\\
+ On en déduit que $\mathrm{K} \in (\mathrm{IJK}) \cap (\mathrm{EFG})$.
+\item Les plans (IJK) et (EFG) ne sont pas parallèles donc leur intersection est une droite. Les deux points P et K appartiennent à l'intersection des deux plans donc l'intersection des deux plans (IJK) et (EFG) est la droite (PK).
+\end{list}
+\end{enumerate}
+ 
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+On se place désormais dans le repère orthonormé $\left(\text{A}~;~\vect{\text{AB}}, \vect{\text{AD}}, \vect{\text{AE}}\right)$.
+
+On a donc
+$\mathrm{A}\:\begin{pmatrix}0 \\ 0 \\ 0 \end{pmatrix}$,
+$\mathrm{B}\:\begin{pmatrix}1 \\ 0 \\ 0 \end{pmatrix}$,
+$\mathrm{D}\:\begin{pmatrix}0 \\ 1 \\ 0 \end{pmatrix}$ et
+$\mathrm{E}\:\begin{pmatrix}0 \\ 0 \\ 1 \end{pmatrix}$.
+On a aussi
+$\mathrm{C}\:\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}$,
+$\mathrm{F}\:\begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}$,
+$\mathrm{H}\:\begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}$ et
+$\mathrm{G}\:\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}$.
+
+\medskip
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item% Donner sans justification les coordonnées des points I, J et K.
+\begin{list}{\textbullet}{}
+\item Le point I est le milieu de [AD] donc I a pour coordonnées
+$\begin{pmatrix}0 \\  \frac{1}{2} \\ 0 \end{pmatrix}$.
+\item Le point J est défini par $\vect{\text{AJ}} = \dfrac{3}{4} \vect{\text{AE}}$ et le vecteur $\vect{\text{AE}}$ a pour coordonnées  $\begin{pmatrix}0 \\  0 \\ 1 \end{pmatrix}$; donc le point J a pour coordonnées $\begin{pmatrix}0 \\  0 \\ \frac{3}{4} \end{pmatrix}$.
+\item Le point K est le milieu de [FG] donc K a pour coordonnées
+$\begin{pmatrix} 1 \\  \frac{1}{2} \\ 1 \end{pmatrix}$.
+\end{list}		
+		
+		\item  Soit $\vect{n}$ le vecteur de coordonnées $(4~;~a~;~b)$. %soit orthogonal aux vecteurs $\vect{\text{IJ}}$ et $\vect{\text{IK}}$.
+\begin{list}{\textbullet}{}
+\item $\vect{n}$ est orthogonal à $\vect{\text{IJ}}$ si et seulement si leur produit scalaire est nul.
+
+Le vecteur $\vect{\text{IJ}}$ a pour coordonnées 
+$\begin{pmatrix} 0 - 0 \\ 0 - \frac{1}{2} \\ \frac{3}{4} - 0 \end{pmatrix}
+= \begin{pmatrix} 0 \\ -\frac{1}{2} \\ \frac{3}{4}\end{pmatrix}$.
+
+$\vect{n} \perp \vect{\text{IJ}}\iff \vect{n} \;.\; \vect{\text{IJ}}=0
+\iff  0 - \dfrac{a}{2}+\dfrac{3b}{4} = 0 \iff 3b=2a$
+
+\item $\vect{n}$ est orthogonal à $\vect{\text{IK}}$ si et seulement si leur produit scalaire est nul.
+
+Le vecteur $\vect{\text{IK}}$ a pour coordonnées 
+$\begin{pmatrix} 1 - 0 \\ \frac{1}{2} - \frac{1}{2} \\ 1 - 0 \end{pmatrix}
+= \begin{pmatrix} 1 \\ 0 \\ 1\end{pmatrix}$.
+
+$\vect{n} \perp \vect{\text{IK}}\iff \vect{n} \;.\; \vect{\text{IK}}=0
+\iff  4+0+b=0 \iff b=-4$
+
+\item $b=-4$ et $3b=2a$ donc $a=-6$
+\end{list}		
+
+Donc le vecteur $\vect{n}$ a pour coordonnées
+$\begin{pmatrix} 4 \\ -6 \\ -4 \end{pmatrix}$.
+		
+		\item%  En déduire qu'une équation cartésienne du plan (IJK) est : $4x - 6y - 4z + 3 = 0$.
+Le vecteur $\vect{n}$ est orthogonal aux deux vecteurs non colinéaires	$\vect{\text{IJ}}$ et  $\vect{\text{IK}}$	donc c'est un vecteur normal au plan (IJK). Ce plan (IJK) contient le point I.
+
+Le plan (IJK) est donc l'ensemble des points M de coordonnées $(x,y,z)$ tels que les vecteurs  $\vect{n}$ et $ \vect{\text{IM}}$ soient orthogonaux.
+
+Le vecteur $\vect{\text{IM}}$ a pour coordonnées
+$\begin{pmatrix} x-0 \\ y-\frac{1}{2} \\ z-0\end{pmatrix}
+=\begin{pmatrix} x\\ y-\frac{1}{2} \\ z\end{pmatrix}$.
+
+$\vect{n} \perp  \vect{\text{IM}} \iff \vect{n}\;.\;\vect{\text{IM}}=0
+\iff 4x -6\left (y-\dfrac{1}{2}\right ) -4z=0
+\iff 4x -6y -4z +3=0$
+
+Le plan (IJK) a donc pour équation cartésienne $4x -6y -4z +3=0$.
+		
+	\end{enumerate}
+\item 
+	\begin{enumerate}
+		\item %Donner une représentation paramétrique de la droite (CG).
+La droite (CG) passe par le point C et a pour vecteur directeur $\vect{\mathrm{CG}}$ égal au vecteur $\vect{\mathrm{AE}}$ de coordonnées
+$ \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}$.
+
+La droite (CG) est donc l'ensemble des points M de coordonnées $(x,y,z)$ tels que $\vect{\mathrm{CM}}$ soit colinéaire à $\vect{\mathrm{CG}}$, ce qui s'écrit:
+
+$\vect{\mathrm{CM}} = t \vect{\mathrm{CG}}
+\iff 
+\left \lbrace
+\begin{array}{l !{=} l}
+x-1 & 0t\\
+y-1 & 0t\\
+z-0 & 1t
+\end{array}
+\right .
+\iff
+\left \lbrace
+\begin{array}{l !{=} l}
+x & 1\\
+y & 1\\
+z & t
+\end{array}
+\right .$ avec $t\in \R$.
+
+La droite (CG) a donc pour représentation paramétrique 
+$\left \lbrace
+\begin{array}{l !{=} l l}
+x & 1\\
+y & 1 & t\in \R.\\
+z & t
+\end{array}
+\right .$
+		
+		\item Les coordonnées $(x,y,z)$ du point N, intersection du plan (IJK) et de la droite (CG) vérifient le système
+$\left \lbrace
+\begin{array}{r !{=} l}
+x & 1\\
+y & 1 \\
+z & t\\
+4x-6y-4z+3 & 0
+\end{array}
+\right .$	
+
+La 4\ieme{} équation donne $4-6-4t+3=0$ ce qui entraîne que $t=\dfrac{1}{4}$.
+
+La point N a donc pour coordonnées
+$\begin{pmatrix} 1 \\ 1 \\ \frac{1}{4}\end{pmatrix}$.
+		
+		\item Placement du point N  et construction de la section du cube par le plan (IJK):
+		
+\begin{center}
+\scalebox{0.8}
+{
+\psset{unit=1cm}
+\begin{pspicture}(-0.5,-2)(9,7.8)
+\psset{nodesep=0pt, radius=0pt}
+\Cnode*(0,0){A}           \uput[dl](A){A}
+\Cnode*(4.5,0){B}       \uput[dr](B){B}
+\Cnode*(4.5,4.5){F}    \uput[-10](F){F}
+\Cnode*(0,4.5){E}       \uput[ul](E){E}
+\Cnode*(6.7,6.8){G}   \uput[ur](G){G}
+\Cnode*(2.2,6.8){H}   \uput[ul](H){H}
+\Cnode*(6.7,2.3){C}   \uput[r](C){C}
+\Cnode*(2.2,2.3){D}   \uput[160](D){D}
+\pspolygon(A)(B)(F)(E)%ABFE
+\psline(E)(H)(G)(C)(B)
+\psline(F)(G)
+\psline[linestyle=dashed](A)(D)(H)
+\psline[linestyle=dashed](D)(C)
+\psset{radius=2pt}
+\Cnode*(1.1,1.15){I}     \uput[l](I){I}
+\Cnode*(0,3.375){J}      \uput[dl](J){J}
+\Cnode*(5.6,5.65){K}    \uput[u](K){K}
+\psset{linecolor=red}
+\ncline[nodesepA=0cm,nodesepB=-3cm]{I}{J}
+\ncline[nodesepA=2.2cm,nodesepB=-1.35cm,linestyle=dashed]{J}{I}
+\ncline[nodesepA=3.6cm,nodesepB=-4cm]{J}{I}
+\ncline[nodesepA=4.5cm,nodesepB=-2.2cm,linestyle=dashed]{H}{D}
+\ncline[nodesepA=6.8cm,nodesepB=-4cm]{H}{D}
+\ncline[nodesepA=4.5cm,nodesepB=-4cm]{H}{G}
+\ncline[nodesepA=3cm,nodesepB=-2cm]{H}{E}
+\Cnode*(-0.367,4.117){P}     \uput[160](P){\red P}
+\ncline[nodesepA=-1cm,nodesepB=-6cm]{P}{K}
+\Cnode*(6.7,3.425){N}          \uput[dr](N){\red N}
+{\psset{radius=0pt}%%% points cachés
+\Cnode*(2.2,-1,075){X}
+\Cnode*(5.575,2.3){Y}
+\Cnode*(1.078,4.5){Z}
+}
+\ncline[nodesepA=6cm,nodesepB=-6cm]{X}{N}
+\ncline[nodesepA=1.5cm,nodesepB=0cm,linestyle=dashed]{X}{N}
+\ncline[nodesepA=-1cm,nodesepB=4.8cm]{X}{N}
+\pspolygon[fillstyle=vlines,hatchcolor=blue,linecolor=blue](I)(J)(Z)(K)(N)(Y)
+\end{pspicture}
+}%%% fin du scalebox
+\end{center}
+	\end{enumerate}
+	
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+\medskip
+
+On note R le projeté orthogonal du point F sur le plan (IJK). Le point R est donc l'unique point du plan (IJK) tel que la droite (FR) est orthogonale au plan (IJK).
+
+On définit l'intérieur du cube comme l'ensemble des points M\,$(x~;~y~;~z)$ tels que $\left\{\begin{array}{l}
+0 < x < 1\\
+0 < y < 1\\
+0 < z < 1
+\end{array}\right.$
+
+%Le point R est-il à l'intérieur du cube ?
+
+%Le point R appartient au plan (IJK) donc ses coordonnées vérifient l'équation du plan:$4x_{\mathrm{R}} - 6_{\mathrm{R}} -4z_{\mathrm{R}} +3=0$.
+
+Le point R est le projeté orthogonal de F sur le plan (IJK) donc le vecteur $\vect{\mathrm{FR}}$ est orthogonal au plan, donc il est colinéaire au vecteur $\vect n$;  les coordonnées de $\vect{\mathrm{FR}}$ sont donc de la forme 
+$\begin{pmatrix} 4k \\ -6k \\ -4k \end{pmatrix}$ où $k\in\R$.
+
+Le point F a pour coordonnées
+$\begin{pmatrix}  1 \\ 0 \\ 1 \end{pmatrix}$
+donc le vecteur $\vect{\mathrm{FR}}$ a pour coordonnées 
+$\begin{pmatrix}  x_{\mathrm{R}} - 1 \\ y_{\mathrm{R}} \\ z_{\mathrm{R}}-1 \end{pmatrix}$.
+
+On en déduit que R a pour coordonnées
+$\begin{pmatrix} 1+4k \\ -6k \\ 1-4k \end{pmatrix}$.
+
+On pourrait calculer la valeur du réel $k$ en utilisant le fait que R est un point du plan (IJK) donc que ses coordonnées vérifient $4x_{\mathrm{R}} - 6_{\mathrm{R}} -4z_{\mathrm{R}} +3=0$.
+
+Mais si on trouve $k\geqslant 0$, on aura $x_{\mathrm{R}} = 1+4k \geqslant 1$ donc on pourra déduire que R n'est pas à l'intérieur du cube, et si on trouve $k<0$, on aura $z_{\mathrm{R}}=1-4k >1$ donc on pourra également déduire que R n'est pas à l'intérieur du cube.
+
+On peut donc dire que R n'est pas à l'intérieur du cube.
+
+\medskip
+
+Pour les amateurs de calcul, on trouve $k=-\dfrac{3}{68}$ et
+$\left ( \dfrac{14}{17}\;,\; \dfrac{9}{34}\;,\;\dfrac{20}{17}\right )$ comme coordonnées de R. On voit alors que $z_{\mathrm{R}}>1$.
+
+
+\vspace{0.5cm}
+
+\textbf{\large{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats ayant suivi la spécialité mathématique}
+
+\medskip
+
+Le but de cet exercice est d'envisager une méthode de cryptage à clé publique d'une information numérique, appelée système RSA, en l'honneur des mathématiciens Ronald Rivest, Adi Shamir et Leonard Adleman, qui ont inventé cette méthode de cryptage en 1977 et l'ont publiée en 1978.
+
+%\smallskip
+%
+%Les questions 1 et 2 sont des questions préparatoires, la question 3 aborde le cryptage, la question 4 le décryptage.
+
+\medskip
+
+\begin{enumerate}
+\item Cette question envisage de calculer le reste dans la division euclidienne par $55$ de certaines puissances de l'entier $8$.
+	\begin{enumerate}
+		\item %Vérifier que $8^7 \equiv 2 \mod 55$.
+\begin{list}{\textbullet}{}
+\item $8^3 = 512 = 9\times 55 +17$ donc $8^3 \equiv 17 \mod 55$
+
+\item $8^6 = \left (8^3\right )^2 \equiv 17^2 \mod 55$;
+$17^2 = 289 = 5\times 55 + 14 \equiv 14 \mod 55$
+
+Donc $8^6 \equiv 14 \mod 55$
+
+\item $8^7 = 8^6 \times 8 \equiv 14\times 8 \mod 55$
+
+$14\times 8 = 112 = 2\times 55 +2 \equiv 2 \mod 55$
+\end{list} 
+
+On peut donc dire que $8^7 \equiv 2 \mod 55$.		
+		
+%En déduire le reste dans la division euclidienne par $55$ du nombre $8^{21}$.
+
+$8^{21} = \left (8^7\right )^{3} \equiv 2^3 \mod 55$ donc $8^{21} \equiv 8 \mod 55$
+
+		\item% Vérifier que $8^2 \equiv 9 \mod 55$, puis déduire de la question a. le reste dans la division euclidienne par $55$ de $8^{23}$.
+		
+$8^2 = 64 = 1\times 55+9 \equiv 9 \mod 55$
+
+$8^{23} = 8^{21} \times 8^2 \equiv 8\times 9 \mod 55$;
+$8\times 9 = 72 = 1\times 55+17 \equiv 17\mod 55$.
+Donc $8^{23} \equiv 17 \mod 55$.
+
+Or $0\leqslant 17 < 55$ donc 17 est le reste de la division de $8^{23}$ par 55.		
+		
+ 	\end{enumerate}
+\item  Dans cette question, on considère l'équation $(E)$\: $23 x - 40 y = 1$, dont les solutions sont des couples $(x~;~y)$ d'entiers relatifs.
+	\begin{enumerate}
+		\item% Justifier le fait que l'équation $(E)$ admet au moins un couple solution.
+23 est un nombre premier et 40 n'est pas un multiple de 23 donc les nombres 23 et 40 sont premiers entre eux donc, d'après le théorème de Bézout, 	l'équation $23x-40y=1$ admet au moins un couple solution.
+		
+		\item  On détermine un couple solution particulière de l'équation $(E)$ par divisions euclidiennes successives.
+		
+$\begin{array}{@{\hspace*{1cm}}l l}
+40=1\times 23 + 17  & 23\times (-1) + 40 \times 1 = 17\\
+23 = 1\times 17 + 6  & 23\times 1 +17 \times (-1) = 6\\
+                                    & 23\times 1 + \left (23\times (-1) + 40 \times 1\mathstrut\right )\times (-1) = 6\\
+                                    & 23 \times 2 + 40 \times (-1) = 6\\
+17 = 2\times 6 + 5   & 17\times 1 + 6 \times (-2) = 5\\
+                                   & \left (23\times (-1) + 40 \times 1 \mathstrut\right )\times 1 + \left ( 23 \times 2 + 40 \times (-1) \mathstrut\right ) \times (-2) = 5\\
+                                  & 23\times (-5) + 40 \times 3 = 5\\
+6 = 5\times 1 + 1    & 6\times 1 + 5\times (-1) = 1\\
+                                 & \left ( 23 \times 2 + 40 \times (-1) \mathstrut\right ) \times 1 + \left (23\times (-5) + 40 \times 3\mathstrut \right ) \times (-1) = 1\\
+                                 & 23\times 7 + 40\times (-4) = 1\\
+\end{array}$
+
+On arrive à $23\times 7 + 40\times (-4) = 1$ donc $23\times 7 - 40\times 4 = 1$; on peut donc dire que le couple $(7,4)$ est solution de l'équation $(E)$.
+		
+		\item % Déterminer tous les couples d'entiers relatifs solutions de l'équation $(E)$.
+\begin{list}{\textbullet}{}
+\item \begin{tabular}[t]{@{} l l !{$-$} l !{$=$} l}
+Si le couple $(x,y)$ est solution de $(E)$, on a & $23\times x$ & $40\times y$ & $1$\\
+Le couple $(7,4)$ est solution de $(E)$, donc & $23\times 7$ & $40\times 4$ & $1$\\  
+\cline{2-4}
+Par soustraction membre à membre: & $23\left (x-7\right )$ & $40\left (y-4\right )$ & $0$
+\end{tabular}
+		
+On déduit donc que $23\left (x-7\right ) = 40\left (y-4\right )$, donc que 23 divise	$40\left (y-4\right )$. \\
+Or 23  et 40 sont premiers entre eux donc, d'après le théorème de Gauss, 23 divise $y-4$. \\
+On a donc $y-4=23k$ avec $k\in\Z$ c'est-à-dire $y=4+23k$.
+
+ $23\left (x-7\right ) = 40\left (y-4\right )$ et $y-4=23k$, donc $23\left (x-7\right ) = 40\times 23k$ et donc $x-7 = 40k$, c'est-à-dire $x=7+40k$.
+ 
+\item Réciproquement, si $x=7+40k$ et $y=4+23k$ avec $k\in\Z$, \\
+$23x-40y = 23\left (7+40k\right ) - 40\left (4+23k\right ) 
+= 161 + 23\times 40\times k - 160 = 40\times 23\times k = 1$.
+
+Donc le couple $(7+40k\;,\,4+23k)_{k\in\Z}$ est solution de $(E)$.
+
+\end{list}
+ 
+ L'ensemble des solutions de l'équation $(E)$ est donc
+ $\left \lbrace \left ( 7+40k\;,\;4+23k\strut\right) \right \rbrace_{k\in \Z}$.
+		
+		\item%  En déduire qu'il existe un unique entier $d$ vérifiant les conditions $0 \leqslant d < 40$ et $23 d \equiv  1 \mod 40$.
+$23 d \equiv  1 \mod 40 \iff 23 d = 1 +40y \text{ avec } y\in\Z\iff 23d -40y = 1\text{ avec } y\in\Z$ ce qui équivaut à \og le couple $(d,y)$ est solution de $(E)$\fg{} .
+Donc $d$ s'écrit $7+40k$ avec $k\in\Z$. 
+
+Pour satisfaire à la condition $0\leqslant d < 40$, il faut $0\leqslant 7+40k < 40$, ce qui n'est possible que si $k=0$, ce qui donne $d=7$.
+
+Il existe donc un unique entier $d=7$ vérifiant les conditions $0 \leqslant d < 40$ et $23 d \equiv  1 \mod 40$.
+		
+ 	\end{enumerate}
+\item  Cryptage dans le système RSA -- 
+Une personne A choisit deux nombres premiers $p$ et $q$, puis calcule les produits $N = p q$ et $n = (p - 1)(q - 1)$. Elle choisit également un entier naturel $c$ premier avec $n$.
+	
+La personne A publie le couple $(N~;~c)$, qui est une clé publique permettant à quiconque de lui envoyer un nombre crypté.
+	
+Les messages sont numérisés et transformés en une suite d'entiers compris entre $0$ et $N -1$.
+	
+Pour crypter un entier $a$ de cette suite, on procède ainsi : on calcule le reste $b$ dans la division euclidienne par $N$ du nombre $a^c$, et le nombre crypté est l'entier $b$.
+
+\smallskip
+
+%Dans la pratique, cette méthode est sûre si la personne A choisit des nombres premiers $p$ et $q$ très grands, s'écrivant avec plusieurs dizaines de chiffres.
+
+On va l'envisager ici avec des nombres simples : $p = 5$ et $q = 11$.
+La personne A choisit  $c = 23$.
+	\begin{enumerate}
+		\item $N=pq=5\times 11 = 55$ et $n=\left (p-1\right )\left (q-1\right )=4\times 10=40$
+		
+On a déjà vu que 23 et 40 étaient premiers entre eux, donc l'entier naturel $c=23$ vérifie la condition voulue. 	
+		
+		\item  Un émetteur souhaite envoyer à la personne A le nombre $a = 8$.
+		
+Le nombre crypté $b$ est le reste dans la division par $N$ du nombre $a^{c}$, donc le reste dans la division par $55$ du nombre $8^{23}$.
+
+D'après la question \textbf{1.b.}, le nombre crypté $b$ vaut 17. 
+	\end{enumerate}
+\item Décryptage dans le système RSA --
+La personne A calcule dans un premier temps l'unique entier naturel $d$ vérifiant les conditions $0 \leqslant d < n$ et $cd \equiv 1 \mod n$.
+
+Elle garde secret ce nombre $d$ qui lui permet, et à elle seule, de décrypter les nombres qui lui ont été envoyés cryptés avec sa clé publique.
+
+Pour décrypter un nombre crypté $b$, la personne A calcule le reste $a$ dans la division euclidienne par $N$ du nombre $b^d$, et le nombre en clair -- c'est-à-dire le nombre avant cryptage -- est le nombre $a$.
+
+On admet l'existence et l'unicité de l'entier $d$, et le fait que le décryptage fonctionne.
+
+Les nombres choisis par A sont encore $p = 5$, $q = 11$ et $c = 23$.
+	\begin{enumerate}
+		\item Le nombre $d$ est l'unique entier tel que $0 \leqslant d < n$ et $cd \equiv 1 \mod n$, c'est-à-dire  $0 \leqslant d < 40$ et $23d \equiv 1 \mod 40$; d'après la question \textbf{2.d.} on peut dire que $d=7$.
+		\item Le nombre crypté étant $b = 17$,  le nombre en clair est le nombre $a$, reste de la division de $b^{d}$ par $N$, c'est-à-dire le reste de la division de $17^{7}$ par 55.
+
+\begin{list}{\textbullet}{}
+\item $17^3=\np{4913} = 89\times 55 + 18$ donc $17^{3} \equiv 18 \mod 55$
+
+\item $17^6 = \left (17^3\right )^2 \equiv 18^2 \mod 55$; 
+$18^{^2} = 324 = 4\times 55 + 49$ donc $18^2 \equiv 49 \mod 55$
+
+On en déduit que $17^6 \equiv 49 \mod 55$.
+
+\item $17^7 = 17^6 \times 17 \equiv 49\times 17 \mod 55$;
+$49\times 17 = 833 = 15\times 55 +8$ donc $49\times 17 \equiv 8 \mod 55$
+
+On en déduit que $17^{7} \equiv 8 \mod 55$ et comme $0\leqslant 8 < 55$, on peut dire que 8 est le reste de la division de $17^7$ par $55$.
+
+\end{list}
+
+Le nombre qui se crypte en 17 est donc 8.
+ 
+	\end{enumerate}
+\end{enumerate}
+
+\end{document}
