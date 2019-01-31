@@ -1,0 +1,611 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[scaled=0.875]{helvet} 
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{amsmath,amssymb,makeidx}
+\usepackage[normalem]{ulem}
+\usepackage{fancybox}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{ulem}
+\usepackage{lscape}
+\usepackage{dcolumn}
+\usepackage{textcomp}
+\newcommand{\euro}{\eurologo{}}
+\usepackage{pstricks,pst-plot,pst-tree,pstricks-add}
+\usepackage{tikz}
+\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
+\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
+% Tapuscrit : Denis Vergès
+%Corrigé : François Kriegk
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
+\def\e{\text{e}}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{%
+pdfauthor = {APMEP},
+pdfsubject = {TS Amérique du Nord},
+pdftitle = {29 mai 2018},
+allbordercolors = white,
+pdfstartview=FitH}
+\usepackage[np]{numprint}
+\usepackage[frenchb]{babel}
+\begin{document}
+\setlength\parindent{0mm}
+\rhead{\textbf{A. P{}. M. E. P{}.}}
+\lhead{\small Baccalauréat S}
+\lfoot{\small{Amérique du Nord}}
+\rfoot{\small 29 mai 2018}
+\pagestyle{fancy}
+\thispagestyle{empty}
+\begin{center}\textbf{Durée : 4 heures}
+
+\vspace{0,5cm}
+
+{\Large \textbf{\decofourleft~Corrigé Baccalauréat S Amérique du Nord 29 mai 2018~\decofourright}}
+\end{center}
+
+\vspace{0,5cm}
+
+\textbf{Exercice 1 \hfill  6 points}
+
+	\textbf{Commun à  tous les candidats}
+	
+	\medskip
+	
+	\textbf{Partie A - Démonstration préliminaire}
+	
+		\begin{enumerate}
+			\item La fonction $G$ sera une primitive de $g$ sur $[0~;~+\infty[$ si et seulement si elle est dérivable sur $[0~;~+\infty[$ et que sa fonction dérivée est la fonction $g$.
+			
+			Avec les règles de composition et de produit de fonctions classiques, la fonction $G$ est effectivement dérivable sur $[0~;~+\infty[$, et pour tout $t$ réel positif, on a : 
+			
+$G'(t) = (- 1) \times \e^{-0,2t} + (-t-5) \times (-0,2) \e^{-0,2t} = \big(-1 + 0,2t + 0,2\times 5\big)\e^{-0,2t} = 0,2t\e^{-0,2t} = g(t)$.
+			
+La fonction $G$ est donc bien une primitive de $g$ sur $[0~;~+\infty[$.
+			
+			\item En appliquant la définition de l'espérance, rappelée dans l'énoncé, on va commencer par calculer l'intégrale de $g$ entre 0 et $x$ :
+			
+$\displaystyle \int_{0}^{x}g(t) \text{~d} t = \Big[G(t)\Big]_{0}^{x} = G(x) - G(0) = (-x-5)\e^{-0,2x} - (0 - 5)\e^{-0,2\times 0} = -x\e^{-0,2x} - 5\e^{-0,2x} + 5$
+			
+\smallskip
+			
+Déterminons maintenant la limite de cette intégrale quand $x$ tend vers $+\infty$.
+			
+Puisque cette limite est admise dans le sujet, on a : $\lim\limits_{x \to +\infty} x\e^{-0,2x} = 0$.
+			
+Comme $-0,2$ est négatif, on a : 
+			
+$\lim\limits_{x \to +\infty} -0,2x = -\infty$, or $\lim\limits_{y \to -\infty} \e^y = 0$, donc, par composition : $\lim\limits_{x \to +\infty} \e^{-0,2x} = 0$.
+	
+Finalement, par limite de la somme de fonctions, on a :
+	
+$\lim\limits_{x \to +\infty} \displaystyle \int_{0}^{x}g(t) \text{~d} t = \lim\limits_{x \to +\infty} -x\e^{-0,2x} - 5\e^{-0,2x} + 5 = 5$.
+
+\medskip
+	
+En conclusion, on a bien établi que l'espérance $\text{E}(X)$ est bien égale à 5.
+		\end{enumerate}
+
+	\bigskip
+	
+	\textbf{Partie B - Étude de la durée de présence d'un client dans le supermarché}
+	
+	\medskip
+
+	\begin{enumerate}
+		\item Posons $T'$ la variable aléatoire définie par $T' = \dfrac{T - 40}{\sigma}$. Puisque $T$ suit une loi normale d'espérance $40$ et d'écart-type $\sigma$, on peut dire que $T'$ suit la loi normale centrée et réduite.
+		
+		Par ailleurs les évènements $(T < 10)$ et $\left (T' < \dfrac{10 - 40}{\sigma}\right)$ sont équivalents, et ont donc la même probabilité.
+		
+		En utilisant la calculatrice avec la fonction inversant la loi normale centrée réduite, on obtient que la borne $\dfrac{10 - 40 }{\sigma} = \dfrac{-30}{\sigma}$ doit être environ égale à $\np{-1,4985}$.
+		
+		En résolvant, on a $\sigma \approx \dfrac{-30}{\np{-1,4985}}$, soit $\sigma \approx \np[min]{20,0198}$, soit, en donnant un arrondi à la seconde près, 20 min 01 s. (car $0,0198 \times 60 \approx 1,2$)
+		
+		\medskip
+		
+		\textit{Remarque :} Ici la modélisation implique que les valeurs prises par $T$ peuvent être négatives, et ce de façon non complètement négligeable, puisque la probabilité d'avoir $T$ négatif va être proche de $0,025$, le 0 étant presque égal à $\mu - 2\sigma$.
+		Cela peut sembler déstabilisant, mais ici, la modélisation est donnée et n'est pas à remettre en cause.
+		
+		\item Puisque le temps est exprimé en minutes, une heure correspond à 60 minutes, et donc la probabilité cherchée est obtenue à la calculatrice :
+		
+		$P( T \geqslant 60) = 1 - P(T < 60) \approx \np{0,1587}$.
+		
+		Puisque la question est posée en terme de proportion, on va supposer que la modélisation est fiable et que les probabilités sont assimilables à des proportions, et donc qu'environ 15,9~\% des clients passent plus d'une heure dans le supermarché.
+	\end{enumerate}
+
+	
+	\bigskip
+	
+	\textbf{Partie C - Durée d'attente pour le paiement}
+	
+	\medskip
+
+	\begin{enumerate}
+		\item \begin{enumerate}
+			\item Pour la durée d'attente moyenne d'attente des clients, on va utiliser l'espérance de la variable aléatoire donnant leur temps d'attente.  
+			
+			Comme cette variable aléatoire suit la loi exponentielle de paramètre \np[min^{-1}]{0,2}, on est exactement dans la situation étudiée à la \textbf{Partie A} et donc on va en utiliser le résultat : la durée moyenne d'attente aux caisses automatiques est de 5 minutes.
+			
+			\item Si on note $X$ la variable aléatoire, la probabilité qu'un client attende plus de 10 minutes est donc :
+			
+			$\displaystyle P(X \geqslant 10) = 1 - P(X < 10) = 1 - \int_{0}^{10} 0,2\e^{-0,2t}~\text{d}t = \e^{-0,2 \times 10} = \e^{-2} \approx 0,135$.
+			
+			À $10^{-3}$ près, la probabilité qu'un client attende plus de dix minutes aux bornes automatiques est donc de 0,135.
+		\end{enumerate}
+	\item Puisque l'on choisit au hasard un client du magasin, on est en situation d'équiprobabilité et les proportions sont assimilables à des probabilités.
+	
+	Notons $p$ la proportion de clients choisissant les caisses automatiques. On peut alors visualiser la situation à l'aide de l'arbre suivant :
+	
+%:-+-+-+- Engendré par : http://math.et.info.free.fr/TikZ/Arbre/
+\begin{center}
+% Racine à Gauche, développement vers la droite
+\begin{tikzpicture}[xscale=1,yscale=1]
+% Styles (MODIFIABLES)
+\tikzstyle{fleche}=[->,>=latex,thick]
+\tikzstyle{noeud}=[fill=white]
+\tikzstyle{feuille}=[fill=white]
+\tikzstyle{etiquette}=[pos = 0.6,fill=white]
+% Dimensions (MODIFIABLES)
+\def\DistanceInterNiveaux{3}
+\def\DistanceInterFeuilles{0.8}
+% Dimensions calculées (NON MODIFIABLES)
+\def\NiveauA{(0)*\DistanceInterNiveaux}
+\def\NiveauB{(1)*\DistanceInterNiveaux}
+\def\NiveauC{(2)*\DistanceInterNiveaux}
+\def\InterFeuilles{(-1)*\DistanceInterFeuilles}
+% Noeuds (MODIFIABLES : Styles et Coefficients d'InterFeuilles)
+\node[noeud] (R) at ({\NiveauA},{(1.5)*\InterFeuilles}) {~};
+\node[noeud] (Ra) at ({\NiveauB},{(0.5)*\InterFeuilles}) {$B$};
+\node[feuille] (Raa) at ({\NiveauC},{(0)*\InterFeuilles}) {$S$};
+\node[feuille] (Rab) at ({\NiveauC},{(1)*\InterFeuilles}) {$\overline{S}$};
+\node[noeud] (Rb) at ({\NiveauB},{(2.5)*\InterFeuilles}) {$\overline{B}$};
+\node[feuille] (Rba) at ({\NiveauC},{(2)*\InterFeuilles}) {$S$};
+\node[feuille] (Rbb) at ({\NiveauC},{(3)*\InterFeuilles}) {$\overline{S}$};
+% Arcs (MODIFIABLES : Styles)
+\draw[fleche] (R.east)--(Ra) node[etiquette] {$p$};
+\draw[fleche] (Ra.east)--(Raa) node[etiquette] {$0,86$};
+\draw[fleche] (Ra.east)--(Rab) node[etiquette] {$0,14$};
+\draw[fleche] (R.east)--(Rb) node[etiquette] {$1 - p$};
+\draw[fleche] (Rb.east)--(Rba) node[etiquette] {$0,63$};
+\draw[fleche] (Rb.east)--(Rbb) node[etiquette] {$0,37$};
+\end{tikzpicture}
+\end{center}
+%:-+-+-+-+- Fin
+	
+$B$ et $\overline{B}$ formant une partition de l'univers, on utilise la loi des probabilités totales :
+		
+$P(S) = P\big(S \cap B\big) + P\left(S \cap \overline{B}\right) = P\big(B\big) \times P_{B}\big(S\big) + P\left(\overline{B}\right) \times P_{\overline{B}}\big(S\big) = p \times 0,86 + (1 - p) \times 0,63$
+	
+		
+Finalement : $P(S) = 0,63 + p(0,86 - 0,63) = 0,63 + 0,23p$.
+	
+Pour que plus de 75~\% des clients attendent moins de dix minutes, on doit avoir :
+
+\begin{tabbing}
+$P(S) > 0,75$~\=$\iff 0,63 + 0,23p > 0,75$      \\
+\> $\iff 0,23 p > 0,12$ \\
+\> $\iff p > \dfrac{0,12}{0,23}$
+\end{tabbing}
+	
+La proportion minimale de clients devant choisir les caisses automatiques, si on veut que plus de 75~\% des clients attendent moins de dix minutes est donc de $\dfrac{12}{23}$, soit environ 52,2~\%.
+	\end{enumerate}
+	 
+\bigskip
+
+\textbf{Partie D - Bons d'achat}
+	
+\medskip
+	
+\begin{enumerate}
+	\item Pour un montant de 158,02~\euro{}, le client obtient 15 cartes.
+		
+	\begin{itemize}
+		\item Chaque carte peut être gagnante (considéré comme succès).
+			
+Puisque la distribution d'une carte est assimilable à un tirage au sort dans le stock de cartes, on va assimiler la proportion de cartes gagnantes à la probabilité qu'une carte distribuée soit gagnante.
+	
+La probabilité du succès est donc de $p = 0,005$.
+			
+		\item Le client reçoit 15 cartes.
+	
+Puisque l'on dit que la distribution est assimilable à un tirage avec remise, la distribution des 15 cartes est considérée comme la répétition 15 fois de façon indépendante de la distribution d'une carte.
+	
+	\item On s'intéresse au nombre $N$ de cartes gagnantes reçues par le client.
+		\end{itemize}
+	
+Les éléments cités ci-dessus permettent de dire que la variable aléatoire $N$ suit la loi binomiale de paramètres $\mathcal{B}(15~;~0,005)$, et donc :
+	
+$P(N \geqslant 1) = 1 - P(N = 0) = 1 - \displaystyle \binom{15}{0} 0,005^0 \times 0,995^{15} = 1 - 0,995^{15} \approx 0,072$.
+		
+La probabilité que ce client ait au moins une carte gagnante est de 0,07, à $10^{-2}$ près.
+		
+	\item La démarche va être similaire, sauf que le nombre de répétitions va être variable. Si on note $n$ le nombre de cartes reçues, et que l'on considère $N_n$, la variable aléatoire suivant la loi binomiale de paramètres $n$ et 0,005 alors on aura :
+		
+$P(N_n \geqslant 1) = 1 - P\left(N_n = 0\right) = 1 - \displaystyle \binom{n}{0} 0,005^0 \times 0,995^{n} = 1 - 0,995^{n}$.
+		
+Résolvons :
+		
+\begin{tabbing}
+$P\left(N_n \geqslant 1\right) \geqslant 0,50$~\=$\iff 1 - 0,995^n \geqslant 0,5$\\
+\> $\iff - 0,995^{n} \geqslant -0,5$\\
+\> $\iff 0,995^n \leqslant 0,5$\\
+\> $\iff n \ln(0,995) \leqslant \ln(0,5)$ \quad \= car la fonction ln est croissante sur $[0~;~+\infty[$\\
+\> $\iff n \geqslant \dfrac{\ln(0,5)}{\ln(0,995)}$ \> car $\ln(0,995)$ est négatif.
+		\end{tabbing}
+		
+Comme $\dfrac{\ln(0,5)}{\ln(0,995)} \approx 138,3$ et que $n$ doit être entier, il faut avoir $n\geqslant 139$, et c'est donc à partir de \np{1390}~\euro{} que la probabilité d'avoir au moins une carte gagnante dépasse $0,5$.
+	\end{enumerate}
+	
+\vspace{0,5cm}
+	
+	\textbf{Exercice 2 \hfill  4 points}
+	
+	\textbf{Commun à  tous les candidats}
+	
+\medskip
+
+	\begin{enumerate}
+		\item Puisque la fonction $f$ est dérivable, et que l'on connaît sa fonction dérivée, on va étudier le signe de la fonction dérivée pour connaître les variations de la fonction $f$.
+		
+\smallskip
+		
+Soit $x$ dans $[0~;~1[$. On a $x < 1$ et donc, $0< 1  -x$.
+			
+Le dénominateur de $f'(x)$ étant strictement positif, le signe de $f'(x)$ est le signe du numérateur, qui est une quantité affine, de coefficient directeur $- b$ négatif (puisque $b$ est supérieur à 2) et donc on aura bien une fonction dérivée d'abord positive, pour $x \leqslant \dfrac{b - 2}{b}$, puis négative.
+		
+On remarque le nombre $\dfrac{b-2}{b} = 1 - \dfrac{2}{b}$ est un nombre inférieur à 1 et positif, car $b$ est un réel positif, supérieur à 2.
+		
+On peut donc affirmer que la fonction $f$ est croissante sur l'intervalle $\left[0~;~\dfrac{b - 2}{b}\right] $ et décroissante sur $\left[\dfrac{b - 2}{b}~;~1\right[$. 
+		
+Ces variations indiquent que $f$ atteint un maximum pour $x = \dfrac{b - 2}{b} = 1 - \dfrac{2}{b}$.
+		
+Ce maximum est donc $f\left(1 - \dfrac{2}{b}\right) = b\times \left(1 - \dfrac{2}{b}\right) + 2\ln\left(1 - \left(1 - \dfrac{2}{b} \right) \right) = b - 2 + 2 \ln\left(\dfrac{2}{b}\right) $.
+		
+Le maximum de la fonction $f$ s'établit bien à $b - 2 + 2 \ln\left(\dfrac{2}{b}\right) $.
+		
+		\item Si on essaye de résoudre l'inéquation $b - 2 + 2 \ln\left(\dfrac{2}{b}\right) \leqslant 1,6$, on se retrouve devant une équation que l'on ne sait pas résoudre de façon exacte.
+		
+On peut donc procéder à tâtons, par exploration à la calculatrice pour donner une réponse.
+		
+La méthode la plus complète serait la suivante :
+		
+Posons $m$ la fonction définie sur $[2~;~+\infty[$ par $m(b) = b - 2 + 2 \ln\left(\dfrac{2}{b}\right) = b - 2 + \ln(4) - 2\ln(b)$.
+		
+La fonction $m$ est dérivable sur son ensemble de définition et on a pour tout $b$ supérieur à 2 :
+		
+$m'(b) = 1 - \dfrac{2}{b}$.
+		
+Comme $b$ est supérieur à 2, on en déduit que $m'(b)$ est positif, et même strictement positif pour $b>2$, et donc que la fonction $m$ est strictement croissante sur $[2~;~+\infty[$.
+
+$m(2) = 2 - 2 + \ln 1 = 0$.
+				
+S'il y a un réel $b_0$ tel que $f\left(b_0\right) = 1,6$, on pourra donc dire que $2 \leqslant b \leqslant b_0 \iff 0 \leqslant m(b) \leqslant1,6$.
+		
+Par exploration à la calculatrice, on constate (par exemple) que $m(10) \approx 4,8$.
+		
+La fonction $m$ étant continue (car dérivable) et strictement croissante sur l'intervalle $[2~;~10]$ et 1,6 étant une valeur intermédiaire entre $m(0) = 0$ et $m(10) \approx 4,8$, le corollaire au théorème des valeurs intermédiaires permet d'affirmer qu'il existe un unique nombre $b_0$ antécédent de 1,6 par $m$ sur $[2~;~10]$. Comme $m$ est strictement croissante sur $[2~;~+\infty[$, il n'y aura pas d'autre antécédent que celui là.
+		
+Un balayage à la calculatrice donne $5,69 < b_0 < 5,70$.
+		
+Les valeurs du paramètre $b$ garantissant une hauteur maximale $m(b)$ ne dépassant pas 1,6 mètre sont donc les réels de l'intervalle $[2~;~b_0]$, soit, en donnant une valeur approchée (nécessairement par défaut, vu que $m$ est croissante) de l'intervalle $[2~;~5,69]$.
+		
+		\item Si on choisit $b = 5,69$, alors, cela signifie que la tangente tracée en pointillés est la droite d'équation : $y = f'(0) \times (x - 0) + f(0) = \dfrac{b - 2}{1 - 0} \times x + 0 = (5,69 - 2)x = 3,69x$.
+		
+Cela signifie que l'origine du repère, le point de coordonnée $(1~;~0)$ et le point de coordonnées $(1~;~3,69)$ forment un triangle rectangle, dans lequel le côté opposé à l'angle $\theta$ mesure 3,69 et le côté adjacent mesure $1$, donc la tangente de l'angle est donnée par $\tan \theta = \dfrac{3,69}{1} = 3,69$.
+		
+À la calculatrice (réglée en mode degrés), on obtient $\theta = \arctan(3,69) \approx 74,8$°
+	\end{enumerate}
+	 
+\vspace{0,5cm}
+	
+\textbf{Exercice 3 \hfill  5 points}
+	
+\textbf{Commun à  tous les candidats}
+	
+\medskip
+
+	\begin{enumerate}
+		\item \begin{enumerate}
+			\item Comme A est l'origine du repère, les coordonnées de $\vect{\text{AB}}$ sont égales aux coordonnées de B, et donc la droite (AB), passant par A et dirigée par $\vect{\text{AB}}$ admet pour représentation paramétrique : $\left\{\begin{array}{lcr} x &= &\phantom{-}10k \\ y& = &-8k \\ z& =& \phantom{-}2k\\
+\end{array}\right.  k \in \R$.
+	
+\smallskip
+	
+Le vecteur $ \vect{\text{CD}} $ a pour coordonnées $\big(14 - (-1)~;~4 - (-8)~;~8 - 5\big)$ soit $(15~;~12~;~3)$.
+			
+La droite (CD) passant par C et dirigée par $\vect{\text{CD}}$ admet donc pour représentation paramétrique : $\left\{\begin{array}{lc r} x &=& -1 + 15l \\ y &=& -8 + 12l \\ z &=& 5 + 3l\\
+\end{array}\right.  l \in \R$.
+			
+			\item Les vecteurs $ \vect{\text{AB}} $ et $\vect{\text{CD}}$ sont clairement non colinéaires (leurs abscisses ont le même signe, mais pas leurs ordonnées), donc les droites ne sont ni parallèles, ni confondues.
+			
+Voyons si elles ont un point commun, en résolvant le système suivant :
+\begin{tabbing}
+$\left\{\begin{array}{lcr} 10k &=& -1 + 15l \\ -8k &=& -8 + 12l \\ 2k &= &5 + 3l\\
+\end{array}\right.$~\=
+$\iff \left\{\begin{array}{lcr} 5(5 + 3l) &=& -1 + 15l \\ -4(5 + 3l) &=& -8 + 12l \\ 2k &=&  5 + 3l\\
+\end{array}\right.$\\
+\>$\iff \left\{\begin{array}{lcr} 25 + 15l &=& -1 + 15l \\ -20 -12l &=& -8 + 12l \\ 2k &=&  5 + 3l\\
+\end{array}\right.$\\
+\>$\iff \left\{\begin{array}{lcr} 26 &=& 0 \\ -20 -12l &=& -8 + 12l \\ 2k &=&  5 + 3l\\
+\end{array}\right.$
+\end{tabbing}
+	
+Ce système n'a pas de solution, et donc il n'y a aucun point commun aux deux droites, donc elles ne sont pas sécantes.
+	
+Finalement, puisque ces droites ne sont ni confondues, ni parallèles, ni sécantes, par élimination on en déduit qu'elles sont effectivement non coplanaires.
+		\end{enumerate}
+	
+	\item \begin{enumerate}
+		\item Si I est sur (AB), alors il existe un paramètre $k$ lui correspondant. Puisque son abscisse est 5, cela donne $10 k = 5$, soit $k = 0,5$. I est donc le point de paramètre $k = 0,5$ sur (AB), donc ses coordonnées sont : $(5 ~;~-8\times 0,5~;~2\times 0,5)$ soit $(5~;~-4~;~1)$.
+		
+De façon analogue J est le point de paramètre $l = \dfrac{1}{3}$ sur (CD), ce qui donne les coordonnées suivantes pour J $(4~;~-4~;~6)$.
+		
+Le repère de l'espace étant orthonormé, on a alors : $\text{IJ} = \sqrt{(4 - 5)^2 + (-4 - (-4))^2 + (6 - 1)^2}$ soit $\text{IJ} = \sqrt{26}$.
+		
+		\item Le repère étant orthonormé, on peut utiliser les coordonnées des vecteurs pour calculer un produit scalaire.
+		
+$ \vect{\text{IJ}} $ a pour coordonnées $(-1~;~0~;~5)$ et donc on a :
+		
+$\vect{\text{AB}} \cdot  \vect{\text{IJ}} = 10 \times (-1) + (-8) \times 0 + 2 \times 5 = -10 + 0 + 10 = 0$ : les vecteurs sont orthogonaux, et donc les droites qu'ils dirigent, (AB) et (IJ) sont orthogonales.
+		
+Par définition de I, ces droites ont également I comme point commun, donc elles sont bien perpendiculaires.
+		
+De façon analogue : $\vect{\text{CD}} \cdot  \vect{\text{IJ}} = 15 \times (-1) + 12 \times 0 + 3 \times 5 = -15 + 0 + 15 = 0$ (CD) et (IJ) sont donc également orthogonales, avec J comme point commun, par définition de J, et donc elles sont bien perpendiculaires.
+	\end{enumerate}
+	
+	\item \begin{enumerate}
+		\item Le point I étant sur (AB) qui est non coplanaire avec (CD), on en déduit que I n'est pas un point de (CD), et donc que les points C, D et I définissent un plan.
+		
+J étant un point de (CD), il est un point de (CDI).
+		
+$\Delta$ étant parallèle à (CD) --- incluse dans (CDI) --- et passant par I --- appartenant à (CDI) --- on en déduit que la droite $\Delta$ est bien une droite de (CDI).
+		
+De même, la parallèle à (IJ) passant par $M'$ est parallèle à (IJ) --- droite de (CDI)--- et passe par $M'$ --- point de (CD), donc du plan (CDI) ---  donc cette droite est aussi dans le plan (CDI).
+		
+Finalement, on a établi que les droites $\Delta$ et la parallèle à (IJ) passant par $M'$ sont coplanaires.
+		
+Comme (IJ) est perpendiculaire à (CD), toute parallèle à (IJ) sera orthogonale à (CD), et donc la parallèle à (IJ) passant par $M'$ est orthogonale à (CD), et donc ne lui est pas parallèle.
+		
+Par élimination, les droites étant coplanaires et non parallèles, elles sont bien sécantes, et donc le point $P$ est bien défini.
+		\item Les droites (AB) et $\Delta$ ont I comme point commun, par définition de $\Delta$, et elles ne sont pas confondues, sinon, par transitivité du parallélisme, (AB) et (CD) seraient parallèles, ce qui est exclu depuis la question \textbf{1. b.}. Ces deux droites sont donc sécantes, et elles définissent donc un plan $\mathcal{P}$ (qui est matérialisé par un parallélogramme sur la figure du sujet).
+		
+La droite (IJ) est perpendiculaire à (AB), et elle est perpendiculaire à (CD), ce qui implique, puisque $\Delta$ est parallèle à (CD) que (IJ) est orthogonale à $\Delta$ (elle lui est même perpendiculaire en I). On peut donc en conclure que la droite (IJ) est perpendiculaire au plan $ \mathcal{P} $, et donc que $(M'P)$ qui est parallèle à (IJ) est également perpendiculaire à $\mathcal{P}$, donc $(M'P)$ est orthogonale à toutes les droites du plan $\mathcal{P}$, notamment à $ (PM) $ (qui est bien une droite de $ \mathcal{P} $, puisqu'elle relie deux points sur les droites définissant le plan).
+		
+Finalement, on a établi que les droites $(M'P)$ et $(PM)$ sont orthogonales, et donc perpendiculaires en P, donc le triangle $M'PM$ est un triangle rectangle en $P$.
+		
+		\item Dans un triangle rectangle, l'hypoténuse est le côté le plus long, donc $MM' > M'P$ et comme IJ$M'P$ est un parallélogramme, IJ = $M'P$ et donc on a bien $MM' >$ IJ.
+		
+En éludant le cas où $M$ est distinct de I et $M'$ est confondu avec J ou le cas croisé où $M$ est confondu avec I et $M'$ distinct de J (situations qui ne présentent pas de difficulté supplémentaire, mais qui demanderait une rédaction allongée), on va conclure :
+		
+On a bien démontré que, pour tout point $M$ de (AB) et pour tout point $M'$ de (CD), la distance $MM'$ est supérieure ou égale à la distance IJ, et donc cette distance IJ est bien la distance minimale entre les droites (AB) et (CD).
+	\end{enumerate}	
+\end{enumerate}
+
+\vspace{0,5cm}
+	
+\textbf{Exercice 4 \hfill  5 points}
+	
+\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
+	
+\medskip
+	
+\textbf{Partie A - Modélisation à l'aide d'une suite}
+	
+\medskip
+	
+\begin{enumerate}
+	\item On construit $M_2$ sur le segment $[M_1S_1]$, de sorte que la distance $M_1M_2$ soit égale à 1, puisque le chien se déplace à \np[m.s^{-1}]{1}, avec un délai d'une seconde entre sa position en $M_1$ et sa position en $M_2$, il aura parcouru 1 m, dans un repère orthonormé d'unité 1~m.
+		
+De même, on construit $M_3$ à une unité de $M_2$ sur le segment $[M_2S_2]$.
+		
+On a donc :
+
+\begin{center}
+\psset{unit=1.4cm}
+\begin{pspicture}(-0.2,-0.2)(5.5,4.5)
+\psgrid[gridlabels=0pt,subgriddiv=1](0,0)(5,4)
+\psaxes[linewidth=1pt,labelFontSize=\scriptstyle](0,0)(0,0)(5.5,4.5)
+\psline[linestyle = dotted](1,0)(5,1)
+\psline[linestyle = dotted](1.97,0.243)(5,2)
+\uput[dr](0,0){$M_0$}
+\uput[dr](1,0){$M_1$}
+\psdot(1.97,0.243)
+\uput[ul](1.97,0.243){$M_2$}
+\psdot(2.84,0.74)
+\uput[ul](2.84,0.74){$M_3$}
+\uput[dr](1,0){$M_1$}
+\uput[ur](5,0){$S_0$}
+\uput[ur](5,1){$S_1$}
+\uput[ur](5,2){$S_2$}
+\uput[ur](5,3){$S_3$}
+\end{pspicture}
+\end{center}
+
+\medskip		
+		\item Comme on est dans un repère orthonormé, on peut calculer la distance en appliquant :
+		
+$d_0 = M_0S_0 = \sqrt{(x_{S_0} - x_{M_0})^2 + (y_{S_0} - y_{M_0})^2} = \sqrt{(5 - 0)^2 + (0 - 0)^2} =\sqrt{25} = 5$. 
+		
+$d_1 = M_1S_1 = \sqrt{(5 - 1)^2 + (1 - 0)^2} = \sqrt{17}$
+		
+On a donc $d_0 = \np[m]{5}$ et $d_1 = \sqrt{17}$~m.
+		
+		\item On sait que le vecteur $\vect{M_1M_2}$ doit être un vecteur de norme 1 (puisqu'il représente la distance parcourue par le chien en 1 s), colinéaire à $\vect{M_1S_1}$ et de même sens (puisque le chien court dans la direction du scooter, et vers le scooter).
+		
+Comme la norme de $\vect{M_1S_1}$ est $d_1 = \sqrt{17}$, on en déduit que $\vect{M_1M_2} = \dfrac{1}{\sqrt{17}} \vect{M_1S_1}$.
+		
+En termes de coordonnées, on a : $\vect{M_1S_1} ~(5 - 1 ~;~ 1 - 0)$, soit $(4~;~1)$ et donc $\vect{M_1M_2} ~\left(\dfrac{4}{\sqrt{17}}~;~\dfrac{1}{\sqrt{17}}\right )$ et donc $M_2 \left(\dfrac{4}{\sqrt{17}} + x_{M_1}~;~\dfrac{1}{\sqrt{17}} + y_{M_1}\right) $, soit $M_2 \left(1+\dfrac{4}{\sqrt{17}}~;~\dfrac{1}{\sqrt{17}}\right) $, ce que l'on voulait démontrer.
+		
+		\item 
+		\begin{enumerate}
+			\item La formule à saisir en \textsf{C5} est la retranscription de la relation de récurrence de la suite $(y_n)$. Il faut être attentif : le $n$ qui intervient est l'indice du terme précédent, donc dans la cellule \textsf{C5}, l'indice est $n=2$, du coup, il faudra utiliser les termes d'indice $n= 1$ dans la relation de récurrence. 
+On a alors : \textsf{=C4 + (A4 - C4)/F4}.
+			
+Par contre, la distance $d_2$ qui doit apparaître dans la cellule \textsf{F5} est calculée à partir des coordonnées des points dans la ligne 5, on aura donc : \textsf{=RACINE((D5 - B5)\^{}2 + (E5 - C5)\^{}2)}.
+			
+\textit{Remarque :} dans cette dernière formule, la référence \textsf{D5} peut être remplacée par 5 simplement, car l'abscisse du scooter reste constante égale à 5.
+			
+		\item Si la suite $(d_n)$ est strictement décroissante, puisqu'elle est minorée par 0 (les distances sont nécessairement positives), elle est donc convergente vers une limite positive.
+			
+L'observation du tableau semble indiquer une certaine stagnation proche d'une valeur \np{2,7731658}, il est raisonnable de conjecturer que la limite est sans doute un nombre proche de cette valeur (mais inférieur ou égal, puisque la suite est décroissante).
+			
+L'utilisation d'un tableur permet de constater que cette valeur reste celle affichée pour $d_n$ pour des valeurs élevées de $n$ (jusqu'à au moins $n = \np{1048573}$, en exploitant les limites du tableur de ce correcteur).
+		\end{enumerate}
+\end{enumerate}
+	
+\bigskip
+	 
+\textbf{Partie B - Modélisation à l'aide d'une fonction}
+	 
+	\medskip
+	 
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item On construit au jugé une droite passant par $M$ et qui semble être tangente à $\mathcal{T}$
+			\begin{center}
+\psset{unit=1.4cm}
+\begin{pspicture*}(-0.5,-0.5)(5.5,5.5)
+\psgrid[gridlabels=0pt,subgriddiv=1,gridwidth=0.3pt](0,0)(5,6)
+\psaxes[linewidth=1pt,labelFontSize=\scriptstyle](0,0)(0,0)(5.5,5.5)
+\psaxes[linewidth=1.5pt,labelFontSize=\scriptstyle]{->}(0,0)(1,1)
+\psplot[plotpoints=3000,linewidth=1.25pt,linecolor=blue]{0}{4.8}{0.05 x dup mul mul 0.5 x mul sub 1 0.2 x mul sub ln 2.5 mul sub}
+\psdots(3,1.23)\uput[ul](3,1.23){$M$}\uput[l](4.5,5){\blue $\mathcal{F}$}
+\psline(1.5,-0.334)(5.5 ,3.866)
+\psdot(5,3.341)
+\uput[dr](5,3.341){S}
+\end{pspicture*}
+\end{center}
+
+Et on lit les coordonnées du point S. La droite étant construite au jugé et l'échelle choisie pour la représentation graphique étant un peu ésotérique, la lecture graphique est nécessairement peu précise. La valeur au dixième, pour un tracé correct donnerait $S(5~;~3,3)$.
+			
+	\item L'équation réduite de la tangente à $\mathcal{T}$ au point d'abscisse 3 est donc :
+$y = f'(3) \times (x - 3) + f(3)$ soit $y = \dfrac{3(1 - 0,1 \times 3)}{5 - 3} \times (x-3) -2,5 \ln(1 - 0,2 \times 3) - 0,5 \times 3 + 0,05 \times 3^2$ et donc, en effectuant les calculs $y = 1,05x-4,2 - 2,5\ln(0,4) $.
+			
+Sachant que le scooter est sur la tangente dont on vient de donner une équation, et sur la droite d'équation $x = 5$, son ordonnée est $1,05 \times 5 - 4,2 -2,5\ln(0,4) \approx 3,34$, au centième près.
+	\end{enumerate}
+
+		\item La distance $MS$ se rapproche d'une limite si la fonction $d(x)$ a une limite finie quand $x$ tend vers 5. La fonction $d$ n'est pas définie en 5, mais comme il s'agit d'une fonction polynôme, on peut calculer sa limite en calculant l'image de 5 par une fonction polynôme ayant les mêmes coefficients, mais définie en 5, puisque les fonctions polynômes sont continues, l'image en un réel est aussi la limite quand $x$ tend vers ce réel.
+		
+		On a donc $\lim\limits_{x \to 5} d(x) = \lim\limits_{x \to 5} 0,1x^2 - x + 5 = 0,1 \times 5^2 - 5 + 5 = 2,5$.	
+	\end{enumerate}
+	\vspace{0,5cm}
+	
+	\textbf{Exercice 4 \hfill  5 points}
+	
+	\textbf{Candidats ayant suivi l'enseignement de spécialité}
+	
+	\medskip
+	
+	\textbf{Partie A - Un modèle simple}
+	
+	\medskip
+	
+	\begin{enumerate}
+		\item \begin{enumerate}
+			\item La matrice qui va retranscrire les deux relations de récurrence des suites $(u_n)$ et $(v_n)$ est : 
+		
+			$A = \left( \begin{array}{@{}cc@{}} 1,1&-2000\\2\times 10^{-5}&0,6 \end{array} \right)$ 
+			
+			La matrice $U_0$ est donc $U_0 = \left(\begin{array}{@{}c@{}} u_0\\v_0 \end{array}\right) =\left(\begin{array}{@{}c@{}} \np{2000000} \\120
+			\end{array}\right)$.
+			
+			\item Le premier juillet de l'année 2018, c'est-à-dire $2012 + 6$, l'estimation est donc contenue dans le vecteur $U_6$.
+			
+			$U_6 = A \times U_5 = A^2 \times U_4 = ... = A^6 \times U_0$. À la calculatrice, on obtient (en arrondissant les valeurs) $U_6 \approx \left(\begin{array}{@{}c@{}} \np{1882353,2}\\  96,47 \end{array}\right) $, cela donne donc, une estimation de 96 renards et \np{1882353} campagnols (on se doit d'arrondir à l'entier près, puisque le nombre de campagnols comme celui de renards doit être un entier naturel).
+		\end{enumerate}
+	
+		\item \begin{enumerate}
+			\item Pour tout entier naturel $n$, soit $\mathcal{P}_n$ la propriété : $U_n = P \times D^n \times P^{-1} \times U_0$.
+			
+\medskip
+			
+\textit{Initialisation :} Pour $n= 0$, on a, $D^0 = I_2$, où $I_2$ est la matrice identité d'ordre 2.
+			
+\begin{tabbing}
+Donc $P \times I_2 \times P^{-1} \times U_0$~\=$ = P \times P^{-1} \times U_0$ \quad car la matrice $I_2$ est neutre pour le produit.\\
+\>$= I_2 \times U_0$ \quad car les matrices $P$ et $P^{-1}$ sont inverses l'une de l'autre.\\
+\>$= U_0$ \quad à nouveau parce que $I_2$ est l'élément neutre.
+\end{tabbing}
+On a donc bien $U_0 =  P \times D^0 \times P^{-1} \times U_0$ : la propriété est vraie au rang 0.
+			
+\medskip 
+			
+\textit{Hérédité :} Pour un entier naturel $k$ donné, on suppose la propriété $\mathcal{P}_k$ vraie. On a alors :
+			
+\begin{tabbing}
+$U_{k+1} $~\=$=A \times U_k$ \quad d'après la question \textbf{1. a.}\\
+\>$= P \times D \times P^{-1} \times U_k$ \quad d'après la relation admise au début de la question \textbf{2.}      \\
+\>$= P \times D \times P^{-1} \times P \times D^k \times P^{-1} \times U_0$ \quad d'après l'hypothèse de récurrence\\
+\>$= P \times D \times I_2 \times D^k \times P^{-1} \times U_0$ \quad puisque $P$ et $P^{-1}$ sont inverses l'une de l'autre\\
+\>$= P \times D \times  D^k \times P^{-1} \times U_0$ \\
+\>$= P \times  D^{k+1} \times P^{-1} \times U_0$ \quad et ça, c'est la propriété $\mathcal{P}_{k+1}$
+\end{tabbing}
+			
+\medskip
+	
+\textit{Conclusion :} La propriété $\mathcal{P}_0$ est vraie, et si une propriété $\mathcal{P}_k$ est vraie, la suivante l'est également, donc en application de l'axiome de récurrence, on peut confirmer que, pour tout entier naturel $n$, on a bien $U_n = P \times D^n \times P^{-1} \times U_0$. (ce que l'on avait utilisé dans le cas particulier $n = 6$ à la question \textbf{1. b.})
+			
+			\item Comme la matrice $D$ est diagonale, alors on a $D^n = \left(\begin{array}{@{}cc@{}} 1^n &0\\0&0,7^n 		\end{array}\right) = \left(\begin{array}{@{}cc@{}} 1 &0\\0&0,7^n 		\end{array}\right) $.
+			
+			\item L'évolution des populations peut faire référence à deux choses : la monotonie des suites, et leurs limites éventuelles.
+			 
+Ici, les deux suites sont la somme d'une constante et d'une suite géométrique de premier terme positif --- $\dfrac{2 \times 10^6}{15}$ pour $(u_n)$ et $\dfrac{400}{15}$ pour $(v_n)$ --- et de raison 0,7 (donc strictement comprise entre 0 et 1).
+			 
+			 Ces suites géométriques seront donc strictement décroissantes et convergentes vers 0, donc en ajoutant une constante :
+			 \begin{itemize}
+			 	\item La monotonie n'est pas affectée, on peut donc dire que les suites $(u_n)$ et $(v_n)$ sont décroissantes strictement.
+			 	\item La limite est modifiée de cette constante, ce qui veut dire que $(u_n)$ converge vers $\dfrac{2,8 \times 10^7}{15 }$ soit environ $\np[campagnols]{1866667}$ et $(v_n)$ converge vers $\dfrac{\np{1400}}{15} = \dfrac{280}{3}$, soit environ 93 renards.
+			 \end{itemize}
+		\end{enumerate}
+	\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B - Un modèle plus conforme à la réalité}
+	
+\medskip
+	
+\begin{enumerate}
+	\item Dans la cellule \textsf{B4}, la relation de récurrence de la suite $(u_n)$ donne : \textsf{=1,1*B3 - 0,001*B3*C3 }.
+		
+Dans la cellule \textsf{C4}, on écrit : \textsf{= 2*10\^{}(-7)*B3*C3 + 0,6*C3}.
+		
+	\item On constate la baisse des prédateurs et la hausse des proies en 2021 (pour $n = 9$, et $ 2012 + 9 = 2021 $).
+\end{enumerate}
+
+\bigskip
+	
+\textbf{Partie C}
+	
+\medskip
+\begin{tabbing}
+$u_{n+1}=u_{n} $~\=$\iff 0,1u_{n} - 0,001u_{n} \times v_{n}=0$\\
+\>$\iff u_{n}\left(0,1 - 0,001v_{n}\right)=0$\\
+\> $\iff u_{n}=0\text{ ou }v_{n}=100$.
+\end{tabbing}
+
+De la même façon : $v_{n+1}=v_{n} \iff v_{n}=0\text{ ou }u_{n}=2 \times 10^6$.
+
+Si l'on suppose que les populations sont présentes, alors $u_{n} = u_0 = 2 \times 10^6$ et $v_{n}=v_0 = 100$ pour tout $n$ est le seul exemple de suites constantes selon ce modèle. Cela correspond à 2 millions de campagnols et 100 renards.
+	
+\smallskip
+
+Si on ne suppose pas que les deux populations sont présentes, on peut prendre une suite constante égale à 0 pour $u$ ou pour $v$, mais cela rend caduc le modèle (s'il y a 0 campagnols, que mangent les renards? ou s'il n'y a pas de renards pour manger les campagnols, qui limitera la croissance de la population de campagnols ?).
+\end{document}
