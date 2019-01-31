@@ -13,7 +13,7 @@ Il est rappelé que la qualité de la rédaction, la clarté et la précision de
 }
 \end{center}
 %D'après Pondichery mai 2018
-\begin{exercice}[Les complexes sont nos amis][6]
+\begin{exercice}[Les complexes sont nos amis][5.5]
 Le plan est muni d'un repère orthonormé \Ouv.
 
 \smallskip
@@ -29,6 +29,7 @@ $$j=-\dfrac{1}{2} + \text{i}\dfrac{\sqrt{3}}{2}$$
 	\begin{enumerate}
 		\item Donner la forme trigonométrique et la forme exponentielle de j.
 
+\setbar{1.5}
 \begin{solution}
 $\text{j}=-\dfrac{1}{2} + \text{i}\dfrac{\sqrt{3}}{2}=\cos\left(\dfrac{2\pi}{3}\right) + \text{i}\sin\left(\dfrac{2\pi}{3}\right)=e^{\frac{2\text{i}\pi}{3}}$
 
@@ -45,6 +46,7 @@ représentés sur le graphique ci-dessous.
 		
 Placer les points A$'$, B$'$ et C$'$ sur ce graphique.
 
+\setbar{1.5}
 \begin{solution}
 \begin{center}
 \psset{unit=0.6cm}
@@ -82,6 +84,7 @@ $|c'|=4$ donc C$'$ est sur le cercle de centre O et de rayon 4 et on a $Re\left(
 	\end{enumerate}
 \item  Montrer que les points A$'$, B$'$ et C$'$ sont alignés.
 
+\setbar{1}
 \begin{solution}
 
 $a'=-c'$ donc A$'$ et C$'$ sont symétriques par rapport à O alors O, A$'$ et C$'$ sont alignés
@@ -98,6 +101,7 @@ segment [C$'$A].
 	
 Démontrer que le triangle MNP est isocèle.
 
+\setbar{1.5}
 \begin{solution}
 
 $z_{\text{M}}=\dfrac{a'+c}{2}=3-\text{i}\sqrt{3}$
@@ -143,7 +147,7 @@ On a MN=NP donc MNP est bien isocèle en N
 \newpage
 
 %D'après Amérique du Nord Mai 2018
-\begin{exercice}[Un peu de physique, mais pas trop...][6]
+\begin{exercice}[Un peu de physique, mais pas trop...][10]
 Lors d'une expérience en laboratoire, on lance un projectile dans un milieu fluide. L'objectif est de déterminer pour quel angle de tir
 $\theta$ par rapport à l'horizontale la hauteur du projectile ne dépasse
 pas $1,6$ mètre.
@@ -181,6 +185,7 @@ $x$ de l'intervalle [0~;~1[ :
 
 \[f'(x) = \dfrac{- bx + b - 2}{1 - x}.\]
 
+\setbar{1}
 \begin{solution}
 On va utiliser: $\left(\ln (u) \right) ' = \frac{u'}{u}$
 
@@ -190,6 +195,7 @@ $f'(x) = b + 2\times \frac{-1}{1-x} = \cdots = \frac{-bx+x-2}{1-x}$
 
 le maximum de la fonction $f$ est égal à $b - 2 + 2\ln \left(\dfrac{2}{b}\right)$.
 
+\setbar{3}
 \begin{solution}
 Puisque la fonction $f$ est dérivable, et que l'on connaît sa fonction dérivée, on va étudier le signe de la fonction dérivée pour connaître les variations de la fonction $f$.
 		
@@ -220,7 +226,8 @@ Posons $m$ la fonction définie sur $[2~;~+\infty[$ par $m(b) = b - 2 + 2 \ln\le
 \begin{enumerate}
 	
 	\item Etudier les variations de la fonction $m$ pour $b$ supérieur à 2.
-	
+
+\setbar{1.5}	
 \begin{solution}
 La fonction $m$ est dérivable sur son ensemble de définition et on a pour tout $b$ supérieur à 2 :
 		
@@ -229,18 +236,29 @@ $m'(b) = 1 - \dfrac{2}{b}$.
 Comme $b$ est supérieur à 2, on en déduit que $m'(b)$ est positif, et même strictement positif pour $b>2$, et donc que la fonction $m$ est strictement croissante sur $[2~;~+\infty[$.
 \end{solution}
 \item Déterminer: $\lim_{b \to +\infty} m(b)$
+
+\setbar{1}
+\begin{solution}
+TODO
+\end{solution}
 	\item Dresser le tableau de variation de $m$ sur $[2;+\infty[$
-	
+
+\setbar{0.5}
+\begin{solution}
+TODO
+\end{solution}
 
 	\item Démontrer que l'équation $m(b)=1,6$ admet une unique solution $b_0$ dans $[2;10]$. En donner un encadrement à $0,01$ près.
-	
+
+\setbar{1.5}
 \begin{solution}
 La fonction $m$ étant continue (car dérivable) et strictement croissante sur l'intervalle $[2~;~10]$ et 1,6 étant une valeur intermédiaire entre $m(0) = 0$ et $m(10) \approx 4,8$, le corollaire au théorème des valeurs intermédiaires permet d'affirmer qu'il existe un unique nombre $b_0$ antécédent de 1,6 par $m$ sur $[2~;~10]$. Comme $m$ est strictement croissante sur $[2~;~+\infty[$, il n'y aura pas d'autre antécédent que celui là.
 
 Un balayage à la calculatrice donne $5,69 < b_0 < 5,70$.
 \end{solution}
 	\item Conclure.
-	
+
+\setbar{0.5}	
 \begin{solution}
 	
 Les valeurs du paramètre $b$ garantissant une hauteur maximale $m(b)$ ne dépassant pas 1,6 mètre sont donc les réels de l'intervalle $[2~;~b_0]$, soit, en donnant une valeur approchée (nécessairement par défaut, vu que $m$ est croissante) de l'intervalle $[2~;~5,69]$.
@@ -256,6 +274,7 @@ fonction $f$ au point d'abscisse $0$ comme indiqué sur le schéma donné ci-des
 
 Déterminer une valeur approchée au dixième de degré près de l'angle $\theta$.
 
+\setbar{1}
 \begin{solution}
 Si on choisit $b = 5,69$, alors, cela signifie que la tangente tracée en pointillés est la droite d'équation : 
 $$y = f'(0) \times (x - 0) + f(0) = \dfrac{b - 2}{1 - 0} \times x + 0 = (5,69 - 2)x = 3,69x$$
@@ -268,13 +287,12 @@ Cela signifie que l'origine du repère, le point de coordonnée $(1~;~0)$ et le 
 \end{exercice}
 
 %Daprès Centres étrangers juin 2018
-\begin{exercice}[VRAI-FAUX][2]
+\begin{exercice}[VRAI-FAUX][4]
 Pour chacune des  affirmations suivantes,
  indiquer si elle est vraie ou fausse, 
 en justifiant la réponse.
- Il est attribué un point par réponse exacte correctement justifiée.
- Une réponse inexacte ou
-non justifiée ne rapporte ni n'enlève aucun point.
+ Il est attribué deux points par réponse exacte correctement justifiée.
+ 
 
 \begin{enumerate}
 
@@ -286,7 +304,7 @@ non justifiée ne rapporte ni n'enlève aucun point.
 
 \textbf{Affirmation} l'équation admet deux solutions dans l'intervalle $\left]\dfrac{1}{2}~;~+ \infty\right[$.
 
-\setbar{1}
+\setbar{2}
 \begin{solution}
 \begin{list}{\textbullet}{}
 \item Soit $I=\left]\frac{1}{2}~;~+ \infty\right[$. 
@@ -321,7 +339,7 @@ $x'\in I$ et $x'' \not\in I$ donc l'équation du départ n'admet qu'une solution
 \textbf{Affirmation} les solutions de l'équation sont les affixes de points appartenant à un même
 cercle de centre le point P d'affixe $2$.
 
-\setbar{1}
+\setbar{2}
 \begin{solution}
 \begin{list}{\textbullet}{}
 \item Les solutions de l'équation $\left(4z^2 - 20z + 37\right)(2z -7 + 2i) = 0$ sont les solutions des deux équations $4z^2 - 20z + 37 = 0$ et $2z -7 + 2i = 0$.
@@ -352,7 +370,7 @@ Cette équation a pour solution le nombre complexe $z_3=\dfrac{7}{2}- i$.
 \end{exercice}
 
 %Daprès Métropole juin 2018
-\begin{exercice}[Complexes: suites...][6]
+\begin{exercice}[Complexes: suites...][10.5]
 Le plan complexe est muni d'un repère orthonormé direct \Ouv.
 
 On pose $z_0 = 8$ et, pour tout entier naturel $n$ :
@@ -370,11 +388,13 @@ On note $A_n$ le point du plan d'affixe $z_n$.
 		
 \[\dfrac{3 - \text{i}\sqrt{3}}{4} = \dfrac{\sqrt{3}}{2}\text{e}^{- \text{i}\frac{\pi}{6}}.\]
 
+\setbar{0.5}
 \begin{solution}
 $\dfrac{\sqrt{3}}{2} \e^{-\text{i} \frac{\pi}{6}} = \dfrac{\sqrt{3}}{2} \left( \cos\left(-\dfrac{\pi}{6}\right) + \text{i}\sin\left(-\dfrac{\pi}{6}\right) \right) = \dfrac{\sqrt{3}}{2} \left( \dfrac{\sqrt{3}}{2} - \text{i}\dfrac{1}{2} \right) = \dfrac{3}{4} - \text{i} \dfrac{\sqrt{3}}{4} = \dfrac{3-\text{i}\sqrt{3}}{4}$
 \end{solution}		
 		\item En déduire l'écriture de chacun des nombres complexes $z_1$,  $z_2$ et $z_3$ sous forme exponentielle et vérifier que $z_3$ est un imaginaire pur dont on précisera la partie imaginaire.
-		
+
+\setbar{2}	
 \begin{solution}
 $z_1=\dfrac{\sqrt{3}}{2} \e^{-\text{i} \frac{\pi}{6}}z_0=\dfrac{\sqrt{3}}{2} \e^{-\text{i} \frac{\pi}{6}} \times 8$ donc $\boxed{ z_1=4\sqrt{3} \e^{-\text{i} \frac{\pi}{6}} }$\smallskip 
 	
@@ -387,7 +407,8 @@ $z_1=\dfrac{\sqrt{3}}{2} \e^{-\text{i} \frac{\pi}{6}}z_0=\dfrac{\sqrt{3}}{2} \e^
 $\boxed{ \text{Im}\left(z_3\right) = - 3\sqrt{3} }$
 \end{solution}
 		\item Représenter graphiquement les points $A_0$ , $A_1$ , $A_2$ et $A_3$ ; on prendra pour unité le centimètre.
-		
+
+\setbar{2}	
 \begin{solution}
 \textsc{Figure représentation des points $A_0$, \:$A_1$, \:$A_2$, \:$A_3$}
 
@@ -455,7 +476,7 @@ $A_3$ est le point d'intersection de l'axe des ordonnées  avec le demi-cercle d
 		
 \[z_n = 8 \times \left(\dfrac{\sqrt{3}}{2}\right)^n \text{e}^{- \text{i}\frac{n\pi}{6}}.\]
 
-
+\setbar{1.5}
 \begin{solution}
 \emph{Initialisation} $z_0 = 8 \times 1 \times 1 = 8$ donc la propriété est vraie pour $n=0$.\smallskip 
 		
@@ -477,6 +498,7 @@ Conclusion : d'après le principe de récurrence la propriété est vraie pour t
 		
 Déterminer la nature et la limite de la suite $\left(u_n\right)$.
 
+\setbar{1.5}
 \begin{solution}
 On a donc $u_n=\left|z_n\right| =8 \times \left( \dfrac{\sqrt{3}}{2} \right)^n$\smallskip 
 	
@@ -493,6 +515,7 @@ $0 < \dfrac{\sqrt{3}}{2} < 1$ donc $\displaystyle\lim_{n \to + \infty} \left( \d
 
 En déduire que, pour tout entier naturel $k$, on a l'égalité : $A_kA_{k+1} = \dfrac{1}{\sqrt{3}} \text{O}A_{k+1}$.
 
+\setbar{1.5}
 \begin{solution}
 $\dfrac{z_{k+1} - z_k}{z_{k+1} } = \dfrac{ \dfrac{3-\text{i}\sqrt{3}}{4}z_k - z_k}{ \dfrac{3-\text{i}\sqrt{3}}{4}z_k } = \dfrac{ \cancel{z_k} \left( \dfrac{3-\text{i}\sqrt{3}}{4} - 1 \right)}{ \dfrac{3-\text{i}\sqrt{3}}{4}\cancel{z_k} } 
 		=\dfrac{ \dfrac{3-\text{i}\sqrt{3}}{4} - 1 }{\dfrac{3-\text{i}\sqrt{3}}{4}}
@@ -518,6 +541,7 @@ On a ainsi : $\ell_n = A_0A_1 + A_1A_2 + \ldots + A_{n-1}A_n$.
 		
 Démontrer que la suite $\left(\ell_n\right)$ est convergente et calculer sa limite.
 
+\setbar{1.5}
 \begin{solution}
 D'après la question précédente, pour tout entier naturel $k$,\smallskip 
 		
@@ -536,78 +560,7 @@ Pour finir, $\displaystyle\lim_{n \to + \infty} \ell_n=\dfrac{8}{2-\sqrt{3}}(1-0
 \end{enumerate}
 \end{exercice}
 
-\newpage
-\section{Un peu de culture: Tacite}
-54 - 117
- 
-en latin Publius Cornelius Tacitus
- 
-Historien romain (Interamna, Ombrie, ou Rome, entre 54 et 56 apr. J.-C. — ?, v. 120).
- 
-Tacite était issu d'une famille de l'ordre équestre de la Gaule transalpine, 
-cette classe sociale dynamique et prospère qui servait de soutien à l'Empire depuis le déclin des familles patriciennes romaines.
 
- Maîtrisant parfaitement l'éloquence, 
-il fit une brillante carrière politique: questeur, puis préteur (88); 
-toutefois, pour ne pas attirer sur lui l'attention de l'empereur Domitien (81-96), 
-toujours prêt à exiler ou à faire assassiner les personnages illustres de l'Empire, 
-il n'accepta le consulat qu'en 97, sous l'empereur Nerva.
- Bien que provincial et appartenant à l'ordre équestre, 
-il entra au Sénat. 
-Malgré une vive critique de la rhétorique désuète et stérile des sénateurs,
- il reproduisit implicitement les préjugés traditionnels de la classe dirigeante 
-et défendit avec fierté son appartenance à la "caste sénatoriale"
-qui retrouva son lustre sous Trajan (98-117). 
-C'est à cette situation qu'il dut de connaître constamment une vie calme.
-
-Sa production littéraire, 
-s'inscrivant dans le cadre de son amitié pour Trajan et Pline le Jeune,
- était appréciée par le milieu impérial. 
-Tacite fut l'historien officieux du régime,
- ce qui ne l'empêcha pas d'être aussi un historien critique.
- Dans son Dialogue des orateurs, 
-dont la date de publication n'est pas connue avec certitude,
- mais qui a dû être écrit vers 81,
- il se montre déjà un subtil historien et critique littéraire. 
-Étudiant les causes du déclin de l'éloquence à Rome, 
-il introduit la liberté comme élément d'explication, 
-et tend à montrer que le régime impérial, 
-en limitant la liberté politique 
-et en subordonnant le talent des orateurs à la louange de l'empereur,
- déplace et pervertit la fonction de l'éloquence.
- Au temps de Cicéron, la rhétorique était un moyen d'arriver au pouvoir;
- sous Trajan, seule une rhétorique déférente permettait 
-de s'assurer les bonnes grâces de l'empereur,
- donc un certain pouvoir.
- Le discours de Tacite est teinté d'un regret du temps de la liberté.
- Cette critique subtile fut tolérée par le régime de Trajan,
- qui se voulait libéral pour faire oublier le despotisme de Domitien.
-Après la Vie d'Agricola (98), 
-éloge funèbre de son beau-père,
- il publia la Germanie (vers 98),
- un traité sur les moeurs des Germains. 
-Ces deux oeuvres sont l'occasion d'une étude sociologique sur les "Barbares".
-
-Le récit des campagnes d'Agricola en Bretagne (la Grande-Bretagne actuelle),
- et la compilation des récits des campagnes romaines en Germanie
- permettent à Tacite de brosser 
-un tableau socio-historique de ces populations frontalières qui,
- à partir du moment où l'on commence à s'y intéresser,
- n'ont de barbare que le nom :
- dépassant les préjugés traditionnels,
- Tacite tend à reconnaître l'existence de cultures 
-et de sociétés non romaines.
- Cette reconnaissance indirecte de la spécificité des Bretons et des Germains 
-détruit l'image d'une barbarie homogène se définissant 
-par opposition à la culture méditerranéenne.
-
-\section{Une grande oeuvre historique}
-Après les Histoires (publiées en 106), 
-dont il ne reste que quatre livres, 
-et qui décrivaient l'Empire de 69 à 96 
-(depuis la mort de Néron jusqu'à la chute de Domitien), 
-Tacite publia les Annales (écrites vers 115-117), 
-qui constituent, sans doute, sa grande oeuvre historique. Elles sont consacrées à la période qui suit la mort d'Auguste; seuls nous sont parvenus les livres I à IV, un fragment des livres V et VI (sur Tibère) et les livres XI à XVI (deuxième partie du règne de Claude et quasi-totalité de celui de Néron). À la fois historien et moraliste, Tacite y dépeint avec pessimisme, dans un style d'une saisissante concision, les mentalités et les moeurs des hommes de son temps.
 
 
 \end{document}
