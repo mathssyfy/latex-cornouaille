@@ -1,0 +1,516 @@
+%!TEX encoding = UTF-8 Unicode
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[scaled=0.875]{helvet}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{amsmath,amssymb}
+\usepackage{fancybox}
+\usepackage[normalem]{ulem}
+\usepackage{pifont}
+\usepackage{lscape}
+\usepackage{diagbox}
+\usepackage{eucal}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{mathrsfs}
+\usepackage{textcomp} 
+\usepackage{enumerate}
+\usepackage{enumitem} 
+\usepackage{colortbl} 
+\usepackage{variations}
+\newcommand{\euro}{\eurologo{}}
+%Tapuscrit : Denis Vergès
+\usepackage{pst-plot,pst-tree,pstricks,pst-node,pst-text}
+\usepackage{pst-eucl}
+\usepackage{pstricks-add}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
+\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
+\newcommand{\barre}[1]{\overline{\,\mathstrut#1\,}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\renewcommand{\thesubsection}{Exercice \Roman{subsection}} 
+\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
+\everymath{\displaystyle}
+\usepackage{fancyhdr}
+\usepackage[dvips]{hyperref}
+\hypersetup{%
+pdfauthor = {APMEP},
+pdfsubject = {Baccalauréat S},
+pdftitle = {Centres étrangers - 11 juin 2018},
+allbordercolors = white,
+pdfstartview=FitH} 
+\usepackage[frenchb]{babel}
+\usepackage[np]{numprint}
+\begin{document}
+\setlength\parindent{0mm}
+\marginpar{\rotatebox{90}{\textbf{A. P{}. M. E. P{}.}}}
+\rhead{\textbf{A. P{}. M. E. P{}.}}
+\lhead{\small Baccalauréat S }
+\lfoot{\small{Centres étrangers}}
+\rfoot{\small{11 juin 2018}}
+\pagestyle{fancy}
+\thispagestyle{empty} 
+
+\begin{center} {\Large{\textbf{\decofourleft~Baccalauréat S  Centres étrangers 11 juin 2018~\decofourright}}}
+\end{center}
+
+\subsection{\hfill 4 points}
+ 
+\textbf{Pour tous les candidats}
+
+\medskip
+
+Dans une usine, on se propose de tester un prototype de hotte aspirante pour un local industriel.
+
+Avant de lancer la fabrication en série, on réalise l'expérience suivante : dans un local clos équipé
+du prototype de hotte aspirante, on diffuse du dioxyde de carbone (CO$_2$) à débit constant.
+
+Dans ce qui suit, $t$ est le temps exprimé en minute.
+
+À l'instant $t = 0$, la hotte est mise en marche et on la laisse fonctionner pendant $20$ minutes. Les
+mesures réalisées permettent de modéliser le taux (en pourcentage) de CO$_2$ contenu dans le local au
+bout de $t$ minutes de fonctionnement de la hotte par l'expression $f(t)$, où $f$ est la fonction définie
+pour tout réel $t$ de l'intervalle [0~;~20] par :
+
+\[f(t) = (0,8t + 0,2)\text{e}^{-0,5t} + 0,03.\]
+
+\smallskip
+
+\parbox{0.57\linewidth}{On donne ci-contre le tableau de variation de la fonction $f$ sur l'intervalle [0~;~20].
+
+Ainsi, la valeur $f(0) = 0,23$ traduit le fait que le taux 
+de CO$_2$ à l'instant $0$ est égal à 23\,\%.}\hfill
+\parbox{0.41\linewidth}{\psset{unit=1.2cm}
+\begin{pspicture}(5,2.5)
+\psframe(5,2.5)\psline(0,1.5)(5,1.5)\psline(0,2)(5,2)\psline(1,0)(1,2.5)
+\uput[u](0.5,1.9){$t$}\uput[u](1.1,1.9){$0$}\uput[u](3,1.9){$1,75$}\uput[u](4.8,1.9){$20$}
+\rput(0.5,1.75){$f'(t)$}\rput(2,1.75){$+$}\rput(3,1.75){$0$}\rput(4,1.75){$-$}
+\rput(0.5,0.75){$f$}\uput[u](1.3,0){\small $0,23$}
+\psline{->}(1.5,0.5)(2.5,1.25)\psline{->}(3.5,1.25)(4.5,0.5)
+\end{pspicture}}
+
+\bigskip
+
+\begin{enumerate}
+\item Dans cette question, on arrondira les deux résultats au millième.
+	\begin{enumerate}
+		\item Calculer $f (20)$.
+		\item Déterminer le taux maximal de CO$_2$ présent dans le local pendant l'expérience.
+ 	\end{enumerate}
+\item  On souhaite que le taux de CO$_2$ dans le local retrouve une valeur $V$ inférieure ou égale à $3,5$\,\%.
+	\begin{enumerate}
+		\item Justifier qu'il existe un unique instant $T$ satisfaisant cette condition.
+		\item  On considère l'algorithme suivant :
+		
+\begin{center}
+\begin{tabularx}{0.5\linewidth}{|X|}\hline
+$t \gets 1,75$\\
+$p \gets 0,1$\\
+$V \gets 0,7$\\
+Tant que $V > 0,035$\\
+\hspace{0.75cm}$t \gets t + p$\\
+\hspace{0.75cm}$V \gets (0,8t + 0,2)\text{e}^{-0,5t} + 0,03$\\
+Fin Tant que\\ \hline
+\end{tabularx}
+\end{center}		
+		
+Quelle est la valeur de la variable $t$ à la fin de l'algorithme ?
+		
+Que représente cette valeur dans le contexte de l'exercice ?
+ 	\end{enumerate}
+\item  On désigne par $V_m$ le taux moyen ( en pourcentage) de CO$_2$ présent dans le local pendant les $11$
+premières minutes de fonctionnement de la hotte aspirante.
+	\begin{enumerate}
+		\item Soit $F$ la fonction définie sur l'intervalle [0~;~11] par : 
+		
+		\[F(t) = (-1,6t -3,6)\text{e}^{-0,5t} + 0,03t.\]
+		
+Montrer que la fonction $F$ est une primitive de la fonction $f$ sur l'intervalle [0~;~11].\index{primitive}
+		\item En déduire le taux moyen $V_m$, valeur moyenne de la fonction $f$ sur l'intervalle [0~;~11].
+Arrondir le résultat au millième, soit à $0,1$\,\%.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{\hfill 4 points}
+ 
+\textbf{Pour tous les candidats}
+
+\medskip
+
+Pour chacune des quatre affirmations suivantes, indiquer si elle est vraie ou fausse, en justifiant la
+réponse. Il est attribué un point par réponse exacte correctement justifiée. Une réponse inexacte ou
+non justifiée ne rapporte ni n'enlève aucun point.
+
+\bigskip
+
+\begin{enumerate}
+\item Un type d'oscilloscope a une durée de vie, exprimée en année, qui peut être modélisée par une
+variable aléatoire $D$ qui suit une loi exponentielle de paramètre $\lambda$.
+
+On sait que la durée de vie moyenne de ce type d'oscilloscope est de $8$ ans.
+
+\smallskip
+
+\textbf{Affirmation 1 :} pour un oscilloscope de ce type choisi au hasard et ayant déjà fonctionné $3$ ans,
+la probabilité que la durée de vie soit supérieure ou égale à $10$ ans, arrondie au centième, est
+égale à $0,42$.
+
+\emph{On rappelle que si $X$ est une variable aléatoire qui suit une loi exponentielle de paramètre $\lambda$, on a pour tout réel $t$ positif :} $P(X \leqslant t) = 1 - \text{e}^{-\lambda t}$.
+\item  En 2016, en France, les forces de l'ordre ont réalisé $9,8$ millions de dépistages d'alcoolémie
+auprès des automobilistes, et 3,1\,\% de ces dépistages étaient positifs.
+
+Source : \emph{OFDT (Observatoire Français des Drogues et des Toxicomanies)}
+
+Dans une région donnée, le 15 juin 2016, une brigade de gendarmerie a effectué un dépistage
+sur $200$ automobilistes.
+
+\smallskip
+
+\textbf{Affirmation 2 :} en arrondissant au centième, la probabilité que, sur les $200$ dépistages, il y ait
+eu strictement plus de $5$ dépistages positifs, est égale à $0,59$.
+\item  On considère dans $\R$ l'équation :
+
+\[\ln (6 x - 2) + \ln (2x - 1) = \ln (x).\]
+
+\smallskip
+
+\textbf{Affirmation 3 :} l'équation admet deux solutions dans l'intervalle $\left]\dfrac{1}{2}~;~+ \infty\right[$.
+\item  On considère dans $\C$ l'équation : 
+
+\[\left(4z^2 - 20z + 37\right)(2z -7 + 2\text{i}) = 0.\]
+
+
+\smallskip
+
+\textbf{Affirmation 4 :} les solutions de l'équation sont les affixes de points appartenant à un même
+cercle de centre le point P d'affixe $2$.
+\end{enumerate}
+
+\subsection{\hfill 7 points}
+ 
+\textbf{Pour tous les candidats}
+
+\medskip
+
+\emph{Les parties} A \emph{et} B \emph{sont indépendantes}
+
+\medskip
+
+Un détaillant en fruits et légumes étudie l'évolution de ses ventes de melons afin de pouvoir
+anticiper ses commandes.
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+Le détaillant constate que ses melons se vendent bien lorsque leur masse est comprise entre $900$ g et
+\np{1200}~g. Dans la suite, de tels melons sont qualifiés \og conformes \fg.
+
+Le détaillant achète ses melons auprès de trois maraîchers, notés respectivement A, B et C.
+
+Pour les melons du maraîcher A, on modélise la masse en gramme par une variable aléatoire $M_{\text{A}}$
+qui suit une loi uniforme sur l'intervalle $[850~;~x]$, où $x$ est un nombre réel supérieur à \np{1200}.
+
+La masse en gramme des melons du maraîcher B est modélisée par une variable aléatoire $M_{\text{B}}$ qui
+suit une loi normale de moyenne \np{1050} et d'écart-type inconnu $\sigma$.
+
+Le maraîcher C affirme, quant à lui, que 80\,\% des melons de sa production sont conformes.
+
+\medskip
+
+\begin{enumerate}
+\item Le détaillant constate que 75\,\% des melons du maraîcher A sont conformes. Déterminer $x$.
+\item Il constate que 85\,\% des melons fournis par le maraîcher B sont conformes.
+
+Déterminer l'écart-type $\sigma$ de la variable aléatoire $M_{\text{B}}$. En donner la valeur arrondie à l'unité.
+\item  Le détaillant doute de l'affirmation du maraîcher C. Il constate que sur $400$ melons livrés par ce
+maraîcher au cours d'une semaine, seulement $294$ sont conformes.
+
+Le détaillant a-t-il raison de douter de l'affirmation du maraîcher C ?
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+Le détaillant réalise une étude sur ses clients. Il constate que:
+
+\begin{itemize}
+\item parmi les clients qui achètent un melon une semaine donnée, 90\,\% d'entre eux achètent un
+melon la semaine suivante;
+\item parmi les clients qui n'achètent pas de melon une semaine donnée, 60\,\% d'entre eux n'achètent
+pas de melon la semaine suivante.
+\end{itemize}
+
+\smallskip
+
+On choisit au hasard un client ayant acheté un melon au cours de la semaine 1 et, pour $n \geqslant 1$, on
+note $A_n$ l'évènement : \og le client achète un melon au cours de la semaine $n$ \fg.
+
+On a ainsi $p\left(A_1\right) = 1$.
+
+\medskip
+
+\parbox{0.6\linewidth}{\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Reproduire et compléter l'arbre de probabilités
+ci-contre, relatif aux trois premières semaines.
+		\item Démontrer que $p\left(A_3\right) = 0,85$.
+		\item Sachant que le client achète un melon au cours
+de la semaine 3, quelle est la probabilité qu'il en ait acheté un au cours de la semaine 2 ?
+		
+Arrondir au centième.
+	\end{enumerate}
+\end{enumerate}
+}\hfill 
+\parbox{0.31\linewidth}{\pstree[treemode=R,nodesepA=0pt,nodesepB=3pt]{\TR{$A_1$~}}
+{
+   \pstree{\TR{$A_2$~}}
+      {
+      \TR{$A_3$} 
+      \TR{$\overline{A_3}$}
+      }
+
+   \pstree{\TR{$\overline{A_2}$~} }
+     {
+     \TR{$A_3$} 
+     \TR{$\overline{A_3}$}
+     }
+}
+}
+\medskip
+	
+Dans la suite, on pose pour tout entier $n \geqslant 1$ : \:$p_n = P\left(A_n\right)$. On a ainsi $p_1 = 1$.
+
+\medskip
+
+\begin{enumerate}[resume,start=2]
+\item Démontrer que, pour tout entier $n \geqslant 1$ : $p_{n+1} = 0,5p_n + 0,4$.
+\item 
+	\begin{enumerate}
+		\item Démontrer par récurrence que, pour tout entier $n \geqslant 1$ : $p_n > 0,8$.
+		\item Démontrer que la suite $\left(p_n\right)$ est décroissante.
+		\item La suite $\left(p_n\right)$ est-elle convergente ?
+ 	\end{enumerate}
+\item On pose pour tout entier $n \geqslant 1$ : $v_n = p_n - 0,8$.
+	\begin{enumerate}
+		\item Démontrer que $\left(v_n\right)$ est une suite géométrique dont on donnera le premier terme $v_1$ et la raison.
+		\item  Exprimer $v_n$ en fonction de $n$.
+		
+En déduire que, pour tout $n \geqslant 1$,\: $p_n = 0,8 + 0,2 \times  0,5^{n-1}$.
+		\item  Déterminer la limite de la suite $\left(p_n\right)$.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{\hfill 5 points}
+ 
+\textbf{Candidats n'ayant pas suivi la spécialité mathématique}
+
+\medskip
+
+\parbox{0.54\linewidth}{La figure ci-contre représente un cube ABCDEFGH.
+
+Les trois points I, J, K sont définis par les conditions
+suivantes :
+
+\begin{itemize}
+\item I est le milieu du segment [AD] ;
+\item J est tel que $\vect{\text{AJ}} = \dfrac{3}{4} \vect{\text{AE}}$ ;
+\item K est le milieu du segment [FG].
+\end{itemize}}
+\hfill
+\parbox{0.44\linewidth}{
+\psset{unit=0.75cm}
+\begin{pspicture}(-0.5,-0.5)(8,7.8)
+\psframe(0,0)(4.5,4.5)%ABFE
+\psline(4.5,0)(6.7,2.3)(6.7,6.8)(4.5,4.5)%BCGF
+\psline(6.7,6.8)(2.2,6.8)(0,4.5)%GHE
+\psline[linestyle=dashed](0,0)(2.2,2.3)(6.7,2.3)
+\psline[linestyle=dashed](2.2,2.3)(2.2,6.8)
+\uput[dl](0,0){A} \uput[dr](4.5,0){B} \uput[r](6.7,2.3){C} 
+\uput[ur](2.2,2.3){D} \uput[l](0,4.5){E} \uput[r](4.5,4.5){F} 
+\uput[r](6.7,6.8){G} \uput[u](2.2,6.8){H} \uput[ul](1.1,1.15){I} 
+\uput[l](0,3.375){J} \uput[dr](5.6,5.65){K}
+\psdots(1.1,1.15)(0,3.375)(5.6,5.65) 
+\end{pspicture}
+}
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+\begin{enumerate}
+\item Sur la figure donnée en annexe, construire sans justifier le point d'intersection P du plan (IJK) et
+de la droite (EH). On laissera les traits de construction sur la figure.
+\item  En déduire, en justifiant, l'intersection du plan (IJK) et du plan (EFG).
+\end{enumerate}
+ 
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+On se place désormais dans le repère orthonormé $\left(\text{A}~;~\vect{\text{AB}}, \vect{\text{AD}}, \vect{\text{AE}}\right)$.
+
+\medskip
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Donner sans justification les coordonnées des points I, J et K.
+		\item Déterminer les réels $a$ et $b$ tels que le vecteur $\vect{n} (4~;~a~;~b)$ soit orthogonal aux vecteurs $\vect{\text{IJ}}$ et $\vect{\text{IK}}$.
+		\item  En déduire qu'une équation cartésienne du plan (IJK) est : $4x - 6y - 4z + 3 = 0$.
+	\end{enumerate}
+\item 
+	\begin{enumerate}
+		\item Donner une représentation paramétrique de la droite (CG).
+		\item Calculer les coordonnées du point N, intersection du plan (IJK) et de la droite (CG).
+		\item Placer le point N sur la figure et construire en couleur la section du cube par le plan (IJK).
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+\medskip
+
+On note R le projeté orthogonal du point F sur le plan (IJK). Le point R est donc l'unique point du
+plan (IJK) tel que la droite (FR) est orthogonale au plan (IJK).
+
+
+On définit l'intérieur du cube comme l'ensemble des points $M(x~;~y~;~z)$ tels que $\left\{\begin{array}{l}
+0 < x < 1\\
+0 < y < 1\\
+0 < z < 1
+\end{array}\right.$
+
+Le point R est-il à l'intérieur du cube ?
+
+\subsection{\hfill 5 points}
+ 
+\textbf{Candidats ayant suivi la spécialité mathématique}
+
+\medskip
+
+Le but de cet exercice est d'envisager une méthode de cryptage à clé publique d'une information
+numérique, appelée système RSA, en l'honneur des mathématiciens Ronald Rivest, Adi Shamir et
+Leonard Adleman, qui ont inventé cette méthode de cryptage en 1977 et l'ont publiée en 1978.
+
+\smallskip
+
+Les questions 1 et 2 sont des questions préparatoires, la question 3 aborde le cryptage, la question 4
+le décryptage.
+
+\bigskip
+
+\begin{enumerate}
+\item Cette question envisage de calculer le reste dans la division euclidienne par $55$ de certaines
+puissances de l'entier $8$.
+	\begin{enumerate}
+		\item Vérifier que $8^7 \equiv 2 \mod 55$.
+		
+En déduire le reste dans la division euclidienne par $55$ du nombre $8^{21}$.
+		\item Vérifier que $8^2 \equiv 9 \mod 55$, puis déduire de la question a. le reste dans la division
+euclidienne par $55$ de $8^{23}$.
+ 	\end{enumerate}
+\item  Dans cette question, on considère l'équation $(E)$\: $23 x - 40 y = 1$, dont les solutions sont des
+couples $(x~;~y)$ d'entiers relatifs.
+	\begin{enumerate}
+		\item Justifier le fait que l'équation $(E)$ admet au moins un couple solution.
+		\item  Donner un couple, solution particulière de l'équation $(E)$.
+		\item  Déterminer tous les couples d'entiers relatifs solutions de l'équation $(E)$.
+		\item  En déduire qu'il existe un unique entier $d$ vérifiant les conditions $0 \leqslant d < 40$ et
+$23 d \equiv  1 \mod 40$.
+ 	\end{enumerate}
+\item  Cryptage dans le système RSA
+	
+Une personne A choisit deux nombres premiers $p$ et $q$, puis calcule les produits $N = p q$ et
+$n = (p - 1)(q - 1)$. Elle choisit également un entier naturel $c$ premier avec $n$.
+	
+La personne A publie le couple $(N~;~c)$, qui est une clé publique permettant à quiconque de lui
+envoyer un nombre crypté.
+	
+Les messages sont numérisés et transformés en une suite d'entiers compris entre $0$ et $N -1$.
+	
+Pour crypter un entier $a$ de cette suite, on procède ainsi : on calcule le reste $b$ dans la division
+euclidienne par $N$ du nombre $a^c$, et le nombre crypté est l'entier $b$.
+
+\smallskip
+
+Dans la pratique, cette méthode est sûre si la personne A choisit des nombres premiers $p$ et $q$
+très grands, s'écrivant avec plusieurs dizaines de chiffres.
+
+On va l'envisager ici avec des nombres plus simples : $p = 5$ et $q = 11$.
+
+La personne A choisit également $c = 23$.
+	\begin{enumerate}
+		\item Calculer les nombres $N$ et $n$, puis justifier que la valeur de $c$ vérifie la condition voulue.
+		\item  Un émetteur souhaite envoyer à la personne A le nombre $a = 8$.
+		
+Déterminer la valeur du nombre crypté $b$.
+	\end{enumerate}
+\item  Décryptage dans le système RSA
+
+La personne A calcule dans un premier temps l'unique entier naturel $d$ vérifiant les conditions
+$0 \leqslant d < n$ et $cd \equiv 1 \mod n$.
+
+Elle garde secret ce nombre $d$ qui lui permet, et à elle seule, de
+décrypter les nombres qui lui ont été envoyés cryptés avec sa clé publique.
+
+Pour décrypter un nombre crypté $b$, la personne A calcule le reste $a$ dans la division euclidienne
+par $N$ du nombre $b^d$, et le nombre en clair -- c'est-à-dire le nombre avant cryptage -- est le
+nombre $a$.
+
+On admet l'existence et l'unicité de l'entier $d$, et le fait que le décryptage fonctionne.
+
+Les nombres choisis par A sont encore $p = 5$, $q = 11$ et $c = 23$.
+	\begin{enumerate}
+		\item Quelle est la valeur de $d$ ?
+		\item En appliquant la règle de décryptage, retrouver le nombre en clair lorsque le nombre crypté
+est $b = 17$.
+	\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\textbf{\large Annexe (à rendre avec la copie)}
+
+\vspace{3cm}
+
+\psset{unit=1.5cm}
+\begin{pspicture}(-0.5,-0.5)(8,7.8)
+\psframe(0,0)(4.5,4.5)%ABFE
+\psline(4.5,0)(6.7,2.3)(6.7,6.8)(4.5,4.5)%BCGF
+\psline(6.7,6.8)(2.2,6.8)(0,4.5)%GHE
+\psline[linestyle=dashed](0,0)(2.2,2.3)(6.7,2.3)
+\psline[linestyle=dashed](2.2,2.3)(2.2,6.8)
+\uput[dl](0,0){A} \uput[dr](4.5,0){B} \uput[r](6.7,2.3){C} 
+\uput[ur](2.2,2.3){D} \uput[l](0,4.5){E} \uput[r](4.5,4.5){F} 
+\uput[r](6.7,6.8){G} \uput[u](2.2,6.8){H} \uput[ul](1.1,1.15){I} 
+\uput[l](0,3.375){J} \uput[dr](5.6,5.65){K}
+\psdots(1.1,1.15)(0,3.375)(5.6,5.65) 
+\end{pspicture}
+\end{center}
+\end{document}
