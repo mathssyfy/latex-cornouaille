@@ -27,18 +27,89 @@ $$j=-\dfrac{1}{2} + \text{i}\dfrac{\sqrt{3}}{2}$$
 
 	\begin{enumerate}
 		\item Donner la forme trigonométrique et la forme exponentielle de j.
+
+\begin{solution}
+$\text{j}=-\dfrac{1}{2} + \text{i}\dfrac{\sqrt{3}}{2}=\cos\left(\dfrac{2\pi}{3}\right) + \text{i}\sin\left(\dfrac{2\pi}{3}\right)=e^{\frac{2\text{i}\pi}{3}}$
+
+$a'=a\text{j}=-4\text{j}=2-2\text{i}\sqrt{3}=4\left( -e^{\frac{2\text{i}\pi}{3}}\right)=4\left( e^{\text{i}\pi}\e{\frac{2\text{i}\pi}{3}}\right)=4e^{\text{i}\left( \pi+\frac{2\pi}{3}\right)  }=4e^{\frac{5\text{i}\pi}{3}}=4e^{-\frac{\text{i}\pi}{3}}$
+
+$b'= b\text{j}=2\text{j}=-1+\text{i}\sqrt{3}=2e^{\frac{2\text{i}\pi}{3}}$
+
+$c'= c\text{j}=4\text{j}=-2+2\text{i}\sqrt{3}=4e^{\frac{2\text{i}\pi}{3}}$
+\end{solution}
 		
 En déduire les formes algébriques et exponentielles de $a'$, $b'$ et $c'$.
 		\item Les points A, B et C ainsi que les cercles de centre O et de rayon 2, 3 et 4 sont
 représentés sur le graphique ci-dessous.
 		
 Placer les points A$'$, B$'$ et C$'$ sur ce graphique.
+
+\begin{solution}
+\psset{unit=0.6cm}
+\begin{pspicture}(-4,-4)(4,4)
+\psgrid[gridlabels=0pt,subgriddiv=1,gridwidth=0.1pt]
+\psaxes[linewidth=1pt,Dx=10,Dy=10](0,0)(-4,-4)(4,4)
+\psaxes[linewidth=1.5pt,Dx=10,Dy=10]{->}(0,0)(1,1)
+\uput[d](0.5,0){$\vect{u}$}\uput[l](0,0.5){$\vect{v}$}\uput[dl](0,0){O}
+\uput[dr](2,0){B} \uput[dr](4,0){C}\uput[dl](-4,0){A}
+\pscircle(0,0){2}\pscircle(0,0){3}\pscircle(0,0){4}
+\psdots(-4,0)(2,0)(4,0)
+
+\psdots[linecolor=red](2,-3.464)(-1,1.732)(-2,3.464)
+\uput[dr](2,-3.464){\red A$'$}
+\uput[dr](-1,1.732){\red B$'$}
+\uput[dr](-2,3.464){\red C$'$}
+
+\psdots[linecolor=blue](3,-1.732)(1,1.732)(-3,1.732)
+\uput[dr](3,-1.732){\blue M}
+\uput[ur](1,1.732){\blue N}
+\uput[ul](-3,1.732){\blue P}
+\psline[linecolor=blue](3,-1.732)(1,1.732)(-3,1.732)(3,-1.732)
+\end{pspicture}
+
+$|a'|=4$ donc A$'$ est sur le cercle de centre O et de rayon 4 et on a $Re\left(a' \right) =2$ et $Im\left(a' \right)<0$, on peut donc placer A$'$
+
+
+$|b'|=2$ donc B$'$ est sur le cercle de centre O et de rayon 2 et on a $Re\left(b' \right) =-1$ et $Im\left(b' \right)>0$, on peut donc placer B$'$
+
+
+$|c'|=4$ donc C$'$ est sur le cercle de centre O et de rayon 4 et on a $Re\left(c' \right) =-2$ et $Im\left(c' \right)>0$, on peut donc placer C$'$
+
+\end{solution}
+
 	\end{enumerate}
 \item  Montrer que les points A$'$, B$'$ et C$'$ sont alignés.
+
+\begin{solution}
+
+$a'=-c'$ donc A$'$ et C$'$ sont symétriques par rapport à O alors O, A$'$ et C$'$ sont alignés
+
+$arg\left( b'\right) =arg\left( c'\right) =\dfrac{2\pi}{3} (2\pi)$ donc $\vect{\text{OB}'}$ et $\vect{\text{OC}'}$ sont colinéaires d'où O, B$'$ et C$'$ sont alignés.
+
+Finalement O, A$'$, B$'$ et C$'$ sont alignés.
+\end{solution}
+
 \item  On note M le milieu du segment [A$'$C], N le milieu du segment [C$'$C] et P le milieu du
 segment [C$'$A]. 
 	
 Démontrer que le triangle MNP est isocèle.
+
+\begin{solution}
+
+$z_{\text{M}}=\dfrac{a'+c}{2}=3-\text{i}\sqrt{3}$
+
+$z_{\text{N}}=\dfrac{c'+c}{2}=1+\text{i}\sqrt{3}$
+
+$z_{\text{P}}=\dfrac{c'+a}{2}=-3+\text{i}\sqrt{3}$
+
+MNP semble isocèle en N d'après le dessin
+
+MN=$\left|z_{\text{N}}-z_{\text{M}} \right| = \left|2-2\text{i}\sqrt{3} \right| =4$
+ et 
+PN=$\left|z_{\text{N}}-z_{\text{P}} \right| =\left|4 \right| = 4$
+
+On a MN=NP donc MNP est bien isocèle en N
+\end{solution}
 \end{enumerate}
 
 \bigskip
