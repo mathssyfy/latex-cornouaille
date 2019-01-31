@@ -52,4 +52,60 @@ Graphique à compléter
 \end{center}
 
 \end{exercice}
+
+\newpage
+
+%D'après Amérique du Nord Mai 2018
+\begin{exercice}[Un peu de physique, mais pas trop...]
+Lors d'une expérience en laboratoire, on lance un projectile dans un milieu fluide. L'objectif est de déterminer pour quel angle de tir
+$\theta$ par rapport à l'horizontale la hauteur du projectile ne dépasse
+pas $1,6$ mètre.
+
+Comme le projectile ne se déplace pas dans l'air mais dans un
+fluide, le modèle parabolique usuel n'est pas adopté.
+
+On modélise ici le projectile par un point qui se déplace, dans un
+plan vertical, sur la courbe représentative de la fonction $f$ définie
+sur l'intervalle [0~;~1[ par:
+
+\[f(x) = bx + 2\ln (1- x)\]
+
+où $b$ est un paramètre réel supérieur ou égal à $2$, $x$ est l'abscisse
+du projectile, $f(x)$ son ordonnée, toutes les deux exprimées en mètres.
+
+\begin{center}
+\psset{unit=4cm,comma=true}
+\begin{pspicture*}(-0.15,-0.15)(1.1,1.7)
+\psgrid[gridlabels=0pt,subgriddiv=10,gridwidth=0.3pt,subgridwidth=0.15pt](0,0)(1.1,1.7)
+\psaxes[linewidth=1pt,Dx=0.5,Dy=0.5,labelFontSize=\scriptstyle](0,0)(0,0)(1.1,1.7)
+\psaxes[linewidth=1.5pt]{->}(0,0)(1,1)
+\psplot[plotpoints=3000,linewidth=1.25pt,linecolor=blue]{0}{0.932}{5.69 x mul 1 x sub ln 2 mul add}
+\psline[linestyle=dotted,linewidth=1pt](0.4,1.5)
+\psarc(0,0){0.15}{0}{72}
+\end{pspicture*}
+
+\end{center}
+
+\begin{enumerate}
+\item La fonction $f$ est dérivable sur l'intervalle [0~;~1[. On note $f'$ sa fonction dérivée.
+\begin{enumerate}
+	\item Démontrer que, pour tout réel
+$x$ de l'intervalle [0~;~1[ :
+
+\[f'(x) = \dfrac{- bx + b - 2}{1 - x}.\]
+\item Démontrer que fonction $f$ possède un maximum sur l'intervalle [0~;~1[ et que, 
+
+le maximum de la fonction $f$ est égal à $b - 2 + 2\ln \left(\dfrac{2}{b}\right)$.
+\end{enumerate}
+
+\item  Déterminer pour quelles valeurs du paramètre $b$ la hauteur maximale du projectile ne dépasse
+pas $1,6$~mètre.
+\item  Dans cette question, on choisit $b = 5,69$.
+
+L'angle de tir $\theta$ correspond à l'angle entre l'axe des abscisses et la tangente à la courbe de la
+fonction $f$ au point d'abscisse $0$ comme indiqué sur le schéma donné ci-dessus.
+
+Déterminer une valeur approchée au dixième de degré près de l'angle $\theta$.
+\end{enumerate}
+\end{exercice}
 \end{document}
