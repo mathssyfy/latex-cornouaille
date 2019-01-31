@@ -1,0 +1,570 @@
+%!TEX encoding = UTF-8 Unicode
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[scaled=0.875]{helvet}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{makeidx}
+\usepackage{amsmath,amssymb}
+\usepackage{fancybox}
+\usepackage[normalem]{ulem}
+\usepackage{pifont}
+\usepackage{lscape}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{textcomp} 
+\newcommand{\euro}{\eurologo{}}
+%Tapuscrit : Denis Vergès
+\usepackage{pst-plot,pst-tree,pstricks,pst-node,pst-text}
+\usepackage{pst-eucl}
+\usepackage{pstricks-add}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
+\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
+\usepackage{fancyhdr}
+\usepackage[dvips]{hyperref}
+\hypersetup{%
+pdfauthor = {APMEP},
+pdfsubject = {Baccalauréat S},
+pdftitle = {Pondichéry  4 mai  2018},
+allbordercolors = white,
+pdfstartview=FitH} 
+\usepackage[frenchb]{babel}
+\usepackage[np]{numprint}
+\begin{document}
+\setlength\parindent{0mm}
+\rhead{\textbf{A. P{}. M. E. P{}.}}
+\lhead{\small Baccalauréat S}
+\lfoot{\small{Pondichéry}}
+\rfoot{\small{4 mai 2018}}
+\pagestyle{fancy}
+\thispagestyle{empty}
+
+\begin{center}{\Large\textbf{\decofourleft~Baccalauréat S Pondichéry 4 mai 2018~\decofourright}}
+\end{center}
+
+\vspace{0,25cm}
+
+\textbf{\textsc{Exercice 1} \hfill 6 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+
+\emph{Les parties } A \emph{et}   B \emph{peuvent être traitées de façon indépendante.}
+
+\bigskip
+
+
+Dans une usine, un four cuit des céramiques à la température de \np{1000}~\degres C. À la fin de la
+cuisson, il est éteint et il refroidit.
+
+\smallskip
+
+On s'intéresse à la phase de refroidissement du four, qui débute dès l'instant où il est éteint.
+
+\smallskip
+La température du four est exprimée en degré Celsius (\degres~C).
+
+\smallskip
+
+La porte du four peut être ouverte sans risque pour les céramiques dès que sa température est
+inférieure à $70$\degres~C. Sinon les céramiques peuvent se fissurer, voire se casser.
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+Pour un nombre entier naturel $n$, on note $T_n$ la température en degré Celsius du four au bout
+de $n$ heures écoulées à partir de l'instant où il a été éteint. On a donc $T_0 = \np{1000}$.
+
+La température $T_n$ est calculée par l'algorithme suivant :
+
+\begin{center}
+\begin{tabularx}{0.35\linewidth}{|X|}\hline
+$T \gets \np{1000}$\\
+Pour $i$ allant de $1$ à $n$\\
+\hspace{1cm}$T \gets 0,82 \times T + 3,6$\\
+Fin Pour\\\hline
+\end{tabularx}
+\end{center}
+
+\medskip
+
+\begin{enumerate}
+\item Déterminer la température du four, arrondie à l'unité, au bout de $4$ heures de
+refroidissement.
+\item  Démontrer que, pour tout nombre entier naturel $n$, on a : $T_n = 980 \times 0,82^n + 20$.
+\item  Au bout de combien d'heures le four peut-il être ouvert sans risque pour les céramiques ?
+ \end{enumerate}
+ 
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+Dans cette partie, on note $t$ le temps (en heure) écoulé depuis l'instant où le four a été éteint.
+
+La température du four (en degré Celsius) à l'instant $t$ est donnée par la fonction $f$ définie,
+pour tout nombre réel $t$ positif, par : 
+
+\[f(t) = a\text{e}^{- \frac{t}{5}} + b,\]
+
+où $a$ et $b$ sont deux nombres réels.
+
+On admet que $f$ vérifie la relation suivante : $f'(t) + \dfrac{1}{5}f(t) = 4$.
+\medskip
+
+\begin{enumerate}
+\item Déterminer les valeurs de $a$ et $b$ sachant qu'initialement, la température du four est de
+$\np{1000}$~\degres C, c'est-à-dire que $f(0) = \np{1000}$.
+\item  Pour la suite, on admet que, pour tout nombre réel positif $t$: 
+
+\[f(t) = 980\text{e}^{- \frac{t}{5}} + 20.\]
+
+\medskip
+
+	\begin{enumerate}
+		\item Déterminer la limite de $f$ lorsque $t$ tend vers $+ \infty$.
+		\item Étudier les variations de $f$ sur $[0~;~+ \infty[$. 
+		
+En déduire son tableau de variations complet.
+		\item Avec ce modèle, après combien de minutes le four peut-il être ouvert sans risque pour
+ les céramiques ?
+ 	\end{enumerate}
+\item  La température moyenne (en degré Celsius) du four entre deux instants $t_1$ et $t_2$ est donnée
+par: $\dfrac{1}{t_2 - t_1}\displaystyle\int_{t_1}^{t_2} f(t)\:\text{d}t$.
+
+	\begin{enumerate}
+		\item À l'aide de la représentation graphique de $f$ ci-dessous, donner une estimation de la
+température moyenne $\theta$ du four sur les $15$ premières heures de refroidissement.
+		
+Expliquer votre démarche.
+		
+\begin{center}
+\psset{xunit=0.6cm,yunit=0.01cm}
+\begin{pspicture}(-1,-50)(19,1100)
+\multido{\n=0+1}{20}{\psline[linestyle=dashed,linewidth=0.5pt](\n,0)(\n,1100)}
+\multido{\n=0+100}{11}{\psline[linestyle=dashed,linewidth=0.5pt](0,\n)(19,\n)}
+\psaxes[linewidth=1.25pt,Dy=200]{->}(0,0)(0,0)(19,1100)
+\psaxes[linewidth=1.25pt,Dy=200](0,0)(0,0)(19,1100)
+\uput[d](16.4,-40){temps écoulé (en heure)}
+\uput[r](0,1080){température (en \degres C)}
+\psplot[plotpoints=3000,linewidth=1.25pt,linecolor=blue]{0}{19}{980 2.71828 0.2 x mul exp div 20 add}
+\end{pspicture}
+\end{center}
+\medskip
+
+		\item  Calculer la valeur exacte de cette température moyenne $\theta$ et en donner la valeur
+arrondie au degré Celsius.
+	\end{enumerate}
+\item  Dans cette question, on s'intéresse à l'abaissement de température (en degré Celsius) du
+four au cours d'une heure, soit entre deux instants $t$ et $(t + 1)$. Cet abaissement est donné
+par la fonction $d$ définie, pour tout nombre réel $t$ positif, par : $d(t) = f(t) - f(t + 1)$.
+	\begin{enumerate}
+		\item Vérifier que. pour tout nombre réel $t$ positif: $d(t) = 980\left(1 - \text{e}^{- \frac{1}{5}}\right)\text{e}^{- \frac{t}{5}}$.
+		\item Déterminer la limite de $d(t)$ lorsque $t$ tend vers $+ \infty$.
+		
+Quelle interprétation peut-on en donner ?
+ 	\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\textbf{\textsc{Exercice 2} \hfill 4 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+
+Le plan est muni d'un repère orthonormé \Ouv.
+
+\smallskip
+
+Les points A, B et C ont pour affixes respectives $a = - 4,\: b = 2$ et $c = 4$.
+
+\medskip
+
+\begin{enumerate}
+\item On considère les trois points A$'$, B$'$ et C$'$ d'affixes respectives $a'= \text{j}a$, $b'= \text{j}b$ et $c'= \text{j}c$ où j est le nombre complexe $-\dfrac{1}{2} + \text{i}\dfrac{\sqrt{3}}{2}$.
+
+	\begin{enumerate}
+		\item Donner la forme trigonométrique et la forme exponentielle de j.
+		
+En déduire les formes algébriques et exponentielles de $a'$, $b'$ et $c'$.
+		\item Les points A, B et C ainsi que les cercles de centre O et de rayon 2, 3 et 4 sont
+représentés sur le graphique fourni en \textbf{Annexe}.
+		
+Placer les points A$'$, B$'$ et C$'$ sur ce graphique.
+	\end{enumerate}
+\item  Montrer que les points A$'$, B$'$ et C$'$ sont alignés.
+\item  On note M le milieu du segment [A$'$C], N le milieu du segment [C$'$C] et P le milieu du
+segment [C$'$A]. 
+	
+Démontrer que le triangle MNP est isocèle.
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3} \hfill 5 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+
+Une entreprise conditionne du sucre blanc provenant de deux exploitations U et V en paquets
+de 1 kg et de différentes qualités.
+
+\smallskip
+
+Le sucre extra fin est conditionné séparément dans des paquets portant le label \og  extra fin \fg.
+
+\smallskip
+
+\emph{Les parties \rm{A}, \rm{B} et \rm{C} peuvent être traitées de façon indépendante.}
+
+\smallskip
+
+Dans tout l'exercice, les résultats seront arrondis, si nécessaire, au millième.
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+Pour calibrer le sucre en fonction de la taille de ses cristaux, on le fait passer au travers d'une
+série de trois tamis positionnés les uns au-dessus des autres et posés sur un récipient à fond
+étanche.
+Les ouvertures des mailles sont les suivantes :
+
+\begin{center}
+\psset{unit=1cm}
+\begin{pspicture}(12,4)
+%\psgrid
+\uput[r](0.5,3){Tamis 1 : 0,8 mm} \psline[linewidth=1.5pt]{->}(4.6,1)(6.8,1)
+\uput[r](0.5,2){Tamis 2 : 0,5 mm} \psline[linewidth=1.5pt]{->}(4.6,2)(6.8,2)
+\uput[r](0.5,1){Tamis 3 : 0,2 mm} \psline[linewidth=1.5pt]{->}(4.6,3)(6.8,3)
+\uput[r](0.5,0.5){Récipient à fond étanche}  \psline[linewidth=1.5pt]{->}(4.6,0.5)(7,0.5)
+\psline[linewidth=2pt](7,3.75)(7,0)(12,0)(12,3.75)
+\multido{\n=7.00+0.12}{42}{\psframe(\n,2.94)(\n,3.06)}
+\multido{\n=7.00+0.1}{50}{\psframe(\n,1.96)(\n,2.04)}
+\multido{\n=7.00+0.06}{84}{\psframe(\n,0.97)(\n,1.03)}
+\end{pspicture}
+\end{center}
+
+Les cristaux de sucre dont la taille est inférieure à $0,2$ mm se trouvent dans le récipient à fond
+étanche à la fin du calibrage. Ils seront conditionnés dans des paquets portant le label \og  sucre
+extra fin \fg.
+
+\medskip
+
+\begin{enumerate}
+\item On prélève au hasard un cristal de sucre de l'exploitation U. La taille de ce cristal,
+exprimée en millimètre, est modélisée par la variable aléatoire $X_{\text{ U}}$ qui suit la loi normale
+de moyenne $\mu_{\text{ U}} = 0,58$~mm et d'écart type $\sigma_{\text{ U}} = 0,21$~mm.
+
+	\begin{enumerate}
+	\item Calculer les probabilités des évènements suivants : $X_{\text{ U}} < 0,2$ et $0,5 \leqslant X_{\text{ U}} < 0,8$.
+	\item On fait passer \np{1800} grammes de sucre provenant de l'exploitation U au travers de la
+série de tamis.
+	
+Déduire de la question précédente une estimation de la masse de sucre récupérée dans
+le récipient à fond étanche et une estimation de la masse de sucre récupérée dans le
+tamis 2.
+ 		\end{enumerate}
+\item On prélève au hasard un cristal de sucre de l'exploitation V. La taille de ce cristal,
+exprimée en millimètre, est modélisée par la variable aléatoire $X_{\text{V}}$ qui suit la loi normale
+de moyenne $\mu_{\text{V}} = 0,65$ mm et d'écart type $\sigma_{\text{V}}$ à déterminer.
+
+Lors du calibrage d'une grande quantité de cristaux de sucre provenant de l'exploitation V,
+on constate que 40\,\% de ces cristaux se retrouvent dans le tamis 2.
+
+Quelle est la valeur de l'écart type $\sigma_{\text{V}}$ de la variable aléatoire $X_{\text{V}}$ ?
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+Dans cette partie, on admet que 3\,\% du sucre provenant de l'exploitation U est extra fin et que
+5\,\% du sucre provenant de l'exploitation V est extra fin.
+
+On prélève au hasard un paquet de sucre dans la production de l'entreprise et, dans un souci
+de traçabilité, on s'intéresse à la provenance de ce paquet.
+
+On considère les évènements suivants:
+
+\setlength\parindent{9mm}
+\begin{itemize}
+\item[$\bullet~~$] $U$ : \og  Le paquet contient du sucre provenant de l'exploitation U \fg{} ;
+\item[$\bullet~~$] $V$ : \og Le paquet contient du sucre provenant de l'exploitation V \fg{} ;
+\item[$\bullet~~$] $E$ : \og Le paquet porte le label "extra fin" \fg{}.
+ \end{itemize}
+\setlength\parindent{0mm} 
+
+\medskip
+ 
+\begin{enumerate}
+\item Dans cette question, on admet que l'entreprise fabrique 30\,\% de ses paquets avec du sucre
+provenant de l'exploitation U et les autres avec du sucre provenant de l'exploitation V,
+sans mélanger les sucres des deux exploitations.
+	\begin{enumerate}
+		\item Quelle est la probabilité que le paquet prélevé porte le label \og extra fin \fg{} ?
+		\item Sachant qu'un paquet porte le label \og extra fin \fg, quelle est la probabilité que le sucre
+qu'il contient provienne de l'exploitation U ?
+ 	\end{enumerate}
+\item L'entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin
+que parmi les paquets portant le label « extra fin », 30\,\% d'entre eux contiennent du sucre
+provenant de l'exploitation U.
+	
+Comment doit-elle s'approvisionner auprès des exploitations U et V ?
+	
+\emph{Toute trace de recherche sera valorisée dans cette question}.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+\medskip
+
+\begin{enumerate}
+\item L'entreprise annonce que 30\,\% des paquets de sucre portant le label «extra fin» qu'elle
+conditionne contiennent du sucre provenant de l'exploitation U.
+
+Avant de valider une commande, un acheteur veut vérifier cette proportion annoncée. Il
+prélève $150$ paquets pris au hasard dans la production de paquets labellisés \og extra fin \fg{} de
+l'entreprise. Parmi ces paquets, $30$ contiennent du sucre provenant de l'exploitation U.
+
+A-t-il des raisons de remettre en question l'annonce de l'entreprise ?
+\item  L'année suivante, l'entreprise déclare avoir modifié sa production. L'acheteur souhaite
+estimer la nouvelle proportion de paquets de sucre provenant de l'exploitation U parmi les
+paquets portant le label \og extra fin \fg. 
+
+Il prélève 150 paquets pris au hasard dans la production de paquets labellisés \og extra fin \fg{} de l'entreprise. Parmi ces paquets 42\,\% contiennent du sucre provenant de l'exploitation U.
+
+Donner un intervalle de confiance, au niveau de confiance 95\,\%, de la nouvelle proportion
+de paquets labellisés \og extra fin \fg{} contenant du sucre provenant de l'exploitation U.
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
+
+\medskip
+
+Dans l'espace muni du repère orthonormé \Oijk d'unité 1~cm, on considère les points
+A, B, C et D de coordonnées respectives (2~;~1~;~4), $(4~;~-1~;~0)$, $(0~;~3~;~2)$ et $(4~;~3~;~-2)$.
+
+\medskip
+
+\begin{enumerate}
+\item Déterminer une représentation paramétrique de la droite (CD).
+\item Soit $M$ un point de la droite (CD).
+	\begin{enumerate}
+		\item Déterminer les coordonnées du point $M$ tel que la distance B$M$ soit minimale.
+		\item On note H le point de la droite (CD) ayant pour coordonnées $(3~;~3~;~- 1)$.
+Vérifier que les droites (BH) et (CD) sont perpendiculaires.
+		\item Montrer que l'aire du triangle BCD est égale à 12 cm$^2$.
+	\end{enumerate}
+\item 
+	\begin{enumerate}
+		\item Démontrer que le vecteur $\vect{n}\begin{pmatrix}2\\1\\2\end{pmatrix}$  est un vecteur normal au plan (BCD).
+		\item Déterminer une équation cartésienne du plan (BCD).
+		\item Déterminer une représentation paramétrique de la droite $\Delta$ passant par A et orthogonale
+au plan (BCD).
+		\item Démontrer que le point I, intersection de la droite $\Delta$ et du plan (BCD) a pour
+coordonnées $\left(\dfrac{2}{3}~;~\dfrac{1}{3}~;~\dfrac{8}{3}\right)$.
+	\end{enumerate}
+\item  Calculer le volume du tétraèdre ABCD.
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats ayant suivi l'enseignement de spécialité}
+
+\medskip
+
+À toute lettre de l'alphabet on associe un nombre entier $x$ compris entre 0 et 25 comme
+indiqué dans le tableau ci-dessous:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{13}{>{\centering \arraybackslash}X|}}\hline
+Lettre 	&A &B &C &D &E &F &G &H &I &J &K 	&L 	&M\\ \hline
+$x$ 	&0 &1 &2 &3 &4 &5 &6 &7 &8 &9 &10 	&11 &12\\ \hline\hline
+Lettre 	&N &O &P &Q &R &S &T &U &V &W &X 	&Y 	&Z\\ \hline
+$x$ 	&13&14&15&16&17&18&19&20&21&22&23 	&24 &25\\ \hline
+\end{tabularx}
+\end{center}
+
+\medskip
+
+Le \og chiffre de RABIN \fg{} est un dispositif de cryptage asymétrique inventé en 1979 par
+l'informaticien Michael Rabin.
+
+\smallskip
+
+Alice veut communiquer de manière sécurisée en utilisant ce cryptosystème. Elle choisit deux
+nombres premiers distincts $p$ et $q$. Ce couple de nombres est sa clé privée qu'elle garde
+secrète.
+
+Elle calcule ensuite $n = p \times q$ et elle choisit un nombre entier naturel $B$ tel que $0 \leqslant B \leqslant n -1$.
+
+Si Bob veut envoyer un message secret à Alice, il le code lettre par lettre.
+
+Le codage d'une lettre représentée par le nombre entier $x$ est le nombre $y$ tel que :
+
+\[y \equiv  x(x + B)\:\: [n] \:\text{ avec }\: 0 \leqslant y \leqslant n.\]
+
+Dans tout l'exercice on prend $p = 3,\: q = 11$ donc $n = p \times q = 33$ et $B = 13$.
+
+\bigskip
+
+\textbf{Partie A : Cryptage}
+
+\medskip
+
+Bob veut envoyer le mot \og  NO \fg{} à Alice.
+
+\medskip
+\begin{enumerate}
+\item Montrer que Bob code la lettre \og N \fg{} avec le nombre 8.
+\item Déterminer le nombre qui code la lettre \og O \fg.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B : Décryptage}
+
+\medskip
+
+Alice a reçu un message crypté qui commence par le nombre 3.
+
+Pour décoder ce premier nombre, elle doit déterminer le nombre entier $x$ tel que :
+
+\[x(x + 13) \equiv  3 \:\: [33]\:  \text{ avec }\: 0 \leqslant  x < 26.\]
+
+\medskip
+
+\begin{enumerate}
+\item Montrer que $x(x + 13) \equiv 3\:\: [33]$ équivaut à $(x + 23)^2 \equiv 4\:\: [33]$.
+\item
+	\begin{enumerate}
+		\item Montrer que si $(x + 23)^2 \equiv 4\:\: [33]$ alors le système d'équations $\left\{\begin{array}{l c l}
+(x + 23)^2 &\equiv &4 \:\: [3]\\ 
+(x + 23)^2 &\equiv &4 \:\: [11]
+\end{array}\right.$ est vérifié.
+		\item Réciproquement, montrer que si  $\left\{\begin{array}{l c l}
+(x + 23)^2 &\equiv &4\:\: [3]\\ 
+(x + 23)^2 &\equiv &4 \:\: [11]
+\end{array}\right.$ alors $(x + 23)^2 \equiv 4\:\: [33]$.
+		\item En déduire que $x(x + 13) \equiv 3\:\: [33] \iff  \left\{\begin{array}{l c l}
+(x + 23)^2 &\equiv&1 \:\: [3]\\
+(x + 23)^2 &\equiv& 4 \:\: [11]
+\end{array}\right.$
+	\end{enumerate}
+\item
+	\begin{enumerate}
+		\item Déterminer les nombres entiers naturels $a$ tels que $0 \leqslant a < 3$ et $a^2 \equiv 1 \:\:  [3]$.
+		\item Déterminer les nombres entiers naturels $b$ tels que $0 \leqslant b < 11$ et $b^2 \equiv 4\:\: [11]$.
+ 	\end{enumerate}
+\item
+	\begin{enumerate}
+		\item En déduire que $x(x + 13) \equiv 3 \quad[33]$ équivaut aux quatre systèmes suivants :
+		
+\[\left\{\begin{array}{l c l}
+x &\equiv&2\quad [3]\\
+x&\equiv &8\quad[11]
+\end{array}\right. \: \text{ ou } \left\{\begin{array}{l c l}
+ x &\equiv& 0\quad[3]\\
+ x &\equiv& 1 \quad[11]
+ \end{array}\right.\: \text{ ou } \left\{\begin{array}{l c l}
+x  &\equiv& 2\quad[3]\\
+x &\equiv&1 \quad[11]
+\end{array}\right.\: \text{ ou } \left\{\begin{array}{l c l}
+x &\equiv& 0\quad [3]\\
+x &\equiv& 8 \quad [11]
+\end{array}\right.\]
+
+		\item On admet que chacun de ces systèmes admet une unique solution entière $x$ telle que
+
+$0 \leqslant x < 33$.
+
+Déterminer, sans justification, chacune de ces solutions.
+	\end{enumerate}
+\item Compléter l'algorithme en \textbf{Annexe} pour qu'il affiche les quatre solutions trouvées dans la
+question précédente.
+\item Alice peut-elle connaître la première lettre du message envoyé par Bob ? 
+	
+Le \og chiffre de RABIN \fg{} est-il utilisable pour décoder un message lettre par lettre ?
+\end{enumerate}
+
+\newpage
+\begin{center}
+
+\textbf{\Large ANNEXE}
+
+\bigskip
+
+\textbf{\Large À COMPLÉTER ET À REMETTRE AVEC LA COPIE}
+
+\begin{flushleft}
+\textbf{\large EXERCICE 2}
+\end{flushleft}
+
+\bigskip
+
+\psset{unit=1cm}
+\begin{pspicture}(-4,-4)(4,4)
+\psgrid[gridlabels=0pt,subgriddiv=1,gridwidth=0.1pt]
+\psaxes[linewidth=1pt,Dx=10,Dy=10](0,0)(-4,-4)(4,4)
+\psaxes[linewidth=1.5pt,Dx=10,Dy=10]{->}(0,0)(1,1)
+\uput[d](0.5,0){$\vect{u}$}\uput[l](0,0.5){$\vect{v}$}\uput[dl](0,0){O}
+\uput[dr](2,0){B} \uput[dr](4,0){C}\uput[dl](-4,0){A}
+\pscircle(0,0){2}\pscircle(0,0){3}\pscircle(0,0){4}
+\psdots(-4,0)(2,0)(4,0)
+\end{pspicture}
+
+\vspace{1.5cm}
+
+
+\begin{flushleft}
+\textbf{\large EXERCICE 4  (spécialité)}
+\end{flushleft}
+
+\vspace{1.5cm}
+
+\begin{tabularx}{0.7\linewidth}{|X|}\hline
+Pour ...... allant de ......à .......\\
+\quad Si le reste de la division de ....... par ....... est égal à ....... alors\\
+\qquad Afficher .......\\
+\quad Fin Si\\
+Fin Pour\\ \hline
+\end{tabularx}
+\end{center}
+\end{document}
