@@ -1,0 +1,263 @@
+\begin{activite}[Boîtes dans une caisse]
+\begin{multicols}{2}
+Soit B une boîte en forme de pavé droit de hauteur $L$, à base carrée de côté $\ell$, où $\ell$ et $L$ sont des entiers naturels non nuls tels que $\ell < L$. 
+
+On veut remplir la boîte B avec des cubes tous identiques dont l'arête $a$ est un entier naturel non nul (les cubes devant remplir complètement la boîte B sans laisser d'espace vide).\vspace{1.5cm}
+
+\begin{center}
+\psset{xunit=1cm, yunit=1cm}
+\begin{pspicture}(5,5.5) 
+\psline[arrowsize=3pt 2,arrowinset=0.25,linewidth=0.4pt]{<->}(0,0)(3.4,0)
+\psline[arrowsize=3pt 2,arrowinset=0.25,linewidth=0.4pt]{<->}(3.8,0.3)(4.9,1.5)
+\psline[arrowsize=3pt 2,arrowinset=0.25,linewidth=0.4pt]{<->}(5,1.5)(5,5.5) 
+
+\pspolygon[linewidth=1.2pt](0,0.3)(3.4,0.3)(3.4,4.4)(0,4.4) 
+\psline[linewidth=1.2pt](3.4,0.3)(4.5,1.5)(4.5,5.5)(3.4,4.4) 
+\psline[linewidth=1.2pt](3.4,4.4)(4.5,5.5)(1.2,5.5)(0,4.4) 
+
+\psline[linestyle=dashed](0,0.3)(1.2,1.5)(4.5,1.5) 
+\psline[linestyle=dashed](1.2,1.5)(1.2,5.5)
+ 
+\uput[d](1.7,0){$\ell$} 
+\uput[r](4.35,0.8){$\ell$} 
+\uput[r](5,3.5){$L$} 
+\end{pspicture} 
+\end{center}
+\end{multicols}
+
+\vspace{-10pt}
+
+\begin{enumerate}
+\item Dans cette question, $\ell = 882$ et $L = 945$. 
+\begin{enumerate}
+\item Quelle est la plus grande valeur possible pour $a$ ?
+
+On appelle $d$ cette valeur. $d$ est appelé le PGCD de $a$ et de $b$.
+
+%Quelle est la plus grande valeur $d$ possible pour~$a$ ?
+\item Démontrer que tous les diviseurs de $d$ conviennent comme valeur de $a$.		 
+\item Existe-t-il d'autres valeurs possibles pour $a$ ?
+\end{enumerate} \medskip
+\item Dans cette question, le volume de la boîte B est
+  $v = \nombre{77760}$. On sait que, pour remplir la\linebreak boîte
+  B, la plus grande valeur possible de $a$ est 12.
+
+On pose :\enskip $\ell=a\ell'$\enskip et\enskip $L=aL'$.
+\begin{enumerate}
+\item Que  peut-on dire de $\pgcd(\ell';L')$ si $a=12$ ? Pourquoi ?
+\item Vérifier, dans le cas\enskip $a=12$,\enskip que\enskip $\ell'^2L'=45$.
+\item Montrer qu'il y a exactement deux boîtes B possibles dont on donnera les dimensions. 
+\end{enumerate}  
+\end{enumerate} 
+\end{activite}
+
+\vspace{-1cm}
+
+\begin{activite}[Algorithme pour une solution particulière]
+  Le but de cette activité est de déterminer un algorithme permettant
+  de déterminer un couple d'entiers relatifs $(x_0\ ;\ y_0)$ solution
+  de l'équation (E) : \enskip $59x+27y=1$.
+
+On suppose que cette équation admet des solutions entières.\vspace{-10pt}
+
+\begin{enumerate}
+\item Pourquoi peut-on trouver un entier naturel $x_0>0$ tel que le
+  couple $(x_0\ ;\ y_0)$ soit solution de~(E) ?\medskip
+\item On s'intéresse à la quantité $59u+27v$ où $u$ et $v$ varient sur
+  $\Z$. 
+
+  On propose l'algorithme de la page suivante pour calculer les
+  valeurs de $x_0$ et $y_0$. 
+
+  E($x$) signifie la partie entière de $x$.
+\begin{enumerate}
+\item Que fait-on à la ligne 8 ?
+\item Que calcule-t-on à la ligne 9 ?
+\item Expliquer la condition ($r\neq1$) dans la boucle conditionnelle.
+\item Déterminer la valeur à donner à la variable $v$ à la ligne 11,
+  pour que $v$ donne la valeur $y_0$.
+\item Rentrer le programme dans la calculatrice et donner une solution
+  $(x_0\ ;\ y_0)$ de~(E).
+\end{enumerate}
+
+\pagebreak
+
+%\begin{multicols}{2}
+
+\begin{center}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{algorithme}
+\BlocVariables
+\DeclareVar{$u$, $v$, $r$}{entiers}{}
+\BlocEntrees
+\DonnerValeur{$r$}{$0$}
+\DonnerValeur{$u$}{$0$}
+\BlocTraitements
+\TantQue{$r\neq1$}{%
+\DonnerValeur{$u$}{$u+1$}
+\DonnerValeur{$r$}{\\[2pt]\hspace*{1.3cm}$59u-27\times\text{\normalfont E}\left(\dfrac{59u}{27}\right)$}
+}
+\DonnerValeur{$v$}{$\dots$}
+\BlocAffichage
+\Afficher{$u$, $v$}
+\end{algorithme}
+\end{center}
+\end{minipage}
+\end{center}
+%\end{multicols}
+\end{enumerate}
+\end{activite}
+
+\vspace{-1cm}
+
+\begin{activite}[\MotDefinition{Chiffrement affine}{}]
+\label{Ar2Acti3}
+Le \MotDefinition{chiffrement}{} ou cryptage consiste à transformer un message en
+message codé (ou chiffré). 
+
+Le \MotDefinition{déchiffrement}{} est le procédé inverse, il consiste à décoder un message codé.\medskip
+
+\partie[Un premier exemple]
+% {\color{H1}\textbf{Partie A : Un premier exemple}}
+
+Afin de \MotDefinition{coder}{} un message, on assimile chaque lettre de l'alphabet à un nombre entier comme l'indique le tableau ci-dessous :
+
+\begin{center}
+\renewcommand*\tabularxcolumn[1]{>{\centering\arraybackslash}m{#1}}
+{\footnotesize\begin{ttableau}{0.9\linewidth}{13}\hline
+\rowcolor{FondTableaux}A& B& C& D& E& F& G& H& I& J& K& L& M\\ \hline
+0& 1& 2& 3& 4& 5& 6& 7& 8& 9& 10& 11& 12\\ \hline \hline
+\rowcolor{FondTableaux}N& O& P& Q& R& S& T& U& V& W& X& Y& Z\\ \hline
+13& 14& 15& 16& 17& 18& 19& 20& 21& 22& 23& 24& 25\\ \hline
+\end{ttableau}}
+\end{center}\medskip
+
+Un chiffrement élémentaire est le chiffrement affine. On se donne une fonction de codage\linebreak affine~$f$, par exemple : \enskip $f(x)=11x+8$.
+
+À une lettre du message :
+\begin{itemize}
+\item on associe un entier $x$ entre 0 et 25 suivant le tableau ci-dessus ;
+\item on calcule\enskip $f(x)=11x+8$\enskip et l'on détermine le reste $y$ de la division de $f(x)$ par 26 ;
+\item on traduit $y$ par une lettre d'après le tableau ci-dessus.
+\end{itemize}\medskip
+
+{\color{H1}\textbf{Exemple :}} Si l'on veut coder la lettre G par la fonction $f(x)=11x+8$, on passe par les étapes suivantes :
+{\centering$\text{G}\enskip\Rightarrow\enskip x=6 \enskip\Rightarrow\enskip 11\times6+8=74\enskip\Rightarrow\enskip 74\equiv22~(26)\enskip\Rightarrow\enskip y=22 \enskip\Rightarrow\enskip \text{W}$\par}
+
+La lettre G est donc codée par la lettre W.
+\begin{enumerate}
+\item  Coder la lettre W.
+\item  Existence d'une fonction de décodage.
+	
+	\begin{cadre}
+		\textbf{Théorème de Bézout} : $a$ et $b$ sont deux entiers naturels. \ofg{$a$ et $b$ sont premiers entre eux} équivaut à \ofg{il existe deux entiers relatifs $u$ et $v$ tels que $au+bv=1$}.\end{cadre}
+	
+	
+	\begin{enumerate}
+		\item Pourquoi le théorème de Bézout permet-il d'affirmer qu'il existe un entier relatif $u$ tel que : \enskip $11u +26v=1$ ?
+		\item Montrer alors que l'équation $11x\equiv 1~(26)$,
+                  puis que l'équation $11x\equiv j~(26)$, $j$ étant un
+                  entier naturel, admettent une solution.
+		\end{enumerate}\vspace{-5pt}
+		
+	\item  Déterminer la fonction de décodage.
+		\begin{enumerate}
+		\item Montrer que pour tous entiers relatifs $x$ et
+                  $j$, on a
+                  :\enskip$11x \equiv j~(26)\enskip
+                  \Leftrightarrow\enskip x \equiv 19j~(26)$.
+		\item En déduire que la fonction $f^{-1}$ de décodage
+                  est $f^{-1}(y)=19y+4$.
+		\item  Décoder la lettre L.
+\end{enumerate}
+\end{enumerate}
+
+% {\color{H1}\textbf{Partie B : Codage et décodage}}
+
+\partie[Codage et décodage]
+
+La fonction de codage est définie par la fonction $f$ telle que : \enskip $f(x)=21x+11$.
+\begin{enumerate}
+\item \begin{multicols}{2}Coder le  mot : \enskip ENIGME.
+%
+
+On pourra éventuellement remplir le tableau ci-contre.
+
+\begin{center}
+\renewcommand*\tabularxcolumn[1]{>{\centering\arraybackslash}m{#1}}
+\begin{Ctableau}{\linewidth}{7}{c}\hline
+Lettre&E&N&I&G&M&E\\ 
+\hline   
+$x$&4&&&&& \\ 
+\hline    
+$f(x)$&95&&&&&\\ 
+\hline
+$y$&17&&&&&\\ 
+\hline
+Code&R&&&&&\\ 
+\hline
+\end{Ctableau}
+\end{center}
+\end{multicols}
+
+\item On cherche la fonction de déchiffrage $f^{-1}$.
+\begin{multicols}{2}
+\begin{enumerate}
+\item Démontrer que, pour tous relatifs $x$ et $z$, on a :\enskip $21x\equiv z~(26)\enskip \Leftrightarrow\enskip x\equiv 5z~(26)$.
+\item En déduire que la fonction de décodage est définie par : \enskip $f^{-1}(y)=5y+23$.
+\item Décoder le message \enskip RPERNL.
+%eureka
+
+On pourra éventuellement remplir le \mbox{tableau} ci-contre.
+\end{enumerate}
+
+\begin{center}
+\renewcommand*\tabularxcolumn[1]{>{\centering\arraybackslash}m{#1}}
+\begin{Ctableau}{\linewidth}{7}{c}\hline
+Code&R&P&E&R&N&L\\ 
+\hline   
+$y$&17&&&&& \\ 
+\hline    
+$f^{-1}(y)$&108&&&&&\\ 
+\hline
+$x$&&&&&&\\ 
+\hline
+Lettre&&&&&&\\ 
+\hline
+\end{Ctableau}
+\end{center}
+\end{multicols}
+
+\end{enumerate}
+
+% {\color{H1}\textbf{Partie C : Casser une fonction de cryptage}}
+
+\partie[Casser une fonction de cryptage]
+
+On a reçu le message suivant : \enskip FMEYSEPGCB.\medskip
+
+Par une étude statistique de la fréquence d'apparition des lettres sur un passage plus important, on déduit que le chiffrement est affine, que la lettre E est codée par la lettre E et que la lettre J est codée par la lettre N.\medskip
+
+Soit la fonction affine $f$ définie par : \enskip $f(x)=ax+b$\enskip où $a$ et $b$ sont des entiers naturels compris entre 0 et 25.\vspace{-10pt}
+
+\begin{enumerate}
+\item Démontrer que $a$ et $b$ vérifient le système suivant : \enskip $\left\{\begin{aligned}
+4a+b&\equiv 4~(26)\\
+9a+b&\equiv 13~(26)\end{aligned}\right.$\medskip
+
+\item \begin{enumerate}
+\item Démontrer que \enskip $5a\equiv 9~(26)$,\enskip puis que\enskip $a\equiv7~(26)$.
+\item En déduire que \enskip $b\equiv2~(26)$\enskip et que $f$ est
+  définie par $f(x)=7x+2$.
+\item Démontrer que, pour tous relatifs $x$ et $z$, on a :\enskip
+$7x\equiv z~(26)\enskip \Leftrightarrow\enskip x\equiv15z~(26)$.
+
+\item En déduire que la fonction de décodage $f^{-1}$ est définie par \enskip $f^{-1}(y)=15y+22$.
+\item Décoder le message.
+%tu es genial
+\end{enumerate}
+\end{enumerate}
+
+\vspace{-1cm}
+\end{activite}

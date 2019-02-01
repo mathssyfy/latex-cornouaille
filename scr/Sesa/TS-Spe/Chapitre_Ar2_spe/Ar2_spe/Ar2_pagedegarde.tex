@@ -1,0 +1,170 @@
+\begin{prerequis}[Connaissances nécessaires à ce chapitre]
+\begin{itemize}
+\item Déterminer le PGCD de deux entiers
+\item Savoir reconnaître deux nombres premiers entre eux
+\item Connaître les congruences
+\item Trouver un couple d'entiers vérifiant l'équation :\\ $ax+by=c$
+\end{itemize}
+\end{prerequis}
+ 
+\vspace{0.5em}
+% 
+\begin{autoeval}
+\begin{multicols}{2}
+	\begin{exercice}
+          \og{}PGCD\fg{} signifie :
+          \og{}plus~grand~commun\\diviseur\fg{}.
+	\begin{enumerate}
+	\item Calculer le \MotDefinition[PGCD]{}[PGCD]{}PGCD de 26 et 65, puis simplifier  $\dfrac{26}{65}$.\vspace{5pt}
+	\item Calculer le PGCD de 72 et 54, puis simplifier  $\dfrac{72}{54}$.\vspace{5pt}
+	\item Calculer le PGCD de 255 et 35, puis simplifier $\dfrac{255}{35}$.
+	%\item Calculer le PGCD de 450 et 756, puis simplifier $\dfrac{26}{65}$
+	\end{enumerate}
+	\end{exercice}
+        \begin{corrige}
+          \begin{enumerate}
+          \item $\pgcd(26,65)=13$\enskip d'où \enskip
+            $\dfrac{26}{65}=\dfrac{2}{5}$.\medskip
+          \item $\pgcd(72,54)=18$\enskip d'où \enskip
+            $\dfrac{72}{54}=\dfrac{4}{3}$.\medskip
+          \item $\pgcd(255,35)=5$\enskip d'où \enskip
+            $\dfrac{255}{35}=\dfrac{51}{7}$.
+          \end{enumerate}
+        \end{corrige}
+        \smallskip{}
+	
+	\begin{exercice}
+          Soit $n$ un entier naturel. Le PGCD de $n$ et de 72 vaut
+          8. Parmi les valeurs suivantes quelles sont celles que peut
+          prendre $n$ ?
+
+          \vspace{-10pt} 
+          \begin{center}
+            9, 16, 18, 24, 32, 40, 48
+          \end{center}
+          \vspace{-10pt}
+	\end{exercice}
+	\begin{corrige}
+	16, 32 et 40.
+	\end{corrige}
+	
+        \smallskip{}
+
+	\begin{exercice}
+          Deux nombres sont premiers entre eux si leur PGCD est égal à
+          1.
+ \begin{enumerate}
+ \item 9 et 16 sont-ils premiers entre eux ? 
+ \item 35 et 91 sont-ils premiers entre eux ?
+ \item 31 et 67 sont-ils premiers entre eux ?
+ \end{enumerate}
+	\end{exercice}
+	\begin{corrige}
+	\begin{enumerate}
+	\item	9 et 16 sont premiers entre eux.
+	\item 35 et 91 ne sont pas premiers entre eux. 
+
+          $35=5\times7$ et $91=7\times13$.
+
+	\item 31 et 67 sont premiers entre eux. En outre, ils sont tous les deux
+          premiers.
+        \end{enumerate}
+      \end{corrige}
+	
+        \smallskip{}
+
+	\begin{exercice}
+          Les phrases suivantes sont-elles vraies ou fausses ?
+          Justifier.
+	\begin{enumerate}
+	\item Un nombre entier $a$ est divisible par 6 et 9, donc $a$
+          est divisible par 54.
+	\item Un nombre entier $a$ est divisible par 8 et 9, donc $a$
+          est divisible par 72.
+	\item Un nombre entier $a$ est divisible par 4 et 18, donc
+	
+	$a\equiv36~(36)$.
+      \item Un nombre entier $a$ est divisible par 10 et 15, donc
+	
+	$a\equiv0~(150)$.
+	\end{enumerate}
+	\end{exercice}
+	\begin{corrige}
+          \begin{enumerate}
+          \item Fausse. 36 est divisible par 6 et 9 mais pas par 54.
+          \item Vraie car 8 et 9 sont premiers entre eux.
+          \item Vraie car 36 est le plus petit multiple commun à 4 et
+            18.
+          \item Fausse car 30 est un multiple de 10 et 15 et
+            \linebreak$30\not\equiv0~(150)$
+          \end{enumerate}
+	\end{corrige}
+	
+        \smallskip{}
+
+	\begin{exercice}
+          Soit $x$ et $y$ des nombres entiers. Les phrases suivantes sont-elles
+          vraies ou fausses ? Justifier.
+	\begin{enumerate}
+	\item Si \enskip $x\equiv0~(81)$,\enskip alors \enskip
+          $x\equiv0~(9)$.
+	\item L'équation \enskip $x^2+2y^2\equiv3~(4)$\enskip admet
+          des solutions.
+	\end{enumerate}
+	\end{exercice}
+	\begin{corrige}
+          \begin{enumerate}
+          \item Vraie car si $x$ est multiple de 81, il est aussi
+            multiple de 9.
+          \item Vraie car $(1\ ;\ 1)$ est un couple solution de
+            l'équation.
+          \end{enumerate}
+	\end{corrige}
+	
+        \smallskip{}
+
+	\begin{exercice}
+          Trouver un couple d'entiers $(x\ ;\ y)$ vérifiant les
+          équations suivantes :
+	\begin{enumerate}\vspace{-10pt}
+	\begin{multicols}{2}
+	\item $7x-10y=1$
+	\item $4x+5y=1$
+	\item $3x+4y=3$
+	\item $7x-12y=3$
+	\end{multicols}
+	\end{enumerate}
+	\end{exercice}
+	\begin{corrige}
+          \begin{colenumerate}{2}
+          \item $(3\ ;\ 2)$
+          \item $(-1\ ;\ 1)$
+          \item $(1\ ;\ 0)$
+          \item $(-3\ ;\ -2)$
+          \end{colenumerate}
+	\end{corrige}
+	
+	\begin{exercice}
+	%\begin{enumerate}
+	%\item 
+          Pierre a des jetons d'une valeur de 3 points et Jean a des
+          jetons d'une valeur de 7 points. 
+
+          Pierre doit donner 34 points à Jean.
+	
+          Comment Pierre et Jean peuvent-il procéder ? Donner une
+          solution.
+	%\item Céline possède des jetons de 3 et 7 points. Elle a en tout 34 points. Combien de jetons de chaque valeur possède-t-elle ? Trouver toutes les solutions
+	%\end{enumerate}
+	\end{exercice}
+	\begin{corrige}
+          Pierre peut donner 16 jetons de 3 points et Jean lui rend 2
+          jetons de 7 points.
+	\end{corrige}
+	
+	%\begin{exercice}
+	%\end{exercice}
+	%\begin{corrige}
+	%\end{corrige}
+\end{multicols}
+\end{autoeval}
