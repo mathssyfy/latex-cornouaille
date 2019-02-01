@@ -7,39 +7,67 @@
 
 
 \begin{exercice}[D'après Bac (Antilles-Guyane - juin 2014)]
-  En montagne, un randonneur a effectué des réservations dans deux
-  types de gîte : l'hébergement A et l'hébergement B.
+  En montagne, un randonneur a effectué des réservations dans deux types d'hébergements:
 
-Une nuit en hébergement A coûte 24 \euro{} et une nuit en  hébergement B coûte 45 \euro{}.
+L'hébergement A et l'hébergement B.
 
-Il se rappelle que le coût  total de sa réservation est de 438 \euro{}.\medskip
+Une nuit en hébergement A coûte 24 \euro{} et une nuit en  hébergement B coûte 45 ~\euro{}.
+
+Il se rappelle que le coût  total de sa réservation est de 438\euro{}.
  
-On souhaite retrouver les nombres $x$ et $y$ de nuitées passées respectivement en hébergement A et en  hébergement B.
+\emph{On souhaite retrouver les nombres $x$ et $y$ de nuitées passées respectivement en hébergement A et en  hébergement B}
+
+\medskip
+ 
 \begin{enumerate}
-\item \begin{enumerate}
-\item Montrer que les nombres $x$ et $y$ sont respectivement inférieurs ou égaux à 18 et 9.		
-\item Recopier et compléter les pointillés de l'algorithme suivant afin qu'il affiche les couples ($x$ ; $y$) possibles.
+\item 
+	\begin{enumerate}
+		\item Montrer que les nombres $x$ et $y$ sont respectivement inférieurs ou égaux à 18 et 9.		
+		\item Recopier et compléter les lignes (1), (2) et (3) de l'algorithme suivant afin qu'il affiche les couples ($x$ ; $y$) possibles.
 
 \begin{center}
-\begin{algorithme}
-\BlocVariables
-\DeclareVar{$x$, $y$}{\normalfont entiers}{}
-\BlocTraitementsEtAffichage
-\Pour{$x$}{0}{\dots}{%
-	\Pour{$y$}{0}{\dots}
-	{\SiAlors{\quad\dots\quad}
-		{\AfficherVar{$x$, $y$}}}}
-%\finAlgo
-\end{algorithme}
+\fbox{
+\begin{minipage}{8.5cm}
+\begin{tabular}{ll}
+\textbf{Entrée :} & $x$ et $y$ sont des nombres\\
+\textbf{Traitement :} & Pour $x$ variant de $0$ \ldots\hfill~~(1)\\
+&\phantom{XXX} Pour $y$ variant de 0 \ldots\hfill~~(2)\\
+&\phantom{XXXXXX} Si \ldots\hfill~~(3)\\
+&\phantom{XXXXXXXXX}Afficher $x$ et $y$\\
+&\phantom{XXXXXX}Fin Si\\
+&\phantom{XXX}Fin Pour\\
+&Fin Pour\\
+\textbf{Fin traitement}
+\end{tabular}
+\end{minipage}
+}
 \end{center}
-\end{enumerate}
-
+%
+%\begin{center}
+%\begin{tabular}{|l l|}\hline
+%\textbf{Entre :}&$x$ et $y$ sont deux nombres \\
+%\textbf{Traitement :}& Pour $x$ variant de 0  \ldots \hfill (1)\\ 
+%& \hspace{0.2cm}\begin{tabular}{|l}
+%Pour $y$ allant de 0  \ldots \hfill (2)\\
+%	\hspace{0.2cm}\begin{tabular}{|l}
+%	Si \ldots \hfill (3)\\ 
+%	Afficher $x$ et $y$\\
+%		\end{tabular}\\ 
+%	Fin si\\
+%Fin Pour\\
+%\end{tabular}\\ 
+%&Fin Pour\\ \hline
+%\end{tabular}
+%\end{center}
+		
+	\end{enumerate}
 \item Justifier que le coût total de la réservation est un multiple de 3.
-\item \begin{enumerate}
-\item Justifier que l'équation $8x + 15y = 1$ admet pour solution au moins un couple d'entiers relatifs.
-\item Déterminer une telle solution.
-\item Résoudre l'équation (E) : $8x + 15y = 146$ où $x$ et $y$ sont des nombres entiers relatifs.
-\end{enumerate}
+\item 
+	\begin{enumerate}
+	\item Justifier que l'équation $8x + 15y = 1$ admet pour solution au moins un couple d'entiers relatifs.
+	\item Déterminer une telle solution.
+	\item Résoudre l'équation (E) : $8x + 15y = 146$ où $x$ et $y$ sont des nombres entiers relatifs.
+	\end{enumerate}
 \item Le randonneur se souvient avoir passé au maximum 13 nuits en hébergement A.
 
 Montrer alors qu'il peut retrouver le nombre exact de nuits passées en hébergement A et celui des nuits passées en hébergement B.
