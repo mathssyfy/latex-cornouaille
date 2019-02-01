@@ -1,0 +1,665 @@
+\documentclass{cornouaille}
+\begin{document}
+
+\fexo{}{Exercices Bac}{}
+
+
+
+
+  \begin{exercice}[D'après Bac Asie -- juin 2013 et Amérique du Sud - novembre 2012]
+
+    Vrai faux
+
+    \emph{Pour chacune des affirmations suivantes, dire si elle est
+      vraie ou fausse, et proposer une démonstration de la réponse
+      indiquée. Une réponse non justifiée n'est pas prise en compte.}
+
+    \begin{enumerate}
+    \item Dans les deux questions suivantes, l'espace est muni d'un
+      repère orthonormé
+      $(O;\overrightarrow{i},\overrightarrow{j},\overrightarrow{k})$.
+    \item Soit S le point de coordonnées $(1~;~3~;~5)$ et $\Delta_{1}$
+      la droite de représentation paramétrique
+      \[\left\{\begin{array}{l c l}
+                 x&=&1 + t\\ 
+                 y&=&5 - 4t\\ 
+                 z&=&2 - 2t
+               \end{array}\right.,\:t\in\mathbb{R}\] 
+             \textbf{Affirmation 1 }: la droite $\Delta_{2}$ de
+             représentation\\ paramétrique
+             \[\left\{\begin{array}{l c l}
+                        x&=&-t\\ 
+                        y&=&7 + 4t\\ 
+                        z&=&7 + 2t 
+                      \end{array}\right.,\:t\in\mathbb{R}\]  
+                    est la droite parallèle à la droite $\Delta_{1}$
+                    passant par le point S.
+
+                  \item On considère les points I(1~;~0~;~0),
+                    J(0~;~1~;~0) et K(0~;~0~;~1).
+
+                    \textbf{Affirmation 2}: la droite $\Delta$ de
+                    représentation\\
+                    paramétrique \[\left\{\begin{array}{l c l}
+                                            x &=& 2 - t \\
+                                            y &=& 6 - 2 t\\
+                                            z &=&-2 + t
+                                          \end{array}\right.,\:t\in\mathbb{R}\] coupe le plan  (IJK) au point E$\left(- \dfrac{1}{2}~;~1~;~\dfrac{1}{2} \right)$.
+
+                                      \item Dans le cube ABCDEFGH, le
+                                        point T est le milieu du
+                                        segment [HF].
+
+
+                                        \begin{center}
+                                          \begin{tikzpicture}[general]
+
+\coordinate (A) at (0,0,2);
+\coordinate (B) at (2,0,2);
+\coordinate (F) at (2,2,2);
+\coordinate (E) at (0,2,2);
+\coordinate (D) at (0,0,0);
+\coordinate (C) at (2,0,0);
+\coordinate (G) at (2,2,0);
+\coordinate (H) at (0,2,0);
+
+\draw [opacity=0] (B)--(G);
+\draw [dashed,J2] (A)--(D)--(C);
+\draw [dashed,J2] (D)--(H);
+\draw (E)--(F)--(G)--(H)--(E); % face arrière
+\draw (A)--(B)--(C); % face avant
+% arêtes horizontales, de l’arrière vers l’avant
+\draw (B) -- (A); % bas gauche
+\draw (C) -- (G); % bas droit
+\draw (F) -- (B); % haut droit
+\draw (A) -- (E); % haut gauche
+\draw (H)--(F) node [midway,right,yshift=1mm,B2] {$T$}node [midway,B2] {$+$};
+
+\node at (A) [left] {$A$};
+\node at (B) [right] {$B$};
+\node at (C) [right] {$C$};
+\node at (D) [above right] {$D$};
+\node at (E) [left] {$E$};
+\node at (F) [right] {$F$};
+\node at (G) [above] {$G$};
+\node at (H) [above] {$H$};
+
+\end{tikzpicture}
+                                        \end{center}
+                                        \textbf{Affirmation 3} : les
+                                        droites (AT) et (EC) sont
+                                        orthogonales
+
+                                      \end{enumerate}
+                                    \end{exercice}
+
+%
+
+\begin{exercice}[D'après Bac Polynésie -- juin 2015]
+  On considère le pavé droit $ABCDEFGH$ ci-dessous, pour lequel
+  $AB = 6$, $AD = 4$ et $AE = 2$.\\
+  $I$, $J$ et $K$ sont les points tels que :\\
+  $\overrightarrow{AI} = \dfrac{1}{6} \overrightarrow{AB}$,
+  $ \overrightarrow{AJ} = \dfrac{1}{4} \overrightarrow{AD}$ et
+  $ \overrightarrow{AK} = \dfrac{1}{2} \overrightarrow {AE}$.
+
+  \begin{center}
+    \begin{tikzpicture}[general]
+
+\coordinate (A) at (0,0,2);
+\coordinate (B) at (2,0,2);
+\coordinate (F) at (2,1,2);
+\coordinate (E) at (0,1,2);
+\coordinate (D) at (0,0,0);
+\coordinate (C) at (2,0,0);
+\coordinate (G) at (2,1,0);
+\coordinate (H) at (0,1,0);
+
+\draw [opacity=0] (B)--(G);
+\draw [dashed,J2] (A)--(D)--(C);
+\draw [dashed,J2] (D)--(H);
+\draw (E)--(F)--(G)--(H)--(E); % face arrière
+\draw (A)--(B)--(C); % face avant
+% arêtes horizontales, de l’arrière vers l’avant
+\draw (B) -- (A); % bas gauche
+\draw (C) -- (G); % bas droit
+\draw (F) -- (B); % haut droit
+\draw (A) -- (E); % haut gauche
+
+\node at (A) [left] {$A$};
+\node at (B) [right] {$B$};
+\node at (C) [right] {$C$};
+\node at (D) [below right] {$D$};
+\node at (E) [left] {$E$};
+\node at (F) [right] {$F$};
+\node at (G) [above] {$G$};
+\node at (H) [above] {$H$};
+
+\end{tikzpicture}
+  \end{center}
+
+On se place dans le repère orthonormé $(A;\vec{AI},\vec{AJ},\vec{AK})$.
+\begin{enumerate}
+\item Déterminer une représentation paramétrique du plan $(IJG)$.
+\item Déterminer les coordonnées du point d'intersection L du plan
+  $(IJG)$ et de la droite $(BF)$.
+\item Reproduire la figure et tracer la section du pavé $ABCDEFGH$ par
+  le plan $(IJG)$. On ne demande pas de justification.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[D'après Bac Métropole -- juin 2015]
+  Dans un repère orthonormé $(O,~I,~J,~K)$ d'unité 1~cm, on considère
+  les points $A(0~;~-1~;~5)$, $B(2~;~-1~;~5)$, $C(11~;~0~;~1)$ et
+  $D(11~;~4~;~4)$.
+
+  Un point $M$ se déplace sur la droite $(AB)$ dans le sens de $A$ vers $B$
+  à la vitesse de 1~cm par seconde.
+
+  Un point $N$ se déplace sur la droite $(CD)$ dans le sens de $C$ vers $D$
+  à la vitesse de 1~cm par seconde.
+
+  À l'instant $t = 0$ le point $M$ est en $A$ et le point $N$ est en $C$.
+
+  On note $M_t$ et $N_t$ les positions des points $M$ et $N$ au bout
+  de $t$ secondes, $t$ désignant un nombre réel positif.
+
+  On admet que $M_t$ et $N_t$, ont pour coordonnées :
+
+  $M_t(t\,;\ -1\,;\ 5)$ et $N_t(11\,;\ 0,8t\,;\ 1 + 0,6 t)$.
+
+  \emph{Les questions $1$ et $2$ sont indépendantes.}
+
+\begin{enumerate}
+\item
+  \begin{enumerate}
+  \item La droite $(AB)$ est parallèle à l'un des axes $(OI)$, $(OJ)$ ou
+    $(OK)$. Lequel ?
+  \item La droite $(CD)$ se trouve dans un plan $\mathcal{P}$ parallèle
+    à l'un des plans $(OIJ)$, $(OIK)$ ou $(OJK)$.
+		
+    Lequel ? On donnera une représentation paramétrique de ce plan
+    $\mathcal{P}$.
+  \item Vérifier que la droite $(AB)$, coupe le plan $\mathcal{P}$ au
+    point $E(11~;~-1~;~5)$.
+  \item Les droites $(AB)$ et $(CD)$ sont-elles sécantes ?
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \item Montrer que $M_t^{}N_t ^2 = 2 t^2 - 25,2 t + 138$.
+  \item À quel instant $t$ la longueur $M_tN_t$ est-elle minimale ?
+  \end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[D'après Bac Métropole -- juin 2014]
+  Dans l'espace, on considère un tétraèdre $ABCD$ dont les faces
+  $ABC$, $ACD$ et $ABD$ sont des triangles rectangles isocèles en
+  $A$. On désigne par $E$, $F$ et $G$ les milieux respectifs des côtés
+  $[AB]$, $[BC]$ et $[CA]$.
+
+  On choisit $AB$ comme unité de longueur et on se place dans le
+  repère orthonormé
+  $(A;\overrightarrow{AB},\overrightarrow{AC},\overrightarrow{AD})$
+  de l'espace.
+  \begin{enumerate}
+  \item Donner les coordonnées des points $D$ et $E$.
+  \item Donner une représentation paramétrique de la droite $(DF)$.
+  \item On désigne par $M$ un point de la droite $(DF)$ et par $t$ le
+    réel tel que $\overrightarrow{DM}=t\overrightarrow{DF}$. On note
+    $\alpha$ la mesure principale en radian de l'angle géométrique
+    $\widehat{EMG}$.
+
+    Le but de cette question est de déterminer la position du point
+    $M$ pour que la mesure de $\alpha$ soit maximale.
+    \begin{enumerate}
+    \item Démontrer que
+      $ME^2=\dfrac{3}{2}t^2-\dfrac{5}{2}t+\dfrac{5}{4}$.
+
+      
+
+    \item Démontrer que le triangle $MEG$ est isocèle en $M$.\\
+      En déduire que :
+      $ME \sin(\dfrac{\alpha}{2})=\dfrac{1}{2\sqrt{2}}$.
+    \item Justifier que $\alpha$ est maximale si et seulement si
+      $\sin(\dfrac{\alpha}{2})$ est maximal.
+
+      En déduire que $\alpha$ est maximale si et seulement si $ME^2$
+      est minimal.
+    \item Conclure.
+    \end{enumerate}
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[D'après Bac Pondichéry -- 2013]
+
+  \emph{Pour chacune des questions, plusieurs propositions de réponse
+    sont données dont une seule est exacte. Pour chacune des questions
+    indiquer, sans justification, la bonne réponse sur la copie. Une
+    réponse exacte rapporte $1$ point.\\ Une réponse fausse ou l'absence
+    de réponse ne rapporte ni n'enlève aucun point. Il en est de même
+    dans le cas où plusieurs réponses sont données pour une même
+    question.}
+
+  \medskip
+ 
+  L'espace est rapporté à un repère orthonormal. $t$ et $t'$ désignent
+  des paramètres réels.
+
+  Le plan (P) est le plan $ABC$ avec $A(0~;~1~;~-1)$, $B(-2~;~0~;~-1)$
+  et $C(-3~;~1~;~0)$.
+
+  Le plan (S) a pour représentation paramétrique
+  $\left\{\begin{array}{l c l}
+            x&=&- 2 + t + 2t'\\
+            y&=&- t - 2t'\\
+            z&=&- 1 - t + 3t'
+          \end{array}\right.$  $t$ dans $\R$ $t'$ dans $\R$.
+
+        La droite (D) a pour représentation paramétrique
+        $\left\{\begin{array}{l c l}
+                  x&=&- 2 + t\\
+                  y&=&- t \\
+                  z&=&- 1 - t
+                \end{array}\right.$ $t$ dans $\R$.
+ 
+              On donne les points de l'espace $M(-1~;~2~;~3)$ et
+              $N(1~;~-2~;~9)$.
+
+              \medskip
+ 
+              \begin{enumerate}
+              \item Une représentation paramétrique du plan (P) est (à
+                chaque fois, $t$ dans $\R$, $t'$ dans $\R$) :
+
+                \medskip {\footnotesize\begin{tabularx}{\linewidth}{XX}
+                    \textbf{a.~}$\left\{\begin{array}{l c l} x&=&
+                        t\\y&=& 1- 2t\\ z&=& -1 +
+                        3t \end{array}\right.$&
+                    \textbf{b.~}$\left\{\begin{array}{l c l} x&=& t +
+                        2t'\\y&=& 1- t + t'\\z&=& - 1 -
+                        t\end{array}\right.$\\
+                    \textbf{c.~}$\left\{\begin{array}{l c l} x&=&t +
+                        t'\\ y&=& 1 - t- 2t'\\z&=& 1 - t -
+                        3t'\end{array}\right.$&
+                    \textbf{d.~}$\left\{\begin{array}{l c l} x&=& 1 +
+                        2t + t'\\y&=& 1 - 2t + 2t'\\z&=& - 1 -
+                        t'\end{array}\right.$
+                  \end{tabularx}\par} 
+
+                \medskip
+
+              \item
+                \begin{enumerate}
+		\item La droite (D) et le plan (P) sont sécants au
+                  point K$(- 8~;~3~;~2)$.
+		\item La droite (D) est une droite du plan (P).
+		\item La droite (D) et le plan (P) sont strictement
+                  parallèles.
+                \end{enumerate}
+              \item
+                \begin{enumerate}
+		\item La droite (MN) et la droite (D) sont non
+                  coplanaires.
+		\item La droite (MN) et la droite (D) sont parallèles.
+		\item La droite (MN) et la droite (D) sont sécantes.
+		\item La droite (MN) et la droite (D) sont confondues.
+                \end{enumerate}
+              \item
+                \begin{enumerate}
+		\item Les plans (P) et (S) sont parallèles.
+		\item La droite $(\Delta)$ de représentation
+                  paramétrique
+                  $\left\{\begin{array}{l c l}x&=&t\\y&=&- 2 - t\\z
+                      &=& -3-t \end{array}\right.$
+                  est la droite d'intersection des plans (P) et (S).
+		\item Le point M appartient à l'intersection des plans
+                  (P) et (S).
+		
+                \end{enumerate}
+              \end{enumerate}
+            \end{exercice}
+
+
+
+
+
+%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%
+
+
+
+
+  \begin{exercice}[Vrai ou faux ?]
+    Dire si les propositions suivantes sont vraies ou fausses et le
+    démontrer.
+    \begin{enumerate}
+    \item Si deux plans sont perpendiculaires, alors toute droite de
+      l'un est orthogonale à toute droite de l'autre.
+    \item Si deux droites sont parallèles, alors toute droite\\
+      orthogonale à l'une est orthogonale à l'autre.
+    \item Si deux droites sont perpendiculaires à une même droite
+      alors elles sont parallèles entre elles.
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    Soit $ABCD$ un tétraèdre régulier et $I$ le milieu de $[BC]$.
+
+    \begin{center}
+      \begin{tikzpicture}[general]
+
+% \coordinate (A) at (0,0);
+% \coordinate (B) at (1,-3);
+% \coordinate (C) at (-1,-2.5);
+% \coordinate (D) at (2,-2);
+% \coordinate (S) at (.25,-2.5);
+
+% \draw [dashed,B2] (A)--(S) node {$\times$} node [right] {$S$};
+% \draw [dashed,B2] (C)--(D);
+% \draw (A)--(C)--(B) node [B2,midway] {$\times$} node [B2,midway,below
+% left] {$I$}--(D)--(A)--(B) ;
+
+% \node at (A) [above] {$A$};
+% \node at (B) [below] {$B$};
+% \node at (C) [left] {$C$};
+% \node at (D) [right] {$D$};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[general,scale=.5]
+% \clip(-4.3,-2.88) rectangle (7.14,6.3);
+\draw [dashed,color=B2] (0.5938169661678563,-0.4137735165887121)-- (0.58,4.74);
+\draw (0.58,4.74)-- (-2.4,-0.06);
+\draw (0.58,4.74)-- (2.06,-2.3);
+\draw (0.58,4.74)-- (3.,2.);
+\draw (-2.4,-0.06)-- (2.06,-2.3);
+\draw (2.06,-2.3)-- (3.,2.);
+\draw [dashed,color=B2] (3.,2.)-- (-2.4,-0.06);
+\begin{scriptsize}
+\draw [fill=Noir] (3.,2.) circle (0.5pt);
+\draw[color=Noir] (3.14,2.2) node {$D$};
+\draw [fill=Noir] (-2.4,-0.06) circle (0.5pt);
+\draw[color=Noir] (-2.56,0.26) node {$C$};
+\draw [fill=Noir] (2.06,-2.3) circle (0.5pt);
+\draw[color=Noir] (2.08,-2.66) node {$B$};
+\draw [color=B2] (-0.17,-1.18)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=B2] (-0.48,-1.36) node {$I$};
+\draw [color=B2] (0.5938169661678563,-0.4137735165887121)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=B2] (0.74,-0.14) node {$S$};
+\draw [fill=Noir] (0.58,4.74) circle (0.5pt);
+\draw[color=Noir] (0.52,5.1) node {$A$};
+\end{scriptsize}
+\end{tikzpicture}
+    \end{center}
+
+    \begin{enumerate}
+    \item Démontrer que la droite $(BC)$ est orthogonale au plan
+      $(ADI)$.
+    \item En déduire que $(BC)\perp(AD)$.
+
+      \textit{Le plan $(ADI)$ est le plan orthogonal au segment $[BC]$
+        et passant par son milieu. Il est appelé plan médiateur du
+        segment $[BC]$. Tous les points de ce plan sont équidistants
+        de $B$ et de $C$.}
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    $ABCDEFGH$ est un cube et $I$ et $J$ sont les milieux respectifs de
+    $[BC]$ et $[EH]$.  Le point $M$ est un point du segment $[AG]$
+    distinct de $A$ et de $G$.
+    \begin{enumerate}
+    \item Montrer qu'il existe un unique réel $t\in\left] 0;1\right[ $
+      tel que $\overrightarrow{AM}=t\overrightarrow{AG}$.
+    \item Construire la section du cube par le plan $(IAM)$. Quelle
+      est sa nature ?
+    \item Existe-t-il une valeur du réel $t$ tel que les points $J$,
+      $M$ et $I$ soient alignés ? Justifier.
+    \item Existe-t-il une valeur du réel $t$ tel que les points $H$,
+      $M$ et $I$ soient alignés ? Justifier.
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    $ABCDEFGH$ est un cube de côté $a$. Le point $M$ est défini par
+    $\overrightarrow{DM}=\dfrac{1}{3}\overrightarrow{DE}$.
+    \begin{enumerate}
+    \item Construire la section du cube par le plan $(AGM)$.
+    \item Démontrer que cette section est un losange $ANGP$ avec $N$
+      et $P$ les milieux respectifs de $[BF]$ et $[DH]$.
+    \item En déduire l'aire de cette section en fonction de $a$.
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    $ABCDEFGH$ est un cube et $I$ ; $J$ et $K$ les points tels que :
+    $I\in [AD]$ et $AI=\dfrac{1}{3}AD$ ; $J\in [AB]$ et
+    $AJ=\dfrac{1}{3}AB$.
+
+    \begin{center}
+      \begin{tikzpicture}[general]
+
+\coordinate (A) at (0,0,2);
+\coordinate (B) at (2,0,2);
+\coordinate (F) at (2,2,2);
+\coordinate (E) at (0,2,2);
+\coordinate (D) at (0,0,0);
+\coordinate (C) at (2,0,0);
+\coordinate (G) at (2,2,0);
+\coordinate (H) at (0,2,0);
+
+\draw [dashed,J2] (A)--(D) node (I) [near start,B2] {+} 
+               node [near start,above,B2] {I}--(C);
+\draw [dashed,J2] (D)--(H);
+\draw (E)--(F)--(G)--(H)--(E); % face arrière
+\draw (A)--(B) node (J) [near start,B2] {+} 
+               node [near start,below,B2] {J} --(C); % face avant
+% arêtes horizontales, de l’arrière vers l’avant
+\draw (B) -- (A); % bas gauche
+\draw (C) -- (G); % bas droit
+\draw (F) -- (B); % haut droit
+\draw (A) -- (E); % haut gauche
+
+\draw [B2] (I)--(J);
+
+\node at (A) [left] {$A$};
+\node at (B) [right] {$B$};
+\node at (C) [right] {$C$};
+\node at (D) [above right] {$D$};
+\node at (E) [left] {$E$};
+\node at (F) [right] {$F$};
+\node at (G) [above] {$G$};
+\node at (H) [above] {$H$};
+
+\end{tikzpicture}
+    \end{center}
+
+    Les propositions sont-elles vraies ou fausse ?
+
+    Le démontrer.
+    \begin{enumerate}
+    \item $(IJ)$ est orthogonale à $(EC)$ ; \item $(IJ)$ est
+      orthogonale à $(BG)$ ;
+    \item $(IJ)$ est orthogonale à $(HB)$ ; \item $(IJ)$ est
+      orthogonale à $(HC)$.
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    Dans l'espace muni d'un repère orthonormé
+    $(O\,;\vec{i},\vec{j},\vec{k})$, on considère les points
+    $A(1\,;0\,;0)$, $B(0\,;1\,;0)$, $C(0\,;0\,;1)$ et $I$ le milieu de
+    $[AB]$.
+    \begin{enumerate}
+    \item Construire la figure à l'aide d'un logiciel de géométrie dans
+      l'espace.
+    \item Placer un point $M$ du segment $[AC]$ et $\wp$ le plan passant
+      par $I$ et orthogonal à la droite $(IM)$.
+    \item Construire le point $N$ intersection de $\wp$ et de la droite
+      $(OB)$.
+    \item Conjecturer la position du point $M$ pour laquelle la distance
+      $MN$ est minimale.
+    \item Démonstration
+      \begin{enumerate}
+      \item Soit $t$ le réel tel que
+        $\overrightarrow{AM}=t\overrightarrow{AC}$. Exprimer les\\
+        coordonnées de $M$ en fonction de $t$. On admet que $N(0\,;t\,;0)$.
+      \item Exprimer la longueur $MN$ en fonction de $t$.
+      \item Déterminer la valeur de $t$ pour laquelle cette longueur est
+        minimale.
+      \end{enumerate}
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    $ABCD$ est un tétraèdre. $P$, $Q$ et $R$ sont les points tels que
+    $ABPC$, $ABQD$ et $ACRD$ sont des parallélogrammes.  En se plaçant
+    dans le repère
+    $(A\,;\overrightarrow{AB},\overrightarrow{AC},\overrightarrow{AD})$,
+    démontrer que les droites $(BR)$, $(CQ)$ et $(DP)$ sont
+    concourantes en un point $K$ dont on déterminera les coordonnées.
+  \end{exercice}
+
+  \begin{exercice}
+    Une autre preuve du théorème du toit  :
+
+    \begin{center}
+      \begin{tikzpicture}[general]
+
+
+ \begin{scope}
+    \tkzDefPoint(2,.6){A}
+    \tkzDefPoint(4,1){B} 
+    \tkzDefPoint(3,3.8){C}
+    \tkzDefPointWith[colinear= at C](B,A)
+    \tkzGetPoint{D}
+    \tkzDrawPolygon[color=black,fill=A3](A,B,C,D)
+  \end{scope}
+ \begin{scope}
+    \tkzDefPoint(0,1.2){A}
+    \tkzDefPoint(2,1.6){B} 
+    \tkzDefPoint(3,3.8){C}
+    \tkzDefPointWith[colinear= at C](B,A)
+    \tkzGetPoint{D}
+    \tkzDrawPolygon[color=black,fill=H3](A,B,C,D)
+  \end{scope}
+
+  \draw (-1,3)--(4,4) node [near start,above left] {$\Delta$};
+  \draw (-1,1)--(4,2) node [near start,below left] {$d$};
+  \draw (-1,0)--(4,1) node [midway,below left] {$d'$};
+
+  \node at (.6,1.75) {$\wp$};
+  \node at (2.2,1) {$\wp'$};
+ \end{tikzpicture}
+    \end{center}
+
+    Soit $\wp$ et $\wp'$ deux plans sécants selon une droite $\Delta$,
+    $d$ une droite de $\wp$ et $d'$ une droite de $\wp'$telles que
+    $d//d'$.  \\ Il s'agit de démontrer que la droite $\Delta$
+    intersection de $\wp$ et $\wp'$ est parallèle à $d$ et à $d'$.
+    \begin{enumerate}
+    \item Soit $\vec{u}$ un vecteur directeur de $d$ et $d'$ et
+      $\vec{w}$ un vecteur directeur de $\Delta$.  On considère des
+      vecteurs $\vec{v}$ et $\vec{v'}$ tels que : $\vec{u}$ et
+      $\vec{v}$ dirigent $\wp$ et
+      $\vec{u}$ et $\vec{v'}$ dirigent $\wp'$.\\
+      Traduire vectoriellement le fait que $\Delta\subset\wp$ puis que
+      $\Delta\subset\wp'$.
+    \item En déduire une relation vectorielle entre $\vec{u}$,
+      $\vec{v}$ et $\vec{v'}$.
+    \item Conclure en utilisant le fait que $\wp$ et $\wp'$ sont
+      sécants.
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    Dans l'espace muni d'un repère orthonormé
+    $(O\,; \vec{i},\vec{j},\vec{k})$, soit $\Delta$ la droite de
+    représentation paramétrique :
+
+    \begin{center}
+      $\begin{cases}x=3-t \\y=2+4t \\z=-2t \end{cases}$ ,
+      $t\in\mathbb{R}$
+    \end{center}
+
+    \begin{enumerate}
+    \item Les points $A(5\,;2\,;6)$ et $B(5\,;-6\,;4)$
+      appartiennent-ils à la droite $\Delta$ ?
+    \item Déterminer les valeurs des réels $a$ et $b$ tels que le
+      point $C(4\,;a\,;b)$ appartienne à $\Delta$.
+    \item Soit $M(x\,;y\,;z)\in \Delta$. Exprimer $AM^2$ en fonction
+      de $t$.
+    \item Déterminer les coordonnées du point $M$ tel que la distance
+      $AM$ soit minimale.
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    Dans l'espace muni d'un repère orthonormé
+    $(O\,;\vec{i},\vec{j},\vec{k})$, soit $\Delta$ la droite de
+    représentation paramétrique :
+
+    \begin{center}
+      $\begin{cases}x=1-t \\y=2t \\z=-t+2 \end{cases}$ , $t\in\mathbb{R}$
+    \end{center} 
+    et $\wp$ le plan de représentation paramétrique :
+
+    \begin{center}
+      $\begin{cases}x=-t' \\y=1+t+3t' \\z=t \end{cases}$
+      $t\in\mathbb{R}, t'\in\mathbb{R}$
+    \end{center}
+    \begin{enumerate}
+    \item Le point $C(1\,; 3\,; 2)$ appartient-il au plan $\wp$ ?
+    \item Démontrer que la droite $\Delta$ est incluse dans le plan
+      $\wp$.
+    \item Soit $\wp'$ le plan de représentation paramétrique :
+
+      \begin{center}
+        $\begin{cases}x=t+t' \\y=1+2t+t' \\z=-1+3t+t' \end{cases}$
+        $t\in\mathbb{R}, t'\in\mathbb{R}$
+      \end{center}
+
+      \begin{enumerate}
+      \item Montrer que $C\in \wp'$.
+      \item Montrer que $\Delta$ coupe $\wp'$ en un point $I$ dont on\\
+        déterminera les coordonnées.
+      \item Montrer que $CI=\sqrt{3}$.
+      \end{enumerate}
+    \item Soit $t$ un nombre réel et $M$ le point de $\Delta$ de
+      coordonnées :\\$M(-t+1\,;2t\,; -t+2)$.
+      \begin{enumerate}
+      \item Montrer que \\ $CM^2=6t^2-12t+9$.
+      \item Montrer que $CI$ est la distance minimale de $CM$
+        lorsque $t$ décrit l'ensemble des réels.
+      \end{enumerate}
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}
+    Soient $A(-2\
+    ;0\,;1)$, $B(1\,;2\,;-1)$ et $C(-2\,;2\
+    ;2)$ trois points de l'espace muni d'un repère $(O\
+    ;\vec{i},\vec{j},\vec{k})$.
+    \begin{enumerate}
+    \item Vérifier que les points $A$, $B$ et $C$ définissent un plan.
+    \item Soit $D(-2\
+      ;-1\,;0)$ et $E(-2\,;5\,;2)$.  Démontrer que la droite
+      $(DE)$
+      et le plan $(ABC)$
+      sont sécants en un point $I$
+      dont on déterminera les coordonnées.
+    \end{enumerate}
+  \end{exercice}
+
+
+
+
+
+
+
+
+\end{document}

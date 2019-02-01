@@ -1,0 +1,266 @@
+\documentclass{cornouaille}
+
+\setcounter{questionqcm}{0}
+
+\dscornouaille
+\begin{document}
+
+\fexo{TS}{QCM}{}
+\emph{Pour chaque question, plusieurs réponses sont
+  proposées.  Déterminer celles qui sont correctes.}
+
+\begin{QCM}
+  \begin{EnonceCommunQCM}
+    On considère le cube $ABCDEFGH$ de côté $a$, avec $I$, $J$ les
+    milieux respectifs des segments $[CD]$ et $[GH]$ et $L$ est le
+    milieu du segment $[GH]$.
+
+    \begin{center}
+     \begin{tikzpicture}[general]
+
+\coordinate (A) at (0,0,2);
+\coordinate (B) at (2,0,2);
+\coordinate (F) at (2,2,2);
+\coordinate (E) at (0,2,2);
+\coordinate (D) at (0,0,0);
+\coordinate (C) at (2,0,0);
+\coordinate (G) at (2,2,0);
+\coordinate (H) at (0,2,0);
+
+\draw [dashed,J2] (A)--(D)--(C) node [B2,midway]{+} 
+                    node [B2,midway,above]{I};
+\node at (1.5,2,0) [B2,above] {L};
+\node at (1.5,2,0) [B2] {+};
+\draw [dashed,J2] (D)--(H);
+\draw (E)--(F)--(G)--(H)node [B2,midway]{+} 
+                        node [B2,midway,above]{J}--(E); % face arrière
+
+\node at (1.5,2,0) [B2] {+};
+\draw (A)--(B)--(C); % face avant
+% arêtes horizontales, de l’arrière vers l’avant
+\draw (B) -- (A); % bas gauche
+\draw (C) -- (G); % bas droit
+\draw (F) -- (B); % haut droit
+\draw (A) -- (E); % haut gauche
+
+
+\node at (A) [left] {$A$};
+\node at (B) [right] {$B$};
+\node at (C) [right] {$C$};
+\node at (D) [above right] {$D$};
+\node at (E) [left] {$E$};
+\node at (F) [right] {$F$};
+\node at (G) [above] {$G$};
+\node at (H) [above] {$H$};
+
+\end{tikzpicture}
+    \end{center}
+  \end{EnonceCommunQCM}
+  
+\begin{GroupeQCM}
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    La droite $(BI)$ est :
+    \begin{ChoixQCM}{3}
+    \item orthogonale à $(IJ)$
+    \item orthogonale à $(IL)$
+    \item orthogonale à $(DG)$
+    \end{ChoixQCM}
+\begin{solution}
+      \reponseQCM{a}
+\end{solution}
+  \end{enumerate}
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    L'intersection du plan $(BIL)$ avec le plan $(ABF)$ est :
+    \begin{ChoixQCM}{3}
+    \item une droite passant par\\ le milieu de $[AB]$
+    \item une droite passant par\\ le point $B$
+    \item une droite parallèle à $(IL)$
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{b} et \reponseQCM{c}
+\end{solution}
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    La section du cube $ABCDEFGH$ par le plan $(BIL)$ est :
+    \begin{ChoixQCM}{3}
+    \item un triangle
+    \item un parallélogramme
+    \item un trapèze
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{c}
+\end{solution}
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    Dans le repère
+    $(A;\overrightarrow{AB},\overrightarrow{AD},\overrightarrow{AE})$
+    on a :
+    \begin{ChoixQCM}{3}
+    \item $\overrightarrow{BJ}\begin{pmatrix}
+        -0,5\\
+        1\\
+        1
+      \end{pmatrix}$
+    \item les points $L$, $I$, $B$ et $F$ sont\\ coplanaires
+    \item
+      $\overrightarrow{AJ}=2\overrightarrow{AF}+\overrightarrow{GH}-\overrightarrow{CG}$
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{a}
+\end{solution}
+\end{GroupeQCM}
+\end{QCM}
+
+\begin{QCM}
+\begin{EnonceCommunQCM}
+  Dans un repère
+  $(O\,;\overrightarrow{i},\overrightarrow{j},\overrightarrow{k})$ de
+  l'espace, on considère les points $A(1\,;0\,;2)$, $B(2\,;1\,;2)$,
+  $C(3\,;0\,;0)$ et $D(5\,;-2\,;-4)$.
+\end{EnonceCommunQCM}
+
+\begin{GroupeQCM}
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    Les points $A$, $B$ et $C$ :
+    \begin{ChoixQCM}{3}
+    \item sont alignés
+    \item sont coplanaires
+    \item définissent un plan
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{b} et \reponseQCM{c}
+\end{solution}
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    Les points $A$, $B$, $C$ et $D$ :
+    \begin{ChoixQCM}{3}
+    \item sont coplanaires
+    \item vérifient l'égalité\\
+      $\overrightarrow{AD}=-2\overrightarrow{AB}+3\overrightarrow{AC}$
+    \item $D\in(BC)$
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{a b c}
+\end{solution}
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    Une représentation paramétrique de :
+    \begin{ChoixQCM}{3}
+    \item la droite $(AB)$ est :\\
+      $\begin{cases}x=2-t\\y=1-t \\z=2+t \end{cases}$,
+      $t\in\mathbb{R}$
+    \item du plan $(ABC)$ est :\\
+      $\begin{cases}x=5+t+4t' \\y=-2-t-2t' \\z=-4-2t-6t' \end{cases}$\\
+      $t\in\mathbb{R}$ et $t'\in\mathbb{R}$
+    \item du plan $(ABC)$ est :\\
+      $\begin{cases}x=1+t+2t' \\y=t \\z=2-2t' \end{cases}$\\
+      $t\in\mathbb{R}$ et $t'\in\mathbb{R}$
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{b} et \reponseQCM{c}
+\end{solution}
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    Soit $E(3\,;4\,;5)$ :
+    \begin{ChoixQCM}{3}
+    \item la droite parallèle à $(AB)$ et passant par $E$ a
+      pour représentation paramétrique
+      $\begin{cases}x=t\\y=1+t \\z=5\end{cases}$ , $t\in\mathbb{R}$
+    \item Le point $E$ appartient au plan $(ABC)$
+    \item les droites $(AB)$ et $(DE)$ sont non coplanaires
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{a} et \reponseQCM{c}
+\end{solution}
+
+\end{GroupeQCM}
+\end{QCM}
+
+\enlargethispage{2cm}
+
+
+\begin{QCM}
+\begin{EnonceCommunQCM}
+  Dans un repère
+  $(O\ ;\ \overrightarrow{i},\overrightarrow{j},\overrightarrow{k})$ de
+  l'espace, on considère les droites 
+
+  $d$ :
+  $\begin{cases}x=1-t \\y=2t \\z=3 \end{cases}$ $t\in\mathbb{R}$ et
+  $d'$ :
+  $\begin{cases}x=3+t \\y=1-4t \\z=2t \end{cases}$  $t\in\mathbb{R}$\\
+  et le plan $\wp$  de représentation paramétrique :
+  $\begin{cases}x=2+t-t' \\y=-2t+3t' \\z=4-t' \end{cases}$
+  $t\in\mathbb{R}, t'\in\mathbb{R}$
+\end{EnonceCommunQCM}
+\begin{GroupeQCM}
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    \begin{ChoixQCM}{3}
+    \item la droite $d$ est parallèle au plan
+      $(O\,;\overrightarrow{i},\overrightarrow{j})$
+    \item la droite $d$ est parallèle au plan
+      $(O\,;\overrightarrow{i},\overrightarrow{k})$
+    \item la droite $d$ est parallèle à la droite
+      $(O\,;\overrightarrow{k})$
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{a}
+\end{solution}
+
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    \begin{ChoixQCM}{3}
+    \item $d$ et $\wp$ sont parallèles
+    \item $d$ et $\wp$ sont sécants\\ en $A(-1;4;3)$
+    \item $d$ est inclus dans $\wp$
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{a}
+\end{solution}
+
+  \begin{enumerate}
+\setcounter{enumi}{\value{questionqcm}}\stepcounter{questionqcm}
+\item 
+    \begin{ChoixQCM}{3}
+    \item $d$ et $d'$ sont parallèles
+    \item  $d$ et $d'$ sont sécantes 
+    \item  $d$ est $d'$ ne sont pas coplanaires 
+    \end{ChoixQCM}
+  \end{enumerate}
+\begin{solution}
+    \reponseQCM{c}
+\end{solution}
+\end{GroupeQCM}
+\end{QCM}
+
+\end{document}
