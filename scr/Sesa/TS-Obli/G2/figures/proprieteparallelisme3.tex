@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{tikz,sesamanuel}
+\input{commandes-tikz}
+\begin{document}
+\begin{tikzpicture}[general]
+
+  \filldraw [fill=H3,draw=black] (-.75,0) rectangle (2.75,3);
+  \begin{scope}
+    \tkzDefPoint(-.5,1.5){A}
+    \tkzDefPoint(1.5,1.7){B} 
+    \tkzDefPoint(2.5,2.5){C}
+    \tkzDefPointWith[colinear= at C](B,A)
+    \tkzGetPoint{D}
+    \tkzDrawPolygon[color=black,fill=B3](A,B,C,D)
+  \end{scope}
+
+  \begin{scope}[yshift=-1cm]
+    \tkzDefPoint(-.5,1.5){A}
+    \tkzDefPoint(1.5,1.7){B} 
+    \tkzDefPoint(2.5,2.5){C}
+    \tkzDefPointWith[colinear= at C](B,A)
+    \tkzGetPoint{D}
+  \end{scope}
+  \tkzDrawPolygon[color=black,fill=A3](A,B,C,D)
+  \draw (-0.2,2)--(2.2,2) node [near start,below] {$d$};
+  \draw (-0.2,1)--(2.2,1) node [near start,below] {$d'$};
+  \node at (1.7,.25) {$\wp''$};
+  \node at (1.7,1.25) {$\wp'$};
+  \node at (1.7,2.25) {$\wp$};
+\end{tikzpicture}
+\end{document}

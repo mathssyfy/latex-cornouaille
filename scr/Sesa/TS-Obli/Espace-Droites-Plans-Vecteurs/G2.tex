@@ -1,0 +1,824 @@
+\documentclass{cornouaille}
+
+\renewcommand\standalonepath[1]{G2/figures/#1}
+\begin{document}
+
+\fexo{TS}{Espace : droites, plans et vecteurs}{}
+
+
+
+\section{Positions relatives de droites et plans}
+
+\begin{tikzpicture}[overlay]
+  \node at (13cm,-2cm) {\includestandalone[scale=.7]{\standalonepath{1definirplan}}};
+\end{tikzpicture}
+
+\begin{rappel}
+  \begin{enumerate}
+  \item Un plan est défini par :
+    \begin{itemize}
+    \item [\textbullet] trois points non alignés ou
+    \item [\textbullet] deux droites sécantes ou
+    \item [\textbullet] deux droites strictement parallèles.
+    \end{itemize}
+  \item Si un plan $\mathscr{P}$ contient deux points distincts $A$ et
+    $ B$ de l'espace,\\
+    alors il contient la droite $(AB)$. On note
+    $(AB)\subset \mathscr{P}$.
+  \item Tous les résultats de géométrie plane (théorèmes de Thalès, de
+    Pythagore...)\\ s'appliquent dans chaque plan de l'espace.
+  \end{enumerate}
+\end{rappel}
+Dans la suite du paragraphe, $ABCDEFGH$ est un cube.\\
+
+\begin{proprietes}
+[Positions relatives de deux droites]
+Deux droites de l'espace sont soit
+coplanaires (c'est-à-dire qu'il existe un plan les
+contenant toutes les deux), soit non coplanaires (c'est-à-dire qu'il
+n'existe aucun plan les contenant toutes les deux).
+
+Si elles sont coplanaires, alors elles sont soit sécantes, soit
+parallèles (strictement parallèles ou confondues).
+\end{proprietes}
+
+\begin{ltableau}{\linewidth}{4}
+  \hline
+  \multicolumn {3}{|c|}{Droites coplanaires (dans un même plan)} & 
+  Droites non coplanaires \tabularnewline \hline \cline{2-4}
+  \rowcolor{FondTableaux}Droites sécantes & \multicolumn {2}{c|}{Droites strictement parallèles} & Droites confondues\tabularnewline\hline
+ \includestandalone{\standalonepath{1_droites_secantes}} & 
+ \includestandalone{\standalonepath{1_droites_confondues}} & 
+ \includestandalone{\standalonepath{1_droites_strt_paralleles}} &
+ \includestandalone{\standalonepath{1_droites_non_coplanaires}}\tabularnewline\hline
+\end{ltableau}
+
+\begin{proprietes}[Positions relatives de deux plans]
+Deux plans de l'espace sont soit sécants (leur intersection est une
+droite), soit parallèles.
+\end{proprietes}
+
+\begin{ltableau}{\linewidth}{3}
+  \hline
+  \multicolumn {1}{|c|}{Plans sécants} & \multicolumn {2}{c|}{Plans parallèles} \tabularnewline\hline
+  \includestandalone{\standalonepath{1_plans_secants}} & 
+  \includestandalone{\standalonepath{1_plans_st_paralleles}} &  
+  \includestandalone{\standalonepath{1_plans_confondus}}\tabularnewline\hline
+\end{ltableau}
+
+\pagebreak
+
+\begin{proprietes}[Positions relatives d'une droite et d'un plan]
+  Une droite et un plan de l'espace sont soit sécants, soit parallèles.
+\end{proprietes}
+
+\begin{ltableau}{\linewidth}{4}
+  \hline
+  \multicolumn {1}{|c|}{Droite et plan sécants} & 
+  \multicolumn{2}{c|}{Droite et plan parallèles} \tabularnewline\hline
+  \includestandalone{\standalonepath{1_droites_secante_plan}} & 
+  \includestandalone{\standalonepath{1_droites_parallele_plan}} &  
+  \centering
+  \includestandalone{\standalonepath{1_droites_incluse_dans_plan}}\tabularnewline
+  \hline
+\end{ltableau}
+
+\section{Parallélisme dans l'espace}
+
+\begin{propriete}
+  \begin{itemize}
+  \item Si deux droites sont parallèles à une même droite alors elles
+    sont parallèles entre elles.
+  \item Si deux plans sont parallèles à un même plan alors ils sont
+    parallèles entre eux.
+  \end{itemize}
+\end{propriete}
+           
+\begin{propriete}
+  Une droite est parallèle à un plan si et seulement si elle est
+  parallèle à une droite de ce plan.
+\end{propriete}
+
+\begin{exemple*1}~\par
+  \begin{minipage}{.45\linewidth}
+    $d$ est parallèle à $d_1$ et $d_1$ est contenue dans le plan $\wp$
+    donc $d$ est parallèle à $\wp$.
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\linewidth}
+    \includestandalone{\standalonepath{proprieteparallelisme}}
+  \end{minipage}
+\end{exemple*1}
+
+\begin{propriete}
+  Si un plan $\wp$ contient deux droites sécantes respectivement
+  parallèles à deux droites sécantes d' un plan $\wp'$ alors les plans
+  $\wp$ et $\wp'$ sont parallèles.
+\end{propriete}
+          
+\begin{exemple*1}~\par
+  \begin{minipage}{.45\linewidth}
+    $d_1$ et $d_2$ sont deux droites du plan $\wp$ ; $d_1$ et $d_2$
+    sont sécantes et respectivement parallèles à deux droites du plan
+    $\wp'$ donc les plans $\wp$ et $\wp'$ sont\linebreak parallèles.
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\linewidth}
+    \includestandalone{\standalonepath{proprieteparallelisme2}}
+  \end{minipage}
+\end{exemple*1}
+
+\begin{propriete}
+  Si deux plans sont parallèles, alors tout plan qui coupe l'un coupe
+  l'autre et les droites\linebreak d'intersection sont parallèles entre elles.
+\end{propriete}
+
+\begin{exemple*1}~\par
+  \begin{minipage}{.45\linewidth}
+    Les plans $\wp$ et $\wp'$ sont parallèles et $\wp$ et $\wp''$ sont
+    sécants avec $\wp\cap\wp''=d$, donc $\wp'$ et $\wp''$ sont sécants
+    et $\wp'\cap\wp''=d'$ où $d'$ est une droite parallèle à $d$.
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\linewidth}
+    \includestandalone[width=\linewidth]{\standalonepath{proprieteparallelisme3}}
+  \end{minipage}
+\end{exemple*1}
+
+\begin{propriete} [Théorème du toit]\label{G2theoremedutoit}
+  \begin{minipage}{.45\linewidth}
+    Soit $\wp$ et $\wp'$ deux plans distincts, sécants selon une
+    droite $\Delta$.
+
+    Si une droite $d$ de $\wp$ est strictement parallèle à une droite
+    $d'$ de $\wp'$ alors la droite $\Delta$ intersection de $\wp$ et
+    $\wp'$ est parallèle à $d$ et à $d'$.
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\linewidth}
+    \includestandalone{\standalonepath{proprieteparallelisme4}}
+  \end{minipage}
+\end{propriete}
+
+\begin{preuve}
+  Par hypothèse, $\wp\cap\wp'=\Delta$ et $d//d'$. Les droites $d$ et
+  $d'$ sont parallèles donc elles sont coplanaires. Donc, il existe un
+  plan $Q$ qui contient à la fois $d$ et $d'$. Mais alors $d$ et
+  $\Delta$ sont contenues dans $\wp$ et $d'$ et $\Delta$ sont
+  contenues dans $\wp'$. Donc : $\wp\cap Q=d$ et $\wp'\cap Q=d'$.
+
+  Montrons que $d//\Delta$.
+  Supposons que $d$ et $\Delta$ ne soient pas parallèles. Donc elles
+  sont sécantes en un point $A$.
+
+  $A\in d$ et $A\in\Delta$.
+  \begin{itemize}
+  \item $A\in d$ et $d=\wp\cap Q$ donc $A\in Q$.
+  \item $A\in\Delta$ et $\Delta=\wp\cap\wp'$ donc $A\in\wp'$.  D'où
+    $A\in Q\cap\wp'=d'$.
+  \end{itemize}
+
+  Par conséquent, $A\in d'$ et $A\in d$ et par conséquent, $d$ et $d'$
+  sont sécantes en A.
+  Ce qui est absurde, contraire à notre hypothèse.
+
+  Les droites $d$ et $\Delta$ sont donc parallèles.  De plus, comme
+  $d$ et $d'$ sont parallèles, on en déduit que les droites $d'$ et
+  $\Delta$ sont aussi parallèles.  
+
+  \textbf{Conclusion :} L'intersection de $\wp$ et $\wp'$ est une
+  droite $\Delta$ parallèle à la fois à $d$ et à $d'$.
+\end{preuve}
+
+\begin{remarque}
+  Une autre démonstration de ce théorème est proposée dans l'exercice
+  \RefExercice{ex71G2}.
+\end{remarque}
+
+\newpage
+
+\begin{methode*1}[Construire la section d'un solide par  un plan]
+  Il s'agit de construire l'intersection de ce plan avec chacune des
+  faces du solide.
+
+  \exercice
+
+  On considère le cube $ABCDEFGH$ ci-contre.  On note $M$ le milieu du
+  segment $[EH]$ et $N$ celui de $[FC]$.
+
+  \habillage{\includestandalone{\standalonepath{methodesection1}}}
+  Tracer la section de ce cube par le plan $(MNG)$.
+
+  \correction
+
+  L'intersection du plan $(MNG)$ avec la face $HEFG$ est le segment\\
+  $[MG]$. Il est visible, on le trace donc en trait plein.
+
+  $G, N$ et $B$ sont alignés, donc l'intersection du plan $(MNG)$ avec\\
+  la face $FGCB$ est le segment $[GB]$. Il est visible, on le trace
+  donc\\ en trait plein.
+
+  \habillage{\includestandalone{\standalonepath{methodesection2}}}
+  Les faces $EHDA$ et $FGCB$ étant parallèles, l'intersection du plan
+  $(MNG)$ avec la face $EHDA$ est le segment passant par $M$ et
+  parallèle à $(GN)$. Il n'est pas visible, on le trace donc en
+  pointillés.
+
+  Notons $P$ le point d'intersection de $(MNG)$ et
+  $(EA)$. L'intersection du plan $(MNG)$ avec la face $ABFE$ est le
+  segment $[PB]$. Il est visible, on le trace donc en trait plein.
+
+  La section du cube par le plan $(MNG)$ est le polygone $MGBP$
+  colorié en rouge. Comme $(MP)//(GB)$, il s'agit d'un trapèze.
+\end{methode*1}
+
+\section{Orthogonalité dans l'espace}
+
+  Droites orthogonales
+
+\begin{definition}[Orthogonalité de deux droites]
+  Deux droites sont orthogonales si leurs parallèles passant par un
+  même point sont perpendiculaires dans le plan qu'elles définissent.
+\end{definition}
+
+\begin{remarque}
+  Deux droites perpendiculaires sont orthogonales mais la réciproque
+  est fausse.
+\end{remarque}
+
+\begin{exemple*1}~\par
+  \begin{minipage}{.45\linewidth}
+    Dans le cube $ABCDEFGH$ ci-contre, $(EF)//(HG)$ et
+    $(HG)\perp (GC)$ donc $(EF)$ et $(GC)$ sont orthogonales. On note
+    $(EF)\perp (GC)$.
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\linewidth}
+    \includestandalone{\standalonepath{exempleorthogonalite}}
+  \end{minipage}
+\end{exemple*1}
+
+\pagebreak
+
+\begin{definition}[Orthogonalité d’une droite et d’un plan]
+  Une droite est orthogonale à un plan lorsqu'elle est orthogonale à
+  toutes les droites\\ de ce plan.
+\end{definition}
+       
+\begin{theoreme}
+  Si une droite est orthogonale à deux droites sécantes d'un plan
+  alors elle est orthogonale\\ à ce plan.
+\end{theoreme}
+
+\begin{methode*1}[Démontrer l'orthogonalité de deux droites
+  \MethodeRefExercice*{ex30G2}%
+  \label{Methode-2G2}]
+
+  \exercice
+
+  Dans le cube $ABCDEFGH$ représenté dans l'exemple précédent,
+  démontrer que $(GC)\perp (BD)$.
+
+  \correction
+
+  La droite $(GC)$ est perpendiculaire à $(BC)$ et à $(CD)$ qui sont
+  deux droites sécantes du plan $(ABC)$ donc $(GC)$ est orthogonale au
+  plan $(ABC)$ donc à toutes les droites de ce plan. En particulier,
+  on en déduit que $(GC)\perp (BD)$.
+\end{methode*1}
+
+\section{Vecteurs de l'espace}
+
+\begin{cadre}
+  On étend à l'espace la définition et les propriétés des
+  vecteurs étudiées dans le plan.
+\end{cadre}
+
+\begin{proprietes}[Vecteurs colinéaires]
+  Deux vecteurs non nuls $\vec{u}$ et $\vec{v}$ sont colinéaires si et
+  seulement si il existe un réel $k$ tel que $\vec{v}=k \vec{u}$.  Par
+  convention, le vecteur nul est colinéaire à tout vecteur de
+  l'espace.
+\end{proprietes}
+
+\begin{propriete}[Caractéristique]
+  $A$ et  $B$ étant deux points distincts de l'espace, la droite
+  $(AB)$ est l'ensemble des points $M$ de l'espace tels que
+  $\overrightarrow{AB}$ et $\overrightarrow{AM}$ soient colinéaires.
+
+  On dit que $\overrightarrow{AB}$ est un vecteur directeur de la
+  droite $(AB)$.
+\end{propriete}
+
+\begin{definition}[Vecteurs coplanaires]
+  Trois vecteurs non nuls $\vec{u}$, $\vec{v}$ et $\vec{w}$ sont
+  coplanaires si et seulement leurs représentants de même origine $A$
+  ont des extrémités $B,C$ et $D$ telles que $A, B, C$ et $D$
+  appartiennent à un même plan.
+\end{definition}
+
+\pagebreak
+
+\begin{propriete}[Caractéristique]
+  \begin{minipage}{.45\linewidth}
+    $A$, $B$ et $C$ étant trois points non alignés de l'espace, le
+    plan $(ABC)$ est l'ensemble des points $M$ de l'espace tels que :
+
+    $\overrightarrow{AM}=\alpha\overrightarrow{AB}+\beta\overrightarrow{AC}$,
+    avec $\alpha$ et $\beta$ deux nombres réels.
+
+    On dit que $\overrightarrow{AB}$ et $\overrightarrow{AC}$ dirigent
+    le plan $(ABC)$.
+  \end{minipage}\quad
+  \begin{minipage}{.45\linewidth}
+    \includestandalone{\standalonepath{veccoplanaires2}}
+  \end{minipage}
+\end{propriete}
+
+
+\begin{preuve}
+  $A$, $B$ et $C$ ne sont pas alignés. Les vecteurs
+  $\overrightarrow{AB}$ et $ \overrightarrow{AC}$ n'étant pas
+  colinéaires, $(A\,;\overrightarrow{AB},\overrightarrow{AC})$ est donc
+  un repère du plan $(ABC)$.
+  \begin{itemize}
+  \item Si $M$ appartient à $(ABC)$, alors $M$, $A$, $B$ et $C$ étant
+    coplanaires, il existe $\alpha$ et $\beta$ deux nombres réels tels
+    que
+    $\overrightarrow{AM}=\alpha\overrightarrow{AB}+\beta\overrightarrow{AC}$.
+  \item Réciproquement, si $M$ est un point de l'espace tel que \\
+    $\overrightarrow{AM}=\alpha\overrightarrow{AB}+\beta\overrightarrow{AC}$,
+    avec $\alpha$ et $\beta$ deux nombres réels, alors il existe un
+    point $N$
+    de la droite $(AB)$ tel que $\overrightarrow{AN}=\alpha\overrightarrow{AB}$.\\
+    $\overrightarrow{AM}=\alpha\overrightarrow{AB}+\beta\overrightarrow{AC}\Leftrightarrow
+    \overrightarrow{NM}=\beta\overrightarrow{AC}$.
+    $M$ est donc un point de la droite parallèle à $(AC)$ passant par
+    $N$. Donc, comme $N\in(ABC)$, $M\in(ABC)$.
+  \end{itemize}
+\end{preuve}
+
+\begin{propriete}
+  \begin{minipage}{.45\linewidth}
+    Soit trois vecteurs non nuls $\vec{u}$, $\vec{v}$ et $\vec{w}$
+    tels que $\vec{u}$ et $\vec{v}$ ne sont pas colinéaires.
+
+    $\vec{u}$, $\vec{v}$ et $\vec{w}$ sont coplanaires si et seulement
+    si il existe deux réels $\alpha$ et $\beta$ tels que\\
+    $\vec{w}=\alpha\vec{u}+\beta\vec{v}$.
+  \end{minipage}\quad
+  \begin{minipage}{.45\linewidth}
+    \includestandalone{\standalonepath{veccoplanaires}}
+  \end{minipage}
+\end{propriete}
+
+\begin{preuve}
+  Soit $A$, $B$, $C$ et $M$ les points de l'espace tels que
+  $\vec{w}=\overrightarrow{AM}$, $\vec{u}=\overrightarrow{AB}$ et
+  $\vec{w}=\overrightarrow{AC}$.
+
+  $\vec{u}$, $\vec{v}$ et $\vec{w}$ sont coplanaires si et seulement
+  si $A$, $B$, $C$ et $M$ sont coplanaires, c'est-à-dire si et
+  seulement si il existe deux réels $\alpha$ et $\beta$ tels que
+  $\vec{AM}=\alpha\vec{AB}+\beta\vec{AC}\Leftrightarrow
+  \vec{w}=\alpha\vec{u}+\beta\vec{v}$.
+\end{preuve}
+
+% Méthode 3
+\begin{methode*1}[Démontrer que quatre points sont coplanaires%
+  \MethodeRefExercice*{ex37G2}%
+  \label{Methode-3G2}] Il s'agit de démontrer que trois vecteurs sont
+  coplanaires en écrivant l'un en fonction des deux autres.
+
+  \begin{tikzpicture}[general, overlay,scale=.6,xshift=20cm,yshift=-10cm]
+\clip(-4.3,-2.88) rectangle (7.14,6.3);
+\draw [dash pattern=on 5pt off 5pt,color=J2] (3.,1.)-- (-3.,0.);
+\draw [color=Noir] (-3.,0.)-- (2.06,-2.3);
+\draw [color=Noir] (2.06,-2.3)-- (3.,1.);
+\draw  (0.,5.)-- (-3.,0.);
+\draw  (0.,5.)-- (2.06,-2.3);
+\draw  (0.,5.)-- (3.,1.);
+\draw [->] (3.,1.) -- (-2.06,3.3);
+\draw [fill=Noir] (0.,5.) circle (0.5pt);
+\draw[color=Noir] (-0.06,5.36) node {$A$};
+\draw [fill=Noir] (2.06,-2.3) circle (0.5pt);
+\draw[color=Noir] (2.04,-2.52) node {$B$};
+\draw [fill=Noir] (3.,1.) circle (0.5pt);
+\draw[color=Noir] (3.14,1.2) node {$D$};
+\draw [fill=Noir] (-3.,0.) circle (0.5pt);
+\draw[color=Noir] (-3.16,0.32) node {$C$};
+\draw [color=B2] (1.03,1.35)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=B2] (0.8,1.3) node {$I$};
+\draw [color=B1] (-2.008235294117647,1.6529411764705884)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=B1] (-2.12,2.) node {$E$};
+\draw [color=B1] (2.0136,2.3152)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=B1] (2.16,2.6) node {$F$};
+\draw [fill=Noir] (-2.06,3.3) circle (0.5pt);
+\draw[color=Noir] (-1.92,3.75) node {$G$};
+\end{tikzpicture}
+
+  \exercice
+
+  Soit $ABCD$ un tétraèdre, $I$ le milieu de $[AB]$ ; $E$ et $F$ les
+  points définis par
+  $\overrightarrow{AE}=\dfrac{2}{3}\overrightarrow{AC}$ et
+  $\overrightarrow{AF}=\dfrac{2}{3}\overrightarrow{AD}$ et G le point
+  tel que $BCGD$ soit un parallélogramme.
+
+\begin{enumerate}
+\item Exprimer les vecteurs $\overrightarrow{IE}$,
+  $ \overrightarrow{IF}$ et $\overrightarrow{IG}$ en fonction de
+  $\overrightarrow{AB}$, $\overrightarrow{AC}$ et
+  $\overrightarrow{AD}$.
+\item En déduire qu'il existe deux réels $\alpha$ et $\beta$ tels que
+  $\overrightarrow{IG}=\alpha\overrightarrow{IE}+\beta\overrightarrow{IF}$.
+\item En déduire que les points $I, E, G$ et $F$ sont coplanaires.
+\end{enumerate}
+
+\correction
+
+\begin{enumerate}
+\item
+  $ \begin{aligned}[t]
+ \overrightarrow{IE} &= \overrightarrow{IA}+\overrightarrow{AE}=-\dfrac{1}{2}\overrightarrow{AB}+\dfrac{2}{3}\overrightarrow{AC}.\\
+%
+  \overrightarrow{IF}
+  &=\overrightarrow{IA}+\overrightarrow{AF}=-\dfrac{1}{2}\overrightarrow{AB}+\dfrac{2}{3}\overrightarrow{AD}.\\
+%
+   \overrightarrow {IG}&=\overrightarrow{IA}+\overrightarrow{AD}+\overrightarrow{DG}\\
+    &=-\dfrac{1}{2}\overrightarrow{AB}+\overrightarrow{AD}+\overrightarrow{BC}\\
+    &=-\dfrac{1}{2}\overrightarrow{AB}+\overrightarrow{AD}+\overrightarrow{BA}+\overrightarrow{AC}\\
+    &=-\dfrac{3}{2}\overrightarrow{AB}+\overrightarrow{AD}+\overrightarrow{AC}.
+  \end{aligned}
+  $
+
+\item Il existe deux réels $\alpha$ et $\beta$ tels que
+  $\overrightarrow{IG}=\alpha\overrightarrow{IE}+\beta\overrightarrow{IF}$
+  \\[1mm]
+  soit
+  $
+  -\dfrac{3}{2}\overrightarrow{AB}+\overrightarrow{AD}+\overrightarrow{AC}=-\dfrac{\alpha}{2}\overrightarrow{AB}+\dfrac{2\alpha}{3}\overrightarrow{AC}-\dfrac{\beta}{2}\overrightarrow{AB}+\dfrac{2\beta}{3}\overrightarrow{AD}$
+
+\vspace{1mm}
+
+Pour obtenir cette égalité, il suffit de prendre $\alpha$ et $\beta$
+tels que : \\[1mm]
+$-\dfrac{3}{2}=-\dfrac{\alpha}{2}-\dfrac{\beta}{2}$ et $\dfrac{2}{3} \alpha=1$ et $\dfrac{2}{3} \beta=1$ , soit, $ \alpha=\dfrac{3}{2}$ et $\beta=\dfrac{3}{2}$.\\[1mm]
+D'où
+$\overrightarrow{IG}=\dfrac{3}{2}\overrightarrow{IE}+\dfrac{3}{2}\overrightarrow{IF}$
+
+\item On en déduit que les vecteurs $\overrightarrow{IE}$, $
+  \overrightarrow{IF}$ et $\overrightarrow{IG}$ sont coplanaires, donc
+  les points $I, E, G$ et $F$ sont coplanaires.
+\end{enumerate}
+
+\vspace{-2\baselineskip}
+\end{methode*1}
+
+\enlargethispage{1cm}
+
+
+\section{Repérage dans l'espace}
+
+\begin{theoreme}
+  Si $O$ est un point de l'espace et $\overrightarrow{i}$,
+  $ \overrightarrow{j}$ et $\overrightarrow{k}$ trois vecteurs non
+  coplanaires, alors pour tout point $M$ de l'espace, il existe un
+  unique triplet de réels $(x\,;y\,;z)$ tels que :
+  \[
+  \overrightarrow{OM}=x\overrightarrow{i}+y\overrightarrow{j}+z\overrightarrow{k}.
+  \]
+\end{theoreme}
+
+
+\newpage
+
+\begin{preuve}
+  \begin{itemize}
+  \item Existence\\
+    \begin{minipage}{.65\linewidth}
+      Soit $\wp$ le plan passant par $O$ et dirigé par les vecteurs $\overrightarrow{i}$ et $ \overrightarrow{j}$ (qui ne sont pas colinéaires car $\overrightarrow{i}$, $ \overrightarrow{j}$ et $\overrightarrow{k}$ sont non\\ coplanaires).\\
+      Soit $M'$ le point d'intersection de $\wp$ et de la droite
+      parallèle à $(O\overrightarrow{k})$ passant par $M$.
+      $\overrightarrow{i}$, $ \overrightarrow{j}$ et
+      $\overrightarrow{OM'}$ sont coplanaires avec
+      $\overrightarrow{i}$ et $ \overrightarrow{j}$ non colinéaires,
+      donc il existe deux réels $x$ et $y$ tels que
+      $ \overrightarrow{OM'}=x\overrightarrow{i}+y\overrightarrow{j}$.
+      D'autre part, $\overrightarrow{MM'}$ et $\overrightarrow{k}$
+      sont colinéaires, donc il existe un réel $z$ tel que
+      $\overrightarrow{MM'}=z\overrightarrow{k}$.  D'où
+      $
+      \overrightarrow{OM}=\overrightarrow{OM}+\overrightarrow{MM'}=x\overrightarrow{i}+y\overrightarrow{j}+z\overrightarrow{k}$
+    \end{minipage}
+    \begin{minipage}{.35\linewidth}
+      \includegraphics[width=\linewidth]{repere}\\
+    \end{minipage}
+  \item Unicité\\
+    Supposons qu'il existe deux triplets de réels $(x\,;y\,;z)$ et
+    $(x';y';z')$ tels que\\
+    $ \overrightarrow{OM}=x\overrightarrow{i}+y\overrightarrow{j}+z\overrightarrow{k}=x'\overrightarrow{i}+y'\overrightarrow{j}+z'\overrightarrow{k}$.\\
+    On a alors $ (z'-z)\overrightarrow{k}=(x-x')\overrightarrow{i}+(y-y')\overrightarrow{j}$.\\
+    Comme $\overrightarrow{i}$, $ \overrightarrow{j}$ et
+    $\overrightarrow{k}$ ne sont pas coplanaires, il n'existe pas de
+    couple de réels $(\alpha;\beta)$ tels que
+    $\overrightarrow{k}=\alpha\overrightarrow{i}+\beta\overrightarrow{j}$,
+    on en déduit que $z-z'=0$, et par suite, que $x=x'$, $y=y'$ et
+    $z=z'$.
+  \end{itemize}
+\end{preuve}
+
+\begin{definition}
+  $(x\,;y\,;z)$ est le triplet de coordonnées du
+  point $M$ dans le repère $(O\,;\vec{i},\vec{j},\vec{k})$.
+
+  $x$ est l'abscisse de $M$, $y$ est l'ordonnée de $M$ et $z$ est la
+  cote de $M$.  
+
+  $(x;y;z)$ sont aussi les coordonnées du vecteur
+  $\overrightarrow{OM}$ dans le repère
+  $(O\,;\vec{i},\vec{j},\vec{k})$.
+\end{definition}
+ 
+\begin{proprietes}
+  Dans un repère $(O\ ;\vec{i},\vec{j},\vec{k})$ de l'espace,
+  soit $A(x_A;y_A;z_A)$  et $B(x_B;y_B;z_B)$.  Alors :
+
+  $\overrightarrow{AB}\begin{pmatrix}x_B-x_A\\y_B-y_A\\z_B-z_A \end{pmatrix}$
+
+  et le milieu $K$ de $[AB]$ a pour coordonnées :   $K$
+  $(\dfrac{x_A+x_B}{2};\dfrac{y_A+y_B}{2} ;\dfrac{z_A+z_B}{2})$.
+
+  \vspace{3mm}
+
+  Si de plus $(O\ ;\ \vec{i},\vec{j},\vec{k})$ est orthonormé,
+  $AB=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}$.
+\end{proprietes}
+
+\begin{proprietes}
+  Dans un repère$(O\ ;\ \vec{i},\vec{j},\vec{k})$ de l'espace,
+  soit $\vec{u}\begin {pmatrix} x\\y\\z \end{pmatrix}$,
+  $\vec{v}\begin {pmatrix} x'\\y'\\z' \end{pmatrix}$ deux vecteurs et
+  $k$ un nombre réel. Alors :
+
+  $\vec{u}+\vec{v} \begin {pmatrix} x+x'\\y+y'\\z+z' \end{pmatrix}$ et
+  $k \vec{u} \begin {pmatrix} kx\\ky\\kz \end{pmatrix}$.
+
+  Si de plus $(O\,;\vec{i},\vec{j},\vec{k})$ est orthonormé,
+  $||\vec{u}||=\sqrt{x^2+y^2+z^2}$.
+\end{proprietes}
+
+% Méthode 4 
+\begin{methode*1}[La coplanarité
+  de points en utilisant leurs coordonnées \MethodeRefExercice*{ex41G2}\label{Methode-4G2}]
+
+  Il s'agit de démontrer que trois vecteurs sont coplanaires en
+  écrivant l'un des vecteurs en fonction des deux autres.
+
+  \exercice 
+
+  Dans un repère $(O\,;\vec{i},\vec{j},\vec{k})$ de l'espace, Démontrer
+  que les points $A(1\,;2\,;0)$, $B(-1\,;1\,;1)$, $C(1\,;4\,;1)$ et $D(3\,;-1\,;-3)$
+  sont coplanaires.
+
+  \correction
+
+  $\overrightarrow{AB} 
+  \begin{pmatrix} 
+    -2\\
+    -1\\
+    \hphantom{-}1
+  \end{pmatrix}$ ; $\overrightarrow{AC} \begin{pmatrix} 0\\2\\1
+  \end{pmatrix}$ et $\overrightarrow{AD} \begin{pmatrix} \hphantom{-}2\\-3\\-3
+  \end{pmatrix}$.
+
+  $\overrightarrow{AB}$ et $\overrightarrow{AC}$ ne sont pas
+  colinéaires, car leurs coordonnées ne sont pas proportionnelles.
+
+  $\overrightarrow{AD}=\alpha\overrightarrow{AB}+\beta\overrightarrow{AC}\Leftrightarrow%
+  \begin{cases}
+    \hphantom{-}2=-2\alpha\\
+    -3=-\alpha+2\beta\\
+    -3=\alpha+\beta
+  \end{cases}\Leftrightarrow
+  \begin{cases}
+    \alpha=-1\\
+    \beta=-2
+  \end{cases}$.
+
+  Le système ayant un unique couple solution, les vecteurs
+  $\overrightarrow{AB}$, $\overrightarrow{AC}$ et
+  $\overrightarrow{AD}$ sont coplanaires, donc les points $A$, $B$,
+  $C$ et $D$ sont coplanaires.
+\end{methode*1}
+
+\section{Représentation paramétrique de droites et de plans}
+
+\begin{propriete}
+  Dans un repère $(O\ ;\vec{i},\vec{j},\vec{k})$ de l'espace, on
+  considère la droite $\mathscr{D}$ passant par $A(x_A\ ;y_A\ ;z_A)$
+  et de vecteur directeur
+  $\vec{u} \begin {pmatrix} \alpha\\\beta\\\gamma \end{pmatrix}$.
+
+  $M(x;y;z)\in \mathscr{D}$ si et seulement si il existe un réel $t$
+  tel que :
+  \begin{center}
+    $\begin{cases}x=x_A+t\alpha \\y=y_A+t\beta
+      \\z=z_A+t\gamma \end{cases}$
+  \end{center}
+\end{propriete}
+
+\begin{preuve}
+  $M(x;y;z)\in \mathscr{D}$ si et seulement si $\overrightarrow{AM}$
+  et $\vec{u}$ sont colinéaires, c'est-à-dire qu'il existe un réel $t$
+  tel que $\overrightarrow{AM}=t\overrightarrow{u}$.  Cela se traduit
+  en terme de coordonnées par :
+
+  $\begin{cases}x-x_A=t\alpha \\y-y_A=t\beta
+    \\z-z_A=t\gamma \end{cases}\Leftrightarrow\begin{cases}x=x_A+t\alpha
+    \\y=y_A+t\beta \\z=z_A+t\gamma \end{cases}$
+\end{preuve}
+
+\begin{definition}
+  On dit que le système d'équations : \\
+  $\begin{cases}
+    x=x_A+t\alpha    \\
+    y=y_A+t\beta \\
+    z=z_A+t\gamma 
+  \end{cases}$
+  où $t\in\mathbb{R}$ est une représentation
+    paramétrique de la droite $\mathscr{D}$ passant par
+  $A(x_A;y_A;z_A)$ et de vecteur directeur $\vec{u}
+  \begin {pmatrix} 
+    \alpha\\
+    \beta\\
+    \gamma 
+  \end{pmatrix}$.
+\end{definition}
+
+
+
+\begin{propriete}
+  Dans un  repère $(O\,;\vec{i},\vec{j},\vec{k})$  de l'espace, le plan
+  $\mathscr{P}$ passant par $A(x_A;y_A;z_A)$ et de vecteurs\\ directeurs
+  $\vec{u} \begin {pmatrix} \alpha\\\beta\\\gamma \end{pmatrix}$ et
+  $\vec{v} \begin {pmatrix} \alpha'\\\beta'\\\gamma' \end{pmatrix}$. 
+
+  $M(x\,;y\,;z)\in \mathscr{P}$ si et seulement si il existe deux réels
+  $t$ et $t'$ tels que :
+  \begin{center}
+    $\begin{cases}
+      x=x_A+t\alpha+t'\alpha' \\
+      y=y_A+t\beta +t'\beta'  \\
+      z=z_A+t\gamma +t'\gamma' 
+    \end{cases}$
+  \end{center}
+\end{propriete}
+
+\begin{preuve}
+  $M(x\ ;\ y\ ;\ z)\in \mathscr{P}$ si et seulement si
+  $\overrightarrow{AM}$, $\vec{u}$ et $\vec{v}$ sont coplanaires,
+  c'est-à-dire qu'il existe deux réels $t$ et $t'$ tels que
+  $\overrightarrow{AM}=t\overrightarrow{u}+t'\overrightarrow{v}$.
+  Cela se traduit en terme de coordonnées par :
+\begin{center}
+  $\begin{cases}x-x_A=t\alpha+t'\alpha' \\
+    y-y_A=t\beta +t'\beta' \\
+    z-z_A=t\gamma + t'\gamma'
+  \end{cases}
+  \Leftrightarrow
+  \begin{cases}
+    x=x_A+t\alpha+t'\alpha' \\
+    y=y_A+t\beta +t'\beta' \\
+    z=z_A+t\gamma +t'\gamma' 
+  \end{cases}$.
+\end{center}
+\end{preuve}
+
+\begin{definition}
+  On dit que le système d'équations :
+  \\$\begin{cases}x=x_A+t\alpha+t'\alpha'
+    \\y=y_A+t\beta +t'\beta' \\z=z_A+t\gamma +t'\gamma'
+  \end{cases}$ où $t\in\mathbb{R}$ et
+  $t'\in\mathbb{R}$
+  est une représentation paramétrique du plan $\mathscr{P}$
+  passant par $A(x_A\,;y_A\,;z_A)$ et de vecteurs directeurs $\vec{u}
+  \begin {pmatrix} \alpha\\\beta\\\gamma \end{pmatrix}$ et
+  $\vec{v} \begin {pmatrix} \alpha'\\\beta'\\\gamma' \end{pmatrix}$.
+\end{definition}
+
+
+
+\begin{remarque}
+  Il existe une infinité de représentations paramétriques, que ce soit
+  pour une droite ou pour un plan.
+\end{remarque}
+
+% Méthode 5
+\begin{methode*1}[Étudier des positions relatives]
+
+  \exercice
+
+  \vspace{-\baselineskip}
+
+  \bgroup
+  \def\columnseprule{.5pt}
+  \begin{multicols}{2}
+    Étudier  les positions relatives des
+    droites $d$ et  $d'$ puis du plan $\wp$ et de la droite $d'$. On
+    donnera leur intersection éventuelle.
+
+    Le plan $\wp$ a pour représentation paramétrique :
+
+    $\begin{cases} x=1-2t+3t'\\y=-2+t-t'\\z=3-t \end{cases}$ avec
+    $t\in\mathbb{R}$ et $t'\in\mathbb{R}$
+
+    \columnbreak
+
+    Les droites $d$ et $d'$ ont pour représentation \mbox{paramétrique} :
+
+    $d$ : $\begin{cases} x=2+4t\\y=5-2t\\z=1+2t \end{cases}$ avec
+    $t\in\mathbb{R}$ et 
+
+    $d'$ : $\begin{cases} x=4-t\\y=-2+t\\z=1+3t \end{cases}$ avec
+    $t\in\mathbb{R}$
+  \end{multicols}
+  \egroup
+
+  \correction
+
+Attention : la même lettre $t$ désigne deux paramètres différents. Il faut donc changer de lettre dans les résolutions de système pour les différencier.\\
+
+$\wp$ est dirigé par les vecteurs $\vec{u} \begin {pmatrix} -2\\1\\-1 \end{pmatrix}$ et $\vec{v} \begin {pmatrix} 3\\-1\\-1 \end{pmatrix}$.\\
+$d$ et $d'$ ont pour vecteur directeur respectif $\vec{w} \begin {pmatrix} 4\\-2\\2 \end{pmatrix}$ et $\vec{w'} \begin {pmatrix} -1\\1\\3 \end{pmatrix}$.\\
+On remarque que $\overrightarrow{w}=-2\overrightarrow{u}$ donc $d$ est parallèle à $\wp$. Le point $A(2;5;1)$ appartient à $d$.
+S'il appartient à $\wp$ alors $d\subset\wp$, sinon $d$ est strictement parallèle à $\wp$.\\
+Or,  $\begin{cases} 2=1-2t+3t'\\5=-2+t-t'\\1=3-t \end{cases}\Leftrightarrow\begin{cases} -2t+3t'=1\\t-t'=7\\t=2 \end{cases}\Leftrightarrow\begin{cases} t'=\dfrac{5}{3}\\t'=-5\\t=2 \end{cases}$ \\
+Le système n'ayant pas de solution, $A\not\in \wp$ donc $d$ est strictement parallèle à $\wp$.\\
+Déterminons maintenant $\wp\cap d'$ :
+$M\in\wp\cap d'\Leftrightarrow$ il existe trois réels $t$, $t'$ et $k$ tels que :\\
+$\begin{cases} x=1-2t+3t'\\y=-2+t-t'\\z=3-t\\x=4-k\\y=-2+k\\z=1+3k \end{cases}\Leftrightarrow \begin{cases} 4-k=1-2t+3t'\\-2+k=-2+t-t'\\1+3k=3-t\\x=4-k\\y=-2+k\\z=1+3k \end{cases}\Leftrightarrow \begin{cases} -k+2t-3t'=-3\\k-t+t'=0\\3k+t=2\\x=4-k\\y=-2+k\\z=1+3k\end{cases}$\\
+En finissant la résolution du système, on obtient 
+ $t'=\dfrac{14}{5}$ ; $t=\dfrac{52}{20}$ et $k=\dfrac{-1}{5}=-0,2$, ce qui nous donne $x=4,2$ ; $y=-2,2$ et $z=0,4$.\\ 
+Ainsi, $\wp$ et $d'$ sont sécantes au point $K(4,2;-2,2;0,4)$
+
+\vspace{-\baselineskip}
+
+  % \textbf{Attention :} la même lettre $t$ désigne deux paramètres
+  % différents. Il faut donc changer de lettre dans les résolutions de
+  % système pour les différencier.
+
+  % $d$ et $d'$ ont pour vecteur directeur respectif $\vec{w}(4;-2;2)$
+  % et $\vec{w'}(-1;1;3)$ qui ne sont pas colinéaires, donc $d$ et $d'$
+  % ne sont pas parallèles.  
+  % Cherchons si elles sont sécantes ou non coplanaires : 
+
+  % Un point $M(x;y;z)$ appartient à $d$ et à $d'$ si et seulement si : 
+
+  % $\begin{cases}
+  %   2+4t=4-k\\5-2t=-2+k\\1+2t=1+3k\\x=4-k\\y=-2+k\\z=1+3k \end{cases}\Leftrightarrow \begin{cases}
+  %   4t=2-k\\6=-1+4k\\2t=3k\\x=4-k\\y=-2+k\\z=1+3k \end{cases}\Leftrightarrow \begin{cases}
+  %   4t=2-k\\k=\dfrac{7}{4}\\t=\dfrac{3}{2}\times\dfrac{7}{4}=\dfrac{21}{8}\\x=4-k\\y=-2+k\\z=1+3k\end{cases}\Leftrightarrow \begin{cases}
+  %   t=\dfrac{1}{16}\\k=\dfrac{7}{4}\\t=\dfrac{3}{2}\times\dfrac{7}{4}=\dfrac{21}{8}\\x=4-k\\y=-2+k\\z=1+3k\end{cases}$\\Ce
+  % système n'admet donc pas de solution, les droites $d$ et $d'$ sont
+  % donc non coplanaires.
+
+  % Déterminons maintenant $\wp\cap d'$ :
+
+  % $M\in\wp\cap d'\Leftrightarrow$ il existe trois réels $t$, $t'$ et
+  % $k$ tels que :
+
+  % $\begin{cases}
+  %   x=1-2t+3t'\\y=-2+t-t'\\z=3-t\\x=4-k\\y=-2+k\\z=1+3k \end{cases}\Leftrightarrow \begin{cases}
+  %   4-k=1-2t+3t'\\-2+k=-2+t-t'\\1+3k=3-t\\x=4-k\\y=-2+k\\z=1+3k \end{cases}\Leftrightarrow \begin{cases}
+  %   -k+2t-3t'=-3\\k-t+t'=0\\3k+t=2\\x=4-k\\y=-2+k\\z=1+3k\end{cases}$
+
+  % $\Leftrightarrow 
+  % \begin{cases} 
+  %   t-2t'=-3\\
+  %   3k-3t+3t'=0
+  %   3k+t=2
+  %   x=4-k
+  %   y=-2+k
+  %   z=1+3k \end{cases}\Leftrightarrow \begin{cases} 4t-8t'=-12
+  %   -4t+3t'=-2
+  %   2k+t=2
+  %   x=4-k
+  %   y=-2+k
+  %   z=1+3k \end{cases}\Leftrightarrow \begin{cases}-5t'=-14
+  %   4t=3t'+2
+  %   2k=-t+2
+  %   x=4-k
+  %   y=-2+k
+  %   z=1+3k \end{cases}$
+  % $\Leftrightarrow \begin{cases} t'=\dfrac{14}{5}
+  %   t=\dfrac{52}{20}
+  %   k=\dfrac{-1}{5}=-0,2
+  %   x=4,2
+  %   y=-2,2
+  %   z=0,4 \end{cases}$
+  
+  % Ainsi, $\wp$ et $d'$ sont sécantes au point $K(4,2;-2,2;0,4)$
+\end{methode*1}
+
+\end{document}

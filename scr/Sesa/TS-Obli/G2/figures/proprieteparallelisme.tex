@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{tikz,sesamanuel}
+\input{commandes-tikz}
+\begin{document}
+\begin{tikzpicture}[general]
+
+\fill [A3] (0,0)--(1,0)--(2,2.5)--(1,2.5);
+\draw  (0.2,.2)--(1.7,2) node [midway, right] {$d_1$};
+\node at (0,0) [above right,xshift=2mm] {$\wp$};
+\draw  (-1,1.2)--(.5,3) node [midway,left] {$d$};
+\end{tikzpicture}
+\end{document}

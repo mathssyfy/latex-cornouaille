@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz,sesamanuel}
+\input{commandes-tikz}
+\begin{document}
+\begin{tikzpicture}[general]
+
+\coordinate (A) at (0,1,1);
+\coordinate (B) at (0,0,1);
+\coordinate (C) at (1,0,1);
+\coordinate (D) at (1,1,1);
+\coordinate (E) at (0,1,0);
+\coordinate (F) at (0,0,0);
+\coordinate (G) at (1,0,0);
+\coordinate (H) at (1,1,0);
+
+\draw [dashed,J2] (E)--(F);
+\draw [dashed,J2] (F)--(G);
+\draw [dashed,J2] (B)--(F);
+\draw (E)--(H)--(G); % face arrière
+\draw (A)--(B)--(C)--(D)--cycle; % face avant
+% arêtes horizontales, de l’arrière vers l’avant
+\draw (B) -- (A); % bas gauche
+\draw (C) -- (G); % bas droit
+\draw (D) -- (H); % haut droit
+\draw (A) -- (E); % haut gauche
+
+\draw [J1] (-1,0,0) -- (F);
+\draw [J1] (G) -- (1.62,0,0);
+
+\node at (A) [left] {$A$};
+\node at (B) [below left] {$B$};
+\node at (C) [below] {$C$};
+\node at (D) [right] {$D$};
+\node at (E) [above] {$E$};
+\node at (F) [above right] {$F$};
+\node at (G) [right] {$G$};
+\node at (H) [above right] {$H$};
+
+\node at (0,-1.25) {\parbox{3cm}{\scriptsize (AD) et (FG) sont strictement parallèles\par}};
+
+\end{tikzpicture}
+\end{document}

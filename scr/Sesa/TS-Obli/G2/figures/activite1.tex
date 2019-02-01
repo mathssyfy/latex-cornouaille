@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz,sesamanuel}
+\input{commandes-tikz}
+\begin{document}
+\begin{tikzpicture}[general]
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (1,1.5);
+\coordinate (D) at (-.8,1.5);
+\coordinate (S) at (.5,3.5);
+
+\draw [dashed,J1] (D) -- (C) -- (B) ;
+\draw (D) -- (A) -- (B) -- (S) -- (C) ;
+\draw (S) -- (C) ;
+\draw (S) -- (D) ;
+\draw (S) -- (A) ;
+
+\node at (A) [left] {$A$};
+\node at (B) [right] {$B$};
+\node at (C) [above left] {$C$};
+\node at (D) [above left] {$D$};
+\node at (S) [above] {$S$};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz,sesamanuel}
+\input{commandes-tikz}
+\begin{document}
+\begin{tikzpicture}[general,scale=.8]
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (3,1);
+\coordinate (D) at (1,1);
+\coordinate (S) at (1.5,4);
+
+\draw [dashed,J1] (A)--(D)--(S)--(C)--(B);
+\draw [dashed,J1] (D)--(C);
+\draw (S)--(A)--(B)--cycle;
+
+\node at (A) [left] {$A$};
+\node at (B) [right] {$B$};
+\node at (C) [below left] {$C$};
+\node at (D) [below right] {$D$};
+\node at (S) [above] {$S$};
+
+\end{tikzpicture}
+\end{document}

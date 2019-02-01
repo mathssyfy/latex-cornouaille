@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{tikz,sesamanuel}
+\input{commandes-tikz}
+\begin{document}
+\begin{tikzpicture}[general]
+
+\coordinate (A) at (0,0,2);
+\coordinate (B) at (2,0,2);
+\coordinate (F) at (2,2,2);
+\coordinate (E) at (0,2,2);
+\coordinate (D) at (0,0,0);
+\coordinate (C) at (2,0,0);
+\coordinate (G) at (2,2,0);
+\coordinate (H) at (0,2,0);
+
+\draw [dashed,J2] (A)--(D)  node [midway,B2] {+} node [midway,B2,above] {$J$}--(C);
+\draw [dashed,J2] (D)--(H) node [midway,B2] {+} node [midway,B2,left] {$K$};
+\draw (E)--(F)--(G) node [midway,B2] {+} node [midway,B2,below] {$I$}--(H)--(E); % face arrière
+\draw (A)--(B)--(C);
+% arêtes horizontales, de l’arrière vers l’avant
+\draw (B) -- (A) ; % bas gauche
+\draw (C) -- (G); % bas droit
+\draw (F) -- (B); % haut droit
+\draw (A) -- (E); % haut gauche
+
+
+\node at (A) [left] {$A$};
+\node at (B) [right] {$B$};
+\node at (C) [above right] {$C$};
+\node at (D) [above right] {$D$};
+\node at (E) [above left] {$E$};
+\node at (F) [above left] {$F$};
+\node at (G) [above right] {$G$};
+\node at (H) [above] {$H$};
+
+\end{tikzpicture}
+\end{document}

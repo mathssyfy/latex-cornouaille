@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz,sesamanuel}
+\input{commandes-tikz}
+\begin{document}
+\begin{tikzpicture}[general]
+
+
+ \begin{scope}
+    \tkzDefPoint(2,.6){A}
+    \tkzDefPoint(4,1){B} 
+    \tkzDefPoint(3,3.8){C}
+    \tkzDefPointWith[colinear= at C](B,A)
+    \tkzGetPoint{D}
+    \tkzDrawPolygon[color=black,fill=A3](A,B,C,D)
+  \end{scope}
+ \begin{scope}
+    \tkzDefPoint(0,1.2){A}
+    \tkzDefPoint(2,1.6){B} 
+    \tkzDefPoint(3,3.8){C}
+    \tkzDefPointWith[colinear= at C](B,A)
+    \tkzGetPoint{D}
+    \tkzDrawPolygon[color=black,fill=H3](A,B,C,D)
+  \end{scope}
+
+  \draw (-1,3)--(4,4) node [near start,above left] {$\Delta$};
+  \draw (-1,1)--(4,2) node [near start,below left] {$d$};
+  \draw (-1,0)--(4,1) node [midway,below left] {$d'$};
+
+  \node at (.6,1.75) {$\wp$};
+  \node at (2.2,1) {$\wp'$};
+ \end{tikzpicture}
+\end{document}
