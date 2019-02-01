@@ -1,0 +1,521 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[scaled=0.875]{helvet} 
+\renewcommand{\ttdefault}{lmtt} 
+\usepackage{amsmath,amssymb,makeidx}
+\usepackage[normalem]{ulem}
+\usepackage{fancybox,graphicx}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{dcolumn}
+\usepackage{textcomp}
+\usepackage{diagbox}
+\usepackage{tabularx}
+\usepackage{lscape}
+\newcommand{\euro}{\eurologo{}}
+%Tapuscrit : Denis Vergès relu et corrigé par François Hache
+\usepackage{pstricks,pst-plot,pst-text,pst-tree,pstricks-add}
+\usepackage[left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
+\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O},~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O}\,;~\vect{u},~\vect{v}\right)$}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{%
+pdfauthor = {APMEP},
+pdfsubject = {Baccalauréat S},
+pdftitle = {Antilles-Guyane 22 juin 2015},
+allbordercolors = white,
+pdfstartview=FitH}   
+\thispagestyle{empty}
+\usepackage[frenchb]{babel}
+\usepackage[np]{numprint}
+\begin{document}
+\setlength\parindent{0mm}
+\marginpar{\rotatebox{90}{\textbf{A. P{}. M. E. P{}.}}}
+\rhead{\textbf{A. P{}. M. E. P{}.}}
+\lhead{\small Baccalauréat S }
+\rfoot{\small{22 juin 2015}}
+\lfoot{\small{Antilles-Guyane}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty}
+\begin{center} {\Large{\textbf{\decofourleft~Baccalauréat S Antilles-Guyane 22 juin 2015~\decofourright
+}}} 
+
+\end{center}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 1 \hfill 6 points}}
+
+\textbf{Commun à tous les candidats} 
+
+\medskip
+
+Soit $f$ la fonction définie sur l'intervalle $]0~;~+ \infty[$ par $f(x) = \ln x$.\index{fonction logarithme népérien}
+
+Pour tout réel $a$ strictement positif, on définit sur $]0~;~+ \infty[$ la fonction $g_a$ par 
+
+$g_a(x) = ax^2$.
+
+On note $\mathcal{C}$ la courbe représentative de la fonction $f$ et $\Gamma_a$ celle de la fonction $g_a$ dans un repère du plan. Le but de l'exercice est d'étudier l'intersection des courbes $\mathcal{C}$ et $\Gamma_a$ suivant les valeurs du réel strictement positif $a$.
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+On a construit en \textbf{annexe 1} (\emph{à rendre avec la copie}) les courbes $\mathcal{C}$, $\Gamma_{0,05}$, $\Gamma_{0,1}$, $\Gamma_{0,19}$ et $\Gamma_{0,4}$.
+
+\medskip
+
+\begin{enumerate}
+\item Nommer les différentes courbes sur le graphique. Aucune justification n'est demandée.
+\item Utiliser le graphique pour émettre une conjecture sur le nombre de points d'intersection de
+$\mathcal{C}$ et $\Gamma_a$ suivant les valeurs (à préciser) du réel $a$.
+\end{enumerate}
+ 
+\bigskip
+ 
+\textbf{Partie B}
+
+\medskip
+
+Pour un réel $a$ strictement positif, on considère la fonction $h_a$ définie sur l'intervalle $]0~;~+ \infty[$ par
+
+\[h_a(x) = \ln x - ax^2.\]
+
+\begin{enumerate}
+\item Justifier que $x$ est l'abscisse d'un point $M$ appartenant à l'intersection de $\mathcal{C}$ et $\Gamma_a$ si et seulement si $h_a (x) = 0.$
+\item 
+	\begin{enumerate}
+		\item On admet que la fonction $h_a$ est dérivable sur $]0~;~+ \infty[$, et on note $h'_a$ la dérivée de la fonction $h_a$ sur cet intervalle.
+
+Le tableau de variation de la fonction $h_a$ est donné ci-dessous.
+
+Justifier, par le calcul, le signe de $h'_a(x)$ pour $x$ appartenant à $]0~;~+ \infty[$.
+
+\begin{center}
+\psset{unit=1cm}
+\begin{pspicture}(7,3.25)
+\psframe(7,3.25)\psline(0,2)(7,2)\psline(0,2.5)(7,2.5)\psline(1,0)(1,3.25) \psline(1.1,0)(1.1,2.5)\psline(1.15,0)(1.15,2.5)
+\uput[u](0.5,2.4){$x$} \uput[u](1.125,2.4){$0$} \uput[u](4,2.4){$\frac{1}{\sqrt{2a}}$} \uput[u](6.5,2.4){$+ \infty$}
+\rput(0.5,2.25){$h'_a(x)$}\rput(2.5,2.25){$+$} \rput(4,2.25){$0$} \rput(5.5,2.25){$-$}
+\rput(0.5,1){$h_a(x)$} \uput[u](1.5,0){$- \infty$}\uput[d](4,2){$\frac{- 1 - \ln (2a)}{2}$}
+\psline{->}(1.5,0.5)(3.5,1.5)\psline{->}(4.5,1.5)(6.5,0.5)
+\end{pspicture}
+\end{center}
+
+		\item Rappeler la limite de $\frac{\ln x}{x}$ en $+ \infty$. En déduire la limite de la fonction $h_a$ en $+ \infty$.
+
+On ne demande pas de justifier la limite de $h_a$ en $0$.
+	\end{enumerate}
+\item Dans cette question et uniquement dans cette question, on suppose que 
+
+$a = 0,1$.
+	\begin{enumerate}
+		\item Justifier que, dans l'intervalle $\left]0~;~\frac{1}{\sqrt{0,2}}\right]$, l'équation $h_{0,1}(x) = 0$ admet une unique solution.
+		
+On admet que cette équation a aussi une seule solution dans l'intervalle $\left]\frac{1}{\sqrt{0,2}}~;~+ \infty \right[$.
+		\item Quel est le nombre de points d'intersection de $\mathcal{C}$ et $\Gamma_{0,1}$ ?
+	\end{enumerate}
+\item Dans cette question et uniquement dans cette question, on suppose que 
+	
+$a = \frac{1}{2\text{e}}$.
+	\begin{enumerate}
+		\item Déterminer la valeur du maximum de $h_{\frac{1}{2\text{e}}}$.
+		\item En déduire le nombre de points d'intersection des courbes $\mathcal{C}$ et $\Gamma_{\frac{1}{2\text{e}}}$. Justifier.
+	\end{enumerate}
+\item Quelles sont les valeurs de $a$ pour lesquelles $\mathcal{C}$ et $\Gamma_{a}$ n'ont aucun point d'intersection ?
+	
+Justifier.
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 2 \hfill 5 points}}
+
+\textbf{Commun à tous les candidats} 
+
+\medskip
+
+\emph{La partie C peut être traitée indépendamment des parties A et B}
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+On considère une variable aléatoire $X$ qui suit la loi exponentielle de paramètre $\lambda$ avec $\lambda > 0$.\index{loi exponentielle}
+
+On rappelle que, pour tout réel $a$ strictement positif,
+
+\[P(X \leqslant  a) = \displaystyle\int_0^a \lambda\text{e}^{- \lambda t}\:\text{d}t.\]
+
+On se propose de calculer l'espérance mathématique de $X$, notée $E(X)$, et définie par
+
+\[E(X) = \displaystyle\lim_{x \to + \infty} \int_0^x \lambda t \text{e}^{- \lambda t}\:\text{d}t.\]
+
+On note $\R$ l'ensemble des nombres réels.
+
+On admet que la fonction $F$ définie sur $\R$ par $F(t) = - \left(t + \dfrac{1}{\lambda}\right)\text{e}^{- \lambda t}$ est une primitive sur $\R$ de la fonction $f$ définie sur $\R$ par $f(t) = \lambda t \text{e}^{- \lambda t}$.
+
+\medskip
+
+\begin{enumerate}
+\item Soit $x$ un nombre réel strictement positif. Vérifier que
+
+\[\displaystyle \int_0^x \lambda t \text{e}^{- \lambda t}\:\text{d}t = \dfrac{1}{\lambda}\left(- \lambda x \text{e}^{- \lambda x} -  \text{e}^{- \lambda x} + 1\right).\]
+
+\item  En déduire que $E(X) = \dfrac{1}{\lambda}$.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+La durée de vie, exprimée en années, d'un composant électronique peut être modélisée par une
+variable aléatoire notée $X$ suivant la loi exponentielle de paramètre $\lambda$ avec $\lambda > 0$.
+
+La courbe de la fonction densité associée est représentée en \textbf{annexe 2}.
+
+\medskip
+
+\begin{enumerate}
+\item Sur le graphique de l'annexe 2 (à rendre avec la copie) :
+	\begin{enumerate}
+		\item Représenter la probabilité $P(X \leqslant  1)$.
+		\item Indiquer où se lit directement la valeur de $\lambda$.
+ 	\end{enumerate}
+\item  On suppose que $E(X) = 2$.
+	\begin{enumerate}
+		\item Que représente dans le cadre de l'exercice la valeur de l'espérance mathématique de la
+variable aléatoire $X$ ?
+		\item Calculer la valeur de $\lambda$.
+		\item Calculer $P(X \leqslant 2)$. On donnera la valeur exacte puis la valeur arrondie à $0,01$ près.
+		
+Interpréter ce résultat.
+		\item Sachant que le composant a déjà fonctionné une année, quelle est la probabilité que sa
+durée de vie totale soit d'au moins trois années ? On donnera la valeur exacte.
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+\medskip
+
+Un circuit électronique est composé de deux composants identiques numérotés 1 et 2.
+On note $D_1$ l'évènement \og le composant 1 est défaillant avant un an \fg{} et on note $D_2$ l'évènement \og le composant 2 est défaillant avant un an \fg.
+
+On suppose que les deux évènements $D_1$ et $D_2$ sont indépendants et que 
+
+$P\left(D_1\right) = P\left(D_2\right) = 0,39$.
+
+Deux montages possibles sont envisagés, présentés ci-dessous :
+
+\begin{center}
+\psset{unit=1cm}
+\begin{pspicture}(10,3.4)
+%\psgrid
+\psline(0,2)(1,2)(1,2.75)(1.5,2.75)\psframe(1.5,2.25)(3,3.25)\psline(3,2.75)(3.5,2.75)(3.5,2)(4.5,2)
+\psline(0,2)(1,2)(1,1.25)(1.5,1.25)\psframe(1.5,0.75)(3,1.75)\psline(3,1.25)(3.5,1.25)(3.5,2)
+\rput(2.25,2.75){1} \rput(2.25,1.25){2}
+\rput(2.5,0.2){Circuit en parallèle A} \rput(7.5,0.2){ Circuit en série B}
+\psline(5,2)(6,2)\psframe(6,1.5)(7.5,2.5)\psline(7.5,2)(8.5,2)\psframe(8.5,1.5)(10,2.5)
+\rput(6.75,2){1}\rput(9.25,2){2}
+\end{pspicture}
+\end{center}
+
+\medskip
+
+\begin{enumerate}
+\item Lorsque les deux composants sont montés \og en parallèle \fg, le circuit A est défaillant
+uniquement si les deux composants sont défaillants en même temps. Calculer la probabilité
+que le circuit A soit défaillant avant un an.
+\item Lorsque les deux composants sont montés \og en série \fg, le circuit B est défaillant dès que l'un
+au moins des deux composants est défaillant. Calculer la probabilité que le circuit B soit
+défaillant avant un an.
+\end{enumerate}
+ 
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3 \hfill 4 points}}
+
+\textbf{Commun à tous les candidats} 
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+On appelle $\C$ l'ensemble des nombres complexes.\index{complexes}
+
+Dans le plan complexe muni d'un repère orthonormé \Ouv{} on a placé un point $M$ d'affixe $z$
+appartenant à $\C$, puis le point $R$ intersection du cercle de centre O passant par $M$ et du demi-axe
+$\left[\text{O}~;~ \vect{u}\right)$.
+
+\begin{center}
+\psset{unit=0.8cm}
+\begin{pspicture}(-3,-2.7)(3,2.7)
+\psaxes[linewidth=1pt,Dx=5,Dy=5](0,0)(-3,-2.7)(3,2.7)
+\psaxes[linewidth=1.5pt,Dx=5,Dy=5]{->}(0,0)(0,0)(1,1)
+\pscircle(0,0){2.6}
+\psdots(2.6;63)(2.6;0)(0;0)
+\uput[ur](2.6;63){$M$} \uput[dr](2.6;0){$R$}\uput[dl](0,0){O}
+\uput[d](0.5,0){$\vect{u}$}\uput[l](0,0.5){$\vect{v}$}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item Exprimer l'affixe du point $R$ en fonction de $z$.
+\item Soit le point $M'$ d'affixe $z'$ définie par
+
+\[z' = \dfrac{1}{2}\left(\dfrac{z + |z|}{2}\right) .\]
+
+Reproduire la figure sur la copie et construire le point $M'$.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+On définit la suite de nombres complexes $\left(z_n\right)$ par un premier terme $z_0$ appartenant à $\C$ et, pour tout entier naturel $n$, par la relation de récurrence :
+
+\[z_{n + 1} = \dfrac{z_n + \left|z_n \right|}{4}.\]\index{suite de complexes}
+
+Le but de cette partie est d'étudier si le comportement à l'infini de la suite $\left(\left|z_n\right|\right)$ dépend du choix de $z_0$.
+
+\medskip
+
+\begin{enumerate}
+\item Que peut-on dire du comportement à l'infini de la suite $\left(\left|z_n\right|\right)$ quand $z_0$ est un nombre réel négatif ?
+\item Que peut-on dire du comportement à l'infini de la suite $\left(\left|z_n\right|\right)$ quand $z_0$ est un nombre réel positif ?
+\item On suppose désormais que $z_0 $n'est pas un nombre réel.
+	\begin{enumerate}
+		\item Quelle conjecture peut-on faire sur le comportement à l'infini de la suite $\left(\left|z_n\right|\right)$ ?
+		\item Démontrer cette conjecture, puis conclure.
+	\end{enumerate} 
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4 \hfill 5 points}}
+
+\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité} 
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+On considère l'algorithme suivant :\index{algorithme}
+
+\begin{center}
+\begin{tabularx}{0.8\linewidth}{|l|X|}\hline
+Variables :	&$k$ et $p$ sont des entiers naturels\\
+			&$u$ est un réel\\
+Entrée :	& Demander la valeur de $p$\\
+Traitement :& Affecter à $u$ la valeur $5$\\
+			&\hspace{0.3mm}Pour $k$ variant de 1 à $p$\\
+			&\hspace{0.6mm}Affecter à $u$ la valeur $0,5u + 0,5(k - 1) - 1,5$\\
+			&\hspace{0.3mm}Fin de pour\\
+Sortie:& Afficher $u$\\ \hline
+\end{tabularx}
+\end{center}
+
+Faire fonctionner cet algorithme pour $p = 2$ en indiquant les valeurs des variables à chaque étape.
+
+Quel nombre obtient-on en sortie ?
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+Soit $\left(u_n\right)$ la suite définie par son premier terme $u_0 = 5$ et, pour tout entier naturel $n$ par
+
+\[u_{n+1} = 0,5u_n + 0,5n - 1,5.\]\index{suite}
+
+\begin{enumerate}
+\item Modifier l'algorithme de la première partie pour obtenir en sortie toutes les valeurs de $u_n$
+pour $n$ variant de 1 à $p$.
+\item  À l'aide de l'algorithme modifié, après avoir saisi $p = 4$, on obtient les résultats suivants :
+
+\begin{center}
+\begin{tabularx}{0.6\linewidth}{|*{5}{>{\centering \arraybackslash}X|}}\hline
+$n$		&1 &2 		&3			&4\\ \hline
+$u_n$	&1 &$- 0,5$	& $-0,75$	&$- 0,375$\\ \hline
+\end{tabularx}
+\end{center}
+
+Peut-on affirmer, à partir de ces résultats, que la suite $\left(u_n\right)$ est décroissante ? 
+
+Justifier.
+\item  Démontrer par récurrence que pour tout entier naturel $n$ supérieur ou égal à 3, $u_{n+1} > u_n$.
+
+Que peut-on en déduire quant au sens de variation de la suite $\left(u_n\right)$ ?
+\item  Soit $\left(v_n\right)$ la suite définie pour tout entier naturel $n$ par $v_n = 0,1u_n - 0,1n + 0,5$.
+
+Démontrer que la suite $\left(v_n\right)$ est géométrique de raison $0,5$ et exprimer alors $v_n$ en fonction de $n$.\index{suite géométrique}
+\item  En déduire que, pour tout entier naturel $n$,
+
+\[u_n = 10 \times 0,5^n + n - 5.\]
+
+\item  Déterminer alors la limite de la suite $\left(u_n\right)$.
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4 \hfill 5 points}}
+
+\textbf{Candidats ayant  suivi l'enseignement de spécialité} 
+
+\medskip
+
+\emph{Les parties A et B peuvent être traitées de façon indépendante}
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+Pour deux entiers naturels non nuls $a$ et $b$, on note $r(a,~b)$ le reste dans la division euclidienne de $a$ par $b$.\index{arithmétique}
+
+On considère l'algorithme suivant :\index{algorithme}
+
+\begin{center}
+\begin{tabularx}{0.7\linewidth}{|l|X|}\hline
+Variables :	& $c$ est un entier naturel\\
+			&$a$ et $b$ sont des entiers naturels non nuls\\
+Entrées :	&Demander $a$\\
+			&Demander $b$\\
+Traitement:	&Affecter à $c$ le nombre $r(a,~b)$\\
+			&Tant que $c \ne 0$\\
+			&\hspace{0.5cm}Affecter à $a$ le nombre $b$\\
+			&\hspace{0.5cm}Affecter à $b$ la valeur de $c$\\
+			&\hspace{0.5cm}Affecter à $c$ le nombre $r(a,~b)$\\
+			&Fin Tant que\\
+Sortie :	&Afficher $b$\\ \hline
+			\end{tabularx}
+			\end{center}
+
+\begin{enumerate}
+\item Faire fonctionner cet algorithme avec $a = 26$ et $b = 9$ en indiquant les valeurs de $a$, $b$ et $c$ à chaque étape.
+\item Cet algorithme donne en sortie le PGCD des entiers naturels non nuls $a$ et $b$.
+
+Le modifier pour qu'il indique si deux entiers naturels non nuls $a$ et $b$ sont premiers entre
+eux ou non.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+À chaque lettre de l'alphabet on associe grâce au tableau ci-dessous un nombre entier compris entre
+0 et 25.
+
+\begin{center}
+\begin{tabularx}{0.8\linewidth}{|*{13}{>{\centering \arraybackslash}X|}}\hline
+A 	&B 	&C 	&D 	&E 	&F 	&G 	&H 	&I	&J 	&K 	&L 	&M\\ \hline
+0	&1 	&2 	&3 	&4 	&5 	&6 	&7 	&8 	&9 	&10 &11 &12\\ \hline\hline
+N	&O	&P	&Q	&R	&S	&T	&U	&V	&W	&X	&Y	&Z\\ \hline
+13	&14	&15	&16	&17	&18	&19	&20	&21	&22	&23	&24	&25\\ \hline
+\end{tabularx}
+\end{center}
+
+On définit un procédé de codage de la façon suivante :
+
+\textbf{Étape 1 :} on choisit deux entiers naturels $p$ et $q$ compris entre $0$ et $25$.
+
+\textbf{Étape 2 :} à la lettre que l'on veut coder, on associe l'entier $x$ correspondant dans le tableau ci-dessus.
+
+\textbf{Étape 3 :} on calcule l'entier $x'$ défini par les relations 
+
+\[x' \equiv  px + q\quad  [26]\quad \text{et}\quad  0 \leqslant  x' \leqslant 25.\]\index{congruences}
+
+\textbf{Étape 4 :} à l'entier $x'$, on associe la lettre correspondante dans le tableau.
+
+\medskip
+
+\begin{enumerate}
+\item Dans cette question, on choisit $p = 9$ et $q = 2$.
+	\begin{enumerate}
+		\item Démontrer que la lettre V est codée par la lettre J.
+		\item Citer le théorème qui permet d'affirmer l'existence de deux entiers relatifs $u$ et $v$
+tels que $9u + 26v = 1$. Donner sans justifier un couple $(u,~v)$ qui convient.
+		\item Démontrer que $x' \equiv 9x + 2\quad [26]$ équivaut à $x \equiv  3x' + 20\quad [26]$.
+		\item Décoder la lettre R.
+	\end{enumerate}
+\item Dans cette question, on choisit $q = 2$ et $p$ est inconnu. On sait que J est codé par D.
+	
+Déterminer la valeur de $p$ (on admettra que $p$ est unique).
+\item Dans cette question, on choisit $p = 13$ et $q = 2$. Coder les lettres B et D. Que peut-on dire de ce codage ?
+\end{enumerate} 
+%\vspace*{-15cm} 
+\pagebreak
+\begin{landscape}
+\begin{center}
+
+\psset{unit=2.2cm}
+\begin{pspicture*}(-0.5,-0.5)(8.5,5)
+\psgrid[gridlabels=0pt,subgriddiv=1,griddots=12](-0.5,-0.5)(7,5)
+\psaxes[linewidth=1pt]{->}(0,0)(0,0)(7,5)
+\psaxes[linewidth=1.5pt]{->}(0,0)(1,1)
+\psplot[plotpoints=2000,linewidth=1.25pt]{0}{7}{x dup mul 0.05 mul}
+\psplot[plotpoints=2000,linewidth=1.25pt]{0}{7}{x dup mul 0.1 mul}
+\psplot[plotpoints=2000,linewidth=1.25pt]{0}{7}{x dup mul 0.19 mul}
+\psplot[plotpoints=2000,linewidth=1.25pt]{0}{7}{x dup mul 0.4 mul}
+\psplot[plotpoints=2000,linewidth=1.25pt]{0.4}{7}{x ln}
+\rput{-90}(7.5,2.5){\textbf{\large ANNEXE 1 de l'exercice 1}}
+\rput{-90}(8,2.5){\textbf{\large À RENDRE AVEC LA COPIE}}
+\end{pspicture*}
+\end{center} 
+\end{landscape} 
+\newpage
+\begin{center}
+\textbf{\large À RENDRE AVEC LA COPIE}
+
+\vspace{0.5cm}
+
+\textbf{\large ANNEXE 2 de l'exercice 2}
+
+\vspace{0.5cm}
+\psset{xunit=1cm,yunit=10cm,comma=true}
+\begin{pspicture*}(-0.75,-0.1)(10.5,0.7)
+\multido{\n=0+1}{11}{\psline[linestyle=dashed,linewidth=0.15pt](\n,0)(\n,0.7)}
+\multido{\n=0.0+0.1}{9}{\psline[linestyle=dashed,linewidth=0.15pt](0,\n)(10,\n)}
+\psaxes[linewidth=1.25pt,Dy=0.1]{->}(0,0)(0,0)(10.5,0.7)
+\psaxes[linewidth=1.25pt,Dy=0.1](0,0)(0,0)(10.5,0.7)
+\psplot[plotpoints=3000,linewidth=1.25pt,linecolor=blue]{0}{10.5}{0.5 2.71828 0.5 x mul exp div}
+\uput[u](10.3,0){$x$}\uput[l](0,0.68){$y$}
+\end{pspicture*}
+\end{center} 
+\end{document}

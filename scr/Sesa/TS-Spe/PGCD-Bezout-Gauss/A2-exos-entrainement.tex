@@ -1,0 +1,631 @@
+\documentclass{cornouaille}
+\dscornouaille
+\begin{document}
+
+\fexo{TS-Spé-A2}{PGCD-Bezout-Gauss}{}
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Activités mentales}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}
+Déterminer de tête et à l'aide des règles de divisibilité,
+les PGCD des entiers suivants :
+
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item 12 et 42.
+\item 45 et 105.
+\item 92 et 69.
+\item 72 et 108.
+\end{enumerate}
+\end{multicols}
+\end{exercice}
+\begin{solution}
+\begin{colenumerate}{2}
+\item $PGCD(12\ ;\ 42)=6$
+\item $PGCD(45\ ;\ 105)=15$
+\item $PGCD(92\ ;\ 69)=23$
+\item $PGCD(72\ ;\ 108)=36$
+\end{colenumerate}
+\end{solution}
+
+\begin{exercice}
+Sur un vélodrome, deux cyclistes partent en même temps d'un point M et roulent à vitesse
+constante.
+
+Le coureur A boucle le tour en 35 secondes ; le coureur~B en 42
+secondes.
+
+Au bout de combien de temps le coureur A aura-t-il un tour d'avance sur le coureur B ?
+\end{exercice}
+\begin{solution}
+  $PGCD(35,42)=7$\enskip et \enskip $35=7\times5$,\enskip
+  $42=7\times6$.
+
+  Lorsque le coureur A aura fait 6 tours, le coureur B aura fait 5
+  tours, soit un temps de \enskip $35\times 6=210$ s.
+\end{solution}
+
+\begin{exercice}
+\begin{enumerate}
+\item On veut découper un rectangle de 24 cm sur 40 cm en carrés dont le côté est le plus grand possible, sans perte.
+
+Combien doit mesurer le côté du carré ?
+
+\item On dispose d'un grand nombre de rectangles du type précédent que
+  l'on veut assembler bord à bord pour former le carré le plus petit possible.
+
+Combien doit mesurer le côté du carré ?
+\end{enumerate}
+\end{exercice}
+\begin{solution}
+  \begin{enumerate}
+  \item$PGCD(24\ ;\ 40)=8$. Le côté du carré doit diviser 24 et 40, donc
+    le plus grand côté possible est de 8 cm.
+
+  \item $40=8\times5$\enskip et \enskip $24=8\times3$
+
+  Pour former le plus petit carré, il faut mettre 3 fois la longueur
+  et 5 fois la largeur du rectangle, soit 120 cm.
+\end{enumerate}
+\end{solution}
+
+\begin{exercice}
+  Utiliser l'algorithme d'Euclide pour trouver le PGCD des nombres
+  suivants :
+
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item 78 et 108.
+\item 144 et 840.
+\item 202 et 138.
+% \item 441 et 777.
+\end{enumerate}
+\end{multicols}
+\end{exercice}
+\begin{solution}
+  \begin{enumerate}
+  \item $PGCD(78;108)=6$ car
+
+    $\begin{aligned}
+      108&=78\times1+30\\
+      78&=30\times2+18\\
+      30&=18\times1+12\\
+      18&=12\times1+6\\
+      12&=6\times2\end{aligned}$\medskip
+    
+  \item $PGCD(144;840)=24$ car
+    
+    $\begin{aligned}
+      840&=144\times5+120\\
+      144&=120\times1+24\\
+      120&=24\times5\end{aligned}$\medskip
+    
+    
+    
+  \item $PGCD(202;138)=2$ car
+
+    $\begin{aligned}
+      202&=138\times1+64\\
+      138&=64\times2+10\\
+      64&=10\times6+4\\
+      10&=4\times2+2\\
+      4&=2\times2\end{aligned}$
+    
+  % \item Il faut l'enlever de l'exercice car présent aussi à l'exercice
+  %   13.
+
+  %   $PGCD(441;777)=21$ car
+    
+  %   $\begin{aligned}
+  %     777&=441\times1+336\\
+  %     441&=336\times1+105\\
+  %     336&=105\times3+21\\
+  %     105&=21\times5\end{aligned}$
+  \end{enumerate}
+\end{solution}
+
+\begin{exercice}
+  Montrer que deux entiers naturels consécutifs non nuls sont premiers
+  entre eux.
+\end{exercice}
+\begin{solution}
+  $(-1)n+1(n+1)=1$. Donc d'après le théorème de Bézout, $n$ et $(n+1)$
+  sont premiers entre eux.
+\end{solution}
+
+\begin{exercice}
+En utilisant le théorème de Gauss, déterminer les couples d'entiers
+relatifs $(x\ ;\ y)$ qui vérifient les équations suivantes :
+
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $5(x+3)=4y$
+\item $41x+9y=0$
+\end{enumerate}
+\end{multicols}
+\end{exercice}
+\begin{solution}
+  \begin{enumerate}
+  \item 4 divise $5(x+3)$. Or $PGCD(4,5)=1$, donc d'après le théorème
+    de Gauss, 4 divise $(x+3)$.
+
+On  a donc $x+3=4k$. 
+
+En remplaçant dans l'équation, on obtient $y=5k$.
+
+Les couples solutions sont :
+$\left\{\begin{aligned}
+&x\hskip-.5mm=-\hskip-.5mm3+4k\\
+&y\hskip-.5mm=\hskip-.5mm5k\end{aligned}\right.\hskip-.5mm, k\in\Z$
+
+\item $41x=9(-y)$\enskip (1)
+
+  9 divise $41x$. Or $PGCD(9,41)=1$, donc d'après le théorème de
+  Gauss, 9 divise $x$.
+
+On  a donc $x=9k$. 
+
+En remplaçant dans l'équation, on obtient $y=-41k$.
+
+Les couples solutions sont: 
+$\left\{\begin{aligned}
+&x=9k\\
+&y=-41k\end{aligned}\right.,\enskip k\in\Z$
+\end{enumerate}
+\end{solution}
+
+\begin{exercice}
+  Trouver un couple d'entiers relatifs $(x ; y)$ qui vérifie
+  l'équation : $7x+5y=1$.
+\end{exercice}
+\begin{solution}
+  $(-2\ ;\ 3)$ est solution.
+\end{solution}
+
+\begin{exercice}
+  Existe-il des couples d'entiers $(x\ ;\ y)$ solutions de chacune des
+  équations suivantes ?
+\begin{enumerate}
+\item $37x + 25y = 1$
+\item $51x + 39y = 1$
+\item $51x + 39y = 2016$
+\end{enumerate}
+\end{exercice}
+\begin{solution}
+  \begin{enumerate}
+  \item Oui car $PGCD(37\ ;\ 25)=1$, donc d'après le théorème de
+    Bézout, il existe au moins un couple solution.
+  \item Non car $PGCD(51\ ;\ 39)=3$ et comme 1 n'est pas multiple de
+    3, d'après le corollaire de Bézout, il n'y a pas de solution.
+  \item Oui car $PGCD(51\ ;\ 39)=3$ et comme 2016 est divisible par
+    3, d'après le corollaire du Bézout, il existe des solutions
+    entières.
+\end{enumerate}
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PGCD}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}
+Dresser la liste des diviseurs positifs de 72 et de 60. En déduire leur PGCD.
+\end{exercice}
+
+\begin{exercice}
+Si, en un point donné du ciel, un astre A apparaît tous les 28 jours et un astre B tous les 77 jours, avec quelle périodicité les verra-t-on simultanément en ce point ?
+\end{exercice}
+
+\begin{exercice}
+Déterminer tous les entiers naturels $n$ inférieurs à 200 tels que : $PGCD(n;324)=12$.
+\end{exercice}
+
+\begin{exercice}
+  $a$ et $b$ sont deux entiers naturels non nuls tels que
+  $a>b$.
+
+\begin{enumerate}
+\item Démontrer que : $PGCD(a;b)=PGCD(a-b ; b)$.
+\item Calculer les PGCD des entiers suivants par cette méthode, répétée autant de fois que nécessaire :
+\begin{colenumerate}{2}
+\item 308 et 165.
+\item 1 008 et 308.
+\item 735 et 210.
+\end{colenumerate}
+
+\end{enumerate}
+\end{exercice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Algorithme d'Euclide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}[]
+  
+  Utiliser l'algorithme d'Euclide pour trouver le PGCD des nombres
+  suivants :
+\begin{colenumerate}{2}
+\item 441 et 777. 
+\item 2004 et 9185.
+\end{colenumerate}
+\end{exercice}
+\begin{solution}
+  \begin{enumerate}
+\item $PGCD(441\ ;\ 777)=21$ car
+
+$\begin{aligned}
+777&=441\times1+336\\
+441&=336\times1+105\\
+336&=105\times3+21\\
+105&=21\times5\end{aligned}$\medskip
+
+\item $PGCD(9185\ ;\ 2004)=167$ car
+
+$\begin{aligned}
+9185&=2004\times4+1169\\
+2004&=1169\times1+835\\
+1169&=835\times1+334\\
+835&=334\times2+167\\
+334&=167\times2\end{aligned}$
+\end{enumerate}
+\end{solution}
+
+\begin{exercice}
+  Utiliser l'algorithme d'Euclide pour trouver le PGCD des nombres
+  suivants :
+\begin{colenumerate}{2}
+\item \np{2012} et \np{7545}. 
+\item \np{1386} et 546.
+\end{colenumerate}
+\end{exercice}
+
+\begin{exercice}
+  Utiliser l'algorithme d'Euclide pour trouver le PGCD des nombres
+  suivants :
+\begin{colenumerate}{2}
+\item \np{4935} et 517. 
+\item \np{1064} et 700.
+\end{colenumerate}
+\end{exercice}
+
+\begin{exercice}
+Les entiers suivants sont-ils premiers entre eux ?
+\begin{colenumerate}{2}
+\item \np{4847} et \np{5633}. 
+\item \np{5617} et 813.
+\end{colenumerate}
+\end{exercice}
+
+\begin{exercice}
+  Si on divise \np{4294} et \np{3521} par un même entier
+  positif, on obtient respectivement 10 et 11 comme reste.
+
+  Quel est cet entier ?
+\end{exercice}
+
+\begin{exercice}
+  En divisant \np{1809} et \np{2527} par un même entier
+  naturel, les restes sont respectivement 9 et 7. 
+
+  Quel est le plus grand nombre que l'on peut obtenir comme diviseur ?
+\end{exercice}
+
+\begin{exercice}
+On note $n$ un naturel non nul, $a=3n+1$ et $b=5n-1$.
+\begin{enumerate}
+\item Montrer que le $PGCD(a,b)$ est un diviseur de 8.
+\item Pour quelles valeurs de $n$, $PGCD(a,b)$ est-il égal à 8 ?
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+$n$ est un entier relatif quelconque. On pose :
+$$A=n-1\enskip \text{et}\enskip B=n^2-3n+6.$$
+\begin{enumerate}
+\item\begin{enumerate}
+\item Démontrer que le PGCD de $A$ et de $B$ est égal au PGCD de $A$ et de 4.
+\item Déterminer, selon les valeurs de l'entier $n$, le PGCD de $A$ et de $B$.
+\end{enumerate}
+\item Pour quelles valeurs de l'entier relatif $n$, $n\neq1$,
+
+$\dfrac{n^2-3n+6}{n-1}$ est-il un entier relatif ?
+\end{enumerate}
+\end{exercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Théorème de Bézout}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}
+Soit l'égalité de Bézout : \og {Soit $a$ et $b$ deux entiers non nuls et $D$ leur PGCD. Il existe un couple d'entiers relatifs telle que $au+bv=D$} \fg .
+\begin{enumerate}
+\item Démontrer le théorème de Bézout \og {$a$ et $b$ sont premiers entre eux si, et seulement si, il existe un couple d'entiers relatifs $(u;v)$ tel que $au+bv=1$} \fg .
+\item En déduire que si $PGCD(a;b) = D$, alors $a = Da'$ et $b = Db'$ avec $PGCD(a'; b') = 1$.
+\end{enumerate}
+\end{exercice}
+
+
+
+\begin{exercice}[]
+\label{exo-bezout}
+Démontrer que, pour tout relatif $k$,
+
+$(7k+3)$ et $(2k+1)$ sont premiers entre eux.
+\end{exercice}
+\begin{solution}
+  $(-2)(7k+3)+7(2k+1)=-14k-6+14k+7=1$.
+
+  D'après le théorème de Bézout, $(7k+3)$ et $(2k+1)$ sont premiers
+  entre eux pour tout entier relatif $k$.
+\end{solution}
+
+\begin{exercice}
+$n$ est un entier naturel , $a=7n+4$ et $b=5n+3$.
+
+Montrer, pour tout $n$, que $a$ et $b$ sont premiers entre eux.
+\end{exercice}
+
+\begin{exercice}
+Démontrer que pour tout relatif $n$, les entiers $(14n+3)$ et $(5n+1)$ sont premiers entre eux. En déduire $PGCD(87;31)$.
+\end{exercice}
+
+\begin{exercice}
+Prouver que la fraction $\dfrac{n}{2n+1}$ est irréductible pour tout entier naturel $n$.
+\end{exercice}
+
+\begin{exercice}
+Prouver que la fraction $\dfrac{2n+1}{n(n+1)}$ est irréductible pour tout entier naturel $n$.
+\end{exercice}
+
+\begin{exercice}
+La fraction $\dfrac{n^3+n}{2n+1}$ est-elle irréductible pour tout entier naturel $n$ ?
+\end{exercice}
+
+\begin{exercice}[]
+\label{exo-sol_particuliere}
+Montrer que 17 et 40 sont premiers entre eux puis déterminer un couple d'entiers relatifs $(x;y)$ tel que : $17x-40y= 1$.
+\end{exercice}
+\begin{solution}
+  On utilise l'algorithme d'Euclide :
+
+$\begin{aligned}
+40&=17\times2+6\qquad (1)\\
+17&=6\times2+5\qquad (2)\\
+6&=5\times1+1\qquad (3)\end{aligned}$\medskip
+
+40 et 17 sont donc premiers entre eux.\medskip
+
+On remonte l'algorithme d'Euclide :
+
+de (3), on obtient\enskip $5=6-1$\medskip
+
+On remplace dans (2) :
+
+$17=6\times3-1$\enskip donc\enskip $6\times3=17+1$\medskip
+
+On multiplie (1) par 3
+
+$\begin{aligned}
+40\times3&=17\times6+6\times3\\
+				 &=17\times6+17+1\\
+				 &=17\times7+1\end{aligned}$\medskip
+				
+On a alors \enskip $17\times(-7)-40\times(-3)=1$.
+\end{solution}
+
+\begin{exercice}
+Montrer que 23 et 26 sont premiers entre eux puis déterminer un couple d'entiers relatifs $(x;y)$ tel que : $23x + 26y = 1$.
+\end{exercice}
+
+\begin{exercice}
+L'équation $6x + 3y = 1$ admet-elle des solutions entières ? Et l'équation $7x + 5y = 1$ ?
+\end{exercice}
+
+\begin{exercice}
+  Montrer que 221 et 331 sont premiers entre eux puis déterminer un
+  couple d'entiers relatifs $(x;y)$ tel que : $221x - 331y = 1$.
+\end{exercice}
+
+\begin{exercice}[Vrai ou faux ?]
+  S'il existe deux entiers relatifs $u$ et $v$ tel que $au + bv = 3$,
+  alors le PGCD de $a$ et de $b$ est égal à 3. Justifier.
+\end{exercice}
+
+\begin{exercice}
+  Résoudre dans $\N^2$ les systèmes suivants. 
+
+  On donnera la réponse sous forme d'un tableau.
+\begin{colenumerate}{2}
+\item $\left\{\begin{aligned}
+					&xy=1512\\
+					&PGCD(x,y)=6\end{aligned}\right.$
+\item $\left\{\begin{aligned}
+					&xy=300\\
+					&PGCD(x,y)=5\end{aligned}\right.$
+\end{colenumerate}
+\end{exercice}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Théorème de Gauss}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}
+En utilisant le théorème de Gauss, déterminer les couples d'entiers relatifs $(a;b)$ qui vérifient :
+$$33a - 45b = 0.$$
+\end{exercice}
+
+\begin{exercice}
+\begin{enumerate}
+\item En utilisant le théorème de Gauss, déterminer les couples d'entiers relatifs $(x;y)$ qui vérifient :
+$$7(x-3)=5(y-2).$$
+\item De la question précédente, déterminer les entiers naturels $x$ tels que : $7x\equiv1~(5)$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+En utilisant le théorème de de Gauss, démontrer le corollaire du théorème de Gauss :\og {Si $b$ et $c$ divisent $a$ et si $b$ et $c$ sont premiers entre eux, alors $bc$ divise $a$} \fg .
+\end{exercice}
+
+\begin{exercice}
+  Montrer que si $n\equiv0~(8)$ et $n\equiv0~(9)$, alors
+  $n\equiv0~(72)$.
+\end{exercice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PPCM}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exercice}
+  Soit deux entiers relatifs $a$ et $b$. 
+  
+  On appelle $PPCM(a; b)$ le plus petit multiple strictement positif
+  de $a$ et de $b$.
+\begin{enumerate}
+\item Calculer $PPCM(18; 12)$ et $PPCM(24\ ;\ 40)$.
+\item Calculer $\dfrac{7}{6}+\dfrac{11}{15}$. Que représente
+  $PPCM(6\ ;\ 15)$ ?
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}\label{ExoPPCM}
+On appelle $D = PGCD(a\ ;\ b)$ et\\ $M = PPCM(a\ ;\ b)$.
+\begin{enumerate}
+\item Montrer que si $a = Da'$ et $b = Db'$, alors $M = Da'b'$.
+\item En déduire que : $D\times M = ab$.
+\end{enumerate}
+\end{exercice}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Équation du type \textit{ax} + \textit{by} = \textit{c}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercice}
+  Soit l'identité de Bézout : \og {Soit $a$ et $b$ deux entiers non
+    nuls et $D$ leur PGCD. Il existe un couple d'entiers relatifs
+    tel que $au + bv = D$} \fg .
+
+  Démontrer le corollaire du théorème de Bézout : \og {L'équation
+    $ax + by = c$ admet des solutions entières si, et seulement si,
+    $c$ est un multiple du $PGCD(a\ ;\ b)$} \fg .
+\end{exercice}
+
+
+
+\begin{exercice}[]
+\label{exo-eq_diophantienne}
+Soit l'équation (E) : $4x-3y = 2$.
+\begin{enumerate}
+\item Déterminer une solution particulière entière à (E).
+\item Déterminer l'ensemble des solutions entières.
+\end{enumerate}
+\end{exercice}
+\begin{solution}
+  \begin{itemize}
+  \item $(2\ ;\ 2)$ est une solution particulière.
+  \item Soit $(x\ ;\ y)$ la solution générale, on écrit :
+    $$\left\{\begin{aligned}
+        4x-3y&=2\\
+        4(2)-3(2)&=2\end{aligned}\right.$$
+    
+En soustrayant termes à termes, on obtient : 
+
+$4(x-2)=3(y-2)$\enskip (1)
+
+3 divise $4(x-2)$. Or $PGCD(4;3)=1$, donc d'après le théorème de
+Gauss, 3 divise $(x-2)$. On a alors :
+
+$x-2=3k$.
+
+En remplaçant dans (1), on obtient :\enskip $y-2=4k$.
+
+L'ensemble des couples solutions est de la forme :
+$$\left\{\begin{aligned}
+x&=2+3k\\
+y&=2+4k\end{aligned}\right.\enskip k\in\Z$$
+\end{itemize}
+\end{solution}
+
+\begin{exercice}
+Soit l'équation (F) : $3x - 4y = 6$.
+\begin{enumerate}
+\item Déterminer une solution particulière entière à (F).
+\item Déterminer l'ensemble des solutions entières.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit l'équation (G) : $5x + 8y = 2$.
+\begin{enumerate}
+\item Déterminer une solution particulière entière à (G).
+\item Déterminer l'ensemble des solutions entières.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit l'équation $13x - 23y = 1$.
+\begin{enumerate}
+\item Déterminer une solution particulière entière, à l'aide de
+  l'algorithme d'Euclide, à cette équation.
+\item Déterminer l'ensemble des solutions entières.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+\begin{enumerate}
+\item Déterminer l'ensemble des couples $(x; y)$ des nombres entiers
+  relatifs, solutions de l'équation :
+
+{\centering $\text{(E)}~:~8x - 5y = 3$.\par}
+
+\item Soit $m$ un nombre entier relatif tel qu'il existe un couple
+  $(p; q)$ de nombres entiers vérifiant :
+
+$m=8p + 1$ et $m = 5q + 4$.
+
+Montrer que le couple $(p, q)$ est solution de l'équation (E).
+
+\item Déterminer le plus petit de ces nombres entiers $m$ supérieur à
+  \np{2000}.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+\begin{enumerate}
+\item On considère l'équation (E) à résoudre dans $\Z$ :
+
+{\centering $7x - 5y = 1.$\par}
+
+
+\begin{enumerate}
+\item Vérifier que le couple (3 ; 4) est solution de (E).
+\item Montrer que le couple d'entiers $(x ; y)$ est solution de (E) si, et seulement si, $7(x - 3) = 5(y - 4)$.
+\item Montrer que les solutions entières de l'équation (E) sont
+  exactement les couples $(x ; y)$ d'entiers relatifs tels que :
+$$\left\{\begin{aligned}
+&x = 5k + 3\\
+&y = 7k + 4\end{aligned}\right.\enskip \text{où}\enskip k\in\Z.$$
+\end{enumerate}
+\item Une boîte contient 25 jetons, des rouges, des verts et des
+  blancs. Sur les 25 jetons, il y a $x$ jetons rouges et $y$
+  jetons verts. 
+
+  Sachant que $7x-5y = 1$, quels peuvent être les nombres de jetons
+  rouges, verts et blancs ?
+\end{enumerate}
+\end{exercice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}

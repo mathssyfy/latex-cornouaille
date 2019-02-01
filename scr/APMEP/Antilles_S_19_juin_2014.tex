@@ -1,0 +1,389 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}%ATTENTION codage en utf8 !!! 
+\usepackage[upright]{fourier}
+\usepackage[scaled=0.875]{helvet}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{amsmath,amssymb,makeidx}
+\usepackage{fancybox}
+\usepackage{tabularx}
+\usepackage[normalem]{ulem}
+\usepackage{pifont}
+\usepackage{textcomp} 
+\usepackage{multicol}
+\newcommand{\euro}{\eurologo{}}
+%Tapuscrit : Denis Vergès
+%Merci à Florence Francillette et à Vincent Tolleron pour le sujet
+\usepackage{pst-plot,pst-text}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\usepackage[left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
+\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
+\newcommand{\barre}[1]{\overline{\,\mathstrut#1\,}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O},~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O},~\vect{u},~\vect{v}\right)$}
+\def\e{\text{e}}
+\def\i{\text{i}}
+\setlength{\voffset}{-1,5cm}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{%
+pdfauthor = {APMEP},
+pdfsubject = {TS Antilles-Guyane},
+pdftitle = {19 juin 2014},
+allbordercolors = white,
+pdfstartview=FitH}  
+\usepackage[frenchb]{babel}
+\usepackage[np]{numprint}
+\usepackage{pstricks-add}
+\usepackage{pst-bezier}
+\usepackage{graphicx}
+\begin{document}
+\setlength\parindent{0mm}
+\rhead{\textbf{A. P{}. M. E. P{}.}}
+\lhead{\small Baccalauréat S}
+\lfoot{\small{Antilles-Guyane}}
+\rfoot{\small{19 juin 2014}}
+\pagestyle{fancy}
+\thispagestyle{empty}
+\begin{center}\textbf{Durée : 4 heures}
+
+\vspace{0,5cm}
+
+{\Large \textbf{Baccalauréat S Antilles-Guyane 19 juin 2014}}
+\end{center}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 1} \hfill 5 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip
+
+\emph{Les parties A et B sont indépendantes}
+
+\medskip
+ 
+\emph{Les résultats seront arrondis à $10^{-4}$ près}
+
+\medskip
+ 
+\textbf{Partie A}
+
+\medskip
+ 
+Un ostréiculteur élève deux espèces d'huîtres : \og la plate \fg{} et \og la japonaise \fg. Chaque année, les huîtres plates représentent 15\,\% de sa production.\index{probabilités}
+ 
+Les huîtres sont dites de calibre \no 3 lorsque leur masse est comprise entre 66~g et 85~g.
+ 
+Seulement 10\,\% des huîtres plates sont de calibre \no 3, alors que 80\,\% des huîtres japonaises le sont.
+
+\medskip
+ 
+\begin{enumerate}
+\item Le service sanitaire prélève une huître au hasard dans la production de l'ostréiculteur. On suppose que toutes les huitres ont la même chance d'être choisies.
+ 
+On considère les évènements suivants : 
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] $J$ : \og l'huître prélevée est une huître japonaise \fg, 
+\item[$\bullet~~$] $C$ : \og l'huître prélevée est de calibre \no 3 \fg.
+\end{itemize}
+\setlength\parindent{0mm}
+ 
+	\begin{enumerate}
+		\item Construire un arbre pondéré complet traduisant la situation.\index{arbre} 
+		\item Calculer la probabilité que l'huître prélevée soit une huître plate de calibre \no 3. 
+		\item Justifier que la probabilité d'obtenir une huître de calibre \no 3 est $0,695$. 
+		\item Le service sanitaire a prélevé une huître de calibre \no 3. 
+Quelle est la probabilité que ce soit une huître plate ?
+	\end{enumerate} 
+\item La masse d'une huître peut être modélisée par une variable aléatoire $X$ suivant la loi normale de moyenne $\mu = 90$ et d'écart-type $\sigma = 2$. \index{loi normale}
+	\begin{enumerate}
+		\item Donner la probabilité que l'huître prélevée dans la production de l'ostréiculteur ait une masse comprise entre 87~g et 89~g. 
+		\item Donner $P(X \geqslant 91)$.
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+	 
+\textbf{Partie B}
+
+\medskip
+ 
+Cet ostréiculteur affirme que 60\,\% de ses huîtres ont une masse supérieure à 91~g.
+ 
+Un restaurateur souhaiterait lui acheter une grande quantité d'huîtres mais il voudrait, auparavant, vérifier l'affirmation de l'ostréiculteur.
+
+\medskip
+ 
+Le restaurateur achète auprès de cet ostréiculteur 10 douzaines d'huîtres qu'on considèrera comme un échantillon de $120$~huîtres tirées au hasard. Sa production est suffisamment importante pour qu'on l'assimile à un tirage avec remise.
+ 
+Il constate que $65$ de ces huîtres ont une masse supérieure à 91~g.
+
+\medskip
+ 
+\begin{enumerate}
+\item Soit $F$ la variable aléatoire qui à tout échantillon de $120$~huîtres associe la fréquence de celles qui ont une masse supérieure à 91~g. 
+
+Après en avoir vérifié les conditions d'application, donner un intervalle de fluctuation asymptotique au seuil de 95\,\% de la variable aléatoire $F$.\index{intervalle de fluctuation} 
+\item Que peut penser le restaurateur de l'affirmation de l'ostréiculteur ? 
+\end{enumerate} 
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 2} \hfill 6 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip 
+
+On considère la fonction $f$ définie et dérivable sur l'ensemble $\R$ des nombres réels par 
+
+\[f(x) = x + 1 + \dfrac{x}{\text{e}^x}.\]
+
+On note $\mathcal{C}$ sa courbe représentative dans un repère orthonormé \Oij. 
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+\begin{enumerate}
+\item Soit $g$ la fonction définie et dérivable sur l'ensemble $\R$ par 
+\index{fonction exponentielle}
+\[g(x) = 1 - x + \text{e}^x.\]
+ 
+Dresser, en le justifiant, le tableau donnant les variations de la fonction $g$ sur $\R$ (les limites de $g$ aux bornes de son ensemble de définition ne sont pas attendues).
+ 
+En déduire le signe de $g(x)$. 
+\item Déterminer la limite de $f$ en $- \infty$ puis la limite de $f$ en $+ \infty$. 
+\item On appelle $f'$ la dérivée de la fonction $f$ sur $\R$. 
+
+Démontrer que, pour tout réel $x$, 
+
+\[f'(x) = \text{e}^{- x}g(x).\]
+ 
+\item En déduire le tableau de variation de la fonction $f$ sur $\R$. 
+\item Démontrer que l'équation $f(x) = 0$ admet une unique solution réelle $\alpha$ sur $\R$.
+ 
+Démontrer que $- 1 < \alpha < 0$.  
+\item 
+	\begin{enumerate}
+		\item Démontrer que la droite $T$ d'équation $y = 2x + 1$ est tangente à la courbe $\mathcal{C}$  au point d'abscisse $0$.
+		\item Étudier la position relative de la courbe $\mathcal{C}$ et de la droite $T$.
+	\end{enumerate} 
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+ 
+\begin{enumerate}
+\item Soit $H$ la fonction définie et dérivable sur $\R$ par 
+
+\[H(x) = (- x - 1)\text{e}^{- x}.\]
+ 
+Démontrer que $H$ est une primitive sur $\R$ de la fonction $h$ définie par $h(x) = x\text{e}^{- x}$.\index{primitive} 
+\item On note $\mathcal{D}$ le domaine délimité par la courbe $\mathcal{C}$, la droite $T$ et les droites d'équation $x = 1$ et $x = 3$.
+ 
+Calculer, en unité d'aire, l'aire du domaine $\mathcal{D}$. 
+\end{enumerate}
+
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3} \hfill 4 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip 
+
+\emph{Pour chacune des quatre propositions suivantes, indiquer si elle est vraie ou fausse en justifiant la réponse.\\ 
+Il est attribué un point par réponse exacte correctement justifiée. Une réponse non justifiée n'est pas prise en compte. Une absence de réponse n'est pas pénalisée.}
+
+\medskip
+ 
+L'espace est muni d'un repère orthonormé \Oijk.\index{géométrie dans l'espace}
+ 
+On considère les points A(1~;~2~;~5), B$(-1~;~6~;~4)$, C$(7~;~- 10~;~8)$ et D$(-1~;~3~;~4)$.
+
+\medskip
+ 
+\begin{enumerate}
+\item \textbf{Proposition 1 :} Les points A, B et C définissent un plan. 
+\item On admet que les points A, B et D définissent un plan. 
+
+\textbf{Proposition 2 :} Une équation cartésienne du plan (ABD) est $x - 2z + 9 = 0$. 
+\item \textbf{Proposition 3 :} Une représentation paramétrique de la droite (AC) est 
+\index{equation parametrique de droite@équation paramétrique de droite}
+\[\left\{\begin{array}{l c l} 
+x &=& \phantom{-}\dfrac{3}{2}t - 5\\ 
+y &=& - 3t + 14\\
+z &=&- \dfrac{3}{2}t + 2
+\end{array}\right. \quad  t \in \R\]
+ 
+\item Soit $\mathcal{P}$ le plan d'équation cartésienne $2x - y + 5z + 7 = 0$ et $\mathcal{P}'$ le plan d'équation cartésienne $- 3x - y + z + 5 = 0$.
+ 
+\textbf{Proposition 4 :} Les plans $\mathcal{P}$ et $\mathcal{P}'$ sont parallèles. 
+\end{enumerate}
+
+
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats n'ayant pas choisi l'enseignement de spécialité}
+
+\medskip 
+
+Soit la suite numérique $\left(u_{n}\right)$ définie sur l'ensemble des entiers naturels $\N$ par \index{suite}
+
+\[\left\{\begin{array}{r c l}
+u_{0}& =& 2\\ 
+\text{et pour tout entier naturel }\:n,\: u_{n+1} &=& \dfrac{1}{5} u_{n} + 3 \times 0,5^n.
+\end{array}\right.\] 
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Recopier et, à l'aide de la calculatrice, compléter le tableau des valeurs de la suite $\left(u_{n}\right)$ approchées à $10^{-2}$ près: 
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|*{10}{>{\centering \arraybackslash}X|}}\hline
+$n$		&0	&1	&2	&3	&4	&5	&6	&7	&8\\ \hline 
+$u_{n}$	&2	&	&	&	&	&	&	&	&\\ \hline
+\end{tabularx}
+\end{center} 
+ 
+		\item D'après ce tableau, énoncer une conjecture sur le sens de variation de la suite $\left(u_{n}\right)$.
+	\end{enumerate} 
+\item
+	\begin{enumerate}
+		\item Démontrer, par récurrence, que pour tout entier naturel $n$ non nul on a 
+		
+		\[u_{n} \geqslant  \dfrac{15}{4} \times 0,5^n.\] 
+ 
+		\item En déduire que, pour tout entier naturel $n$ non nul, $u_{n+1} - u_{n} \leqslant  0$. 
+		\item Démontrer que la suite $\left(u_{n}\right)$ est convergente.
+	\end{enumerate} 
+\item \emph{On se propose, dans cette question de déterminer la limite de la suite } \:$\left(u_{n}\right)$.
+ 
+Soit $\left(v_{n}\right)$ la suite définie sur $\N$ par $v_{n} = u_{n} - 10 \times  0,5^n$. 
+	\begin{enumerate}
+		\item Démontrer que la suite $\left(v_{n}\right)$ est une suite géométrique de raison $\dfrac{1}{5}$. On précisera le  
+premier terme de la suite $\left(v_{n}\right)$. \index{suite géométrique}
+		\item En déduire, que pour tout entier naturel $n$,
+ 
+\[u_{n} = - 8 \times  \left(\dfrac{1}{5}\right)^n + 10 \times  0,5^n.\]
+ 
+		\item Déterminer la limite de la suite $\left(u_{n}\right)$
+	\end{enumerate} 
+\item Recopier et compléter les lignes (1), (2) et (3) de l'algorithme suivant, afin qu'il affiche la plus petite valeur de $n$ telle que $u_{n} \leqslant  0,01$.
+\index{algorithme}
+\begin{center}
+\begin{tabularx}{0.6\linewidth}{|l X|} \hline
+\textbf{Entrée :}& $n$ et $u$ sont des nombres\\ 
+\textbf{Initialisation :}& $n$ prend la valeur 0\\
+& $u$ prend la valeur 2\\  
+\textbf{Traitement :}&Tant que ...\hfill (1)\\  
+	&\hspace{0,5cm} $n$ prend la valeur ... 	\hfill(2)\\ 
+	&\hspace{0,5cm} $u$ prend la valeur ... 	\hfill(3)\\ 
+&Fin Tant que\\ 
+\textbf{Sortie :}&Afficher $n$\\ \hline 
+\end{tabularx}
+\end{center}
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats ayant  choisi l'enseignement de spécialité}
+
+\medskip 
+
+En montagne, un randonneur a effectué des réservations dans deux types d'hébergements:
+
+L'hébergement A et l'hébergement B.
+
+Une nuit en hébergement A coûte 24 \euro{} et une nuit en  hébergement B coûte 45 ~\euro{}.
+
+Il se rappelle que le coût  total de sa réservation est de 438\euro{}.
+ 
+\emph{On souhaite retrouver les nombres $x$ et $y$ de nuitées passées respectivement en hébergement A et en  hébergement B}
+
+\medskip
+ 
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Montrer que les nombres $x$ et $y$ sont respectivement inférieurs ou égaux à 18 et 9.		
+		\item Recopier et compléter les lignes (1), (2) et (3) de l'algorithme suivant afin qu'il affiche les couples ($x$ ; $y$) possibles.
+
+\begin{center}
+\fbox{
+\begin{minipage}{8.5cm}
+\begin{tabular}{ll}
+\textbf{Entrée :} & $x$ et $y$ sont des nombres\\
+\textbf{Traitement :} & Pour $x$ variant de $0$ \ldots\hfill~~(1)\\
+&\phantom{XXX} Pour $y$ variant de 0 \ldots\hfill~~(2)\\
+&\phantom{XXXXXX} Si \ldots\hfill~~(3)\\
+&\phantom{XXXXXXXXX}Afficher $x$ et $y$\\
+&\phantom{XXXXXX}Fin Si\\
+&\phantom{XXX}Fin Pour\\
+&Fin Pour\\
+\textbf{Fin traitement}
+\end{tabular}
+\end{minipage}
+}
+\end{center}
+%
+%\begin{center}
+%\begin{tabular}{|l l|}\hline
+%\textbf{Entre :}&$x$ et $y$ sont deux nombres \\
+%\textbf{Traitement :}& Pour $x$ variant de 0  \ldots \hfill (1)\\ 
+%& \hspace{0.2cm}\begin{tabular}{|l}
+%Pour $y$ allant de 0  \ldots \hfill (2)\\
+%	\hspace{0.2cm}\begin{tabular}{|l}
+%	Si \ldots \hfill (3)\\ 
+%	Afficher $x$ et $y$\\
+%		\end{tabular}\\ 
+%	Fin si\\
+%Fin Pour\\
+%\end{tabular}\\ 
+%&Fin Pour\\ \hline
+%\end{tabular}
+%\end{center}
+		
+	\end{enumerate}
+\item Justifier que le coût total de la réservation est un multiple de 3.
+\item 
+	\begin{enumerate}
+	\item Justifier que l'équation $8x + 15y = 1$ admet pour solution au moins un couple d'entiers relatifs.
+	\item Déterminer une telle solution.
+	\item Résoudre l'équation (E) : $8x + 15y = 146$ où $x$ et $y$ sont des nombres entiers relatifs.
+	\end{enumerate}
+\item Le randonneur se souvient avoir passé au maximum 13 nuits en hébergement A.
+
+Montrer alors qu'il peut retrouver le nombre exact de nuits passées en hébergement A et celui des nuits passées en hébergement B.
+
+Calculer ces nombres.
+\end{enumerate}
+\end{document}
