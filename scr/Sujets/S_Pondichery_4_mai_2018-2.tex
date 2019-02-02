@@ -1,70 +1,13 @@
 %!TEX encoding = UTF-8 Unicode
-\documentclass[10pt]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{fourier}
-\usepackage[scaled=0.875]{helvet}
-\renewcommand{\ttdefault}{lmtt}
-\usepackage{makeidx}
-\usepackage{amsmath,amssymb}
-\usepackage{fancybox}
-\usepackage[normalem]{ulem}
-\usepackage{pifont}
-\usepackage{lscape}
-\usepackage{multicol}
-\usepackage{mathrsfs}
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{textcomp} 
-\newcommand{\euro}{\eurologo{}}
-%Tapuscrit : Denis Vergès
-\usepackage{pst-plot,pst-tree,pstricks,pst-node,pst-text}
-\usepackage{pst-eucl}
-\usepackage{pstricks-add}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
-\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
-\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
-\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
-\renewcommand{\labelenumii}{\textbf{\theenumii.}}
-\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
-\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
-\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
-\usepackage{fancyhdr}
-\usepackage[dvips]{hyperref}
-\hypersetup{%
-pdfauthor = {APMEP},
-pdfsubject = {Baccalauréat S},
-pdftitle = {Pondichéry  4 mai  2018},
-allbordercolors = white,
-pdfstartview=FitH} 
-\usepackage[frenchb]{babel}
-\usepackage[np]{numprint}
+\documentclass{cornouaille}
+
 \begin{document}
-\setlength\parindent{0mm}
-\rhead{\textbf{A. P{}. M. E. P{}.}}
-\lhead{\small Baccalauréat S}
-\lfoot{\small{Pondichéry}}
-\rfoot{\small{4 mai 2018}}
-\pagestyle{fancy}
-\thispagestyle{empty}
+\fexo{TS}{Baccalauréat S Pondichéry 4 mai 2018}{}
+\tableofcontents
 
-\begin{center}{\Large\textbf{\decofourleft~Baccalauréat S Pondichéry 4 mai 2018~\decofourright}}
-\end{center}
+\section{Analyse - Exponentielle}
+\begin{exercice}[Commun - Exponentielle][6]
 
-\vspace{0,25cm}
-
-\textbf{\textsc{Exercice 1} \hfill 6 points}
- 
-\textbf{Commun  à tous les candidats}
-
-\medskip
 
 \emph{Les parties } A \emph{et}   B \emph{peuvent être traitées de façon indépendante.}
 
@@ -186,14 +129,12 @@ par la fonction $d$ définie, pour tout nombre réel $t$ positif, par : $d(t) = 
 Quelle interprétation peut-on en donner ?
  	\end{enumerate}
 \end{enumerate}
-
+\end{exercice}
 \newpage
 
-\textbf{\textsc{Exercice 2} \hfill 4 points}
- 
-\textbf{Commun  à tous les candidats}
+\section{Complexes}
+\begin{exercice}[Commun- Complexes][4]
 
-\medskip
 
 Le plan est muni d'un repère orthonormé \Ouv.
 
@@ -221,12 +162,11 @@ segment [C$'$A].
 	
 Démontrer que le triangle MNP est isocèle.
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Probabilités}
+\begin{exercice}[Commun - Proba][5]
 
-\textbf{\textsc{Exercice 3} \hfill 5 points}
- 
-\textbf{Commun  à tous les candidats}
 
 \medskip
 
@@ -367,14 +307,12 @@ Il prélève 150 paquets pris au hasard dans la production de paquets labellisé
 Donner un intervalle de confiance, au niveau de confiance 95\,\%, de la nouvelle proportion
 de paquets labellisés \og extra fin \fg{} contenant du sucre provenant de l'exploitation U.
 \end{enumerate}
-
+\end{exercice}
 \vspace{0,5cm}
 
-\textbf{\textsc{Exercice 4} \hfill 5 points}
- 
-\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
+\section{Espace}
+\begin{exercice}[Obli - Espace][5]
 
-\medskip
 
 Dans l'espace muni du repère orthonormé \Oijk d'unité 1~cm, on considère les points
 A, B, C et D de coordonnées respectives (2~;~1~;~4), $(4~;~-1~;~0)$, $(0~;~3~;~2)$ et $(4~;~3~;~-2)$.
@@ -401,14 +339,10 @@ coordonnées $\left(\dfrac{2}{3}~;~\dfrac{1}{3}~;~\dfrac{8}{3}\right)$.
 	\end{enumerate}
 \item  Calculer le volume du tétraèdre ABCD.
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
-
-\textbf{\textsc{Exercice 4} \hfill 5 points}
- 
-\textbf{Candidats ayant suivi l'enseignement de spécialité}
-
-\medskip
+\section{Spécialité}
+\begin{exercice}[Spécialité][5]
 
 À toute lettre de l'alphabet on associe un nombre entier $x$ compris entre 0 et 25 comme
 indiqué dans le tableau ci-dessous:
@@ -523,8 +457,9 @@ question précédente.
 	
 Le \og chiffre de RABIN \fg{} est-il utilisable pour décoder un message lettre par lettre ?
 \end{enumerate}
-
+\end{exercice}
 \newpage
+\section{Annexes}
 \begin{center}
 
 \textbf{\Large ANNEXE}

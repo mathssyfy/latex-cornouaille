@@ -1,76 +1,12 @@
 %!TEX encoding = UTF-8 Unicode
-\documentclass[10pt]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{fourier}
-\usepackage[scaled=0.875]{helvet}
-\renewcommand{\ttdefault}{lmtt}
-\usepackage{amsmath,amssymb}
-\usepackage{fancybox}
-\usepackage[normalem]{ulem}
-\usepackage{pifont}
-\usepackage{lscape}
-\usepackage{diagbox}
-\usepackage{eucal}
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{mathrsfs}
-\usepackage{textcomp} 
-\usepackage{enumerate}
-\usepackage{enumitem} 
-\usepackage{colortbl} 
-\usepackage{variations}
-\newcommand{\euro}{\eurologo{}}
-%Tapuscrit : Denis Vergès
-\usepackage{pst-plot,pst-tree,pstricks,pst-node,pst-text}
-\usepackage{pst-eucl}
-\usepackage{pstricks-add}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
-\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
-\newcommand{\barre}[1]{\overline{\,\mathstrut#1\,}}
-\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
-\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
-\renewcommand{\labelenumii}{\textbf{\theenumii.}}
-\renewcommand{\thesubsection}{Exercice \Roman{subsection}} 
-\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
-\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
-\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
-\everymath{\displaystyle}
-\usepackage{fancyhdr}
-\usepackage[dvips]{hyperref}
-\hypersetup{%
-pdfauthor = {APMEP},
-pdfsubject = {Baccalauréat S},
-pdftitle = {Centres étrangers - 11 juin 2018},
-allbordercolors = white,
-pdfstartview=FitH} 
-\usepackage[frenchb]{babel}
-\usepackage[np]{numprint}
+\documentclass{cornouaille}
+
 \begin{document}
-\setlength\parindent{0mm}
-\marginpar{\rotatebox{90}{\textbf{A. P{}. M. E. P{}.}}}
-\rhead{\textbf{A. P{}. M. E. P{}.}}
-\lhead{\small Baccalauréat S }
-\lfoot{\small{Centres étrangers}}
-\rfoot{\small{11 juin 2018}}
-\pagestyle{fancy}
-\thispagestyle{empty} 
+\fexo{TS}{Baccalauréat S  Centres étrangers 11 juin 2018}{}
 
-\begin{center} {\Large{\textbf{\decofourleft~Baccalauréat S  Centres étrangers 11 juin 2018~\decofourright}}}
-\end{center}
-
-\subsection{\hfill 4 points}
- 
-\textbf{Pour tous les candidats}
-
-\medskip
+\tableofcontents
+\section{Analyse - exponentielle}
+\begin{exercice}[Commun - Analyse expo][4]
 
 Dans une usine, on se propose de tester un prototype de hotte aspirante pour un local industriel.
 
@@ -142,12 +78,11 @@ Montrer que la fonction $F$ est une primitive de la fonction $f$ sur l'intervall
 Arrondir le résultat au millième, soit à $0,1$\,\%.
 	\end{enumerate}
 \end{enumerate}
+\end{exercice}
 
-\subsection{\hfill 4 points}
- 
-\textbf{Pour tous les candidats}
+\section{Vrai-Faux}
+\begin{exercice}[Commun - Vrai-Faux][4]
 
-\medskip
 
 Pour chacune des quatre affirmations suivantes, indiquer si elle est vraie ou fausse, en justifiant la
 réponse. Il est attribué un point par réponse exacte correctement justifiée. Une réponse inexacte ou
@@ -197,12 +132,11 @@ eu strictement plus de $5$ dépistages positifs, est égale à $0,59$.
 \textbf{Affirmation 4 :} les solutions de l'équation sont les affixes de points appartenant à un même
 cercle de centre le point P d'affixe $2$.
 \end{enumerate}
+\end{exercice}
 
-\subsection{\hfill 7 points}
- 
-\textbf{Pour tous les candidats}
+\section{Probabilités}
+\begin{exercice}[Commun - Probas][7]
 
-\medskip
 
 \emph{Les parties} A \emph{et} B \emph{sont indépendantes}
 
@@ -318,10 +252,11 @@ En déduire que, pour tout $n \geqslant 1$,\: $p_n = 0,8 + 0,2 \times  0,5^{n-1}
 		\item  Déterminer la limite de la suite $\left(p_n\right)$.
 	\end{enumerate}
 \end{enumerate}
+\end{exercice}
 
-\subsection{\hfill 5 points}
- 
-\textbf{Candidats n'ayant pas suivi la spécialité mathématique}
+\section{Espace}
+\begin{exercice}[Obli - Espace][5]
+
 
 \medskip
 
@@ -406,10 +341,11 @@ On définit l'intérieur du cube comme l'ensemble des points $M(x~;~y~;~z)$ tels
 \end{array}\right.$
 
 Le point R est-il à l'intérieur du cube ?
+\end{exercice}
 
-\subsection{\hfill 5 points}
- 
-\textbf{Candidats ayant suivi la spécialité mathématique}
+\section{Spécialité}
+\begin{exercice}[Spécialité][5]
+
 
 \medskip
 
@@ -491,9 +427,9 @@ Les nombres choisis par A sont encore $p = 5$, $q = 11$ et $c = 23$.
 est $b = 17$.
 	\end{enumerate}
 \end{enumerate}
-
+\end{exercice}
 \newpage
-
+\section{Annexes}
 \begin{center}
 \textbf{\large Annexe (à rendre avec la copie)}
 

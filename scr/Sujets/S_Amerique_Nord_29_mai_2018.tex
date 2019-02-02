@@ -1,68 +1,12 @@
-\documentclass[10pt]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{fourier}
-\usepackage[scaled=0.875]{helvet} 
-\renewcommand{\ttdefault}{lmtt}
-\usepackage{amsmath,amssymb,makeidx}
-\usepackage[normalem]{ulem}
-\usepackage{fancybox}
-\usepackage{tabularx}
-\usepackage{colortbl}
-\usepackage{ulem}
-\usepackage{lscape}
-\usepackage{dcolumn}
-\usepackage{textcomp}
-\newcommand{\euro}{\eurologo{}}
-\usepackage{pstricks,pst-plot,pst-tree,pstricks-add}
-\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
-\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
-% Tapuscrit Denis Vergès
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
-\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
-\renewcommand{\labelenumii}{\textbf{\theenumii.}}
-\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
-\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
-\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-\hypersetup{%
-pdfauthor = {APMEP},
-pdfsubject = {TS Amérique du Nord},
-pdftitle = {29 mai 2018},
-allbordercolors = white,
-pdfstartview=FitH}
-\usepackage[np]{numprint}
-\usepackage[frenchb]{babel}
+\documentclass{cornouaille}
+
 \begin{document}
-\setlength\parindent{0mm}
-\rhead{\textbf{A. P{}. M. E. P{}.}}
-\lhead{\small Baccalauréat S}
-\lfoot{\small{Amérique du Nord}}
-\rfoot{\small 29 mai 2018}
-\pagestyle{fancy}
-\thispagestyle{empty}
-\begin{center}\textbf{Durée : 4 heures}
+\fexo{TS}{Baccalauréat S Amérique du Nord 29 mai 2018}{}
 
-\vspace{0,5cm}
+\tableofcontents
+\section{Probabilités}
+\begin{exercice}[Commun - Proba][6]
 
-{\Large \textbf{\decofourleft~Baccalauréat S Amérique du Nord 29 mai 2018~\decofourright}}
-\end{center}
-
-\vspace{0,5cm}
-
-\textbf{Exercice 1 \hfill  6 points}
-
-\textbf{Commun à  tous les candidats}
-
-\medskip
 
 On étudie certaines caractéristiques d'un supermarché d'une petite ville.
 
@@ -186,14 +130,11 @@ Quelle est la probabilité, arrondie à $10^{-2}$, qu'il obtienne au moins une c
 \item  À partir de quel montant d'achats, arrondi à 10~\euro, la probabilité d'obtenir au moins une carte
 gagnante est-elle supérieure à 50\,\% ?
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Analyse - ln}
+\begin{exercice}[Commun-Analyse-ln][4]
 
-\textbf{Exercice 2 \hfill  4 points}
-
-\textbf{Commun à  tous les candidats}
-
-\medskip
 
 \parbox{0.6\linewidth}{Lors d'une expérience en laboratoire, on lance un projectile dans un milieu fluide. L'objectif est de déterminer pour quel angle de tir
 $\theta$ par rapport à l'horizontale la hauteur du projectile ne dépasse
@@ -242,14 +183,11 @@ fonction $f$ au point d'abscisse $0$ comme indiqué sur le schéma donné ci-des
 
 Déterminer une valeur approchée au dixième de degré près de l'angle $\theta$.
 \end{enumerate}
- 
-\vspace{0,5cm}
+ \end{exercice}
 
-\textbf{Exercice 3 \hfill  5 points}
+\section{Espace}
+\begin{exercice}[Commun - Espace][5]
 
-\textbf{Commun à  tous les candidats}
-
-\medskip
 
 On se place dans l'espace muni d'un repère orthonormé dont l'origine est le point A.
 
@@ -310,14 +248,11 @@ On considère un point $M'$ de la droite (CD) distinct du point J.
 		\item Justifier que $MM' > IJ$ et conclure.
 	\end{enumerate}
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Suites}
+\begin{exercice}[Obligatoire - Suites][5]
 
-\textbf{Exercice 4 \hfill  5 points}
-
-\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
-
-\medskip
 
 \textbf{Les deux graphiques donnés en annexe seront à compléter et à rendre avec la copie}
 
@@ -432,14 +367,11 @@ le chien se trouve au point d'abscisse 3 de la courbe $\mathcal{F}$.
 
 Justifier qu'au cours du temps la distance $MS$ se rapproche d'une valeur limite que l'on déterminera.
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Spécialité}
+\begin{exercice}[Spécialité][5]
 
-\textbf{Exercice 4 \hfill  5 points}
-
-\textbf{Candidats ayant suivi l'enseignement de spécialité}
-
-\medskip
 
 Dans une région, on s'intéresse à la cohabitation de deux espèces animales : les campagnols et les
 renards, les renards étant les prédateurs des campagnols. 
@@ -564,17 +496,17 @@ Dans cette partie on utilise le modèle de la partie B.
 
 Est - il possible de donner à $u_0$ et $v_0$ des valeurs afin que les deux populations restent stables d'une
 année sur l'autre, c'est-à-dire telles que pour tout entier naturel $n$ on ait $u_{n+1} = u_n$ et $v_{n+1} = v_n$ ? (On parle alors d'état stable.)
-
+\end{exercice}
 
 \newpage
-
+\section{Annexes}
 \begin{center}
 \textbf{\large Annexe}
 
-\vspace{1cm}
+
 
 \textbf{À rendre avec la copie}
-\vspace{1cm}
+
 \textbf{EXERCICE 4}
 
 \textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
@@ -595,7 +527,7 @@ Graphique \no 1
 \uput[ur](5,1){$S_1$}\uput[ur](5,2){$S_2$}\uput[ur](5,3){$S_3$}
 \end{pspicture}
 
-\vspace{1cm}
+
 
 \textbf{Partie B}, question 1
 

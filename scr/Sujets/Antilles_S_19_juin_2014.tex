@@ -1,75 +1,13 @@
-\documentclass[10pt]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}%ATTENTION codage en utf8 !!! 
-\usepackage[upright]{fourier}
-\usepackage[scaled=0.875]{helvet}
-\renewcommand{\ttdefault}{lmtt}
-\usepackage{amsmath,amssymb,makeidx}
-\usepackage{fancybox}
-\usepackage{tabularx}
-\usepackage[normalem]{ulem}
-\usepackage{pifont}
-\usepackage{textcomp} 
-\usepackage{multicol}
-\newcommand{\euro}{\eurologo{}}
-%Tapuscrit : Denis Vergès
-%Merci à Florence Francillette et à Vincent Tolleron pour le sujet
-\usepackage{pst-plot,pst-text}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\abs}[1]{\left\vert#1\right\vert}
-\usepackage[left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
-\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
-\newcommand{\barre}[1]{\overline{\,\mathstrut#1\,}}
-\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
-\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
-\renewcommand{\labelenumii}{\textbf{\theenumii.}}
-\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
-\def\Oijk{$\left(\text{O},~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
-\def\Ouv{$\left(\text{O},~\vect{u},~\vect{v}\right)$}
-\def\e{\text{e}}
-\def\i{\text{i}}
-\setlength{\voffset}{-1,5cm}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-\hypersetup{%
-pdfauthor = {APMEP},
-pdfsubject = {TS Antilles-Guyane},
-pdftitle = {19 juin 2014},
-allbordercolors = white,
-pdfstartview=FitH}  
-\usepackage[frenchb]{babel}
-\usepackage[np]{numprint}
-\usepackage{pstricks-add}
-\usepackage{pst-bezier}
-\usepackage{graphicx}
+\documentclass{cornouaille}
+
 \begin{document}
-\setlength\parindent{0mm}
-\rhead{\textbf{A. P{}. M. E. P{}.}}
-\lhead{\small Baccalauréat S}
-\lfoot{\small{Antilles-Guyane}}
-\rfoot{\small{19 juin 2014}}
-\pagestyle{fancy}
-\thispagestyle{empty}
-\begin{center}\textbf{Durée : 4 heures}
+\fexo{TS}{Baccalauréat S Antilles-Guyane 19 juin 2014}{}
 
-\vspace{0,5cm}
+\tableofcontents
 
-{\Large \textbf{Baccalauréat S Antilles-Guyane 19 juin 2014}}
-\end{center}
+\section{Probabilités}
+\begin{exercice}[Commun - Proba][5]
 
-\vspace{0,5cm}
-
-\textbf{\textsc{Exercice 1} \hfill 5 points}
- 
-\textbf{Commun à tous les candidats}
-
-\medskip
 
 \emph{Les parties A et B sont indépendantes}
 
@@ -141,14 +79,11 @@ Il constate que $65$ de ces huîtres ont une masse supérieure à 91~g.
 Après en avoir vérifié les conditions d'application, donner un intervalle de fluctuation asymptotique au seuil de 95\,\% de la variable aléatoire $F$.\index{intervalle de fluctuation} 
 \item Que peut penser le restaurateur de l'affirmation de l'ostréiculteur ? 
 \end{enumerate} 
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Analyse - Exponentielle}
+\begin{exercice}[Commun - expo][6]
 
-\textbf{\textsc{Exercice 2} \hfill 6 points}
- 
-\textbf{Commun à tous les candidats}
-
-\medskip 
 
 On considère la fonction $f$ définie et dérivable sur l'ensemble $\R$ des nombres réels par 
 
@@ -204,15 +139,11 @@ Démontrer que $H$ est une primitive sur $\R$ de la fonction $h$ définie par $h
  
 Calculer, en unité d'aire, l'aire du domaine $\mathcal{D}$. 
 \end{enumerate}
+\end{exercice}
 
+\section{Vrai-Faux}
+\begin{exercice}[Commun Vrai-Faux][4]
 
-\vspace{0,5cm}
-
-\textbf{\textsc{Exercice 3} \hfill 4 points}
- 
-\textbf{Commun à tous les candidats}
-
-\medskip 
 
 \emph{Pour chacune des quatre propositions suivantes, indiquer si elle est vraie ou fausse en justifiant la réponse.\\ 
 Il est attribué un point par réponse exacte correctement justifiée. Une réponse non justifiée n'est pas prise en compte. Une absence de réponse n'est pas pénalisée.}
@@ -242,14 +173,12 @@ z &=&- \dfrac{3}{2}t + 2
  
 \textbf{Proposition 4 :} Les plans $\mathcal{P}$ et $\mathcal{P}'$ sont parallèles. 
 \end{enumerate}
+\end{exercice}
 
 
+\section{Suites}
+\begin{exercice}[Obligatoire - Suites][5]
 
-\vspace{0,5cm}
-
-\textbf{\textsc{Exercice 4} \hfill 5 points}
- 
-\textbf{Candidats n'ayant pas choisi l'enseignement de spécialité}
 
 \medskip 
 
@@ -310,14 +239,11 @@ premier terme de la suite $\left(v_{n}\right)$. \index{suite géométrique}
 \end{tabularx}
 \end{center}
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Spécialité}
+\begin{exercice}[Spécialité][5]
 
-\textbf{\textsc{Exercice 4} \hfill 5 points}
- 
-\textbf{Candidats ayant  choisi l'enseignement de spécialité}
-
-\medskip 
 
 En montagne, un randonneur a effectué des réservations dans deux types d'hébergements:
 
@@ -354,23 +280,8 @@ Il se rappelle que le coût  total de sa réservation est de 438\euro{}.
 \end{minipage}
 }
 \end{center}
-%
-%\begin{center}
-%\begin{tabular}{|l l|}\hline
-%\textbf{Entre :}&$x$ et $y$ sont deux nombres \\
-%\textbf{Traitement :}& Pour $x$ variant de 0  \ldots \hfill (1)\\ 
-%& \hspace{0.2cm}\begin{tabular}{|l}
-%Pour $y$ allant de 0  \ldots \hfill (2)\\
-%	\hspace{0.2cm}\begin{tabular}{|l}
-%	Si \ldots \hfill (3)\\ 
-%	Afficher $x$ et $y$\\
-%		\end{tabular}\\ 
-%	Fin si\\
-%Fin Pour\\
-%\end{tabular}\\ 
-%&Fin Pour\\ \hline
-%\end{tabular}
-%\end{center}
+
+
 		
 	\end{enumerate}
 \item Justifier que le coût total de la réservation est un multiple de 3.
@@ -386,4 +297,5 @@ Montrer alors qu'il peut retrouver le nombre exact de nuits passées en héberge
 
 Calculer ces nombres.
 \end{enumerate}
+\end{exercice}
 \end{document}

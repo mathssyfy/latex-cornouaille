@@ -1,70 +1,14 @@
-\documentclass[10pt]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{fourier}
-\usepackage[scaled=0.875]{helvet} 
-\renewcommand{\ttdefault}{lmtt} 
-\usepackage{amsmath,amssymb,makeidx}
-\usepackage[normalem]{ulem}
-\usepackage{fancybox,graphicx}
-\usepackage{tabularx}
-\usepackage{ulem}
-\usepackage{dcolumn}
-\usepackage{textcomp}
-\usepackage{diagbox}
-\usepackage{tabularx}
-\usepackage{lscape}
-\newcommand{\euro}{\eurologo{}}
-%Tapuscrit : Denis Vergès relu et corrigé par François Hache
-\usepackage{pstricks,pst-plot,pst-text,pst-tree,pstricks-add}
-\usepackage[left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
-\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
-\renewcommand{\labelenumii}{\textbf{\theenumii.}}
-\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
-\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
-\def\Oijk{$\left(\text{O},~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
-\def\Ouv{$\left(\text{O}\,;~\vect{u},~\vect{v}\right)$}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-\hypersetup{%
-pdfauthor = {APMEP},
-pdfsubject = {Baccalauréat S},
-pdftitle = {Antilles-Guyane 22 juin 2015},
-allbordercolors = white,
-pdfstartview=FitH}   
-\thispagestyle{empty}
-\usepackage[frenchb]{babel}
-\usepackage[np]{numprint}
+\documentclass{cornouaille}
+
 \begin{document}
-\setlength\parindent{0mm}
-\marginpar{\rotatebox{90}{\textbf{A. P{}. M. E. P{}.}}}
-\rhead{\textbf{A. P{}. M. E. P{}.}}
-\lhead{\small Baccalauréat S }
-\rfoot{\small{22 juin 2015}}
-\lfoot{\small{Antilles-Guyane}}
-\renewcommand \footrulewidth{.2pt}
-\pagestyle{fancy}
-\thispagestyle{empty}
-\begin{center} {\Large{\textbf{\decofourleft~Baccalauréat S Antilles-Guyane 22 juin 2015~\decofourright
-}}} 
 
-\end{center}
+\fexo{TS}{Baccalauréat S Antilles-Guyane 22 juin 2015}{}
+\tableofcontents
 
-\vspace{0,5cm}
+\section{Analyse - ln}
 
-\textbf{\textsc{Exercice 1 \hfill 6 points}}
+\begin{exercice}[Commun-Analyse - ln][6]
 
-\textbf{Commun à tous les candidats} 
-
-\medskip
 
 Soit $f$ la fonction définie sur l'intervalle $]0~;~+ \infty[$ par $f(x) = \ln x$.\index{fonction logarithme népérien}
 
@@ -145,14 +89,12 @@ $a = \frac{1}{2\text{e}}$.
 	
 Justifier.
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Probabilités}
+\begin{exercice}[commun - proba][5]
 
-\textbf{\textsc{Exercice 2 \hfill 5 points}}
 
-\textbf{Commun à tous les candidats} 
-
-\medskip
 
 \emph{La partie C peut être traitée indépendamment des parties A et B}
 
@@ -256,14 +198,12 @@ que le circuit A soit défaillant avant un an.
 au moins des deux composants est défaillant. Calculer la probabilité que le circuit B soit
 défaillant avant un an.
 \end{enumerate}
- 
-\vspace{0,5cm}
+ \end{exercice}
 
-\textbf{\textsc{Exercice 3 \hfill 4 points}}
+\section{Complexes}
+\begin{exercice}[Commun - Complexes][4]
 
-\textbf{Commun à tous les candidats} 
 
-\medskip
 
 \textbf{Partie A}
 
@@ -319,14 +259,12 @@ Le but de cette partie est d'étudier si le comportement à l'infini de la suite
 		\item Démontrer cette conjecture, puis conclure.
 	\end{enumerate} 
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Suites}
+\begin{exercice}[Obligatoire - Suites][5]
 
-\textbf{\textsc{Exercice 4 \hfill 5 points}}
 
-\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité} 
-
-\medskip
 
 \textbf{Partie A}
 
@@ -388,14 +326,10 @@ Démontrer que la suite $\left(v_n\right)$ est géométrique de raison $0,5$ et 
 
 \item  Déterminer alors la limite de la suite $\left(u_n\right)$.
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
-
-\textbf{\textsc{Exercice 4 \hfill 5 points}}
-
-\textbf{Candidats ayant  suivi l'enseignement de spécialité} 
-
-\medskip
+\section{Spécialité}
+\begin{exercice}[Spécialité][5]
 
 \emph{Les parties A et B peuvent être traitées de façon indépendante}
 
@@ -478,11 +412,13 @@ tels que $9u + 26v = 1$. Donner sans justifier un couple $(u,~v)$ qui convient.
 	
 Déterminer la valeur de $p$ (on admettra que $p$ est unique).
 \item Dans cette question, on choisit $p = 13$ et $q = 2$. Coder les lettres B et D. Que peut-on dire de ce codage ?
-\end{enumerate} 
-%\vspace*{-15cm} 
-\pagebreak
-\begin{landscape}
+\end{enumerate}
+\end{exercice}
+
+\section{Annexes}
+
 \begin{center}
+\textbf{Annexe}
 
 \psset{unit=2.2cm}
 \begin{pspicture*}(-0.5,-0.5)(8.5,5)
@@ -494,11 +430,10 @@ Déterminer la valeur de $p$ (on admettra que $p$ est unique).
 \psplot[plotpoints=2000,linewidth=1.25pt]{0}{7}{x dup mul 0.19 mul}
 \psplot[plotpoints=2000,linewidth=1.25pt]{0}{7}{x dup mul 0.4 mul}
 \psplot[plotpoints=2000,linewidth=1.25pt]{0.4}{7}{x ln}
-\rput{-90}(7.5,2.5){\textbf{\large ANNEXE 1 de l'exercice 1}}
-\rput{-90}(8,2.5){\textbf{\large À RENDRE AVEC LA COPIE}}
+
 \end{pspicture*}
 \end{center} 
-\end{landscape} 
+
 \newpage
 \begin{center}
 \textbf{\large À RENDRE AVEC LA COPIE}
