@@ -1,0 +1,387 @@
+\documentclass{cornouaille}
+\begin{document}
+
+\fexo{Bac Blanc}{Bac Blanc - document de travail}{2019}
+\tableofcontents
+
+\section{La queue du lézard}
+\begin{exercice}[Amérique du Sud Novembre 2018][4]
+Lorsque la queue d'un lézard des murailles casse, elle repousse toute seule en une soixantaine de jours.
+
+Lors de la repousse, on modélise la longueur en centimètre de la queue du lézard en fonction du nombre de jours.
+
+Cette longueur est modélisée par la fonction $f$ définie sur 
+$[0~;~+ \infty[$ par :
+
+\[f(x) = 10\text{e}^{u(x)}\]\index{fonction exponentielle}
+
+où $u$ est la fonction définie sur $[0~;~+ \infty[$ par :
+ 
+\[u(x) = - \text{e}^{2 - \frac{x}{10}}.\]
+
+On admet que la fonction $f$ est dérivable sur $[0~;~+ \infty[$ et on note $f'$ sa fonction dérivée.
+
+\medskip
+
+\begin{enumerate}
+\item Vérifier que pour tout $x$ positif on a $f'(x) = - u(x)\text{e}^{u(x)}$.\index{dérivée}
+
+En déduire le sens de variations de la fonction $f$ sur $[0~;~+ \infty[$.
+\item  
+	\begin{enumerate}
+		\item Calculer $f(20)$.
+		
+En déduire une estimation, arrondie au millimètre, de la longueur de la queue du lézard après vingt jours de repousse.
+		\item Selon cette modélisation, la queue du lézard peut-elle mesurer $11$ cm ?
+	\end{enumerate}
+\item  On souhaite déterminer au bout de combien de jours la vitesse de croissance est maximale.
+
+On admet que la vitesse de croissance au bout de $x$ jours est donnée par $f'(x)$.
+
+On admet que la fonction dérivée $f'$ est dérivable sur $[0~;~+ \infty[$, on note $f''$ la fonction dérivée de $f'$ et on admet que :\index{dérivée}
+
+\[f''(x) = \dfrac{1}{10}u(x)\text{e}^{u(x)}(1 + u(x)).\]
+
+	\begin{enumerate}
+		\item Déterminer les variations de $f'$ sur  $[0~;~+ \infty[$.
+		\item En déduire au bout de combien de jours la vitesse de croissance de la longueur de la queue du lézard est maximale.
+	\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\section{Ce matin, un lapin...}
+\begin{exercice}[Polynésie juin 2018][5]
+Un lapin se déplace dans un terrier composé de trois galeries, notées A, B et C, dans chacune desquelles il est confronté à un stimulus particulier.
+
+À chaque fois qu'il est soumis à un stimulus, le lapin reste dans la galerie où il se trouve ou change de galerie. Cela constitue une étape.
+
+\smallskip
+
+Soit $n$ un entier naturel.
+
+On note $a_n$ la probabilité de l'évènement : \og le lapin est dans la galerie A à l'étape $n$ \fg.
+On note $b_n$ la probabilité de l'évènement : \og le lapin est dans la galerie B à l'étape $n $\fg.
+On note $c_n$ la probabilité de l'évènement : \og le lapin est dans la galerie C à l'étape $n $\fg.
+
+À l'étape $n = 0$, le lapin est dans la galerie A.
+
+Une étude antérieure des réactions du lapin face aux différents stimuli permet de modéliser ses déplacements par le système suivant :
+
+\[\renewcommand\arraystretch{1.5}\left\{\begin{array}{l c r}
+a_{n+1}&=&\frac{1}{3}a_n + \frac{1}{4} b_n \phantom{+ \frac{2}{3}c_n}\\
+b_{n+1}&=&\frac{2}{3}a_n + \frac{1}{2} b_n + \frac{2}{3}c_n\\
+c_{n+1}&=&\frac{1}{4}b_n + \frac{1}{3} c_n
+\end{array}\right.\]
+
+\medskip
+
+L'objectif de cet exercice est d'estimer dans quelle galerie le lapin a la plus grande probabilité de se trouver à long terme.\index{probabilité}
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+
+À l'aide d'un tableur, on obtient le tableau de valeurs suivant:\index{tableur}
+
+\begin{center}
+\begin{tabularx}{0.75\linewidth}{|c|*{4}{>{\centering \arraybackslash}X|}}\hline
+	&A &B &C &D\\ \hline
+1 	&$n$ &$a_n$ &$b_n$ &$c_n$\\ \hline
+2 	&0	& 1 	&0	&0\\ \hline
+3	&1	&0,333 	&0,667 	&0\\ \hline
+4 	&2 	&0,278 &0,556 &0,167\\ \hline
+5 	&3 &0,231 &0,574 &0,194\\ \hline
+6 	&4 &0,221 &0,571 &0,208\\ \hline
+7 	&5 &0,216 &0,572 &0,212\\ \hline
+8 	&6 &0,215 &0,571 &0,214\\ \hline
+9 	&7 &0,215 &0,571 &0,214\\ \hline
+10 	&8 &0,214 &0,571 &0,214\\ \hline
+11 	&9 &0,214 &0,571 &0,214\\ \hline
+12 	&10 &0,214 &0,571 &0,214\\ \hline
+\end{tabularx}
+\end{center}
+
+\medskip
+
+\begin{enumerate}
+\item Quelle formule faut-il entrer dans la cellule C3 et recopier vers le bas pour remplir la colonne C ?
+\item Quelle conjecture peut-on émettre ?
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+\begin{enumerate}
+\item On définit la suite $\left(u_n\right)$, pour tout entier naturel $n$, par $u_n = a_n - c_n$.\index{suite}
+	\begin{enumerate}
+		\item Démontrer que la suite $\left(u_n\right)$ est géométrique en précisant sa raison.\index{suite géométrique}
+		\item Donner, pour tout entier naturel $n$, l'expression de $u_n$ en fonction de $n$.
+	\end{enumerate}
+\item  On définit la suite $\left(v_n\right)$ par $v_n = b_n - \dfrac{4}{7}$ pour tout entier naturel $n$.
+	\begin{enumerate}
+		\item Expliquer pourquoi pour tout entier naturel $n$,\: $a_n + b_n + c_n = 1$ et en déduire que pour tout entier naturel $n$,\: $v_{n+1} = - \dfrac{1}{6}v_n$.
+		\item En déduire, pour tout entier naturel $n$, l'expression de $v_n$ en fonction de $n$.
+	\end{enumerate}
+\item  En déduire que pour tout entier naturel $n$, on a :
+
+\[a_{n} = \dfrac{3}{14} +\dfrac{1}{2}\left(\dfrac{1}{3}\right)^n + \dfrac{2}{7}\left(- \dfrac{1}{6}\right)^n, \quad b_{n} = \dfrac{4}{7} - \dfrac{4}{7}\left(- \dfrac{1}{6}\right)^n \quad \text{et} \quad c_{n} = \dfrac{3}{14} -\dfrac{1}{2}\left(\dfrac{1}{3}\right)^n + \dfrac{2}{7}\left(- \dfrac{1}{6}\right)^n.\]
+
+\item  Que peut-on en déduire sur la position du lapin après un très grand nombre d'étapes ?
+\end{enumerate}
+\end{exercice}
+
+\section{Où dors-tu, tortue tordue ?}
+\begin{exercice}[Amérique du Sud][4]
+Deux espèces de tortues endémiques d'une petite île de l'océan pacifique, les tortues vertes et les tortues imbriquées, se retrouvent lors de différents épisodes reproducteurs sur deux des plages de l'île pour pondre. Cette île, étant le point de convergence de nombreuses tortues, des spécialistes ont décidé d'en profiter pour recueillir différentes données sur celles-ci.\index{géométrie dans l'espace}
+
+\smallskip
+
+Ils ont dans un premier temps constaté que les couloirs empruntés dans l'océan par chacune des deux espèces pour arriver sur l'île pouvaient être assimilés à des trajectoires rectilignes.
+
+Dans la suite, l'espace est rapporté à un repère orthonormé \Oijk{} d'unité $100$ mètres.
+
+Le plan \Oij{} représente le niveau de l'eau et on admet qu'un point $M(x~;~y~;~z)$ avec $z < 0$ se situe dans l'océan.
+
+La modélisation des spécialistes établit que :
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] la trajectoire empruntée dans l'océan par les tortues vertes a pour support la droite $\mathcal{D}_1$ dont une représentation paramétrique est :\index{equation parametrique@équation paramétrique}
+
+\[\left\{\begin{array}{l c r}
+x	&=&3+t\\
+y 	&=&6t\\
+z	&=&- 3t
+\end{array}\right.\:\text{avec } \:t\: \text{réel}\: ;\]
+
+\item[$\bullet~~$] la trajectoire empruntée dans l'océan par les tortues imbriquées a pour support la droite $\mathcal{D}_2$ dont une représentation paramétrique est :
+
+\[\left\{\begin{array}{l c r}
+x&=&10k\\
+y&=&2 + 6k\\ 
+z&=&- 4k
+\end{array}\right.\:\text{avec } \:k\: \text{réel}\: ;\]
+\end{itemize}
+\setlength\parindent{0mm}
+
+\smallskip
+
+\begin{enumerate}
+\item Démontrer que les deux espèces ne sont jamais amenées à se croiser avant d'arriver sur l'île.
+\item L'objectif de cette question est d'estimer la distance minimale séparant ces deux
+trajectoires.
+	\begin{enumerate}
+		\item Vérifier que le vecteur $\vect{n}\begin{pmatrix}3\\13\\27\end{pmatrix}$ est normal aux droites $\mathcal{D}_1$ et $\mathcal{D}_2$.\index{vecteur normal}
+		\item On admet que la distance minimale entre les droites $\mathcal{D}_1$ et $\mathcal{D}_2$ est la distance HH$'$ où $\vect{\text{HH}'}$ est un vecteur colinéaire à $\vect{n}$ avec H appartenant à la droite $\mathcal{D}_1$ et H$'$ appartenant à la droite $\mathcal{D}_2$.
+
+Déterminer une valeur arrondie en mètre de cette distance minimale.
+
+On pourra utiliser les résultats ci-après fournis par un logiciel de calcul formel
+
+\begin{tabularx}{\linewidth}{|c|X|}\hline
+\multicolumn{2}{|l|}{$\triangleright$ Calcul formel}\\ \hline
+1	&Résoudre$(\{10*k-3-t=3*l,2 + 6*k - 6*t = 13*l,- 4*k + 3*t= 27*l\},\{k,~l,~t\})$\\ 
+	&$\to \left\{\left\{k = \dfrac{675}{\np{1814}},\:\ell = \dfrac{17}{907}, \: t =\dfrac{603}{907}\right\}\right\}$\\ \hline
+\end{tabularx}
+
+	\end{enumerate}
+\item  Les scientifiques décident d'installer une balise en mer.
+
+Elle est repérée par le point B de coordonnées (2~;~4~;~0).
+	\begin{enumerate}
+		\item Soit $M$ un point de la droite $\mathcal{D}_1$.
+		
+Déterminer les coordonnées du point $M$ tel que la distance B$M$ soit minimale.
+		\item En déduire la distance minimale, arrondie au mètre, entre la balise et les tortues vertes.
+	\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\section{Le renard dans le  poulailler}
+
+\begin{exercice}[Amérique du Nord 2018][5]
+Dans une région, on s'intéresse à la cohabitation de deux espèces animales : les campagnols et les
+renards, les renards étant les prédateurs des campagnols. 
+
+Au 1\up{er} juillet 2012, on estime qu'il y a dans cette région approximativement deux millions de campagnols et cent-vingt renards.
+
+On note $u_n$ le nombre de campagnols et $v_n$ le nombre de renards au 1\up{er} juillet de l'année $2012+ n$.\index{suite}
+
+\bigskip
+
+\textbf{Partie A - Un modèle simple}
+
+\medskip
+
+On modélise l'évolution des populations par les relations suivantes :
+
+\[\left\{\begin{array}{l c r}
+u_{n+1}& =& 1,1u_n - \np{2000}v_n\\
+v_{n+1} &=& 2 \times 10^{-5}u_n + 0,6v_n
+\end{array}\right. \quad \text{pour tout entier }\:n \geqslant 0,\: \text{avec } \:u_0 = \np{2000000}\:  \text{ et} \: v_0 = 120.\]\index{suite}
+
+\medskip
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item On considère la matrice colonne $U_n = \begin{pmatrix}u_n\\v_n\end{pmatrix}$ pour tout entier $n \geqslant 0$.\index{matrice}
+		
+Déterminer la matrice $A$ telle que $U_{n+1} = A \times U_n$ pour tout entier $n$ et donner la matrice $U_0$.
+		\item Calculer le nombre de campagnols et de renards estimés grâce à ce modèle au 1\up{er} juillet
+2018.
+	\end{enumerate}
+\item Soit les matrices $P = \begin{pmatrix}\np{20000}&\np{5000}\\1&1\end{pmatrix}$, \:$D = \begin{pmatrix}1&0\\0&0,7\end{pmatrix}$ et $P^{-1} = \dfrac{1}{\np{15000}}\begin{pmatrix}1& \np{-5000}\\- 1&\np{20000}\end{pmatrix}$.
+	
+On admet que $P^{- 1}$ est la matrice inverse de la matrice $P$ et que $A = P \times D \times P^{- 1}$.\index{matrice inverse}
+	\begin{enumerate}
+		\item Montrer que pour tout entier naturel $n$,\: $U_n = P \times D^n \times P^{- 1} \times U_0$.
+		\item Donner sans justification l'expression de la matrice $D^n$ en fonction de $n$.
+		\item On admet que, pour tout entier naturel $n$ :
+	
+\renewcommand\arraystretch{1.8}	
+\[\left\{\begin{array}{l c r}
+u_n &=& \dfrac{2,8 \times 10^7 + 2 \times 10^6 \times 0,7^n}{15}\\
+
+v_n &=&\dfrac{\np{1400} + 400 \times 0,7^n}{15}
+		\end{array}\right.\]
+\renewcommand\arraystretch{1}	
+Décrire l'évolution des deux populations.
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B - Un modèle plus conforme à la réalité}
+
+\medskip
+
+Dans la réalité, on observe que si le nombre de renards a suffisamment baissé, alors le nombre de
+campagnols augmente à nouveau, ce qui n'est pas le cas avec le modèle précédent. 
+
+On construit donc un autre modèle, plus précis, qui tient compte de ce type d'observations à l'aide des relations suivantes :\index{suite}
+
+\[\left\{\begin{array}{l c r}
+u_{n+1} &=& 1,1u_n - 0,001u_n \times v_n\\
+v_{n+1} &=& 2 \times 10^{-7} u_n \times v_n + 0,6v_n
+\end{array}\right.\quad \text{pour tout entier }\:n \geqslant 0,\: \text{avec }\:u_0 = \np{2000000}\: \text{et }\: v_0 = 120.\]
+
+\medskip
+
+Le tableau ci-dessous présente ce nouveau modèle sur les $25$ premières années en donnant les
+effectifs des populations arrondis à l'unité :
+\begin{center}
+\begin{tabularx}{0.7\linewidth}{|>{\columncolor[gray]{0.7}}c|*{3}{>{\centering \arraybackslash}X|}}\hline
+\rowcolor[gray]{0.7}&A &B &C\\ \hline
+1& \multicolumn{3}{c|}{Modèle de la \textbf{partie B}}\\ \hline
+2& $n$ 	&$u_n$ 			&$v_n$\\ \hline
+3&0		& \np{2000000} 	&120\\ \hline
+4&1		& \np{1960000} 	&120\\ \hline
+5&2		& \np{1920800} 	&119\\ \hline
+6&3		& \np{1884228} 	&117\\ \hline
+7&4		& \np{1851905} 	&114\\ \hline
+8&5		& \np{1825160} 	&111\\ \hline
+9&6		& \np{1804988} 	&107\\ \hline
+10&7	& \np{1792049} 	&103\\ \hline
+11&8	& \np{1786692} 	&99\\ \hline
+12&9	& \np{1789005} 	&94\\ \hline
+13&10	& \np{1798854} 	&91\\ \hline
+14&11	& \np{1815930} 	&87\\ \hline
+15&12	& \np{1839780} 	&84\\ \hline
+16&13	& \np{1869827} 	&81\\ \hline
+17&14	& \np{1905378} 	&79\\ \hline
+18&15	& \np{1945622} 	&77\\ \hline
+19&16	& \np{1989620} 	&77\\ \hline
+20&17	& \np{2036288} 	&76\\ \hline
+21&18	& \np{2084374} 	&77\\ \hline
+22&19	& \np{2132440} 	&78\\ \hline
+23&20	& \np{2178846} 	&80\\ \hline
+24&21	& \np{2221746} 	&83\\ \hline
+25&22	& \np{2259109} 	&87\\ \hline
+26&23	& \np{2288766} 	&91\\ \hline
+27&24	& \np{2308508} 	&97\\ \hline
+\end{tabularx}
+\end{center}
+
+\medskip
+
+\begin{enumerate}
+\item Quelles formules faut-il écrire dans les cellules B4 et C4 et recopier vers le bas pour remplir
+les colonnes B et C ?\index{tableur}
+\item  Avec le deuxième modèle, à partir de quelle année observe-t-on le phénomène décrit (baisse
+des renards et hausse des campagnols) ?
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+\medskip
+
+Dans cette partie on utilise le modèle de la partie B.
+
+Est - il possible de donner à $u_0$ et $v_0$ des valeurs afin que les deux populations restent stables d'une
+année sur l'autre, c'est-à-dire telles que pour tout entier naturel $n$ on ait $u_{n+1} = u_n$ et $v_{n+1} = v_n$ ? (On parle alors d'état stable.)
+\end{exercice}
+
+\section{C'est une petite crevette qui est sur le bord de l'eau et qui pleure. Passant par là, un escargot lui demande : - Mais pourquoi pleures-tu ? - Ma mère est partie à un cocktail et n'est toujours pas revenue...}
+
+\begin{exercice}[Asie juin 2018][5]
+Une ferme aquatique exploite une population de crevettes qui évolue en fonction de la reproduction naturelle et des prélèvements effectués.
+
+La masse initiale de celte population de crevettes est estimée à $100$ tonnes.
+
+Compte tenu des conditions de reproduction et de prélèvement, on modélise la masse de la
+population de crevettes, exprimée en tonne, en fonction du temps, exprimé en semaine, par la fonction $f_p$, définie sur l'intervalle $[0~;~ +\infty[$ par :
+
+\[f_p(t) = \dfrac{100p}{1 - (1 - p)\text{e}^{- pt}}\]\index{fonction exponentielle}
+
+où $p$ est un paramètre strictement compris entre $0$ et $1$ et qui dépend des différentes conditions de vie et d'exploitation des crevettes.
+
+\medskip
+
+\begin{enumerate}
+\item Cohérence du modèle
+	\begin{enumerate}
+		\item Calculer $f_p(0)$.
+		\item On rappelle que $0 < p < 1$.
+		
+Démontrer que pour tout nombre réel $t \geqslant 0$,\: $1 - (1 - p)\text{e}^{- pt} \geqslant p$.
+		\item En déduire que pour tout nombre réel $t \geqslant 0$,\: $0 < f_p(t) \leqslant  100$.
+ 	\end{enumerate}
+\item  Étude de l'évolution lorsque $p = 0,9$
+	
+Dans cette question, on prend $p = 0,9$ et on étudie la fonction $f_{0,9}$ définie sur $[0~;~+\infty[$ par :
+	
+\[f_{0,9}(t) = \dfrac{90}{1 - 0,1 \text{e}^{- 0,9t}}.\]
+	
+	\begin{enumerate}
+		\item Déterminer les variations de la fonction $f_{0,9}$.
+		\item Démontrer pour tout nombre réel $t \geqslant 0$,\: $f_{0,9}(t) \geqslant 90$.
+		\item Interpréter les résultats des questions 2. a. et 2. b. dans le contexte.
+	\end{enumerate}
+\item  Retour au cas général
+	
+On rappelle que $0 < p < 1$.
+	
+Exprimer en fonction de $p$ la limite de $f_p$ lorsque $t$ tend vers $+ \infty$.
+\item  Dans cette question, on prend $p = \dfrac{1}{2}$.
+	\begin{enumerate}
+		\item Montrer que la fonction $H$ définie sur l'intervalle $[0~;~ +\infty[$ par:
+
+		\[H(t) = 100\ln \left(2 - \text{e}^{- \frac{t}{2}}\right) + 50t\]
+		
+est une primitive de la fonction $f_{1/2}$ sur cet intervalle.\index{primitive}
+		\item En déduire la masse moyenne de crevettes lors des 5 premières semaines d'exploitation, c'est-à-dire la valeur moyenne de la fonction $f_{1/2}$ sur l'intervalle [0~;~5].\index{valeur moyenne}
+		
+En donner une valeur approchée arrondie à la tonne.
+	\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\end{document}

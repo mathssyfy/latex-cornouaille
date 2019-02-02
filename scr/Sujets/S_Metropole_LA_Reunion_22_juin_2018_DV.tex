@@ -1,78 +1,14 @@
 %!TEX encoding = UTF-8 Unicode
-\documentclass[10pt]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{fourier}
-\usepackage[scaled=0.875]{helvet}
-\renewcommand{\ttdefault}{lmtt}
-\usepackage{amsmath,amssymb}
-\usepackage{fancybox}
-\usepackage[normalem]{ulem}
-\usepackage{enumitem}
-\usepackage{pifont}
-\usepackage{lscape}
-\usepackage{diagbox}
-\usepackage{eucal}
-\usepackage{tabularx}
-\usepackage{colortbl}
-\usepackage{multirow}
-\usepackage{mathrsfs}
-\usepackage{textcomp} 
-%\usepackage{enumerate}
-\newcommand{\euro}{\eurologo{}}
-%Tapuscrit : Denis Vergès
-%Relecture : François Hache
-\usepackage{pst-plot,pst-tree,pstricks,pst-node,pst-text}
-\usepackage{pst-eucl}
-\usepackage{pstricks-add}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\textbf{N}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\usepackage[left=3.5cm, right=3.5cm, top=3cm, bottom=3cm]{geometry}
-\newcommand{\vect}[1]{\overrightarrow{\,\mathstrut#1\,}}
-\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
-\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
-\renewcommand{\labelenumii}{\textbf{\theenumii.}}
-%\renewcommand{\thesubsection}{{\textsc{Exercice} \arabic{subsection}}} 
-\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
-\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
-\def\Ouv{$\left(\text{O}~;~\vect{u},~\vect{v}\right)$}
-\usepackage{fancyhdr}
-\usepackage[dvips]{hyperref}
-\hypersetup{%
-pdfauthor = {APMEP},
-pdfsubject = {Baccalauréat S},
-pdftitle = {Métropole - 22 juin 2018},
-allbordercolors = white,
-pdfstartview=FitH} 
-\usepackage[frenchb]{babel}
-\usepackage[np]{numprint}
+\documentclass{cornouaille}
+
 \begin{document}
-\setlength\parindent{0mm}
-\marginpar{\rotatebox{90}{\textbf{A. P{}. M. E. P{}.}}}
-\rhead{\textbf{A. P{}. M. E. P{}.}}
-\lhead{\small Baccalauréat S}
-\lfoot{\small{Métropole}}
-\rfoot{\small{22 juin 2018}}
-\renewcommand \footrulewidth{.2pt}
-\pagestyle{fancy}
-\thispagestyle{empty} 
+\fexo{TS}{Baccalauréat S  Métropole--La Réunion  22 juin 2018}{}
 
-\begin{center} 
-{\Large{\textbf{\decofourleft~Baccalauréat S  Métropole--La Réunion  22 juin 2018~\decofourright
-}}}
-\end{center}
+\tableofcontents
 
-\bigskip
-\textbf{Exercice 1 \hfill 6 points}
+\section{Analyse - Exponentielle}
+\begin{exercice}[Commun - Analyse expo][6]
 
-\textbf{Commun à tous les candidats }
-
-\bigskip
 
 \emph{Dans cet exercice, on munit le plan d'un repère orthonormé.}
 
@@ -203,12 +139,13 @@ positive de l'équation :
 Donner un encadrement de la hauteur de la \emph{Gateway Arch}.
 
 \end{enumerate}
+\end{exercice}
 
 \newpage
 
-\textbf{Exercice 2 \hfill 4 points}
+\section{Probabilité}
+\begin{exercice}[Commun - Proba][4]
 
-\textbf{Commun à tous les candidats }
 
 \bigskip
 
@@ -313,13 +250,11 @@ loi normale centrée réduite.
 	
 En utilisant cette approximation, déterminer la probabilité qu'il y ait entre \np{1450} et \np{1550} individus vaccinés dans l'échantillon interrogé.
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
+\section{Espace}
+\begin{exercice}[Commun - Espace][5]
 
-\textbf{Exercice 3\hfill 5 points}
-
-
-\textbf{Commun à tous les candidats }
 
 \bigskip
 
@@ -421,14 +356,11 @@ Dans un repère orthonormé, on considère les points :
 \[\text{R}(-3~;~5~;~2) ,\text{S}(1~;~4~;~-2) , \text{T}(4~;~-1~;~5)\quad  \text{et U}(4~;~7~;~3).\]
 
 Le tétraèdre RSTU est-il orthocentrique ? Justifier.
-
+\end{exercice}
 \newpage
 
-\textbf{Exercice 4 \hfill 5 points}
-
-\textbf{Pour les candidats n'ayant pas suivi l'enseignement de spécialité}
-
-\bigskip
+\section{Complexes}
+\begin{exercice}[Obli - complexes][5]
 
 Le plan complexe est muni d'un repère orthonormé direct \Ouv.
 
@@ -474,14 +406,12 @@ On a ainsi : $\ell_n = A_0A_1 + A_1A_2 + \ldots + A_{n-1}A_n$.
 Démontrer que la suite $\left(\ell_n\right)$ est convergente et calculer sa limite.
 	\end{enumerate}
 \end{enumerate}
+\end{exercice}
 
-\vspace{0,5cm}
 
-\textbf{Exercice 4\hfill 5 points}
+\section{Spécialité}
+\begin{exercice}[Spécialité][5]
 
-\textbf{Pour les candidats ayant suivi l'enseignement de spécialité}
-
-\bigskip
 
 \textbf{Partie A}
 
@@ -527,7 +457,7 @@ L'objectif de cette partie est de démontrer, à l'aide des résultats de la par
 
 \medskip
 
-\begin{enumerate}[resume]
+\begin{enumerate}
 \item  Soient $a$ et $b$ deux entiers naturels.
 
 Montrer que l'entier naturel $n = a^2 b^3$ est un nombre puissant.
@@ -536,4 +466,5 @@ Montrer que l'entier naturel $n = a^2 b^3$ est un nombre puissant.
 
 Déterminer deux nombres entiers consécutifs puissants supérieurs à $2018$.
 \end{enumerate}
+\end{exercice}
 \end{document}
