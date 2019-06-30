@@ -3,7 +3,13 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: directory
+  path: data
+  label: data
+  create: all
+  match: "**/*"
+  new_doc_ext: ".json"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
@@ -15,3 +21,5 @@ build:
   preview_output_directory: ".vuepress/dist"
   output_directory: ".vuepress/dist"
   instant_preview_command: vuepress dev -p 8080 -h 0.0.0.0
+  preview_docker_image: forestryio/build:latest
+  mount_path: "/opt/buildhome/repo"
