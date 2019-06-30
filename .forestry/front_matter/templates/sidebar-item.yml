@@ -1,4 +1,20 @@
 ---
 label: Sidebar-Item
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: name
+  description: Name
+- name: path
+  type: text
+  config:
+    required: false
+  label: path
+- name: children
+  type: include
+  config: {}
+  template: sidebar-item
+  label: children
